@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blocked by SiteGuard</title>
+  <style>
+    :root {
+      --bg-page: #f0f4f9;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --primary-blue: #2563eb;
+      --primary-blue-hover: #1d4ed8;
+      --danger-red: #ef4444;
+      --danger-dark: #991b1b;
+      --danger-light: #fee2e2;
+      --safe-green: #047857;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 3.5rem;
+    }
+
+    /* Top navigation bar matching Image 3 */
+    .top-nav {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      padding: 0 0.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #1e40af;
+      text-decoration: none;
+    }
+
+    .brand-logo svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2563eb;
+      cursor: pointer;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+
+    .lang-btn:hover {
+      opacity: 0.85;
+    }
+
+    .lang-btn.active {
+      background: var(--primary-blue);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    }
+
+    /* Main Card matching Image 3 */
+    .card {
+      width: 100%;
+      max-width: 580px;
+      background: var(--card-bg);
+      border-radius: 28px;
+      box-shadow: 0 12px 35px -8px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+      border: 1px solid var(--border);
+      padding: 2.75rem 2.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Red shield icon badge in soft circular container */
+    .icon-badge {
+      width: 64px;
+      height: 64px;
+      background: var(--danger-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--danger-red);
+    }
+
+    .card h1 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #1e293b;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.75rem;
+      max-width: 440px;
+    }
+
+    .tried-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .host-pill {
+      background: var(--danger-light);
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 0.5rem 1.15rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--danger-dark);
+      margin-bottom: 1.75rem;
+      word-break: break-all;
+      display: inline-block;
+    }
+
+    /* Bullet reasons list with red dots */
+    .reasons-container {
+      width: 100%;
+      max-width: 420px;
+      margin-bottom: 2rem;
+    }
+
+    .reasons-list {
+      list-style: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .reasons-list li {
+      position: relative;
+      padding-left: 1.35rem;
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    .reasons-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--danger-red);
+      font-size: 1.3rem;
+      line-height: 1.1;
+      font-weight: bold;
+    }
+
+    /* Action buttons matching Image 3 */
+    .action-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .btn-take-real {
+      width: 100%;
+      background: var(--primary-blue);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      transition: all 0.15s ease-in-out;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-take-real:hover {
+      background: var(--primary-blue-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-take-real:active {
+      transform: translateY(0);
+    }
+
+    .opens-url {
+      font-size: 0.88rem;
+      color: var(--safe-green);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 600;
+    }
+
+    .opens-url span {
+      color: var(--text-muted);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 400;
+    }
+
+    .continue-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-decoration: underline;
+      margin-top: 0.75rem;
+    }
+
+    .continue-btn:hover {
+      color: var(--text-main);
+    }
+
+    /* Web Reputation Panel */
+    .web-rep-panel {
+      width: 100%;
+      margin-top: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #f8fafc;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .web-rep-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: #f1f5f9;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .web-rep-body {
+      padding: 0.9rem 1rem;
+      font-size: 0.85rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .web-rep-status {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.15rem 0.55rem;
+      border-radius: 9999px;
+      margin-bottom: 0.4rem;
+    }
+
+    .web-rep-status.genuine { background: #d1fae5; color: #065f46; }
+    .web-rep-status.scam { background: #fee2e2; color: #991b1b; }
+    .web-rep-status.unverified { background: #e2e8f0; color: #475569; }
+
+    .web-rep-snippet {
+      margin-top: 0.4rem;
+      padding: 0.4rem 0.65rem;
+      background: #ffffff;
+      border-left: 3px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #64748b;
+    }
+
+    .auto-redirect-banner {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      background: #d1fae5;
+      border: 1px solid #6ee7b7;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #065f46;
+      text-align: center;
+    }
+
+    /* Footer links */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .card-footer a {
+      color: var(--primary-blue);
+      text-decoration: underline;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .card-footer a:hover {
+      color: var(--primary-blue-hover);
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation matching Image 3 -->
+  <div class="top-nav">
+    <a href="#" class="brand-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </svg>
+      SiteGuard
+    </a>
+
+    <div class="lang-switcher">
+      <button id="lang-en" class="lang-btn active">English</button>
+      <button id="lang-hi" class="lang-btn">हिन्दी</button>
+      <button id="lang-mr" class="lang-btn">मराठी</button>
+    </div>
+  </div>
+
+  <!-- Centered Block Card matching Image 3 -->
+  <div class="card">
+    <div class="icon-badge">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+    </div>
+
+    <h1 id="title-text">This site is pretending to be Example Bank</h1>
+    <p id="subtitle-text" class="card-subtitle">We stopped it before it opened. Please do not type any details.</p>
+
+    <div class="tried-label" id="label-tried">You tried to open</div>
+    <div id="host-display" class="host-pill">...</div>
+
+    <div class="reasons-container">
+      <ul id="reasons-list" class="reasons-list">
+        <!-- Bullets populated dynamically -->
+      </ul>
+    </div>
+
+    <div class="action-group">
+      <button id="go-real" class="btn-take-real" hidden>
+        <span id="btn-main-text">Take me to the real Example Bank</span>
+      </button>
+
+      <div id="real-address-container" class="opens-url" hidden>
+        <span id="opens-prefix">Opens </span><span id="real-domain"></span>
+      </div>
+
+      <div id="continue-box" hidden>
+        <button id="btn-continue" class="continue-btn">
+          I understand the risk, continue anyway (<span id="countdown">5</span>s)
+        </button>
+      </div>
+    </div>
+
+    <!-- Web Surfer Community & Wikipedia Findings Panel -->
+    <div id="web-rep-panel" class="web-rep-panel" hidden>
+      <div id="web-rep-header" class="web-rep-header">
+        <span>🔍</span>
+        <span id="web-rep-header-text">Web Reputation Research</span>
+      </div>
+      <div id="web-rep-body" class="web-rep-body">
+        <span id="web-rep-status-badge" class="web-rep-status unverified"></span>
+        <div id="web-rep-summary"></div>
+        <div id="web-rep-snippet-1" class="web-rep-snippet" hidden></div>
+        <div id="web-rep-snippet-2" class="web-rep-snippet" hidden></div>
+      </div>
+    </div>
+
+    <div id="auto-redirect-banner" class="auto-redirect-banner" hidden>
+      ✅ Site verified as genuine — redirecting in <span id="redirect-countdown">3</span>s…
+    </div>
+
+    <!-- Footer Links matching Image 3 -->
+    <div class="card-footer">
+      <a id="link-report" href="#">Report this site</a>
+      <a id="link-why" href="#">Why was this blocked?</a>
+    </div>
+  </div>
+
+  <script type="module" src="warning.js"></script>
+</body>
+</html>

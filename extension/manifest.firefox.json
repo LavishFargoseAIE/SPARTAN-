@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "SiteGuard",
+  "version": "0.1.0",
+  "description": "Warns about fake bank and government sites and takes you to the real one.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "siteguard@spartan.site",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": [
+    "webNavigation",
+    "storage",
+    "tabs",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SiteGuard",
+    "default_icon": {
+      "48": "icons/icon.svg"
+    }
+  },
+  "icons": {
+    "48": "icons/icon.svg"
+  }
+}

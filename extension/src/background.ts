@@ -133,12 +133,15 @@ chrome.webNavigation.onBeforeNavigate.addListener(
 
     // Step 5: Store verdict in session storage (NO DATA IN URL - Rule 6)
     const sessionKey = "v" + details.tabId;
-    await chrome.storage.session.set({
-      [sessionKey]: {
-        host,
-        ...verdict,
-      },
-    });
+    const sessionPayload = {
+      host,
+      ...verdict,
+    };
+    if (chrome.storage?.session) {
+      await chrome.storage.session.set({ [sessionKey]: sessionPayload });
+    } else if (chrome.storage?.local) {
+      await chrome.storage.local.set({ [sessionKey]: sessionPayload });
+    }
 
     // Step 6: Replace tab URL with warning.html
     chrome.tabs.update(details.tabId, {
@@ -155,5 +158,11 @@ chrome.webNavigation.onBeforeNavigate.addListener(
 
 // Listen for tab closed to clean up session storage
 chrome.tabs.onRemoved.addListener((tabId) => {
-  chrome.storage.session.remove("v" + tabId);
+  const key = "v" + tabId;
+  if (chrome.storage?.session) {
+    chrome.storage.session.remove(key);
+  }
+  if (chrome.storage?.local) {
+    chrome.storage.local.remove(key);
+  }
 });

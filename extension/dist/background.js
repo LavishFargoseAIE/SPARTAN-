@@ -843,12 +843,15 @@ chrome.webNavigation.onBeforeNavigate.addListener(
       return;
     }
     const sessionKey = "v" + details.tabId;
-    await chrome.storage.session.set({
-      [sessionKey]: {
-        host,
-        ...verdict
-      }
-    });
+    const sessionPayload = {
+      host,
+      ...verdict
+    };
+    if (chrome.storage?.session) {
+      await chrome.storage.session.set({ [sessionKey]: sessionPayload });
+    } else if (chrome.storage?.local) {
+      await chrome.storage.local.set({ [sessionKey]: sessionPayload });
+    }
     chrome.tabs.update(details.tabId, {
       url: chrome.runtime.getURL("warning.html")
     });
@@ -859,6 +862,12 @@ chrome.webNavigation.onBeforeNavigate.addListener(
   { url: [{ schemes: ["http", "https"] }] }
 );
 chrome.tabs.onRemoved.addListener((tabId) => {
-  chrome.storage.session.remove("v" + tabId);
+  const key = "v" + tabId;
+  if (chrome.storage?.session) {
+    chrome.storage.session.remove(key);
+  }
+  if (chrome.storage?.local) {
+    chrome.storage.local.remove(key);
+  }
 });
 //# sourceMappingURL=background.js.map
