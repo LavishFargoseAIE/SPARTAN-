@@ -1,6 +1,8 @@
-# SiteGuard
-
-**Fake Website Detection and Safe Redirect to the Original Website**
+<div align="center">
+  <img src="assets/logo.png" alt="SPARTAN Logo" width="160" />
+  <h1>SPARTAN</h1>
+  <p><strong>SiteGuard: Fake Website Detection and Safe Redirect to the Original Website</strong></p>
+</div>
 
 SiteGuard detects fake bank and government websites **before the page loads**, explains the risk in plain words, and offers a one-tap redirect to the **verified original website**.
 
@@ -49,8 +51,9 @@ flowchart TD
 ## Repository Structure
 
 ```
-siteguard/
+spartan/
 ├── README.md
+├── assets/                      # SPARTAN project logo & brand assets
 ├── .env.example                 # Configuration template (no secrets committed)
 ├── .gitignore                   # Excludes .env, *.pem, keys/
 ├── docker-compose.yml           # API + Redis + PostgreSQL

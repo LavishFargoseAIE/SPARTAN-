@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SiteGuard — Organisation Security & Takedown Portal",
+  title: "SPARTAN (SiteGuard) — Organisation Security & Takedown Portal",
   description: "Brand impersonation monitoring, active fake detection, and automated takedown evidence pack generator.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/icon-128.png",
+    apple: "/icon-128.png",
+  },
 };
 
 export default function RootLayout({

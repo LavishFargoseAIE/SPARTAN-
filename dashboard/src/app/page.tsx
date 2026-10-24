@@ -227,12 +227,12 @@ export default function Dashboard() {
       <aside className="w-64 border-r border-slate-800/80 bg-[#0c1222] p-5 flex flex-col justify-between">
         <div>
           <div className="flex items-center gap-3 px-2 mb-8">
-            <div className="h-10 w-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
-              <Shield className="h-6 w-6 text-white" />
+            <div className="h-10 w-10 rounded-xl bg-blue-950/60 border border-blue-500/30 flex items-center justify-center p-1.5 shadow-lg shadow-blue-500/10">
+              <img src="/logo.png" alt="SPARTAN Logo" className="h-full w-full object-contain" />
             </div>
             <div>
-              <h1 className="font-bold text-lg leading-tight tracking-tight text-white">SiteGuard</h1>
-              <p className="text-xs text-blue-400 font-medium">Organisation Portal</p>
+              <h1 className="font-bold text-lg leading-tight tracking-tight text-white">SPARTAN</h1>
+              <p className="text-xs text-blue-400 font-medium">SiteGuard Portal</p>
             </div>
           </div>
 
