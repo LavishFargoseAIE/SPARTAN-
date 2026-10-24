@@ -159,7 +159,13 @@ async function loadVerdict(): Promise<VerdictSessionData> {
 
   if (tabId !== undefined) {
     const key = "v" + tabId;
-    const sessionRes = await chrome.storage.session.get(key);
+    let sessionRes: Record<string, any> = {};
+    if (chrome.storage?.session) {
+      sessionRes = await chrome.storage.session.get(key);
+    }
+    if (!sessionRes[key] && chrome.storage?.local) {
+      sessionRes = await chrome.storage.local.get(key);
+    }
     if (sessionRes[key]) {
       cachedVerdict = sessionRes[key];
       return cachedVerdict!;

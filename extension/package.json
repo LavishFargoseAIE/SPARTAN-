@@ -1,9 +1,11 @@
 {
   "name": "siteguard-extension",
   "version": "0.1.0",
-  "description": "SiteGuard Chrome & Edge Extension (Manifest V3)",
+  "description": "SiteGuard Chrome & Firefox Extension (Manifest V3)",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js all",
+    "build:chrome": "node build.js chrome",
+    "build:firefox": "node build.js firefox"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.280",
