@@ -1,123 +1,50 @@
 """
-Brand Registry management, Ed25519 canonical signing, and signature verification.
+Brand registry: loading, validation, domain mapping, and Ed25519 signing/verification.
 """
 
 from __future__ import annotations
 import base64
-import hashlib
 import json
+import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from urllib.parse import urlparse
 
-import tldextract
+from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives.asymmetric import ed25519
+from cryptography.hazmat.primitives import serialization
 from pydantic import BaseModel, Field
 
+from app.config import settings
+from app.normalize import normalize_host
 
-def canonical_bytes(entry: Dict[str, Any]) -> bytes:
-    """
-    Produce canonical bytes for signing: sorted keys, signature field removed,
-    compact separators, utf-8 encoded.
-    """
-    data = {k: v for k, v in entry.items() if k != "signature"}
-    canonical_str = json.dumps(data, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
-    return canonical_str.encode("utf-8")
+logger = logging.getLogger(__name__)
 
 
-def sign_entry(entry: Dict[str, Any], private_key_b64: str) -> str:
-    """
-    Sign an entry with an Ed25519 private key (base64 encoded raw 32-bytes).
-    Returns the base64-encoded signature.
-    """
-    priv_bytes = base64.b64decode(private_key_b64)
-    priv_key = ed25519.Ed25519PrivateKey.from_private_bytes(priv_bytes)
-    data = canonical_bytes(entry)
-    sig = priv_key.sign(data)
-    return base64.b64encode(sig).decode("utf-8")
+def canonical_json(data: dict) -> bytes:
+    """Format dict into canonical JSON bytes with sorted keys and minimal whitespace."""
+    filtered = {k: v for k, v in data.items() if k != "signature"}
+    return json.dumps(filtered, sort_keys=True, separators=(",", ":")).encode("utf-8")
 
 
-def verify_entry(entry: Dict[str, Any], public_key_b64: str) -> bool:
-    """
-    Verify the signature of an entry with an Ed25519 public key (base64 encoded raw 32-bytes).
-    """
-    sig_b64 = entry.get("signature")
-    if not sig_b64:
-        return False
-    try:
-        pub_bytes = base64.b64decode(public_key_b64)
-        pub_key = ed25519.Ed25519PublicKey.from_public_bytes(pub_bytes)
-        sig = base64.b64decode(sig_b64)
-        data = canonical_bytes(entry)
-        pub_key.verify(sig, data)
-        return True
-    except Exception:
-        return False
+def canonical_redirect_json(name: str, official_url: str) -> bytes:
+    """Canonical representation of the redirect action to verify in the browser."""
+    payload = {"name": name, "official_url": official_url}
+    return json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
 
 
-def validate_entry(entry: Dict[str, Any]) -> List[str]:
-    """
-    Enforce security rules:
-    - canonical_url host MUST be inside official_domains
-    - login_url host (if given) MUST be inside official_domains or associated_domains
-    - official_domains must not be empty
-    - token_match must be 'substring' or 'exact_only'
-    """
-    errors = []
-    brand_id = entry.get("brand_id", "<unknown>")
-    official_domains = set(entry.get("official_domains", []))
-    associated_domains = set(entry.get("associated_domains", []))
-    all_domains = official_domains | associated_domains
-
-    if not official_domains:
-        errors.append(f"[{brand_id}] official_domains must not be empty")
-
-    canonical_url = entry.get("canonical_url")
-    if canonical_url:
-        parsed = urlparse(canonical_url)
-        host = parsed.netloc.lower()
-        if ":" in host:
-            host = host.split(":")[0]
-        ext = tldextract.extract(host)
-        registrable = f"{ext.domain}.{ext.suffix}"
-        # Host itself or registrable domain must be in official_domains
-        if host not in official_domains and registrable not in official_domains:
-            errors.append(
-                f"[{brand_id}] canonical_url host '{host}' is not in official_domains: {official_domains}"
-            )
-
-    login_url = entry.get("login_url")
-    if login_url:
-        parsed = urlparse(login_url)
-        host = parsed.netloc.lower()
-        if ":" in host:
-            host = host.split(":")[0]
-        ext = tldextract.extract(host)
-        registrable = f"{ext.domain}.{ext.suffix}"
-        if host not in all_domains and registrable not in all_domains:
-            errors.append(
-                f"[{brand_id}] login_url host '{host}' is not in official or associated domains"
-            )
-
-    token_match = entry.get("token_match", "substring")
-    if token_match not in ("substring", "exact_only"):
-        errors.append(f"[{brand_id}] token_match must be 'substring' or 'exact_only', got '{token_match}'")
-
-    return errors
-
-
-class Brand(BaseModel):
+class BrandEntry(BaseModel):
     brand_id: str
     display_name: str
     aliases: List[str] = Field(default_factory=list)
     category: str
-    official_domains: List[str] = Field(default_factory=list)
+    official_domains: List[str]
     associated_domains: List[str] = Field(default_factory=list)
-    canonical_url: Optional[str] = None
+    canonical_url: str
     login_url: Optional[str] = None
-    deep_links: Dict[str, str] = Field(default_factory=dict)
+    deep_links: Optional[Dict[str, str]] = None
     tokens: List[str] = Field(default_factory=list)
-    token_match: str = "substring"
+    token_match: str = "substring"  # 'substring' or 'exact_only'
     logo_hashes: List[str] = Field(default_factory=list)
     languages: List[str] = Field(default_factory=lambda: ["en"])
     verified: bool = False
@@ -126,68 +53,178 @@ class Brand(BaseModel):
     verified_by: Optional[str] = None
     source: Optional[str] = None
     version: int = 1
-    dev_only: bool = False
+    dev_only: Optional[bool] = False
     shared_hosting_risk: bool = False
     signature: Optional[str] = None
 
+    def validate_domain_pinning(self) -> None:
+        """Verify that canonical_url and login_url hosts belong to official_domains."""
+        canon_host = urlparse(self.canonical_url).hostname
+        if not canon_host:
+            raise ValueError(f"Brand {self.brand_id} has invalid canonical_url: {self.canonical_url}")
+        canon_norm = normalize_host(canon_host)
+        if canon_norm.registrable not in self.official_domains and canon_norm.hostname not in self.official_domains:
+            raise ValueError(
+                f"Brand {self.brand_id} canonical_url host '{canon_host}' is not in official_domains: {self.official_domains}"
+            )
+
+        if self.login_url:
+            login_host = urlparse(self.login_url).hostname
+            if login_host:
+                login_norm = normalize_host(login_host)
+                if login_norm.registrable not in self.official_domains and login_norm.hostname not in self.official_domains:
+                    raise ValueError(
+                        f"Brand {self.brand_id} login_url host '{login_host}' is not in official_domains: {self.official_domains}"
+                    )
+
 
 class BrandRegistry:
-    def __init__(self, brands_file: Optional[Path] = None, public_key_b64: Optional[str] = None):
-        self.brands_file = brands_file
-        self.public_key_b64 = public_key_b64
-        self.brands: List[Dict[str, Any]] = []
-        self.by_id: Dict[str, Dict[str, Any]] = {}
-        self.domain_to_brand: Dict[str, Dict[str, Any]] = {}
-        self.version: int = 1
-        self.etag: str = ""
+    def __init__(self, brands: Optional[List[BrandEntry]] = None, private_key_b64: Optional[str] = None, public_key_b64: Optional[str] = None):
+        self._brands: Dict[str, BrandEntry] = {}
+        self._domain_to_brand: Dict[str, BrandEntry] = {}
+        self._private_key: Optional[ed25519.Ed25519PrivateKey] = None
+        self._public_key: Optional[ed25519.Ed25519PublicKey] = None
 
-        if brands_file and brands_file.exists():
-            self.load()
+        if private_key_b64:
+            self.set_private_key(private_key_b64)
+        if public_key_b64:
+            self.set_public_key(public_key_b64)
 
-    def load(self):
-        if not self.brands_file or not self.brands_file.exists():
-            return
-        with open(self.brands_file, "r", encoding="utf-8") as f:
-            raw = f.read()
-            self.brands = json.loads(raw)
+        if brands:
+            for b in brands:
+                self.register(b)
 
-        # Compute etag based on file content
-        self.etag = hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
+    def set_private_key(self, b64_key: str) -> None:
+        raw = base64.b64decode(b64_key)
+        self._private_key = ed25519.Ed25519PrivateKey.from_private_bytes(raw)
+        if not self._public_key:
+            self._public_key = self._private_key.public_key()
 
-        self.by_id.clear()
-        self.domain_to_brand.clear()
+    def set_public_key(self, b64_key: str) -> None:
+        raw = base64.b64decode(b64_key)
+        self._public_key = ed25519.Ed25519PublicKey.from_public_bytes(raw)
 
-        max_version = 1
-        for b in self.brands:
-            bid = b["brand_id"]
-            self.by_id[bid] = b
-            v = b.get("version", 1)
-            if v > max_version:
-                max_version = v
+    def register(self, brand: BrandEntry) -> None:
+        brand.validate_domain_pinning()
+        self._brands[brand.brand_id] = brand
+        for dom in brand.official_domains:
+            self._domain_to_brand[dom.lower()] = brand
+        for dom in brand.associated_domains:
+            self._domain_to_brand[dom.lower()] = brand
 
-            for dom in b.get("official_domains", []):
-                self.domain_to_brand[dom.lower()] = b
-            for dom in b.get("associated_domains", []):
-                self.domain_to_brand[dom.lower()] = b
+    def get(self, brand_id: str) -> Optional[BrandEntry]:
+        return self._brands.get(brand_id)
 
-        self.version = max_version
+    def find_by_domain(self, domain: str) -> Optional[BrandEntry]:
+        """Lookup by exact registrable domain or hostname."""
+        return self._domain_to_brand.get(domain.lower())
 
-    def get_brand(self, brand_id: str) -> Optional[Dict[str, Any]]:
-        return self.by_id.get(brand_id)
+    def is_official(self, registrable_domain: str, hostname: Optional[str] = None) -> bool:
+        """Check if registrable domain or hostname is official."""
+        if registrable_domain.lower() in self._domain_to_brand:
+            return True
+        if hostname and hostname.lower() in self._domain_to_brand:
+            return True
+        return False
 
-    def find_by_domain(self, domain_or_host: str) -> Optional[Dict[str, Any]]:
-        """Exact match on full domain or registrable domain."""
-        dom = domain_or_host.lower()
-        if dom in self.domain_to_brand:
-            return self.domain_to_brand[dom]
-        ext = tldextract.extract(dom)
-        registrable = f"{ext.domain}.{ext.suffix}".lower()
-        return self.domain_to_brand.get(registrable)
+    def all_brands(self) -> List[BrandEntry]:
+        return list(self._brands.values())
 
-    def get_snapshot(self) -> Dict[str, Any]:
+    def sign_entry(self, entry: BrandEntry) -> str:
+        if not self._private_key:
+            raise RuntimeError("Private key is not configured for registry signing.")
+        data = canonical_json(entry.model_dump())
+        sig = self._private_key.sign(data)
+        sig_b64 = base64.b64encode(sig).decode("ascii")
+        entry.signature = sig_b64
+        return sig_b64
+
+    def verify_entry(self, entry: BrandEntry) -> bool:
+        if not entry.signature:
+            return False
+        if not self._public_key:
+            return False
+        data = canonical_json(entry.model_dump())
+        sig = base64.b64decode(entry.signature)
+        try:
+            self._public_key.verify(sig, data)
+            return True
+        except InvalidSignature:
+            return False
+
+    def sign_redirect(self, name: str, official_url: str) -> str:
+        """Sign canonical redirect payload for verification in browser extension."""
+        if not self._private_key:
+            raise RuntimeError("Private key is not configured for signing redirects.")
+        data = canonical_redirect_json(name, official_url)
+        sig = self._private_key.sign(data)
+        return base64.b64encode(sig).decode("ascii")
+
+    def verify_redirect(self, name: str, official_url: str, signature_b64: str) -> bool:
+        """Verify redirect signature."""
+        if not self._public_key:
+            return False
+        data = canonical_redirect_json(name, official_url)
+        try:
+            sig = base64.b64decode(signature_b64)
+            self._public_key.verify(sig, data)
+            return True
+        except Exception:
+            return False
+
+    def snapshot(self, etag: Optional[str] = None) -> dict:
+        """Generate a signed snapshot for extension allowlisting."""
+        official_domains = sorted(list(self._domain_to_brand.keys()))
+        verified_brands = [
+            {
+                "brand_id": b.brand_id,
+                "display_name": b.display_name,
+                "category": b.category,
+                "official_domains": b.official_domains,
+                "canonical_url": b.canonical_url,
+                "signature": b.signature,
+            }
+            for b in self._brands.values()
+            if b.verified
+        ]
         return {
-            "version": self.version,
-            "etag": self.etag,
-            "count": len(self.brands),
-            "brands": self.brands,
+            "version": 1,
+            "count": len(self._brands),
+            "official_domains": official_domains,
+            "verified_brands": verified_brands,
         }
+
+
+def load_registry(filepath: Optional[str] = None) -> BrandRegistry:
+    """Load registry brands from file, with automatic fallback."""
+    priv = settings.REGISTRY_SIGNING_PRIVATE_KEY
+    pub = settings.REGISTRY_SIGNING_PUBLIC_KEY
+    reg = BrandRegistry(private_key_b64=priv, public_key_b64=pub)
+
+    # Candidate file locations
+    paths_to_check = []
+    if filepath:
+        paths_to_check.append(Path(filepath))
+    paths_to_check.extend([
+        Path(settings.REGISTRY_PATH),
+        Path(__file__).resolve().parent.parent.parent / "registry" / "brands.json",
+        Path(__file__).resolve().parent.parent.parent / "registry" / "brands_seed.json",
+    ])
+
+    loaded = False
+    for path in paths_to_check:
+        if path.exists():
+            try:
+                content = json.loads(path.read_text(encoding="utf-8"))
+                for item in content:
+                    reg.register(BrandEntry(**item))
+                logger.info(f"Loaded {len(content)} brands from {path}")
+                loaded = True
+                break
+            except Exception as e:
+                logger.warning(f"Failed loading registry from {path}: {e}")
+
+    if not loaded:
+        logger.warning("No brand registry file found; initialized empty registry.")
+
+    return reg

@@ -1,5 +1,5 @@
 """
-Cache layer with Redis backend and in-memory TTL/LRU fallback.
+Verdict caching layer: Redis with automatic in-memory fallback.
 """
 
 from __future__ import annotations
@@ -8,40 +8,50 @@ import logging
 import time
 from typing import Any, Dict, Optional, Tuple
 
+import redis.asyncio as redis
+
+from app.config import settings
+
 logger = logging.getLogger(__name__)
 
 
 class VerdictCache:
     def __init__(self, redis_url: Optional[str] = None):
-        self.redis_url = redis_url
-        self.redis_client = None
+        self._redis_url = redis_url or settings.REDIS_URL
+        self._redis_client: Optional[redis.Redis] = None
         self._memory_cache: Dict[str, Tuple[float, Any]] = {}
-        self._connect_redis()
+        self._use_redis = False
 
-    def _connect_redis(self):
-        if not self.redis_url:
-            return
-        try:
-            import redis
-            client = redis.from_url(self.redis_url, socket_timeout=0.3, socket_connect_timeout=0.3)
-            client.ping()
-            self.redis_client = client
-            logger.info("Connected to Redis cache at %s", self.redis_url)
-        except Exception as e:
-            logger.warning("Redis unavailable (%s), falling back to in-memory cache", e)
-            self.redis_client = None
-
-    def get(self, key: str) -> Optional[Any]:
-        # Try Redis first
-        if self.redis_client:
+    async def initialize(self) -> None:
+        """Attempt connection to Redis; fall back to in-memory cache if unavailable."""
+        if self._redis_url and self._redis_url != "<<FILL_ME>>":
             try:
-                val = self.redis_client.get(key)
-                if val:
-                    return json.loads(val.decode("utf-8"))
-            except Exception:
-                pass
+                client = redis.from_url(
+                    self._redis_url,
+                    socket_connect_timeout=0.5,
+                    socket_timeout=0.5,
+                    decode_responses=True,
+                )
+                await client.ping()
+                self._redis_client = client
+                self._use_redis = True
+                logger.info("Connected to Redis cache.")
+                return
+            except Exception as e:
+                logger.warning(f"Redis unavailable ({e}). Using in-memory cache fallback.")
+        self._use_redis = False
 
-        # In-memory fallback
+    async def get(self, key: str) -> Optional[Dict[str, Any]]:
+        """Retrieve cached verdict by host."""
+        if self._use_redis and self._redis_client:
+            try:
+                val = await self._redis_client.get(f"verdict:{key}")
+                if val:
+                    return json.loads(val)
+            except Exception as e:
+                logger.warning(f"Redis get failed: {e}. Falling back to memory.")
+
+        # Check in-memory cache
         item = self._memory_cache.get(key)
         if item:
             expires_at, val = item
@@ -51,26 +61,25 @@ class VerdictCache:
                 del self._memory_cache[key]
         return None
 
-    def set(self, key: str, value: Any, ttl_seconds: int = 3600):
-        # Redis
-        if self.redis_client:
+    async def set(self, key: str, value: Dict[str, Any], ttl_seconds: int = 3600) -> None:
+        """Store verdict with time-to-live."""
+        if self._use_redis and self._redis_client:
             try:
-                self.redis_client.setex(key, ttl_seconds, json.dumps(value))
+                await self._redis_client.set(
+                    f"verdict:{key}",
+                    json.dumps(value),
+                    ex=ttl_seconds,
+                )
                 return
-            except Exception:
-                pass
+            except Exception as e:
+                logger.warning(f"Redis set failed: {e}. Using memory cache.")
 
-        # In-memory
-        # Keep memory cache size bounded (max 10,000 items)
-        if len(self._memory_cache) > 10000:
-            now = time.time()
-            expired = [k for k, (exp, _) in self._memory_cache.items() if now >= exp]
-            for k in expired:
-                del self._memory_cache[k]
-            if len(self._memory_cache) > 10000:
-                # Remove oldest 1000 keys
-                old_keys = list(self._memory_cache.keys())[:1000]
-                for k in old_keys:
-                    del self._memory_cache[k]
-
+        # In-memory store
         self._memory_cache[key] = (time.time() + ttl_seconds, value)
+
+    async def close(self) -> None:
+        if self._redis_client:
+            await self._redis_client.aclose()
+
+
+verdict_cache = VerdictCache()
