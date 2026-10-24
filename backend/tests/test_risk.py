@@ -1,88 +1,116 @@
-"""
-Unit tests for risk calculation, signal weight renormalization, and override logic.
-"""
-
 import pytest
+from app.registry import BrandEntry, BrandRegistry
 from app.risk import (
-    REDIRECT_MIN_CONFIDENCE,
     calculate_brand_confidence,
-    compute_risk,
-    get_risk_level,
-    is_redirect_allowed,
+    compute_risk_score,
+    get_verdict_level,
+    resolve_official_brand,
 )
+from scripts.gen_keys import generate_keypair
+
+
+@pytest.fixture
+def mock_registry():
+    priv, pub = generate_keypair()
+    return BrandRegistry(private_key_b64=priv, public_key_b64=pub)
 
 
 def test_empty_signals():
-    # Should not raise ZeroDivisionError
-    assert compute_risk({}) == 0
-    assert get_risk_level(0) == "SAFE"
+    # Must handle empty signals without division by zero
+    assert compute_risk_score({}) == 0
+    assert compute_risk_score({"L": None, "T": None}) == 0
 
 
-def test_standard_scoring():
-    # Single L signal of 0.8 -> renormalised weight is 1.0 -> score 80
-    assert compute_risk({"L": 0.8}) == 80
-    assert get_risk_level(80) == "DANGEROUS"
-
-    # L=0.5, T=0.0 -> weighted: (0.5 * 0.3 + 0.0 * 0.2) / 0.5 = 0.15 / 0.5 = 0.30 -> 30
-    score = compute_risk({"L": 0.5, "T": 0.0})
-    assert score == 30
-    assert get_risk_level(score) == "SUSPICIOUS"
-
-    # Low score
-    assert compute_risk({"L": 0.1, "D": 0.05}) < 30
-    assert get_risk_level(20) == "SAFE"
+def test_official_override():
+    # Official site must always return 0, regardless of other signals
+    signals = {"is_official": True, "L": 0.85, "T": 1.0, "D": 0.5}
+    assert compute_risk_score(signals) == 0
+    assert get_verdict_level(0) == "SAFE"
 
 
 def test_threat_feed_override():
-    # Threat feed hit (T >= 1.0) must produce score >= 90
-    score = compute_risk({"T": 1.0, "L": 0.0})
+    # Threat feed hit (T >= 1.0) must force R >= 90 (Dangerous)
+    signals = {"T": 1.0, "L": 0.1, "D": 0.1}
+    score = compute_risk_score(signals)
     assert score >= 90
-    assert get_risk_level(score) == "DANGEROUS"
+    assert get_verdict_level(score) == "DANGEROUS"
 
 
-def test_cross_domain_credential_override():
-    # Cross domain credential form with L > 0.6 must produce score >= 80
-    score = compute_risk({"C_form_cross_domain": 1.0, "L": 0.65})
+def test_cross_domain_credential_form_override():
+    # C_form_cross_domain and L > 0.6 -> R >= 80 (Dangerous)
+    signals = {"C_form_cross_domain": True, "L": 0.65, "T": 0.0, "D": 0.2}
+    score = compute_risk_score(signals)
     assert score >= 80
-    assert get_risk_level(score) == "DANGEROUS"
+    assert get_verdict_level(score) == "DANGEROUS"
 
 
-def test_bank_category_multiplier():
-    # Category multiplier for bank should boost score
-    std_score = compute_risk({"L": 0.6, "D": 0.1})
-    bank_score = compute_risk({"L": 0.6, "D": 0.1}, category="bank")
-    assert bank_score >= std_score
+def test_verdict_levels():
+    assert get_verdict_level(0) == "SAFE"
+    assert get_verdict_level(29) == "SAFE"
+    assert get_verdict_level(30) == "SUSPICIOUS"
+    assert get_verdict_level(69) == "SUSPICIOUS"
+    assert get_verdict_level(70) == "DANGEROUS"
+    assert get_verdict_level(91) == "DANGEROUS"
+    assert get_verdict_level(100) == "DANGEROUS"
 
 
-def test_brand_confidence():
-    # V is None
-    assert calculate_brand_confidence(0.85, None) == 0.85
+def test_worked_cases_from_specification():
+    # From Figure A5 and page 16 of report:
+    # 1. Official
+    assert compute_risk_score({"is_official": True}) == 0
 
-    # V is provided
-    assert calculate_brand_confidence(0.9, 0.7) == 0.9  # max(0.9, 0.8) = 0.9
-    assert calculate_brand_confidence(0.6, 0.8) == 0.7  # max(0.6, 0.7) = 0.7
+    # 2. Suspicious: L=0.75, D=0.40, category='bank'
+    suspicious_score = compute_risk_score({"L": 0.75, "D": 0.40}, category="bank")
+    assert 30 <= suspicious_score < 70
+    assert get_verdict_level(suspicious_score) == "SUSPICIOUS"
+
+    # 3. Dangerous: lookalike + threat feed hit
+    dangerous_score = compute_risk_score({"L": 0.85, "T": 1.0, "D": 0.50}, category="bank")
+    assert dangerous_score >= 90
+    assert get_verdict_level(dangerous_score) == "DANGEROUS"
 
 
-def test_redirect_rules():
-    # Verified brand with high confidence -> Redirect Allowed
-    verified_brand = {
-        "brand_id": "sbi",
-        "verified": True,
-        "canonical_url": "https://sbi.co.in/",
-    }
-    assert is_redirect_allowed(verified_brand, 0.85) is True
+def test_brand_confidence_and_resolve_official(mock_registry):
+    verified_brand = BrandEntry(
+        brand_id="examplebank",
+        display_name="Example Bank",
+        category="bank",
+        official_domains=["examplebank.bank.in"],
+        canonical_url="https://www.examplebank.bank.in/",
+        tokens=["examplebank"],
+        token_match="substring",
+        verified=True,
+        needs_verification=False,
+        version=1,
+    )
 
-    # Low confidence (< 0.80) -> Redirect Disabled
-    assert is_redirect_allowed(verified_brand, 0.75) is False
+    unverified_brand = BrandEntry(
+        brand_id="unverifiedbank",
+        display_name="Unverified Bank",
+        category="bank",
+        official_domains=["unverifiedbank.com"],
+        canonical_url="https://unverifiedbank.com/",
+        tokens=["unverifiedbank"],
+        token_match="substring",
+        verified=False,
+        needs_verification=True,
+        version=1,
+    )
 
-    # Unverified brand (even with high confidence) -> Redirect Disabled (Warning Only)
-    unverified_brand = {
-        "brand_id": "unverified-bank",
-        "verified": False,
-        "canonical_url": "https://example.com/",
-    }
-    assert is_redirect_allowed(unverified_brand, 0.95) is False
+    # 1. Verified brand with confidence >= 0.80 -> returns signed official payload
+    conf = calculate_brand_confidence(0.94)
+    assert conf == 0.94
+    resolved = resolve_official_brand(verified_brand, conf, mock_registry)
+    assert resolved is not None
+    assert resolved["name"] == "Example Bank"
+    assert resolved["official_url"] == "https://www.examplebank.bank.in/"
+    assert resolved["confidence"] == 0.94
+    assert resolved["signature"] != ""
+    assert mock_registry.verify_redirect(resolved["name"], resolved["official_url"], resolved["signature"]) is True
 
-    # Missing canonical_url -> Redirect Disabled
-    no_url_brand = {"brand_id": "no-url", "verified": True, "canonical_url": None}
-    assert is_redirect_allowed(no_url_brand, 0.95) is False
+    # 2. Confidence < 0.80 -> returns None (no redirect button)
+    low_conf = calculate_brand_confidence(0.75)
+    assert resolve_official_brand(verified_brand, low_conf, mock_registry) is None
+
+    # 3. Unverified brand (even with 0.95 confidence) -> returns None (Core Rule)
+    assert resolve_official_brand(unverified_brand, 0.95, mock_registry) is None

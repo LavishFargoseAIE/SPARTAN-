@@ -1,292 +1,233 @@
 """
-FastAPI application for SiteGuard backend.
-Implements /v1/check, /v1/report, /v1/registry/snapshot, /v1/brand/{id}, and /v1/health.
+FastAPI application for SiteGuard Detection API.
 """
 
 from __future__ import annotations
+import asyncio
+import hashlib
+import json
 import logging
+import uuid
 from contextlib import asynccontextmanager
-from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, Header, HTTPException, Request, Response, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from app.cache import VerdictCache
+from app.cache import verdict_cache
 from app.config import settings
-from app.domain_intel import DomainIntelManager
-from app.feeds import ThreatFeedManager
-from app.lookalike import evaluate_lookalike
+from app.domain_intel import get_domain_intel
+from app.feeds import feeds_manager
+from app.lookalike import compute_lookalike
 from app.normalize import normalize_host
-from app.reasons import format_reasons
-from app.registry import BrandRegistry
+from app.reasons import select_top_reasons
+from app.registry import BrandRegistry, load_registry
 from app.risk import (
-    REDIRECT_MIN_CONFIDENCE,
     calculate_brand_confidence,
-    compute_risk,
-    get_risk_level,
-    is_redirect_allowed,
+    compute_risk_score,
+    get_verdict_level,
+    resolve_official_brand,
 )
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
+logging.basicConfig(level=logging.INFO if not settings.DEBUG else logging.DEBUG)
 logger = logging.getLogger("siteguard")
 
-# Paths and initializations
-root_dir = Path(__file__).resolve().parent.parent.parent
-brands_path = root_dir / "registry" / "brands.json"
-
-registry = BrandRegistry(brands_file=brands_path, public_key_b64=settings.REGISTRY_SIGNING_PUBLIC_KEY)
-cache = VerdictCache(redis_url=settings.REDIS_URL)
-feeds = ThreatFeedManager(
-    local_badlist_path=str(root_dir / settings.LOCAL_BADLIST_PATH),
-    google_safe_browsing_key=settings.GOOGLE_SAFE_BROWSING_API_KEY,
-    openphish_feed_url=settings.OPENPHISH_FEED_URL,
-)
-domain_intel = DomainIntelManager()
+# Global in-memory registry instance
+registry: BrandRegistry = BrandRegistry()
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    global registry
     logger.info("Initializing SiteGuard API...")
-    registry.load()
-    logger.info("Loaded %d brands from registry", len(registry.brands))
-    feeds.load_local_badlist()
+    registry = load_registry()
+    await verdict_cache.initialize()
     yield
-    logger.info("Shutting down SiteGuard API...")
+    await verdict_cache.close()
+    logger.info("SiteGuard API shut down.")
 
 
 app = FastAPI(
-    title="SiteGuard Detection API",
-    description="Stateless fake website and bank impersonation detection API",
-    version="1.0.0",
+    title=settings.APP_NAME,
+    version=settings.APP_VERSION,
     lifespan=lifespan,
 )
 
-# CORS setup
+# CORS Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins_list,
-    allow_origin_regex=r"chrome-extension://.*",
+    allow_origins=settings.cors_origin_list + ["chrome-extension://*", "moz-extension://*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
+# Request & Response Models
 class CheckRequest(BaseModel):
-    host: str
-    client: Optional[str] = "browser-extension"
-    lang: Optional[str] = "en"
+    host: str = Field(..., description="The hostname to inspect (never full path or query)")
+    client: Optional[str] = Field("ext-0.1.0", description="Client identifier")
+    lang: Optional[str] = Field("en", description="Client language (e.g. en, hi, mr)")
 
 
-class BrandInfo(BaseModel):
+class BrandResponse(BaseModel):
     name: str
     confidence: float
-    official_url: Optional[str] = None
-    signature: Optional[str] = None
-    verified: bool = False
+    official_url: str
+    signature: str
 
 
 class CheckResponse(BaseModel):
     host: str
     level: str  # SAFE, SUSPICIOUS, DANGEROUS
-    score: int
-    reasons: List[str] = Field(default_factory=list)
-    reason_details: List[Dict[str, str]] = Field(default_factory=list)
-    brand: Optional[BrandInfo] = None
-    differing_part: Optional[str] = None
+    score: int  # 0 to 100
+    reasons: List[str]
+    brand: Optional[BrandResponse] = None
     ttl: int = 3600
-    analysis: str = "evaluated"
+    analysis: str = "completed"
 
 
 class ReportRequest(BaseModel):
     host: str
-    comments: Optional[str] = None
-    reporter_id: Optional[str] = None
+    reason: Optional[str] = "suspicious_site"
+    reporter: Optional[str] = "user"
+    details: Optional[str] = None
 
 
 @app.post("/v1/check", response_model=CheckResponse)
-async def check_host(req: CheckRequest):
+async def check_host(req: CheckRequest) -> CheckResponse:
     """
-    Check a host for brand spoofing, lookalike attacks, and threat feeds.
-    Order of operations:
-      1. Normalize host (IDNA, PSL, strip paths/queries)
-      2. Registry allowlist (0 ms)
-      3. Cache check
-      4. Lookalike engine
-      5. Threat feeds
-      6. Domain intelligence
-      7. Risk scoring & brand confidence
+    Core inspection endpoint. Evaluates host against allowlist, lookalike engine,
+    domain intelligence, and threat feeds before page renders.
     """
-    if not req.host or not req.host.strip():
-        raise HTTPException(status_code=400, detail="Missing host parameter")
+    try:
+        norm = normalize_host(req.host)
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Invalid host format: {str(e)}",
+        )
 
-    norm = normalize_host(req.host)
-    h = norm.host
-    lang = req.lang or "en"
+    # 1. Allowlist check: exact match of registrable domain or hostname
+    if registry.is_official(norm.registrable, norm.hostname):
+        return CheckResponse(
+            host=norm.hostname,
+            level="SAFE",
+            score=0,
+            reasons=[],
+            brand=None,
+            ttl=86400,
+            analysis="allowlisted",
+        )
 
-    # 1. Registry Allowlist Check:
-    # If genuine registrable domain or exact official domain matches
-    matched_brand = registry.find_by_domain(h)
-    if matched_brand:
-        # Check shared hosting risk (e.g. netlify.com, github.io)
-        if matched_brand.get("shared_hosting_risk", False):
-            # Only exact apex domain is trusted; arbitrary subdomains continue through lookalike check
-            if h == norm.registrable_domain:
-                return CheckResponse(
-                    host=h,
-                    level="SAFE",
-                    score=0,
-                    reasons=[],
-                    reason_details=[],
-                    brand=BrandInfo(
-                        name=matched_brand["display_name"],
-                        confidence=1.0,
-                        official_url=matched_brand.get("canonical_url"),
-                        signature=matched_brand.get("signature"),
-                        verified=matched_brand.get("verified", False),
-                    ),
-                    ttl=86400,
-                    analysis="allowlist",
-                )
-        else:
-            return CheckResponse(
-                host=h,
-                level="SAFE",
-                score=0,
-                reasons=[],
-                reason_details=[],
-                brand=BrandInfo(
-                    name=matched_brand["display_name"],
-                    confidence=1.0,
-                    official_url=matched_brand.get("canonical_url"),
-                    signature=matched_brand.get("signature"),
-                    verified=matched_brand.get("verified", False),
-                ),
-                ttl=86400,
-                analysis="allowlist",
-            )
-
-    # 2. Cache Check
-    cache_key = f"verdict:{h}"
-    cached = cache.get(cache_key)
+    # 2. Check cache
+    cached = await verdict_cache.get(norm.hostname)
     if cached:
-        # Re-localize reason details if requested language differs
-        cached["reason_details"] = format_reasons(cached.get("reasons", []), lang=lang)
         return CheckResponse(**cached)
 
-    # 3. Lookalike Engine
-    lookalike_res = evaluate_lookalike(norm, registry.brands)
+    # 3. Parallel checks: Lookalike, Threat Feeds, Domain Intel
+    all_brands = registry.all_brands()
+    lookalike_res = compute_lookalike(norm, all_brands)
 
-    # 4. Threat Feeds Check
-    t_score, t_reasons = await feeds.check(h)
+    t_score, feed_reasons = await feeds_manager.check(norm.hostname, norm.registrable)
+    d_score, domain_reasons = await get_domain_intel(norm)
 
-    # 5. Domain Intelligence Check
-    d_signals, d_reasons = await domain_intel.get_signals(h, norm.registrable_domain)
-
-    # Signal compilation
-    signals: Dict[str, float] = {}
-    if lookalike_res.score > 0:
-        signals["L"] = lookalike_res.score
-    if t_score > 0:
-        signals["T"] = t_score
-    if d_signals:
-        signals.update(d_signals)
-
-    target_category = lookalike_res.brand.get("category") if lookalike_res.brand else None
-    score = compute_risk(signals, category=target_category)
-    level = get_risk_level(score)
-
-    all_reasons = list(set(lookalike_res.reasons + t_reasons + d_reasons))
-
-    # Brand confidence & redirect validation
-    brand_info = None
-    if lookalike_res.brand:
-        conf = calculate_brand_confidence(lookalike_res.score)
-        if conf >= 0.50:
-            target_brand = lookalike_res.brand
-            is_verified = target_brand.get("verified", False)
-            allow_redirect = is_redirect_allowed(target_brand, conf)
-
-            # Rule: If unverified or confidence < 0.80, official_url is NOT provided for one-tap redirect
-            official_url = target_brand.get("canonical_url") if allow_redirect else None
-
-            brand_info = BrandInfo(
-                name=target_brand["display_name"],
-                confidence=conf,
-                official_url=official_url,
-                signature=target_brand.get("signature") if allow_redirect else None,
-                verified=is_verified,
-            )
-
-    # Decide TTL based on risk
-    ttl = 7200 if level == "SAFE" else 3600
-
-    resp_dict = {
-        "host": h,
-        "level": level,
-        "score": score,
-        "reasons": all_reasons,
-        "reason_details": format_reasons(all_reasons, lang=lang),
-        "brand": brand_info.model_dump() if brand_info else None,
-        "differing_part": lookalike_res.differing_part,
-        "ttl": ttl,
-        "analysis": "evaluated",
+    # Signals dict
+    signals: Dict[str, Any] = {
+        "L": lookalike_res.score,
+        "T": t_score,
+        "D": d_score,
     }
 
-    # Store in cache
-    cache.set(cache_key, resp_dict, ttl_seconds=ttl)
+    category = lookalike_res.brand.category if lookalike_res.brand else None
+    score = compute_risk_score(signals, category=category)
+    level = get_verdict_level(score)
+
+    all_reasons = lookalike_res.reasons + feed_reasons + domain_reasons
+    top_reasons = select_top_reasons(all_reasons, max_count=3)
+
+    # Resolve official brand redirect
+    brand_resp = None
+    if lookalike_res.brand:
+        conf = calculate_brand_confidence(lookalike_res.score)
+        official_data = resolve_official_brand(lookalike_res.brand, conf, registry)
+        if official_data:
+            brand_resp = BrandResponse(
+                name=official_data["name"],
+                confidence=official_data["confidence"],
+                official_url=official_data["official_url"],
+                signature=official_data["signature"],
+            )
+
+    ttl = 86400 if level == "SAFE" else 3600
+
+    resp_dict = {
+        "host": norm.hostname,
+        "level": level,
+        "score": score,
+        "reasons": top_reasons,
+        "brand": brand_resp.model_dump() if brand_resp else None,
+        "ttl": ttl,
+        "analysis": "completed",
+    }
+
+    # Cache verdict
+    await verdict_cache.set(norm.hostname, resp_dict, ttl_seconds=ttl)
 
     return CheckResponse(**resp_dict)
 
 
 @app.post("/v1/report")
 async def report_host(req: ReportRequest):
-    """
-    Accept user/client reports of suspicious hosts.
-    Never logs paths or queries.
-    """
-    norm = normalize_host(req.host)
-    logger.info("Report received for suspicious host: %s (reporter: %s)", norm.host, req.reporter_id)
-    return {"status": "received", "host": norm.host}
+    """Report a suspicious or falsely flagged host for analyst review."""
+    try:
+        norm = normalize_host(req.host)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail="Invalid host format")
+
+    report_id = str(uuid.uuid4())
+    logger.info(f"Report received: ID={report_id} host={norm.hostname} reason={req.reason}")
+    return {
+        "status": "received",
+        "report_id": report_id,
+        "host": norm.hostname,
+        "message": "Report queued for analyst review.",
+    }
 
 
 @app.get("/v1/registry/snapshot")
-async def get_registry_snapshot(if_none_match: Optional[str] = Header(None)):
-    """
-    Return signed snapshot of the entire brand registry with ETag support.
-    """
-    snap = registry.get_snapshot()
-    if if_none_match and if_none_match.strip('"') == snap["etag"]:
-        return Response(status_code=status.HTTP_304_NOT_MODIFIED)
+async def get_registry_snapshot(response: Response, if_none_match: Optional[str] = Header(None, alias="if-none-match")):
+    """Return signed snapshot of allowlist for the client extension."""
+    snap = registry.snapshot()
+    raw = json.dumps(snap, sort_keys=True)
+    etag = hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
-    return Response(
-        content=registry.brands_file.read_text(encoding="utf-8") if registry.brands_file else "[]",
-        media_type="application/json",
-        headers={"ETag": f'"{snap["etag"]}"', "Cache-Control": "public, max-age=3600"},
-    )
+    response.headers["ETag"] = f'"{etag}"'
+    response.headers["Cache-Control"] = "public, max-age=86400"
+
+    if if_none_match and if_none_match.strip('"') == etag:
+        response.status_code = status.HTTP_304_NOT_MODIFIED
+        return response
+
+    return snap
 
 
 @app.get("/v1/brand/{brand_id}")
 async def get_brand(brand_id: str):
-    """
-    Return single signed brand entry.
-    """
-    b = registry.get_brand(brand_id)
+    """Return signed brand details by ID."""
+    b = registry.get(brand_id)
     if not b:
-        raise HTTPException(status_code=404, detail="Brand not found")
-    return b
+        raise HTTPException(status_code=404, detail="Brand not found in registry")
+    return b.model_dump()
 
 
 @app.get("/v1/health")
 async def health_check():
-    """
-    Health check endpoint.
-    """
+    """Liveness check and registry status."""
     return {
         "status": "healthy",
-        "brands_loaded": len(registry.brands),
-        "cache": "redis" if cache.redis_client else "memory",
-        "threat_feed_badlist_count": len(feeds.local_bad_hosts),
+        "service": settings.APP_NAME,
+        "version": settings.APP_VERSION,
+        "brands_loaded": len(registry.all_brands()),
     }

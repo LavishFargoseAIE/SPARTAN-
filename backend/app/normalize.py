@@ -1,104 +1,85 @@
 """
-Host normalisation, IDNA decoding, punycode detection, and Public Suffix List domain extraction.
+Host normalization, IDNA decoding, Punycode detection, and registrable domain extraction.
 """
 
-from __future__ import annotations
+from dataclasses import dataclass
 import re
-from typing import Optional
 from urllib.parse import urlparse
 import idna
 import tldextract
-from pydantic import BaseModel
 
 
-class NormalizedHost(BaseModel):
-    raw_input: str
-    host: str
-    punycode_host: str
+# Pre-configured tldextract instance using bundled snapshot to ensure fast offline execution
+_extractor = tldextract.TLDExtract(cache_dir=None)
+
+
+@dataclass(frozen=True)
+class NormalizedHost:
+    raw: str
+    hostname: str
     subdomain: str
     domain: str
     suffix: str
-    registrable_domain: str
-    is_punycode: bool = False
-    is_ip: bool = False
-    path_or_query_stripped: bool = False
+    registrable: str
+    is_punycode: bool
+    decoded_hostname: str
 
 
-IP_REGEX = re.compile(r"^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")
-
-
-def clean_host_input(raw: str) -> tuple[str, bool]:
+def normalize_host(raw_host: str) -> NormalizedHost:
     """
-    Ensure only the host name is processed.
-    Strip protocols, auth, ports, paths, queries and fragments if sent accidentally.
+    Clean, sanitize, and normalize an input host string.
+    Strips schemes, paths, queries, ports, and whitespace.
     """
-    s = raw.strip()
-    path_or_query_stripped = False
+    cleaned = raw_host.strip()
+    if not cleaned:
+        raise ValueError("Host name cannot be empty")
 
-    # Check if a scheme was provided
-    if "://" in s:
-        parsed = urlparse(s)
-        s = parsed.netloc or ""
-        path_or_query_stripped = True
-    elif "/" in s or "?" in s or "#" in s or "\\" in s:
-        # Strip path or query
-        s = re.split(r"[/\\?#]", s)[0]
-        path_or_query_stripped = True
+    # If full URL was provided, strip scheme, path, query, fragment
+    if "://" in cleaned:
+        parsed = urlparse(cleaned)
+        cleaned = parsed.netloc or parsed.path
+    elif "/" in cleaned:
+        cleaned = cleaned.split("/")[0]
 
-    # Strip username:password@ if present
-    if "@" in s:
-        s = s.split("@")[-1]
-        path_or_query_stripped = True
+    # Strip userinfo (user:pass@) if present
+    if "@" in cleaned:
+        cleaned = cleaned.split("@")[-1]
 
     # Strip port if present
-    if ":" in s:
-        s = s.split(":")[0]
+    if ":" in cleaned:
+        cleaned = cleaned.split(":")[0]
 
-    # Lowercase and strip trailing dots
-    s = s.lower().rstrip(".")
-    return s, path_or_query_stripped
-
-
-def normalize_host(raw_input: str) -> NormalizedHost:
-    """
-    Normalise any host representation into a standard NormalizedHost structure.
-    Handles IDNA decoding, punycode flag, and PSL domain separation.
-    """
-    cleaned, stripped = clean_host_input(raw_input)
+    cleaned = cleaned.strip(".").lower()
+    if not cleaned:
+        raise ValueError("Invalid host name after normalization")
 
     is_punycode = "xn--" in cleaned
-    punycode_host = cleaned
-    decoded_host = cleaned
-
+    decoded_hostname = cleaned
     if is_punycode:
         try:
-            decoded_host = idna.decode(cleaned)
+            decoded_hostname = idna.decode(cleaned)
         except Exception:
-            decoded_host = cleaned
+            decoded_hostname = cleaned
+
+    ext = _extractor(cleaned)
+    domain = ext.domain.lower() if ext.domain else ""
+    suffix = ext.suffix.lower() if ext.suffix else ""
+    subdomain = ext.subdomain.lower() if ext.subdomain else ""
+
+    if domain and suffix:
+        registrable = f"{domain}.{suffix}"
+    elif domain:
+        registrable = domain
     else:
-        # Check if non-ascii chars that encode to punycode
-        try:
-            punycode_host = idna.encode(cleaned).decode("ascii")
-            if "xn--" in punycode_host:
-                is_punycode = True
-        except Exception:
-            pass
-
-    # Extract via tldextract (Public Suffix List)
-    ext = tldextract.extract(cleaned)
-    registrable = f"{ext.domain}.{ext.suffix}".lower() if ext.domain and ext.suffix else ext.domain.lower()
-
-    is_ip = bool(IP_REGEX.match(cleaned))
+        registrable = cleaned
 
     return NormalizedHost(
-        raw_input=raw_input,
-        host=decoded_host,
-        punycode_host=punycode_host,
-        subdomain=ext.subdomain.lower(),
-        domain=ext.domain.lower(),
-        suffix=ext.suffix.lower(),
-        registrable_domain=registrable,
+        raw=raw_host,
+        hostname=cleaned,
+        subdomain=subdomain,
+        domain=domain,
+        suffix=suffix,
+        registrable=registrable,
         is_punycode=is_punycode,
-        is_ip=is_ip,
-        path_or_query_stripped=stripped,
+        decoded_hostname=decoded_hostname,
     )

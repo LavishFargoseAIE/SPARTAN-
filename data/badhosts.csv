@@ -1,7 +1,4 @@
 host,added_on,source
-examplebank-secure-login.xyz,2026-10-24,analyst-report
-fake-sbi-portal-login.top,2026-10-24,threat-intel
-hdfc-kyc-update-warning.info,2026-10-24,user-report
-icicibank-card-verification.club,2026-10-24,threat-intel
-incometax-refund-claim-2026.xyz,2026-10-24,cert-in-alert
-uidai-aadhaar-otp-verification.online,2026-10-24,cert-in-alert
+examplebank-secure-login.xyz,2026-10-24T00:00:00Z,seed-test
+examplebank-kyc-update.in,2026-10-24T00:00:00Z,seed-test
+fake-login-examplebank.top,2026-10-24T00:00:00Z,seed-test

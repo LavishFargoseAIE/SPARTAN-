@@ -1,86 +1,66 @@
 #!/usr/bin/env python3
 """
-Admin CLI tool: Verify a brand in registry/brands.json.
-Sets verified: true, needs_verification: false, last_verified: today, and verified_by.
-Re-signs the modified entry with the Ed25519 private key.
-
-Usage:
-    python backend/scripts/verify_brand.py <brand_id> [--verified-by <name>]
+Admin CLI tool to verify a brand in the registry.
+Sets verified=True, updates last_verified, records verified_by, and re-signs the entry.
 """
 
-import argparse
 from datetime import datetime, timezone
 import json
-import os
 import sys
 from pathlib import Path
-from dotenv import load_dotenv
 
-root_dir = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(root_dir / "backend"))
+backend_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(backend_dir))
 
-from app.registry import sign_entry, validate_entry, verify_entry
+from app.config import settings
+from app.registry import BrandEntry, BrandRegistry
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Verify a brand in the SiteGuard registry")
-    parser.add_argument("brand_id", help="The brand_id to mark as verified (e.g. state-bank-of-india)")
-    parser.add_argument("--verified-by", default="admin", help="Identifier of the verifier")
-    args = parser.parse_args()
+def verify_brand(brand_id: str, verified_by: str = "security-admin") -> bool:
+    root = Path(__file__).resolve().parent.parent.parent
+    dest_path = root / "registry" / "brands.json"
 
-    load_dotenv(root_dir / ".env")
-    priv_key_b64 = os.getenv("REGISTRY_SIGNING_PRIVATE_KEY")
-    pub_key_b64 = os.getenv("REGISTRY_SIGNING_PUBLIC_KEY")
+    if not dest_path.exists():
+        print(f"[ERROR] Registry file {dest_path} not found. Run sign_registry.py first.", file=sys.stderr)
+        return False
 
-    if not priv_key_b64:
-        print("ERROR: REGISTRY_SIGNING_PRIVATE_KEY is not set in environment or .env", file=sys.stderr)
-        sys.exit(1)
+    priv_b64 = settings.REGISTRY_SIGNING_PRIVATE_KEY
+    pub_b64 = settings.REGISTRY_SIGNING_PUBLIC_KEY
+    reg = BrandRegistry(private_key_b64=priv_b64, public_key_b64=pub_b64)
 
-    registry_path = root_dir / "registry" / "brands.json"
-    if not registry_path.exists():
-        print(f"ERROR: {registry_path} does not exist!", file=sys.stderr)
-        sys.exit(1)
+    raw_data = json.loads(dest_path.read_text(encoding="utf-8"))
+    found = False
+    now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-    with open(registry_path, "r", encoding="utf-8") as f:
-        brands = json.load(f)
+    updated_entries = []
+    for item in raw_data:
+        entry = BrandEntry(**item)
+        if entry.brand_id == brand_id:
+            entry.verified = True
+            entry.needs_verification = False
+            entry.last_verified = now_str
+            entry.verified_by = verified_by
+            entry.version += 1
+            entry.validate_domain_pinning()
+            reg.sign_entry(entry)
+            found = True
+            print(f"[OK] Verified brand '{brand_id}' ({entry.display_name}). New version: {entry.version}")
+        updated_entries.append(entry.model_dump())
 
-    target = None
-    for b in brands:
-        if b["brand_id"] == args.brand_id:
-            target = b
-            break
+    if not found:
+        print(f"[ERROR] Brand ID '{brand_id}' not found in registry.", file=sys.stderr)
+        return False
 
-    if not target:
-        print(f"ERROR: Brand '{args.brand_id}' not found in registry!", file=sys.stderr)
-        sys.exit(1)
-
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    target["verified"] = True
-    target["needs_verification"] = False
-    target["last_verified"] = today
-    target["verified_by"] = args.verified_by
-    target["version"] = target.get("version", 1) + 1
-
-    errs = validate_entry(target)
-    if errs:
-        print("Validation errors on brand entry:", file=sys.stderr)
-        for e in errs:
-            print(f"  - {e}", file=sys.stderr)
-        sys.exit(1)
-
-    # Re-sign
-    target["signature"] = sign_entry(target, priv_key_b64)
-
-    if pub_key_b64 and not verify_entry(target, pub_key_b64):
-        print("ERROR: Signature verification failed after signing!", file=sys.stderr)
-        sys.exit(1)
-
-    with open(registry_path, "w", encoding="utf-8") as f:
-        json.dump(brands, f, indent=2, ensure_ascii=False)
-
-    print(f"Successfully verified and re-signed brand '{args.brand_id}'.")
-    print(f"Verified by: {args.verified_by}, Date: {today}, Version: {target['version']}")
+    dest_path.write_text(json.dumps(updated_entries, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return True
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) < 2:
+        print("Usage: python verify_brand.py <brand_id> [verified_by]")
+        sys.exit(1)
+
+    b_id = sys.argv[1]
+    v_by = sys.argv[2] if len(sys.argv) > 2 else "security-admin"
+    success = verify_brand(b_id, v_by)
+    sys.exit(0 if success else 1)

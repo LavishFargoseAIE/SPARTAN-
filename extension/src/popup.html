@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SiteGuard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      overflow: hidden;
+    }
+    .header {
+      padding: 1rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .safe-bg { background: #059669; }
+    .warning-bg { background: #d97706; }
+    .danger-bg { background: #dc2626; }
+
+    .content {
+      padding: 1rem;
+    }
+    .host-text {
+      font-family: ui-monospace, monospace;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #475569;
+      word-break: break-all;
+      margin-bottom: 0.75rem;
+    }
+    .score-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+    .score-num {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .score-label {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .reasons-list {
+      list-style: none;
+      margin-bottom: 1.25rem;
+    }
+    .reasons-list li {
+      font-size: 0.8rem;
+      margin-bottom: 0.35rem;
+      padding-left: 1rem;
+      position: relative;
+      color: #334155;
+    }
+    .reasons-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #64748b;
+      font-weight: bold;
+    }
+    .btn-action {
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      padding: 0.65rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #ffffff;
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn-gray { background: #475569; }
+    .btn-gray:hover { background: #334155; }
+    .btn-green { background: #059669; }
+    .btn-green:hover { background: #047857; }
+  </style>
+</head>
+<body>
+  <div id="popup-header" class="header safe-bg">
+    <span id="popup-icon">✓</span>
+    <span id="popup-title">Official site</span>
+  </div>
+
+  <div class="content">
+    <div id="popup-host" class="host-text">www.examplebank.bank.in</div>
+
+    <div class="score-row">
+      <span id="popup-score" class="score-num">0</span>
+      <span class="score-label">risk score</span>
+    </div>
+
+    <ul id="popup-reasons" class="reasons-list">
+      <li>Matches the registry entry</li>
+      <li>Certificate and DNS normal</li>
+    </ul>
+
+    <button id="popup-btn" class="btn-action btn-gray">Report a problem</button>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

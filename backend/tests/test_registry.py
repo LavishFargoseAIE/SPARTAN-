@@ -1,121 +1,107 @@
-"""
-Tests for Brand Registry integrity, Ed25519 signing, and signature verification.
-"""
-
-import json
-from pathlib import Path
 import pytest
-from app.registry import BrandRegistry, canonical_bytes, sign_entry, validate_entry, verify_entry
+from app.registry import (
+    BrandEntry,
+    BrandRegistry,
+    canonical_json,
+    canonical_redirect_json,
+    load_registry,
+)
+from scripts.gen_keys import generate_keypair
 
 
 @pytest.fixture
-def keys_and_entry():
-    from cryptography.hazmat.primitives.asymmetric import ed25519
-    import base64
-
-    priv = ed25519.Ed25519PrivateKey.generate()
-    pub = priv.public_key()
-    priv_b64 = base64.b64encode(priv.private_bytes_raw()).decode("utf-8")
-    pub_b64 = base64.b64encode(pub.public_bytes_raw()).decode("utf-8")
-
-    sample = {
-        "brand_id": "test-bank",
-        "display_name": "Test Bank",
-        "aliases": ["Test Bank"],
-        "category": "bank",
-        "official_domains": ["testbank.bank.in"],
-        "associated_domains": [],
-        "canonical_url": "https://testbank.bank.in/",
-        "login_url": None,
-        "deep_links": {},
-        "tokens": ["testbank"],
-        "token_match": "substring",
-        "logo_hashes": [],
-        "languages": ["en"],
-        "verified": True,
-        "needs_verification": False,
-        "last_verified": "2026-10-24",
-        "verified_by": "tester",
-        "version": 1,
-        "dev_only": False,
-        "shared_hosting_risk": False,
-        "signature": None,
-    }
-    return priv_b64, pub_b64, sample
+def keys():
+    priv, pub = generate_keypair()
+    return priv, pub
 
 
-def test_sign_and_verify(keys_and_entry):
-    priv_b64, pub_b64, sample = keys_and_entry
-
-    # Sign
-    sig = sign_entry(sample, priv_b64)
-    assert sig is not None
-    sample["signature"] = sig
-
-    # Verify
-    assert verify_entry(sample, pub_b64) is True
+@pytest.fixture
+def registry(keys):
+    priv, pub = keys
+    return BrandRegistry(private_key_b64=priv, public_key_b64=pub)
 
 
-def test_tamper_detection(keys_and_entry):
-    priv_b64, pub_b64, sample = keys_and_entry
-    sig = sign_entry(sample, priv_b64)
-    sample["signature"] = sig
-
-    # Tamper with official redirect target
-    sample["canonical_url"] = "https://attacker.evil.com/"
-    assert verify_entry(sample, pub_b64) is False
-
-    # Tamper with display name
-    sample["canonical_url"] = "https://testbank.bank.in/"
-    sample["display_name"] = "Phishing Bank"
-    assert verify_entry(sample, pub_b64) is False
-
-    # Tamper with signature itself
-    sample["display_name"] = "Test Bank"
-    sample["signature"] = "tampered" + sig[8:]
-    assert verify_entry(sample, pub_b64) is False
-
-
-def test_validation_rules():
-    # Valid entry
-    valid = {
-        "brand_id": "valid-bank",
-        "display_name": "Valid Bank",
-        "official_domains": ["validbank.com"],
-        "associated_domains": [],
-        "canonical_url": "https://validbank.com/",
-        "tokens": ["validbank"],
-        "token_match": "substring",
-    }
-    assert validate_entry(valid) == []
+def test_domain_pinning_validation():
+    # Valid brand
+    valid = BrandEntry(
+        brand_id="test-bank",
+        display_name="Test Bank",
+        category="bank",
+        official_domains=["testbank.com"],
+        canonical_url="https://testbank.com/",
+        login_url="https://login.testbank.com/auth",
+        tokens=["testbank"],
+        token_match="substring",
+        verified=True,
+        version=1,
+    )
+    valid.validate_domain_pinning()
 
     # Invalid canonical_url host
-    invalid = {
-        "brand_id": "invalid-bank",
-        "display_name": "Invalid Bank",
-        "official_domains": ["validbank.com"],
-        "canonical_url": "https://malicious.com/",
-        "tokens": ["validbank"],
-    }
-    errors = validate_entry(invalid)
-    assert len(errors) > 0
-    assert "canonical_url host" in errors[0]
+    invalid = BrandEntry(
+        brand_id="bad-bank",
+        display_name="Bad Bank",
+        category="bank",
+        official_domains=["goodbank.com"],
+        canonical_url="https://evil-phish.xyz/",
+        tokens=["badbank"],
+        token_match="substring",
+        verified=True,
+        version=1,
+    )
+    with pytest.raises(ValueError, match="not in official_domains"):
+        invalid.validate_domain_pinning()
 
 
-def test_registry_file_loading():
-    root = Path(__file__).resolve().parent.parent.parent
-    brands_path = root / "registry" / "brands.json"
-    assert brands_path.exists(), "registry/brands.json should exist"
+def test_registry_signing_and_verification(registry):
+    entry = BrandEntry(
+        brand_id="test-bank",
+        display_name="Test Bank",
+        category="bank",
+        official_domains=["testbank.com"],
+        canonical_url="https://testbank.com/",
+        tokens=["testbank"],
+        token_match="substring",
+        verified=True,
+        version=1,
+    )
 
-    registry = BrandRegistry(brands_file=brands_path)
-    assert len(registry.brands) >= 624
+    sig = registry.sign_entry(entry)
+    assert sig is not None
+    assert registry.verify_entry(entry) is True
 
-    # Example bank lookup
-    eb = registry.get_brand("examplebank")
-    assert eb is not None
-    assert eb["display_name"] == "Example Bank"
+    # Tampering with display name
+    entry.display_name = "Tampered Bank"
+    assert registry.verify_entry(entry) is False
 
-    # Domain lookup
-    found = registry.find_by_domain("examplebank.bank.in")
-    assert found is not None
-    assert found["brand_id"] == "examplebank"
+
+def test_redirect_signature_and_tampering(registry):
+    name = "Example Bank"
+    url = "https://www.examplebank.bank.in/"
+    sig = registry.sign_redirect(name, url)
+
+    assert registry.verify_redirect(name, url, sig) is True
+
+    # Tamper with URL
+    assert registry.verify_redirect(name, "https://attacker.com/", sig) is False
+    # Tamper with Name
+    assert registry.verify_redirect("Fake Bank", url, sig) is False
+    # Tamper with signature
+    assert registry.verify_redirect(name, url, sig[:-4] + "AAAA") is False
+
+
+def test_loaded_registry_integrity():
+    reg = load_registry()
+    brands = reg.all_brands()
+    assert len(brands) >= 624
+
+    # Check that examplebank is present
+    ex = reg.get("examplebank")
+    assert ex is not None
+    assert "examplebank.bank.in" in ex.official_domains
+    assert ex.verified is True
+
+    # Verify official domain lookup
+    assert reg.is_official("sbi.co.in") is True
+    assert reg.is_official("hdfcbank.com") is True
+    assert reg.is_official("evilbank.com") is False

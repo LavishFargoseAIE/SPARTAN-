@@ -1,281 +1,180 @@
 """
-Lookalike and domain spoofing detection engine.
-Detects typosquatting, combosquatting, homoglyphs, IDN punycode abuse,
-subdomain abuse, and suspicious keyword combinations.
+Lookalike engine: detects typosquatting, homoglyphs, combosquatting,
+subdomain abuse, and Punycode tricks against registered brands.
 """
 
 from __future__ import annotations
 import re
 import unicodedata
-from typing import Any, Dict, List, Optional, Set, Tuple
+from dataclasses import dataclass
+from typing import List, Optional, Tuple
 
 import tldextract
 from confusable_homoglyphs import confusables
 from rapidfuzz.distance import Levenshtein
 
-from app.normalize import NormalizedHost
+from app.normalize import NormalizedHost, normalize_host
+from app.registry import BrandEntry
 
-# Skeleton normalization table (visual confusables)
-SKELETON_TABLE = str.maketrans({
-    "0": "o",
-    "1": "l",
-    "3": "e",
-    "4": "a",
-    "5": "s",
-    "7": "t",
-    "8": "b",
-    "$": "s",
-    "@": "a",
-    "|": "l",
-    "!": "l",
-})
+TABLE = str.maketrans("0135$@", "oleass")
 
-# Suspicious security / trust keywords commonly used in financial phishing
 TRUST_WORDS = {
-    "login", "signin", "secure", "security", "verify", "verification",
-    "update", "kyc", "portal", "netbanking", "auth", "authenticate",
-    "banking", "account", "support", "service", "help", "otp",
-    "claim", "refund", "card", "alert", "official", "validation", "ebank"
+    "login", "signin", "secure", "security", "kyc", "update",
+    "verify", "verification", "support", "helpdesk", "account",
+    "portal", "netbanking", "banking", "auth", "otp", "password",
+    "service", "pay", "payment", "refund", "claim", "alert"
 }
 
-# Suspicious TLDs frequently used for throwaway phishing sites
 SUSPICIOUS_TLDS = {
-    "xyz", "top", "club", "site", "online", "work", "info", "buzz",
-    "icu", "vip", "fit", "cfd", "rest", "cam", "loan", "tk", "ml", "ga", "cf", "gq"
+    "xyz", "top", "tk", "ml", "ga", "cf", "gq", "buzz", "club",
+    "work", "click", "link", "online", "site", "shop", "vip",
+    "icu", "rest", "cam", "loan", "stream", "download"
 }
 
 
 def skeleton(label: str) -> str:
-    """Normalize unicode, replace common ASCII visual substitutions."""
+    """Normalize label into skeleton format: NFKC, rn->m, vv->w, leetspeak mapping."""
     s = unicodedata.normalize("NFKC", label.lower())
     s = s.replace("rn", "m").replace("vv", "w")
-    return s.translate(SKELETON_TABLE)
+    return s.translate(TABLE)
 
 
-def has_mixed_scripts_or_confusables(label: str) -> bool:
-    """Check if label contains homoglyphs or mixed character scripts."""
-    try:
-        return bool(confusables.is_confusable(label, preferred_aliases=["latin"]))
-    except Exception:
-        return False
-
-
-def is_token_in_text(token: str, text: str, min_len_for_unbounded: int = 4) -> bool:
-    """
-    Check if token is in text.
-    For short tokens (length < 4), require word boundaries (start/end or delimited by hyphens/dots/digits).
-    """
-    if not token or not text:
-        return False
-    if len(token) >= min_len_for_unbounded:
-        return token in text
-
-    pattern = rf"(?:^|[-._0-9]){re.escape(token)}(?:$|[-._0-9])"
-    return bool(re.search(pattern, text))
-
-
+@dataclass
 class LookalikeResult:
-    def __init__(
-        self,
-        score: float,
-        brand: Optional[Dict[str, Any]] = None,
-        reasons: Optional[List[str]] = None,
-        differing_part: Optional[str] = None,
-        is_subdomain_abuse: bool = False,
-    ):
-        self.score = score
-        self.brand = brand
-        self.reasons = reasons or []
-        self.differing_part = differing_part
-        self.is_subdomain_abuse = is_subdomain_abuse
+    score: float
+    brand: Optional[BrandEntry]
+    reasons: List[str]
+    matched_token: Optional[str] = None
 
 
-def evaluate_lookalike(
-    norm: NormalizedHost,
-    brands: List[Dict[str, Any]],
+def compute_lookalike(
+    norm_host: NormalizedHost,
+    brands: List[BrandEntry],
 ) -> LookalikeResult:
     """
-    Evaluate host lookalike risk against all registered brands.
-    Precision over recall: exact match on official_domains returns 0.0 immediately.
+    Score L (0.0 to 1.0) and identify the closest brand if impersonation is detected.
+    Genuine registrable domains in official_domains return score 0.0 immediately.
     """
-    host = norm.host
-    registrable = norm.registrable_domain
-    domain_label = norm.domain
-    subdomain = norm.subdomain
+    host = norm_host.hostname
+    registrable = norm_host.registrable
+    subdomain = norm_host.subdomain
+    domain_label = norm_host.domain
 
-    # Map of all registered official/associated domains to their owning brand
-    all_registered_official_domains: Dict[str, Dict[str, Any]] = {}
-    for b in brands:
-        for d in b.get("official_domains", []):
-            all_registered_official_domains[d.lower()] = b
-        for d in b.get("associated_domains", []):
-            all_registered_official_domains[d.lower()] = b
+    label_skel = skeleton(domain_label)
+    sub_skel = skeleton(subdomain)
+    host_no_dash = skeleton(host.replace("-", "").replace(".", ""))
 
-    # Standard subdomain prefixes that are always legitimate for official domains
-    SAFE_SUBPREFIXES = {"", "www", "login", "secure", "retail", "portal",
-                        "m", "mobile", "app", "api", "netbanking", "online"}
-
-    # 1. Exact match against official domain or safe subdomain of official domain
-    for dom, owning_brand in all_registered_official_domains.items():
-        if host == dom:
-            return LookalikeResult(score=0.0, brand=owning_brand)
-        if host.endswith("." + dom):
-            # Check if the leftmost subdomain label is a recognized safe prefix
-            prefix_part = host[: len(host) - len(dom) - 1]  # e.g. 'www' or 'login.retail'
-            top_label = prefix_part.split(".")[0]
-            if owning_brand.get("shared_hosting_risk", False):
-                # shared_hosting_risk brands: only safe prefixes on the direct subdomain level
-                if top_label in SAFE_SUBPREFIXES:
-                    return LookalikeResult(score=0.0, brand=owning_brand)
-                # Arbitrary user subdomains on shared platforms continue to lookalike analysis
-            else:
-                return LookalikeResult(score=0.0, brand=owning_brand)
-
-    # If the host's registrable domain exactly matches a registered official domain,
-    # the host itself is NOT an attacker lookalike of a different brand.
-    # (e.g. en.wikipedia.org registrable=wikipedia.org → wikipedia.org is registered → SAFE)
-    if registrable in all_registered_official_domains:
-        return LookalikeResult(score=0.0, brand=all_registered_official_domains[registrable])
-
-    clean_domain_label = skeleton(domain_label)
-    clean_host_raw = skeleton(host)
-    clean_subdomain = skeleton(subdomain) if subdomain else ""
+    # Segment tokens from host for exact_only boundary matching
+    host_tokens = set(re.findall(r"[a-z0-9]+", skeleton(host)))
 
     best_score = 0.0
-    best_brand: Optional[Dict[str, Any]] = None
+    best_match_len = 0
+    best_brand: Optional[BrandEntry] = None
     best_reasons: List[str] = []
-    best_differing: Optional[str] = None
-    best_token_len = 0
-    is_subdomain_abuse = False
-
-    has_homoglyphs = has_mixed_scripts_or_confusables(domain_label) or norm.is_punycode
+    best_token: Optional[str] = None
 
     for b in brands:
-        tokens = [t.lower() for t in b.get("tokens", [])]
-        if not tokens:
-            continue
+        # Core Rule: Genuine registrable domain or exact official domain match -> 0.0 immediately
+        if registrable in b.official_domains or host in b.official_domains:
+            return LookalikeResult(score=0.0, brand=b, reasons=[])
 
-        token_match_type = b.get("token_match", "substring")
-        brand_score = 0.0
-        reasons: List[str] = []
-        differing: Optional[str] = None
-        sub_abuse = False
-        matched_token_len = 0
+        for tok in b.tokens:
+            tok_skel = skeleton(tok)
+            t_len = len(tok_skel)
+            if t_len == 0:
+                continue
 
-        for t in tokens:
-            skel_t = skeleton(t)
-            t_len = len(t)
+            # 1. Edit similarity on the primary domain label
+            l_len = len(label_skel)
+            max_len = max(l_len, t_len)
+            dist = Levenshtein.distance(label_skel, tok_skel)
+            sim = (1.0 - dist / max_len) if max_len > 0 else 0.0
 
-            # 1. Edit distance similarity on the registrable domain label
-            # Guard: short tokens (< 5 chars) use only exact/near-exact match to avoid false positives.
-            # Guard: token must be at least half the length of the domain label to flag typosquat.
-            max_len = max(len(clean_domain_label), len(skel_t))
-            if max_len > 0:
-                dist = Levenshtein.distance(clean_domain_label, skel_t)
-                sim = 1.0 - (dist / max_len)
+            # 2. Contains brand token inside host / domain (Combosquatting)
+            contains = False
+            # Short tokens (< 3 chars, e.g. 'x', 'db', 'sc') or exact_only brands must match isolated segments
+            if b.token_match == "exact_only" or t_len < 3:
+                if tok_skel in host_tokens or label_skel == tok_skel:
+                    contains = True
+                elif dist <= 1 and t_len >= 4:
+                    contains = True
             else:
-                sim = 0.0
+                if tok_skel in host_no_dash:
+                    contains = True
 
-            # Typosquatting: high similarity but not identical.
-            # Extra guard: token must cover at least 50% of domain label length to avoid noise.
-            length_ratio = len(skel_t) / max(len(clean_domain_label), 1)
-            if sim >= 0.80 and dist > 0 and t_len >= 5 and length_ratio >= 0.50:
-                score = sim
-                if score > brand_score or (score == brand_score and t_len > matched_token_len):
-                    brand_score = score
-                    differing = domain_label
-                    reasons.append("typosquat_domain")
-                    matched_token_len = t_len
+            # 3. Subdomain abuse: brand token is inside the subdomain of an unrelated registrable domain
+            in_subdomain = False
+            if b.token_match == "exact_only" or t_len < 3:
+                if tok_skel in re.findall(r"[a-z0-9]+", sub_skel):
+                    in_subdomain = True
+            else:
+                if tok_skel in sub_skel:
+                    in_subdomain = True
 
-            # 2. Combosquatting: brand token inside domain or host
-            if token_match_type == "substring":
-                # 2a. Visual ASCII substitution: skeleton(domain) == skeleton(token) but raw domain != raw token
-                # e.g. hdfcb4nk -> skeleton=hdfcbank == token hdfcbank (attacker used '4' instead of 'a')
-                if clean_domain_label == skel_t and domain_label.lower() != t:
-                    score = 0.93
-                    reasons.append("combosquat_with_security_keyword")
-                    if score > brand_score or (score == brand_score and t_len > matched_token_len):
-                        brand_score = score
-                        differing = domain_label
-                        matched_token_len = t_len
+            # Calculate base score for this token
+            cand_score = sim
+            reasons = []
 
-                elif is_token_in_text(skel_t, clean_domain_label) and clean_domain_label != skel_t:
-                    score = 0.85
-                    has_trust_word = any(w in domain_label for w in TRUST_WORDS)
-                    if has_trust_word:
-                        score = 0.92
-                        reasons.append("combosquat_with_security_keyword")
-                    else:
-                        reasons.append("combosquat_domain")
-                    if score > brand_score or (score == brand_score and t_len > matched_token_len):
-                        brand_score = score
-                        differing = domain_label
-                        matched_token_len = t_len
+            if sim >= 0.80:
+                reasons.append("imitates_brand")
 
-                elif is_token_in_text(skel_t, clean_host_raw) and clean_domain_label != skel_t:
-                    score = 0.75
-                    reasons.append("brand_token_in_hostname")
-                    if score > brand_score or (score == brand_score and t_len > matched_token_len):
-                        brand_score = score
-                        differing = host
-                        matched_token_len = t_len
+            if contains:
+                cand_score = max(cand_score, 0.75)
+                reasons.append("imitates_brand")
+                reasons.append("combosquatting")
 
-            # 3. Subdomain abuse: attacker puts genuine brand domain/token in the subdomain
-            # e.g. "examplebank.bank.in.verify-user.xyz"
-            if clean_subdomain and (
-                is_token_in_text(skel_t, clean_subdomain)
-                or any(dom in clean_subdomain for dom in b.get("official_domains", []))
-            ):
-                if registrable not in b.get("official_domains", []):
-                    score = 0.95
-                    sub_abuse = True
-                    reasons.append("subdomain_brand_impersonation")
-                    if score > brand_score or (score == brand_score and t_len > matched_token_len):
-                        brand_score = score
-                        differing = subdomain
-                        matched_token_len = t_len
+            if in_subdomain:
+                cand_score = max(cand_score, 0.90)
+                reasons.append("subdomain_abuse")
+                reasons.append("imitates_brand")
 
-        # For exact_only brands (e.g. Meta, Target, Signal, Box, Max, Line):
-        if token_match_type == "exact_only":
-            for t in tokens:
-                skel_t = skeleton(t)
-                t_len = len(t)
-                if clean_domain_label == skel_t:
-                    score = 0.85
-                    reasons.append("unauthorized_tld_brand_impersonation")
-                    if score > brand_score or (score == brand_score and t_len > matched_token_len):
-                        brand_score = score
-                        differing = domain_label
-                        matched_token_len = t_len
-                elif Levenshtein.distance(clean_domain_label, skel_t) == 1 and len(skel_t) >= 4:
-                    score = 0.80
-                    reasons.append("typosquat_domain")
-                    if score > brand_score or (score == brand_score and t_len > matched_token_len):
-                        brand_score = score
-                        differing = domain_label
-                        matched_token_len = t_len
+            # Trust word detection alongside lookalike
+            found_trust_words = [tw for tw in TRUST_WORDS if tw in host_tokens or tw in host_no_dash]
+            if found_trust_words and cand_score >= 0.60:
+                cand_score = min(1.0, cand_score + 0.10)
+                reasons.append("trust_word_abuse")
 
-        if brand_score > 0.0:
-            if has_homoglyphs:
-                brand_score = min(1.0, brand_score + 0.15)
-                reasons.append("punycode_or_homoglyph_detected")
+            # TLD risk signal
+            ext_suffix = norm_host.suffix
+            if ext_suffix in SUSPICIOUS_TLDS and cand_score >= 0.60:
+                cand_score = min(1.0, cand_score + 0.10)
+                reasons.append("suspicious_tld")
+            elif b.category == "bank" and cand_score >= 0.60:
+                # If bank and not ending with brand's official endings
+                official_suffixes = {tldextract.extract(od).suffix for od in b.official_domains}
+                if ext_suffix not in official_suffixes:
+                    cand_score = min(1.0, cand_score + 0.05)
+                    reasons.append("suspicious_tld")
 
-            if norm.suffix in SUSPICIOUS_TLDS and b.get("category") in ("bank", "government", "payment"):
-                brand_score = min(1.0, brand_score + 0.08)
-                reasons.append("suspicious_tld_for_financial_brand")
+            # Punycode / IDN penalty
+            if norm_host.is_punycode or "xn--" in host:
+                cand_score = min(1.0, cand_score + 0.15)
+                reasons.append("punycode_homoglyph")
 
-            if brand_score > best_score or (brand_score == best_score and matched_token_len > best_token_len):
-                best_score = brand_score
+            # Check for mixed-script confusables
+            if confusables.is_confusable(norm_host.decoded_hostname):
+                cand_score = min(1.0, cand_score + 0.10)
+                if "punycode_homoglyph" not in reasons:
+                    reasons.append("punycode_homoglyph")
+
+            # Select best match: prefer higher score, then longer matched token
+            if cand_score > best_score or (cand_score == best_score and t_len > best_match_len):
+                best_score = cand_score
+                best_match_len = t_len
                 best_brand = b
-                best_reasons = list(set(reasons))
-                best_differing = differing
-                best_token_len = matched_token_len
-                is_subdomain_abuse = sub_abuse
+                best_reasons = list(dict.fromkeys(reasons))
+                best_token = tok
+
+    # Clamp between 0.0 and 1.0
+    best_score = max(0.0, min(1.0, best_score))
+
+    # If the score is negligible, discard brand match to prevent false positives
+    if best_score < 0.35:
+        return LookalikeResult(score=best_score, brand=None, reasons=[])
 
     return LookalikeResult(
         score=best_score,
         brand=best_brand,
         reasons=best_reasons,
-        differing_part=best_differing,
-        is_subdomain_abuse=is_subdomain_abuse,
+        matched_token=best_token,
     )
