@@ -743,7 +743,7 @@ async function blockHost(host) {
 }
 
 // src/background.ts
-var API_BASE = "http://127.0.0.1:8000";
+var API_BASE = "http://172.16.10.45:8000";
 var CHECK_ENDPOINT = `${API_BASE}/v1/check`;
 var localCache = /* @__PURE__ */ new Map();
 var bypassedHosts = /* @__PURE__ */ new Set();
