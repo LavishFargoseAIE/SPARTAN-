@@ -744,11 +744,291 @@
     }
   }
 
+  // src/detector.ts
+  var TOP_BRAND_RULES = [
+    {
+      id: "amazon-india",
+      name: "Amazon India",
+      official_domains: ["amazon.in", "amazon.com"],
+      canonical_url: "https://www.amazon.in",
+      tokens: ["amazon", "amazn", "amzn"]
+    },
+    {
+      id: "state-bank-of-india",
+      name: "State Bank of India",
+      official_domains: ["sbi.co.in", "onlinesbi.sbi", "onlinesbi.com"],
+      canonical_url: "https://sbi.co.in/",
+      tokens: ["onlinesbi", "sbi", "statebankofindia", "statebank"]
+    },
+    {
+      id: "hdfc-bank",
+      name: "HDFC Bank",
+      official_domains: ["hdfcbank.com"],
+      canonical_url: "https://hdfcbank.com/",
+      tokens: ["hdfcbank", "hdfc"]
+    },
+    {
+      id: "icici-bank",
+      name: "ICICI Bank",
+      official_domains: ["icicibank.com"],
+      canonical_url: "https://icicibank.com/",
+      tokens: ["icicibank", "icici"]
+    },
+    {
+      id: "axis-bank",
+      name: "Axis Bank",
+      official_domains: ["axisbank.com"],
+      canonical_url: "https://axisbank.com/",
+      tokens: ["axisbank", "axis"]
+    },
+    {
+      id: "punjab-national-bank",
+      name: "Punjab National Bank",
+      official_domains: ["pnbindia.in", "netpnb.com"],
+      canonical_url: "https://pnbindia.in/",
+      tokens: ["pnbindia", "pnb", "punjabnationalbank"]
+    },
+    {
+      id: "bank-of-baroda",
+      name: "Bank of Baroda",
+      official_domains: ["bankofbaroda.in", "bobibanking.com"],
+      canonical_url: "https://bankofbaroda.in/",
+      tokens: ["bankofbaroda", "bobibanking"]
+    },
+    {
+      id: "kotak-mahindra-bank",
+      name: "Kotak Mahindra Bank",
+      official_domains: ["kotak.com"],
+      canonical_url: "https://kotak.com/",
+      tokens: ["kotak", "kotakmahindrabank"]
+    },
+    {
+      id: "income-tax-department",
+      name: "Income Tax Department",
+      official_domains: ["incometax.gov.in", "incometaxindia.gov.in"],
+      canonical_url: "https://incometax.gov.in/",
+      tokens: ["incometax", "incometaxefiling", "efiling"]
+    },
+    {
+      id: "uidai-aadhaar",
+      name: "UIDAI Aadhaar",
+      official_domains: ["uidai.gov.in"],
+      canonical_url: "https://uidai.gov.in/",
+      tokens: ["uidai", "aadhaar", "myaadhaar"]
+    },
+    {
+      id: "irctc",
+      name: "IRCTC",
+      official_domains: ["irctc.co.in"],
+      canonical_url: "https://irctc.co.in/",
+      tokens: ["irctc"]
+    },
+    {
+      id: "paytm",
+      name: "Paytm",
+      official_domains: ["paytm.com"],
+      canonical_url: "https://paytm.com/",
+      tokens: ["paytm"]
+    },
+    {
+      id: "phonepe",
+      name: "PhonePe",
+      official_domains: ["phonepe.com"],
+      canonical_url: "https://phonepe.com/",
+      tokens: ["phonepe"]
+    },
+    {
+      id: "google",
+      name: "Google",
+      official_domains: ["google.com", "google.co.in"],
+      canonical_url: "https://google.com/",
+      tokens: ["google"]
+    },
+    {
+      id: "microsoft",
+      name: "Microsoft",
+      official_domains: ["microsoft.com", "live.com", "office.com"],
+      canonical_url: "https://microsoft.com/",
+      tokens: ["microsoft", "office365"]
+    },
+    {
+      id: "apple",
+      name: "Apple",
+      official_domains: ["apple.com", "icloud.com"],
+      canonical_url: "https://apple.com/",
+      tokens: ["apple", "icloud"]
+    },
+    {
+      id: "netflix",
+      name: "Netflix",
+      official_domains: ["netflix.com"],
+      canonical_url: "https://netflix.com/",
+      tokens: ["netflix"]
+    },
+    {
+      id: "flipkart",
+      name: "Flipkart",
+      official_domains: ["flipkart.com"],
+      canonical_url: "https://flipkart.com/",
+      tokens: ["flipkart"]
+    },
+    {
+      id: "paypal",
+      name: "PayPal",
+      official_domains: ["paypal.com"],
+      canonical_url: "https://paypal.com/",
+      tokens: ["paypal"]
+    }
+  ];
+  var DECEPTIVE_KEYWORDS = [
+    "login",
+    "secure",
+    "verify",
+    "verification",
+    "kyc",
+    "update",
+    "account",
+    "banking",
+    "support",
+    "help",
+    "service",
+    "portal",
+    "signin",
+    "sign-in",
+    "claim",
+    "refund",
+    "bonus",
+    "sale",
+    "deal",
+    "offer",
+    "discount",
+    "free",
+    "gift",
+    "win",
+    "alert"
+  ];
+  var HIGH_RISK_TLDS = [
+    ".xyz",
+    ".top",
+    ".click",
+    ".sale",
+    ".live",
+    ".online",
+    ".site",
+    ".link",
+    ".shop",
+    ".info",
+    ".club",
+    ".work",
+    ".icu",
+    ".vip",
+    ".buzz",
+    ".fit",
+    ".loan"
+  ];
+  function toSkeleton(input) {
+    return input.toLowerCase().replace(/rn/g, "m").replace(/vv/g, "w").replace(/0/g, "o").replace(/1/g, "l").replace(/3/g, "e").replace(/5/g, "s").replace(/\$/g, "s").replace(/@/g, "a");
+  }
+  async function detectHostLocally(host) {
+    const cleanHost = host.toLowerCase().trim();
+    if (await isOfficial(cleanHost)) {
+      return {
+        host: cleanHost,
+        level: "SAFE",
+        score: 0,
+        reasons: ["matches_official_allowlist"]
+      };
+    }
+    const skel = toSkeleton(cleanHost);
+    const flatSkel = skel.replace(/[-_.]/g, "");
+    const hasHomoglyphs = cleanHost !== skel;
+    const hasSuspiciousTld = HIGH_RISK_TLDS.some((tld) => cleanHost.endsWith(tld));
+    const hasDeceptiveKeyword = DECEPTIVE_KEYWORDS.some(
+      (kw) => cleanHost.includes(kw) || skel.includes(kw)
+    );
+    for (const b of TOP_BRAND_RULES) {
+      if (b.official_domains.some((d) => cleanHost === d || cleanHost.endsWith("." + d))) {
+        return {
+          host: cleanHost,
+          level: "SAFE",
+          score: 0,
+          reasons: ["matches_official_allowlist"]
+        };
+      }
+      for (const t of b.tokens) {
+        const tokenSkel = toSkeleton(t);
+        const isImpersonating = cleanHost.includes(t) || skel.includes(tokenSkel) || flatSkel.includes(tokenSkel);
+        if (isImpersonating) {
+          const reasons = ["imitates_brand"];
+          let riskScore = 91;
+          if (hasDeceptiveKeyword) {
+            reasons.push("combosquatting");
+            riskScore = Math.min(riskScore + 3, 98);
+          }
+          if (hasHomoglyphs) {
+            reasons.push("punycode_homoglyph");
+            riskScore = Math.min(riskScore + 2, 99);
+          }
+          if (hasSuspiciousTld) {
+            reasons.push("suspicious_tld");
+            riskScore = Math.min(riskScore + 2, 99);
+          }
+          return {
+            host: cleanHost,
+            level: "DANGEROUS",
+            score: riskScore,
+            reasons,
+            brand: {
+              name: b.name,
+              confidence: 0.94,
+              official_url: b.canonical_url
+            }
+          };
+        }
+      }
+    }
+    if (hasSuspiciousTld && hasDeceptiveKeyword) {
+      return {
+        host: cleanHost,
+        level: "SUSPICIOUS",
+        score: 65,
+        reasons: ["suspicious_tld", "trust_word_abuse"]
+      };
+    }
+    return {
+      host: cleanHost,
+      level: "SAFE",
+      score: 0,
+      reasons: ["safe_navigation"]
+    };
+  }
+
   // src/background.ts
   var API_BASE = "http://127.0.0.1:8000";
   var CHECK_ENDPOINT = `${API_BASE}/v1/check`;
   var localCache = /* @__PURE__ */ new Map();
   var bypassedHosts = /* @__PURE__ */ new Set();
+  var latestGlobalVerdict = null;
+  function enforceExtensionIcon() {
+    if (chrome.action?.setIcon) {
+      chrome.action.setIcon({
+        path: {
+          "16": "icons/icon-16.png",
+          "19": "icons/icon-19.png",
+          "24": "icons/icon-24.png",
+          "32": "icons/icon-32.png",
+          "38": "icons/icon-38.png",
+          "48": "icons/icon-48.png",
+          "128": "icons/icon-128.png"
+        }
+      }).catch(() => {
+      });
+    }
+  }
+  enforceExtensionIcon();
+  chrome.runtime.onInstalled.addListener(() => enforceExtensionIcon());
+  chrome.runtime.onStartup.addListener(() => enforceExtensionIcon());
+  chrome.tabs.onActivated.addListener(() => enforceExtensionIcon());
   if (chrome.storage?.session?.setAccessLevel) {
     chrome.storage.session.setAccessLevel({
       accessLevel: "TRUSTED_AND_UNTRUSTED_CONTEXTS"
@@ -761,27 +1041,30 @@
       sendResponse({ success: true });
       return;
     }
-    if (message?.action === "getVerdictForTab") {
+    if (message?.action === "getVerdictForTab" || message?.action === "getLatestVerdict") {
       const tabId = message.tabId;
       const key = "v" + tabId;
       (async () => {
         let v = null;
-        if (chrome.storage?.session) {
+        if (chrome.storage?.local) {
           try {
-            const res = await chrome.storage.session.get([key, "latest_verdict"]);
-            v = res[key] || res["latest_verdict"];
+            const res = await chrome.storage.local.get([key, "active_warning_verdict", "latest_verdict"]);
+            v = res[key] || res["active_warning_verdict"] || res["latest_verdict"];
           } catch {
           }
         }
-        if (!v && chrome.storage?.local) {
+        if (!v && chrome.storage?.session) {
           try {
-            const res = await chrome.storage.local.get([key, "latest_verdict"]);
-            v = res[key] || res["latest_verdict"];
+            const res = await chrome.storage.session.get([key, "active_warning_verdict", "latest_verdict"]);
+            v = res[key] || res["active_warning_verdict"] || res["latest_verdict"];
           } catch {
           }
         }
         if (!v && message.host) {
           v = await getCachedVerdict(message.host);
+        }
+        if (!v) {
+          v = latestGlobalVerdict;
         }
         sendResponse({ verdict: v });
       })();
@@ -839,7 +1122,12 @@
         return verdict;
       }
     } catch (err) {
-      console.warn(`[SiteGuard] API timeout or unreachable for ${host}. Failing open.`);
+      console.warn(`[SiteGuard] API timeout or unreachable for ${host}. Falling back to local detector.`);
+    }
+    const localVerdict = await detectHostLocally(host);
+    if (localVerdict.level !== "SAFE") {
+      setCachedVerdict(host, localVerdict, 3600);
+      return localVerdict;
     }
     return {
       host,
@@ -884,17 +1172,20 @@
         timestamp: Date.now(),
         ...verdict
       };
+      latestGlobalVerdict = sessionPayload;
       if (chrome.storage?.session) {
         await chrome.storage.session.set({
           [sessionKey]: sessionPayload,
-          latest_verdict: sessionPayload
+          latest_verdict: sessionPayload,
+          active_warning_verdict: sessionPayload
         }).catch(() => {
         });
       }
       if (chrome.storage?.local) {
         await chrome.storage.local.set({
           [sessionKey]: sessionPayload,
-          latest_verdict: sessionPayload
+          latest_verdict: sessionPayload,
+          active_warning_verdict: sessionPayload
         }).catch(() => {
         });
       }

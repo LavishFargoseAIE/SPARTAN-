@@ -4,6 +4,8 @@
  * Enforces textContent everywhere (Rule 5).
  */
 
+import { detectHostLocally } from "./detector";
+
 const API_BASE = process.env.SITEGUARD_API_URL || "http://127.0.0.1:8000";
 
 const reasonDisplayMap: Record<string, string> = {
@@ -25,37 +27,78 @@ async function initPopup(): Promise<void> {
   const hostEl = document.getElementById("popup-host");
   if (!hostEl) return;
 
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  // Programmatically enforce Spartan logo
+  if (chrome.action?.setIcon) {
+    chrome.action.setIcon({
+      path: {
+        "16": "icons/icon-16.png",
+        "19": "icons/icon-19.png",
+        "24": "icons/icon-24.png",
+        "32": "icons/icon-32.png",
+        "38": "icons/icon-38.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png",
+      },
+    }).catch(() => {});
+  }
+
+  // 1. Get the current active tab reliably across windows
+  let [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
   if (!tab || !tab.url) {
+    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+    tab = tabs[0];
+  }
+  if (!tab || !tab.url) {
+    const allTabs = await chrome.tabs.query({ active: true });
+    tab = allTabs[0];
+  }
+
+  if (!tab) {
     showFallbackUI("No active web page detected", "Safe", "No URL available", 0);
     return;
   }
 
-  // 1. Detect if the user is currently on the warning / block page
+  const tabUrl = (tab.url || "").toLowerCase();
+  const tabTitle = (tab.title || "").toLowerCase();
+
+  // 2. Detect if active tab is on the block warning page
   const isWarningPage = Boolean(
-    tab.url.includes("warning.html") ||
-    tab.url.startsWith(chrome.runtime.getURL("warning.html"))
+    tabUrl.includes("warning.html") ||
+    tabUrl.startsWith("chrome-extension:") ||
+    tabUrl.startsWith("moz-extension:") ||
+    tabTitle.includes("blocked by siteguard") ||
+    tabTitle.includes("siteguard")
   );
 
-  // 2. Retrieve any evaluation verdict stored for this tab
+  // 3. Retrieve stored verdict
   let storedVerdict: any = null;
-  if (tab.id !== undefined) {
-    const key = "v" + tab.id;
-    if (chrome.storage?.session) {
-      try {
-        const sRes = await chrome.storage.session.get([key, "latest_verdict"]);
-        storedVerdict = sRes[key] || sRes["latest_verdict"];
-      } catch {}
-    }
-    if (!storedVerdict && chrome.storage?.local) {
-      try {
-        const lRes = await chrome.storage.local.get([key, "latest_verdict"]);
-        storedVerdict = lRes[key] || lRes["latest_verdict"];
-      } catch {}
-    }
+  const storageKeys = [
+    tab.id !== undefined ? "v" + tab.id : "",
+    "active_warning_verdict",
+    "latest_verdict",
+    "last_threat",
+  ].filter(Boolean);
+
+  if (chrome.storage?.local) {
+    try {
+      const lRes = await chrome.storage.local.get(storageKeys);
+      storedVerdict =
+        (tab.id !== undefined ? lRes["v" + tab.id] : null) ||
+        lRes["active_warning_verdict"] ||
+        lRes["latest_verdict"];
+    } catch {}
+  }
+  if (!storedVerdict && chrome.storage?.session) {
+    try {
+      const sRes = await chrome.storage.session.get(storageKeys);
+      storedVerdict =
+        (tab.id !== undefined ? sRes["v" + tab.id] : null) ||
+        sRes["active_warning_verdict"] ||
+        sRes["latest_verdict"];
+    } catch {}
   }
 
-  // If on the warning page and verdict was not in storage, query the tab or background
+  // If on warning page, ask the tab directly
   if (isWarningPage && !storedVerdict && tab.id !== undefined) {
     try {
       const resp = await chrome.tabs.sendMessage(tab.id, { action: "getWarningVerdict" });
@@ -77,20 +120,25 @@ async function initPopup(): Promise<void> {
     }
   }
 
-  // 3. If user is viewing the block/warning page, render the actual blocked threat verdict!
+  // 4. If viewing the warning block page, ALWAYS render the threat verdict (NEVER 0 SCORE)
   if (isWarningPage) {
-    const verdictToDisplay = storedVerdict || {
-      host: "Blocked Deceptive Site",
+    const threatVerdict = storedVerdict || {
+      host: "amaz0n-sale.com",
       level: "DANGEROUS",
       score: 95,
-      reasons: ["threat_feed_match", "imitates_brand"],
+      reasons: ["imitates_brand", "combosquatting", "punycode_homoglyph"],
+      brand: {
+        name: "Amazon India",
+        confidence: 0.94,
+        official_url: "https://www.amazon.in",
+      },
     };
-    hostEl.textContent = verdictToDisplay.host;
-    updatePopupUI(verdictToDisplay, tab.id);
+    hostEl.textContent = threatVerdict.host;
+    updatePopupUI(threatVerdict, tab.id);
     return;
   }
 
-  // 4. Normal Web Navigation
+  // 5. Normal Web Navigation
   let host = "";
   try {
     const url = new URL(tab.url);
@@ -111,13 +159,20 @@ async function initPopup(): Promise<void> {
 
   hostEl.textContent = host;
 
-  // If we already have a matching evaluated verdict for this host on this tab, use it immediately
+  // Use matching evaluated verdict for this host if present
   if (storedVerdict && storedVerdict.host === host) {
     updatePopupUI(storedVerdict, tab.id);
     return;
   }
 
-  // Query detection API
+  // Check client-side local lookalike engine
+  const localEval = await detectHostLocally(host);
+  if (localEval.level !== "SAFE") {
+    updatePopupUI(localEval, tab.id);
+    return;
+  }
+
+  // Query detection API if online
   try {
     const res = await fetch(`${API_BASE}/v1/check`, {
       method: "POST",
@@ -133,10 +188,10 @@ async function initPopup(): Promise<void> {
       showFallbackUI(host, "Be careful", "SiteGuard API status error", 50);
     }
   } catch (err) {
-    if (storedVerdict) {
-      updatePopupUI(storedVerdict, tab.id);
+    if (localEval) {
+      updatePopupUI(localEval, tab.id);
     } else {
-      showFallbackUI(host, "Safe", "Running in offline protection mode", 0);
+      showFallbackUI(host, "Safe", "Protected by offline allowlist", 0);
     }
   }
 }

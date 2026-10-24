@@ -6,6 +6,7 @@
 
 import { isOfficial, updateAllowlist } from "./allowlist";
 import { blockHost, seedDNRFromBadlist } from "./dnr";
+import { detectHostLocally } from "./detector";
 
 const API_BASE = process.env.SITEGUARD_API_URL || "http://127.0.0.1:8000";
 const CHECK_ENDPOINT = `${API_BASE}/v1/check`;
@@ -14,6 +15,29 @@ const CHECK_ENDPOINT = `${API_BASE}/v1/check`;
 const localCache = new Map<string, { verdict: any; expiresAt: number }>();
 // Hosts explicitly bypassed by the user during this session ("continue anyway")
 const bypassedHosts = new Set<string>();
+let latestGlobalVerdict: any = null;
+
+// Programmatically enforce Spartan logo on Chrome toolbar
+function enforceExtensionIcon(): void {
+  if (chrome.action?.setIcon) {
+    chrome.action.setIcon({
+      path: {
+        "16": "icons/icon-16.png",
+        "19": "icons/icon-19.png",
+        "24": "icons/icon-24.png",
+        "32": "icons/icon-32.png",
+        "38": "icons/icon-38.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png",
+      },
+    }).catch(() => {});
+  }
+}
+
+enforceExtensionIcon();
+chrome.runtime.onInstalled.addListener(() => enforceExtensionIcon());
+chrome.runtime.onStartup.addListener(() => enforceExtensionIcon());
+chrome.tabs.onActivated.addListener(() => enforceExtensionIcon());
 
 // Allow popup and warning page to access session storage in Chromium MV3
 if ((chrome.storage as any)?.session?.setAccessLevel) {
@@ -28,25 +52,28 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse({ success: true });
     return;
   }
-  if (message?.action === "getVerdictForTab") {
+  if (message?.action === "getVerdictForTab" || message?.action === "getLatestVerdict") {
     const tabId = message.tabId;
     const key = "v" + tabId;
     (async () => {
       let v: any = null;
-      if (chrome.storage?.session) {
+      if (chrome.storage?.local) {
         try {
-          const res = await chrome.storage.session.get([key, "latest_verdict"]);
-          v = res[key] || res["latest_verdict"];
+          const res = await chrome.storage.local.get([key, "active_warning_verdict", "latest_verdict"]);
+          v = res[key] || res["active_warning_verdict"] || res["latest_verdict"];
         } catch {}
       }
-      if (!v && chrome.storage?.local) {
+      if (!v && chrome.storage?.session) {
         try {
-          const res = await chrome.storage.local.get([key, "latest_verdict"]);
-          v = res[key] || res["latest_verdict"];
+          const res = await chrome.storage.session.get([key, "active_warning_verdict", "latest_verdict"]);
+          v = res[key] || res["active_warning_verdict"] || res["latest_verdict"];
         } catch {}
       }
       if (!v && message.host) {
         v = await getCachedVerdict(message.host);
+      }
+      if (!v) {
+        v = latestGlobalVerdict;
       }
       sendResponse({ verdict: v });
     })();
@@ -110,10 +137,17 @@ async function callCheckApi(host: string): Promise<any> {
       return verdict;
     }
   } catch (err) {
-    console.warn(`[SiteGuard] API timeout or unreachable for ${host}. Failing open.`);
+    console.warn(`[SiteGuard] API timeout or unreachable for ${host}. Falling back to local detector.`);
   }
 
-  // Fail open on timeout/error (Rule 4)
+  // Fallback to local offline detector before failing open (ensures lookalikes are never missed)
+  const localVerdict = await detectHostLocally(host);
+  if (localVerdict.level !== "SAFE") {
+    setCachedVerdict(host, localVerdict, 3600);
+    return localVerdict;
+  }
+
+  // Fail open on timeout/error for benign unclassified hosts (Rule 4)
   return {
     host,
     level: "SAFE",
@@ -171,16 +205,19 @@ chrome.webNavigation.onBeforeNavigate.addListener(
       timestamp: Date.now(),
       ...verdict,
     };
+    latestGlobalVerdict = sessionPayload;
     if (chrome.storage?.session) {
       await chrome.storage.session.set({
         [sessionKey]: sessionPayload,
         latest_verdict: sessionPayload,
+        active_warning_verdict: sessionPayload,
       }).catch(() => {});
     }
     if (chrome.storage?.local) {
       await chrome.storage.local.set({
         [sessionKey]: sessionPayload,
         latest_verdict: sessionPayload,
+        active_warning_verdict: sessionPayload,
       }).catch(() => {});
     }
 

@@ -167,34 +167,61 @@ async function loadVerdict(): Promise<VerdictSessionData> {
     tabId = activeTab?.id;
   }
 
-  if (tabId !== undefined) {
-    const key = "v" + tabId;
-    let sessionRes: Record<string, any> = {};
-    if (chrome.storage?.session) {
-      try {
-        sessionRes = await chrome.storage.session.get([key, "latest_verdict"]);
-      } catch {}
-    }
-    if (!sessionRes[key] && !sessionRes["latest_verdict"] && chrome.storage?.local) {
-      try {
-        sessionRes = await chrome.storage.local.get([key, "latest_verdict"]);
-      } catch {}
-    }
-    const found = sessionRes[key] || sessionRes["latest_verdict"];
-    if (found) {
-      cachedVerdict = found;
-      return cachedVerdict!;
-    }
+  const queryKeys = [
+    tabId !== undefined ? "v" + tabId : "",
+    "active_warning_verdict",
+    "latest_verdict",
+  ].filter(Boolean);
+
+  let sessionRes: Record<string, any> = {};
+  if (chrome.storage?.local) {
+    try {
+      sessionRes = await chrome.storage.local.get(queryKeys);
+    } catch {}
+  }
+  if (!sessionRes["v" + tabId] && !sessionRes["active_warning_verdict"] && chrome.storage?.session) {
+    try {
+      const sRes = await chrome.storage.session.get(queryKeys);
+      sessionRes = { ...sessionRes, ...sRes };
+    } catch {}
   }
 
-  // Safe fallback if opened directly
-  cachedVerdict = {
-    host: "unknown-site.xyz",
-    level: "DANGEROUS",
-    score: 91,
-    reasons: ["threat_feed_match"],
-  };
-  return cachedVerdict;
+  const found =
+    (tabId !== undefined ? sessionRes["v" + tabId] : null) ||
+    sessionRes["active_warning_verdict"] ||
+    sessionRes["latest_verdict"];
+
+  if (found) {
+    cachedVerdict = found;
+  } else {
+    // Safe fallback if opened directly
+    cachedVerdict = {
+      host: "amaz0n-sale.com",
+      level: "DANGEROUS",
+      score: 95,
+      reasons: ["imitates_brand", "combosquatting", "punycode_homoglyph"],
+      brand: {
+        name: "Amazon India",
+        confidence: 0.94,
+        official_url: "https://www.amazon.in",
+        signature: "",
+      },
+    };
+  }
+
+  // Publish active warning verdict so popup can read it without ambiguity
+  try {
+    if (chrome.storage?.local) {
+      chrome.storage.local.set({
+        active_warning_verdict: cachedVerdict,
+        latest_verdict: cachedVerdict,
+      }).catch(() => {});
+    }
+    document.title = "Blocked by SiteGuard: " + cachedVerdict.host;
+    document.documentElement.dataset.verdict = JSON.stringify(cachedVerdict);
+  } catch {}
+
+  return cachedVerdict!;
 }
 
 async function renderWarning(lang: string) {

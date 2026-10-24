@@ -130,6 +130,25 @@ async function main() {
     await buildPlatform("chrome", chromeDist, chromeManifest);
     await buildPlatform("firefox", firefoxDist, firefoxManifest);
   }
+
+  // Also sync dist files into extension root for seamless loading whether user picks /extension or /extension/dist
+  const filesToSync = [
+    "background.js",
+    "background.js.map",
+    "popup.html",
+    "popup.js",
+    "popup.js.map",
+    "warning.html",
+    "warning.js",
+    "warning.js.map",
+  ];
+  for (const f of filesToSync) {
+    const src = path.resolve(chromeDist, f);
+    const dest = path.resolve(__dirname, f);
+    if (fs.existsSync(src)) {
+      fs.copyFileSync(src, dest);
+    }
+  }
 }
 
 main().catch((err) => {
