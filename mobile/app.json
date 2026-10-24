@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "SiteGuard",
+    "slug": "siteguard",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#070b14"
+    },
+    "scheme": "siteguard",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "site.spartan.siteguard",
+      "infoPlist": {
+        "NSCameraUsageDescription": "SiteGuard requires camera access to scan and verify QR code URLs before opening them."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#070b14"
+      },
+      "package": "site.spartan.siteguard",
+      "permissions": [
+        "CAMERA",
+        "INTERNET"
+      ],
+      "intentFilters": [
+        {
+          "action": "SEND",
+          "category": ["DEFAULT"],
+          "data": {
+            "mimeType": "text/plain"
+          }
+        },
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "siteguard"
+          }
+        }
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow SiteGuard to scan QR codes and inspect destination websites."
+        }
+      ]
+    ]
+  }
+}
