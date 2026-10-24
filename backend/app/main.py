@@ -24,6 +24,7 @@ from app.normalize import normalize_host
 from app.reasons import select_top_reasons
 from app.registry import BrandRegistry, load_registry
 from app.web_surfer import analyze_web_reputation
+from app.url_model import predict_url_risk
 from app.risk import (
     calculate_brand_confidence,
     compute_risk_score,
@@ -98,6 +99,7 @@ class CheckResponse(BaseModel):
     ttl: int = 3600
     analysis: str = "completed"
     web_reputation: Optional[WebReputationResult] = None
+    url_ml_score: Optional[float] = None  # ML phishing probability (0-1), None if model unavailable
 
 
 class ReportRequest(BaseModel):
@@ -178,6 +180,24 @@ async def check_host(req: CheckRequest) -> CheckResponse:
 
     ttl = 86400 if level == "SAFE" else 3600
 
+    # URL ML model: fast phishing-URL pattern scoring
+    url_ml_score: Optional[float] = None
+    try:
+        url_for_ml = f"https://{norm.hostname}/"
+        ml_result = predict_url_risk(url_for_ml)
+        if ml_result["available"]:
+            url_ml_score = ml_result["score"]
+            if ml_result["score"] > 0.6 and level != "SAFE":
+                top_reasons.append(
+                    f"URL pattern suggests phishing (ML confidence: {ml_result['score']:.0%})"
+                )
+                top_reasons = select_top_reasons(top_reasons, max_count=4)
+            if ml_result["is_phishing"] and level != "SAFE":
+                score = min(100, score + 20)
+                level = get_verdict_level(score)
+    except Exception as e:
+        logger.debug("URL ML scoring failed for %s: %s", norm.hostname, e)
+
     # Web Surfer: for unknown domains (no brand match) that are flagged, run web reputation
     web_rep_result: Optional[WebReputationResult] = None
     if lookalike_res.brand is None and level in ("SUSPICIOUS", "DANGEROUS"):
@@ -212,6 +232,7 @@ async def check_host(req: CheckRequest) -> CheckResponse:
         "ttl": ttl,
         "analysis": "completed",
         "web_reputation": web_rep_result.model_dump() if web_rep_result else None,
+        "url_ml_score": url_ml_score,
     }
 
     # Cache verdict
@@ -266,6 +287,23 @@ async def web_reputation_check(req: CheckRequest):
         }
     return result
 
+
+
+@app.get("/v1/url-features")
+async def url_features_debug(url: str):
+    """
+    Debug endpoint: returns raw URL features + ML phishing prediction for any URL.
+
+    Example: GET /v1/url-features?url=https://paypal-secure-login.tk/verify
+    """
+    from app.url_features import extract_url_features  # noqa: PLC0415
+    features = extract_url_features(url)
+    ml_prediction = predict_url_risk(url)
+    return {
+        "url": url,
+        "features": features,
+        "ml_prediction": ml_prediction,
+    }
 
 
 @app.get("/v1/registry/snapshot")
