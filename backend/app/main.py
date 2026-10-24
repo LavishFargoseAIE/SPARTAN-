@@ -26,6 +26,7 @@ from app.registry import BrandRegistry, load_registry
 from app.web_surfer import analyze_web_reputation
 from app.url_model import predict_url_risk
 from app.cert_transparency import analyze_cert_transparency, brand_cert_sweep
+from app.content_classifier import analyze_page_content
 from app.risk import (
     calculate_brand_confidence,
     compute_risk_score,
@@ -101,6 +102,7 @@ class CheckResponse(BaseModel):
     analysis: str = "completed"
     web_reputation: Optional[WebReputationResult] = None
     url_ml_score: Optional[float] = None  # ML phishing probability (0-1), None if model unavailable
+    content_risk_score: Optional[float] = None  # Page content analysis risk (0-1)
 
 
 class ReportRequest(BaseModel):
@@ -199,6 +201,26 @@ async def check_host(req: CheckRequest) -> CheckResponse:
     except Exception as e:
         logger.debug("URL ML scoring failed for %s: %s", norm.hostname, e)
 
+    # Content Classifier: page-level HTML analysis + HF zero-shot NLP
+    # Only run when level is already suspicious (save latency for safe sites)
+    content_risk_score: Optional[float] = None
+    if level in ("SUSPICIOUS", "DANGEROUS"):
+        try:
+            content = await asyncio.wait_for(
+                analyze_page_content(norm.hostname),
+                timeout=8.0,
+            )
+            if content["available"]:
+                content_risk_score = content["content_risk_score"]
+                if content_risk_score >= 0.50:
+                    for r in content["reasons"]:
+                        top_reasons.append(r)
+                    top_reasons = select_top_reasons(top_reasons, max_count=5)
+                    score = min(100, score + int(content_risk_score * 20))
+                    level = get_verdict_level(score)
+        except Exception as e:
+            logger.debug("Content classifier failed for %s: %s", norm.hostname, e)
+
     # Web Surfer: for unknown domains (no brand match) that are flagged, run web reputation
     web_rep_result: Optional[WebReputationResult] = None
     if lookalike_res.brand is None and level in ("SUSPICIOUS", "DANGEROUS"):
@@ -234,6 +256,7 @@ async def check_host(req: CheckRequest) -> CheckResponse:
         "analysis": "completed",
         "web_reputation": web_rep_result.model_dump() if web_rep_result else None,
         "url_ml_score": url_ml_score,
+        "content_risk_score": content_risk_score,
     }
 
     # Cache verdict
@@ -305,6 +328,28 @@ async def url_features_debug(url: str):
         "features": features,
         "ml_prediction": ml_prediction,
     }
+
+
+@app.get("/v1/content-analysis")
+async def content_analysis(host: str):
+    """
+    Analyse page content for credential-harvesting / phishing signals.
+
+    Layer 1: Rule-based HTML analysis (password fields, external form actions, cloaking)
+    Layer 2: HuggingFace bart-large-mnli zero-shot classification (if HF_TOKEN set)
+
+    Example: GET /v1/content-analysis?host=paypal-fake-login.tk
+    """
+    try:
+        norm = normalize_host(host)
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid host format")
+
+    result = await asyncio.wait_for(
+        analyze_page_content(norm.hostname),
+        timeout=10.0,
+    )
+    return {"host": norm.hostname, **result}
 
 
 @app.get("/v1/cert-transparency")
