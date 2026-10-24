@@ -32,6 +32,7 @@ from app.visual_matcher import (
     match_visual_brand,
     compute_image_hashes,
 )
+from app.sandbox import inspect_url_in_sandbox
 from app.risk import (
     calculate_brand_confidence,
     compute_risk_score,
@@ -86,6 +87,12 @@ class VisualMatchRequest(BaseModel):
     image: str = Field(..., description="Base64 encoded image or data URL")
     host: Optional[str] = Field(None, description="Current domain to evaluate visual spoofing risk")
     top_k: Optional[int] = Field(3, description="Number of top matches to return")
+
+
+class SandboxRequest(BaseModel):
+    url: str = Field(..., description="The target URL to inspect inside the headless sandbox")
+    detect_cloaking: Optional[bool] = Field(True, description="Enable dual-profile mobile vs desktop comparison")
+    capture_screenshot: Optional[bool] = Field(True, description="Capture rendering screenshot")
 
 
 class BrandResponse(BaseModel):
@@ -416,6 +423,36 @@ async def visual_match_endpoint(req: VisualMatchRequest):
     except Exception as e:
         logger.error("Visual match processing failed: %s", e)
         raise HTTPException(status_code=500, detail=f"Visual matching error: {str(e)}")
+
+
+@app.post("/v1/sandbox/inspect")
+async def sandbox_inspect_endpoint(req: SandboxRequest):
+    """
+    Playwright headless browser sandbox endpoint.
+
+    Executes isolated browser sessions with:
+      - Disposable contexts (no credentials, no disk leakage)
+      - Egress filtering (blocks .apk, .exe, .dmg, .zip downloads)
+      - Dual fetch profiles (Desktop vs. Indian Mobile) to detect cloaking
+      - Full-page screenshot, DOM extraction, network request tracking
+      - Integrated visual matching (signal V) and credential harvest analysis (signal C)
+
+    Example: POST /v1/sandbox/inspect with {"url": "https://suspicious-site.xyz/login"}
+    """
+    try:
+        report = await inspect_url_in_sandbox(
+            url=req.url,
+            detect_cloaking_enabled=req.detect_cloaking if req.detect_cloaking is not None else True,
+            capture_screenshot=req.capture_screenshot if req.capture_screenshot is not None else True,
+            timeout_seconds=10.0,
+        )
+        return {
+            "status": "success",
+            "report": report,
+        }
+    except Exception as e:
+        logger.error("Sandbox inspection failed for %s: %s", req.url, e)
+        raise HTTPException(status_code=500, detail=f"Sandbox execution error: {str(e)}")
 
 
 @app.get("/v1/cert-transparency")
