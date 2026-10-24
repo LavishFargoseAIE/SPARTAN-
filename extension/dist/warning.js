@@ -775,56 +775,47 @@ async function verifySignature(brand) {
 // src/warning.ts
 var translations = {
   en: {
-    brand_title: "This website is pretending to be {brand}",
-    generic_title: "This website was blocked as dangerous",
-    subtitle: "SiteGuard stopped it before the page could load. Do not enter any details.",
+    brand_title: "This site is pretending to be {brand}",
+    generic_title: "This site was blocked as dangerous",
+    subtitle: "We stopped it before it opened. Please do not type any details.",
     tried_label: "You tried to open",
-    real_label: "The real address is",
-    why_title: "Why it was blocked",
-    btn_main: "Take me to the real {brand} website",
-    btn_sub: "{url} | verified in the official registry",
+    btn_main: "Take me to the real {brand}",
+    opens_prefix: "Opens ",
     report: "Report this site",
     why_link: "Why was this blocked?",
-    continue_label: "I understand the risk, continue anyway",
-    out_of: "out of 100"
+    continue_label: "I understand the risk, continue anyway"
   },
   hi: {
-    brand_title: "\u092F\u0939 \u0935\u0947\u092C\u0938\u093E\u0907\u091F {brand} \u0939\u094B\u0928\u0947 \u0915\u093E \u0922\u094B\u0902\u0917 \u0915\u0930 \u0930\u0939\u0940 \u0939\u0948",
-    generic_title: "\u092F\u0939 \u0935\u0947\u092C\u0938\u093E\u0907\u091F \u0916\u0924\u0930\u0928\u093E\u0915 \u0915\u0947 \u0930\u0942\u092A \u092E\u0947\u0902 \u092C\u094D\u0932\u0949\u0915 \u0915\u0940 \u0917\u0908 \u0939\u0948",
-    subtitle: "SiteGuard \u0928\u0947 \u0907\u0938\u0947 \u092A\u0947\u091C \u0932\u094B\u0921 \u0939\u094B\u0928\u0947 \u0938\u0947 \u092A\u0939\u0932\u0947 \u0939\u0940 \u0930\u094B\u0915 \u0926\u093F\u092F\u093E\u0964 \u0915\u094B\u0908 \u092D\u0940 \u091C\u093E\u0928\u0915\u093E\u0930\u0940 \u0926\u0930\u094D\u091C \u0928 \u0915\u0930\u0947\u0902\u0964",
+    brand_title: "\u092F\u0939 \u0938\u093E\u0907\u091F {brand} \u0915\u0940 \u0928\u0915\u0932 \u0915\u0930\u0924\u0940 \u0939\u0948",
+    generic_title: "\u092F\u0939 \u0932\u093F\u0902\u0915 \u0928 \u0916\u094B\u0932\u0947\u0902",
+    subtitle: "\u0939\u092E\u0928\u0947 \u0907\u0938\u0947 \u0916\u094B\u0932\u0928\u0947 \u0938\u0947 \u092A\u0939\u0932\u0947 \u0939\u0940 \u0930\u094B\u0915 \u0926\u093F\u092F\u093E\u0964 \u0915\u0943\u092A\u092F\u093E \u0915\u094B\u0908 \u091C\u093E\u0928\u0915\u093E\u0930\u0940 \u0928 \u092D\u0930\u0947\u0902\u0964",
     tried_label: "\u0906\u092A\u0928\u0947 \u0916\u094B\u0932\u0928\u0947 \u0915\u093E \u092A\u094D\u0930\u092F\u093E\u0938 \u0915\u093F\u092F\u093E",
-    real_label: "\u0905\u0938\u0932\u0940 \u092A\u0924\u093E \u092F\u0939 \u0939\u0948",
-    why_title: "\u0907\u0938\u0947 \u0915\u094D\u092F\u094B\u0902 \u092C\u094D\u0932\u0949\u0915 \u0915\u093F\u092F\u093E \u0917\u092F\u093E",
-    btn_main: "\u092E\u0941\u091D\u0947 \u0905\u0938\u0932\u0940 {brand} \u0935\u0947\u092C\u0938\u093E\u0907\u091F \u092A\u0930 \u0932\u0947 \u091C\u093E\u090F\u0902",
-    btn_sub: "{url} | \u0906\u0927\u093F\u0915\u093E\u0930\u093F\u0915 \u0930\u091C\u093F\u0938\u094D\u091F\u094D\u0930\u0940 \u092E\u0947\u0902 \u0938\u0924\u094D\u092F\u093E\u092A\u093F\u0924",
-    report: "\u0907\u0938 \u0938\u093E\u0907\u091F \u0915\u0940 \u0930\u093F\u092A\u094B\u0930\u094D\u091F \u0915\u0930\u0947\u0902",
-    why_link: "\u0907\u0938\u0947 \u0915\u094D\u092F\u094B\u0902 \u0930\u094B\u0915\u093E \u0917\u092F\u093E?",
-    continue_label: "\u092E\u0948\u0902 \u091C\u094B\u0916\u093F\u092E \u0938\u092E\u091D\u0924\u093E \u0939\u0942\u0901, \u092B\u093F\u0930 \u092D\u0940 \u0906\u0917\u0947 \u092C\u0922\u093C\u0947\u0902",
-    out_of: "100 \u092E\u0947\u0902 \u0938\u0947"
+    btn_main: "\u0905\u0938\u0932\u0940 {brand} \u0916\u094B\u0932\u0947\u0902",
+    opens_prefix: "\u0916\u0941\u0932\u0947\u0917\u093E ",
+    report: "\u0930\u093F\u092A\u094B\u0930\u094D\u091F \u0915\u0930\u0947\u0902",
+    why_link: "\u0915\u094D\u092F\u094B\u0902 \u0930\u094B\u0915\u093E \u0917\u092F\u093E?",
+    continue_label: "\u092E\u0948\u0902 \u091C\u094B\u0916\u093F\u092E \u0938\u092E\u091D\u0924\u093E \u0939\u0942\u0901, \u092B\u093F\u0930 \u092D\u0940 \u0906\u0917\u0947 \u092C\u0922\u093C\u0947\u0902"
   },
   mr: {
-    brand_title: "\u0939\u0940 \u0935\u0947\u092C\u0938\u093E\u0907\u091F {brand} \u091A\u0940 \u0928\u0915\u094D\u0915\u0932 \u0915\u0930\u0924 \u0906\u0939\u0947",
-    generic_title: "\u0939\u0940 \u0935\u0947\u092C\u0938\u093E\u0907\u091F \u0927\u094B\u0915\u093E\u0926\u093E\u092F\u0915 \u092E\u094D\u0939\u0923\u0942\u0928 \u092C\u094D\u0932\u0949\u0915 \u0915\u0947\u0932\u0940 \u0906\u0939\u0947",
-    subtitle: "SiteGuard \u0928\u0947 \u0939\u0947 \u092A\u0947\u091C \u0909\u0918\u0921\u0923\u094D\u092F\u093E\u092A\u0942\u0930\u094D\u0935\u0940\u091A \u0925\u093E\u0902\u092C\u0935\u0932\u0947 \u0906\u0939\u0947. \u0915\u094B\u0923\u0924\u0940\u0939\u0940 \u092E\u093E\u0939\u093F\u0924\u0940 \u092D\u0930\u0942 \u0928\u0915\u093E.",
+    brand_title: "\u0939\u0940 \u0938\u093E\u0907\u091F {brand} \u091A\u0940 \u0928\u0915\u094D\u0915\u0932 \u0915\u0930\u0924\u0947",
+    generic_title: "\u0939\u0940 \u0932\u093F\u0902\u0915 \u0909\u0918\u0921\u0942 \u0928\u0915\u093E",
+    subtitle: "\u0906\u092E\u094D\u0939\u0940 \u0939\u0947 \u0909\u0918\u0921\u0923\u094D\u092F\u093E\u092A\u0942\u0930\u094D\u0935\u0940\u091A \u0925\u093E\u0902\u092C\u0935\u0932\u0947 \u0906\u0939\u0947. \u0915\u094B\u0923\u0924\u0940\u0939\u0940 \u092E\u093E\u0939\u093F\u0924\u0940 \u092D\u0930\u0942 \u0928\u0915\u093E.",
     tried_label: "\u0924\u0941\u092E\u094D\u0939\u0940 \u0909\u0918\u0921\u0923\u094D\u092F\u093E\u091A\u093E \u092A\u094D\u0930\u092F\u0924\u094D\u0928 \u0915\u0947\u0932\u093E",
-    real_label: "\u0916\u0930\u093E \u092A\u0924\u094D\u0924\u093E \u0939\u093E \u0906\u0939\u0947",
-    why_title: "\u0939\u0947 \u0915\u093E \u092C\u094D\u0932\u0949\u0915 \u0915\u0947\u0932\u0947 \u0917\u0947\u0932\u0947",
-    btn_main: "\u092E\u0932\u093E \u0916\u0931\u094D\u092F\u093E {brand} \u0935\u0947\u092C\u0938\u093E\u0907\u091F\u0935\u0930 \u0918\u0947\u090A\u0928 \u091C\u093E",
-    btn_sub: "{url} | \u0905\u0927\u093F\u0915\u0943\u0924 \u0928\u094B\u0902\u0926\u0923\u0940\u092E\u0927\u094D\u092F\u0947 \u092A\u0921\u0924\u093E\u0933\u0932\u0947\u0932\u0947",
-    report: "\u092F\u093E \u0938\u093E\u0907\u091F\u091A\u0940 \u0924\u0915\u094D\u0930\u093E\u0930 \u0915\u0930\u093E",
-    why_link: "\u0939\u0947 \u0915\u093E \u0925\u093E\u0902\u092C\u0935\u0932\u0947 \u0917\u0947\u0932\u0947?",
-    continue_label: "\u092E\u0932\u093E \u0927\u094B\u0915\u093E \u0938\u092E\u091C\u0932\u093E \u0906\u0939\u0947, \u0924\u0930\u0940\u0939\u0940 \u092A\u0941\u0922\u0947 \u091C\u093E",
-    out_of: "\u0967\u0966\u0966 \u092A\u0948\u0915\u0940"
+    btn_main: "\u0916\u0930\u0940 {brand} \u0938\u093E\u0907\u091F \u0909\u0918\u0921\u093E",
+    opens_prefix: "\u0909\u0918\u0921\u0947\u0932 ",
+    report: "\u0924\u0915\u094D\u0930\u093E\u0930 \u0915\u0930\u093E",
+    why_link: "\u0915\u093E \u0925\u093E\u0902\u092C\u0935\u0932\u0947?",
+    continue_label: "\u092E\u0932\u093E \u0927\u094B\u0915\u093E \u0938\u092E\u091C\u0932\u093E \u0906\u0939\u0947, \u0924\u0930\u0940\u0939\u0940 \u092A\u0941\u0922\u0947 \u091C\u093E"
   }
 };
 var reasonNames = {
   imitates_brand: {
-    en: "The name imitates {brand}",
+    en: "The name copies {brand}",
     hi: "\u092F\u0939 \u0928\u093E\u092E {brand} \u0915\u0940 \u0928\u0915\u0932 \u0915\u0930\u0924\u093E \u0939\u0948",
     mr: "\u0939\u0947 \u0928\u093E\u0935 {brand} \u091A\u0940 \u0928\u0915\u094D\u0915\u0932 \u0915\u0930\u0924\u0947"
   },
   combosquatting: {
-    en: "Uses {brand} with suspicious words",
+    en: "Uses {brand} with deceptive security words",
     hi: "{brand} \u0915\u0947 \u0928\u093E\u092E \u0915\u0947 \u0938\u093E\u0925 \u092D\u094D\u0930\u093E\u092E\u0915 \u0936\u092C\u094D\u0926 \u091C\u094B\u0921\u093C\u0947 \u0917\u090F \u0939\u0948\u0902",
     mr: "{brand} \u091A\u094D\u092F\u093E \u0928\u093E\u0935\u093E\u0938\u0939 \u0926\u093F\u0936\u093E\u092D\u0942\u0932 \u0915\u0930\u0923\u093E\u0930\u0947 \u0936\u092C\u094D\u0926 \u091C\u094B\u0921\u0932\u0947 \u0906\u0939\u0947\u0924"
   },
@@ -833,8 +824,13 @@ var reasonNames = {
     hi: "\u0915\u093F\u0938\u0940 \u0905\u0928\u094D\u092F \u0935\u0947\u092C\u0938\u093E\u0907\u091F \u0915\u0947 \u092A\u0924\u0947 \u092E\u0947\u0902 {brand} \u0915\u093E \u0928\u093E\u092E \u091C\u094B\u0921\u093C\u093E \u0917\u092F\u093E \u0939\u0948",
     mr: "\u0926\u0941\u0938\u0931\u094D\u092F\u093E \u0935\u0947\u092C\u0938\u093E\u0907\u091F\u091A\u094D\u092F\u093E \u092A\u0924\u094D\u0924\u094D\u092F\u093E\u092E\u0927\u094D\u092F\u0947 {brand} \u091A\u0947 \u0928\u093E\u0935 \u091F\u093E\u0915\u0932\u0947 \u0906\u0939\u0947"
   },
+  shared_hosting_abuse: {
+    en: "Hosted on a free shared platform ({host})",
+    hi: "\u092E\u0941\u092B\u093C\u094D\u0924 \u0936\u0947\u0905\u0930\u094D\u0921 \u0939\u094B\u0938\u094D\u091F\u093F\u0902\u0917 \u092A\u094D\u0932\u0947\u091F\u092B\u093C\u0949\u0930\u094D\u092E \u092A\u0930 \u092C\u0928\u093E\u092F\u093E \u0917\u092F\u093E \u0939\u0948",
+    mr: "\u092E\u094B\u092B\u0924 \u0936\u0947\u0905\u0930\u094D\u0921 \u0939\u094B\u0938\u094D\u091F\u093F\u0902\u0917 \u092A\u094D\u0932\u0945\u091F\u092B\u0949\u0930\u094D\u092E\u0935\u0930 \u0924\u092F\u093E\u0930 \u0915\u0947\u0932\u0947 \u0906\u0939\u0947"
+  },
   threat_feed_match: {
-    en: "Listed in a trusted cybersecurity threat feed",
+    en: "Listed in cybersecurity threat databases",
     hi: "\u0938\u093E\u0907\u092C\u0930 \u0938\u0941\u0930\u0915\u094D\u0937\u093E \u0921\u0947\u091F\u093E\u092C\u0947\u0938 \u092E\u0947\u0902 \u0916\u0924\u0930\u0928\u093E\u0915 \u091A\u093F\u0939\u094D\u0928\u093F\u0924 \u0939\u0948",
     mr: "\u0938\u093E\u092F\u092C\u0930 \u0938\u0941\u0930\u0915\u094D\u0937\u093E \u0921\u0947\u091F\u093E\u092C\u0947\u0938\u092E\u0927\u094D\u092F\u0947 \u0927\u094B\u0915\u093E\u0926\u093E\u092F\u0915 \u092E\u094D\u0939\u0923\u0942\u0928 \u0928\u094B\u0902\u0926\u0935\u0932\u0947 \u0906\u0939\u0947"
   },
@@ -844,14 +840,14 @@ var reasonNames = {
     mr: "\u0938\u0941\u0930\u0915\u094D\u0937\u093E \u092C\u094D\u0932\u0945\u0915\u0932\u093F\u0938\u094D\u091F\u0935\u0930 \u0916\u093E\u0924\u094D\u0930\u0940\u0936\u0940\u0930 \u092C\u0928\u093E\u0935\u091F \u0935\u0947\u092C\u0938\u093E\u0907\u091F"
   },
   domain_age_under_30d: {
-    en: "The website was registered recently",
-    hi: "\u092F\u0939 \u0935\u0947\u092C\u0938\u093E\u0907\u091F \u0939\u093E\u0932 \u0939\u0940 \u092E\u0947\u0902 \u092C\u0928\u093E\u0908 \u0917\u0908 \u0939\u0948",
-    mr: "\u0939\u0940 \u0935\u0947\u092C\u0938\u093E\u0907\u091F \u0928\u0941\u0915\u0924\u0940\u091A \u0928\u094B\u0902\u0926\u0923\u0940\u0915\u0943\u0924 \u0915\u0947\u0932\u0940 \u0906\u0939\u0947"
+    en: "The site was registered very recently",
+    hi: "\u0938\u093E\u0907\u091F \u0915\u0947\u0935\u0932 \u0915\u0941\u091B \u0939\u0940 \u0926\u093F\u0928 \u092A\u0941\u0930\u093E\u0928\u0940 \u0939\u0948",
+    mr: "\u0939\u0940 \u0938\u093E\u0907\u091F \u0928\u0941\u0915\u0924\u0940\u091A \u0928\u094B\u0902\u0926\u0923\u0940\u0915\u0943\u0924 \u0915\u0947\u0932\u0940 \u0906\u0939\u0947"
   },
   credential_form_cross_domain: {
-    en: "The login form sends your password to another website",
-    hi: "\u0932\u0949\u0917\u093F\u0928 \u092B\u0949\u0930\u094D\u092E \u0906\u092A\u0915\u093E \u092A\u093E\u0938\u0935\u0930\u094D\u0921 \u0926\u0942\u0938\u0930\u0940 \u0935\u0947\u092C\u0938\u093E\u0907\u091F \u092A\u0930 \u092D\u0947\u091C\u0924\u093E \u0939\u0948",
-    mr: "\u0932\u0949\u0917\u093F\u0928 \u092B\u0949\u0930\u094D\u092E \u0924\u0941\u092E\u091A\u093E \u092A\u093E\u0938\u0935\u0930\u094D\u0921 \u0926\u0941\u0938\u0931\u094D\u092F\u093E \u0935\u0947\u092C\u0938\u093E\u0907\u091F\u0935\u0930 \u092A\u093E\u0920\u0935\u0924\u094B"
+    en: "It would send your password elsewhere",
+    hi: "\u092F\u0939 \u0906\u092A\u0915\u093E \u092A\u093E\u0938\u0935\u0930\u094D\u0921 \u0915\u0939\u0940\u0902 \u0914\u0930 \u092D\u0947\u091C\u0947\u0917\u0940",
+    mr: "\u0939\u0947 \u0924\u0941\u092E\u091A\u093E \u092A\u093E\u0938\u0935\u0930\u094D\u0921 \u0926\u0941\u0938\u0931\u094D\u092F\u093E \u0935\u0947\u092C\u0938\u093E\u0907\u091F\u0935\u0930 \u092A\u093E\u0920\u0935\u0947\u0932"
   },
   punycode_homoglyph: {
     en: "Uses deceptive lookalike characters in the address",
@@ -864,9 +860,14 @@ var reasonNames = {
     mr: "\u092F\u093E \u0938\u0902\u0938\u094D\u0925\u0947\u0938\u093E\u0920\u0940 \u0905\u0938\u093E\u092E\u093E\u0928\u094D\u092F \u0935\u0947\u092C\u0938\u093E\u0907\u091F \u0935\u093F\u0938\u094D\u0924\u093E\u0930"
   },
   trust_word_abuse: {
-    en: "Uses keywords like 'secure' or 'kyc' deceptively",
+    en: "Uses words like 'secure' or 'kyc' deceptively",
     hi: "\u0905\u0938\u0932\u0940 \u0926\u093F\u0916\u0928\u0947 \u0915\u0947 \u0932\u093F\u090F 'secure' \u092F\u093E 'kyc' \u091C\u0948\u0938\u0947 \u0936\u092C\u094D\u0926\u094B\u0902 \u0915\u093E \u0909\u092A\u092F\u094B\u0917 \u0915\u0930\u0924\u093E \u0939\u0948",
     mr: "'secure' \u0915\u093F\u0902\u0935\u093E 'kyc' \u0938\u093E\u0930\u0916\u094D\u092F\u093E \u0936\u092C\u094D\u0926\u093E\u0902\u091A\u093E \u0917\u0948\u0930\u0935\u093E\u092A\u0930"
+  },
+  brand_impersonation_in_title: {
+    en: "Page title copies official {brand} name",
+    hi: "\u092A\u0947\u091C \u0936\u0940\u0930\u094D\u0937\u0915 \u0906\u0927\u093F\u0915\u093E\u0930\u093F\u0915 {brand} \u0915\u0940 \u0928\u0915\u0932 \u0915\u0930\u0924\u093E \u0939\u0948",
+    mr: "\u092A\u0947\u091C \u0936\u0940\u0930\u094D\u0937\u0915 \u0905\u0927\u093F\u0915\u0943\u0924 {brand} \u091A\u0940 \u0928\u0915\u094D\u0915\u0932 \u0915\u0930\u0924\u0947"
   },
   api_unreachable: {
     en: "Security server was unreachable (fail-open check)",
@@ -874,7 +875,8 @@ var reasonNames = {
     mr: "\u0938\u0941\u0930\u0915\u094D\u0937\u093E \u0938\u0930\u094D\u0935\u094D\u0939\u0930\u0936\u0940 \u0938\u0902\u092A\u0930\u094D\u0915 \u0939\u094B\u090A \u0936\u0915\u0932\u093E \u0928\u093E\u0939\u0940"
   }
 };
-function getLang() {
+var currentLang = "en";
+function getBrowserLang() {
   const code = (navigator.language || "en").toLowerCase();
   if (code.startsWith("hi"))
     return "hi";
@@ -882,30 +884,46 @@ function getLang() {
     return "mr";
   return "en";
 }
-async function renderWarning() {
-  const lang = getLang();
-  const dict = translations[lang] || translations.en;
+var cachedVerdict = null;
+async function loadVerdict() {
+  if (cachedVerdict)
+    return cachedVerdict;
   let tab = await chrome.tabs.getCurrent();
   let tabId = tab?.id;
   if (tabId === void 0) {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
     tabId = activeTab?.id;
   }
-  let verdict = null;
   if (tabId !== void 0) {
     const key = "v" + tabId;
     const sessionRes = await chrome.storage.session.get(key);
-    verdict = sessionRes[key] || null;
+    if (sessionRes[key]) {
+      cachedVerdict = sessionRes[key];
+      return cachedVerdict;
+    }
   }
-  if (!verdict) {
-    verdict = {
-      host: "unknown-site.xyz",
-      level: "DANGEROUS",
-      score: 91,
-      reasons: ["threat_feed_match"]
-    };
-  }
+  cachedVerdict = {
+    host: "unknown-site.xyz",
+    level: "DANGEROUS",
+    score: 91,
+    reasons: ["threat_feed_match"]
+  };
+  return cachedVerdict;
+}
+async function renderWarning(lang) {
+  currentLang = lang;
+  const dict = translations[lang] || translations.en;
+  const verdict = await loadVerdict();
   const brandName = verdict.brand?.name || "";
+  const btnEn = document.getElementById("lang-en");
+  const btnHi = document.getElementById("lang-hi");
+  const btnMr = document.getElementById("lang-mr");
+  if (btnEn)
+    btnEn.className = `lang-btn ${lang === "en" ? "active" : ""}`;
+  if (btnHi)
+    btnHi.className = `lang-btn ${lang === "hi" ? "active" : ""}`;
+  if (btnMr)
+    btnMr.className = `lang-btn ${lang === "mr" ? "active" : ""}`;
   const titleEl = document.getElementById("title-text");
   if (brandName) {
     titleEl.textContent = dict.brand_title.replace("{brand}", brandName);
@@ -914,54 +932,28 @@ async function renderWarning() {
   }
   const subtitleEl = document.getElementById("subtitle-text");
   subtitleEl.textContent = dict.subtitle;
+  const labelTried = document.getElementById("label-tried");
+  if (labelTried)
+    labelTried.textContent = dict.tried_label;
   const hostEl = document.getElementById("host-display");
   hostEl.textContent = verdict.host;
-  const realAddrContainer = document.getElementById("real-address-container");
-  const realDomainEl = document.getElementById("real-domain");
-  const labelRealEl = document.getElementById("label-real");
-  labelRealEl.textContent = dict.real_label;
-  if (verdict.brand?.official_url) {
-    try {
-      const u = new URL(verdict.brand.official_url);
-      realDomainEl.textContent = u.hostname;
-      realAddrContainer.hidden = false;
-      realAddrContainer.style.display = "block";
-    } catch {
-      realAddrContainer.hidden = true;
-      realAddrContainer.style.display = "none";
-    }
-  } else {
-    realAddrContainer.hidden = true;
-    realAddrContainer.style.display = "none";
-  }
-  const scoreEl = document.getElementById("score-text");
-  scoreEl.textContent = String(verdict.score);
-  const badgeEl = document.getElementById("level-badge");
-  badgeEl.textContent = verdict.level.toLowerCase();
-  const headerBar = document.getElementById("header-bar");
-  const circleDial = document.getElementById("circle-dial");
-  if (verdict.level === "SUSPICIOUS") {
-    headerBar.classList.add("warning-mode");
-    circleDial.style.borderColor = "var(--warning)";
-    badgeEl.classList.add("warning-pill");
-    badgeEl.textContent = "Suspicious";
-  } else {
-    circleDial.style.borderColor = "var(--danger)";
-    badgeEl.textContent = "Dangerous";
-  }
   const reasonsListEl = document.getElementById("reasons-list");
   reasonsListEl.replaceChildren();
   const reasons = verdict.reasons && verdict.reasons.length > 0 ? verdict.reasons : ["imitates_brand"];
   for (const rCode of reasons.slice(0, 3)) {
     const li = document.createElement("li");
     const rGroup = reasonNames[rCode] || { en: rCode.replace(/_/g, " ") };
-    const rText = rGroup[lang] || rGroup.en || rCode;
-    li.textContent = rText.replace("{brand}", brandName || "official brand");
+    let rText = rGroup[lang] || rGroup.en || rCode;
+    rText = rText.replace("{brand}", brandName || "official brand");
+    rText = rText.replace("{host}", verdict.host);
+    li.textContent = rText;
     reasonsListEl.appendChild(li);
   }
   const btnGoReal = document.getElementById("go-real");
   const btnMainText = document.getElementById("btn-main-text");
-  const btnSubText = document.getElementById("btn-sub-text");
+  const realAddrContainer = document.getElementById("real-address-container");
+  const opensPrefixEl = document.getElementById("opens-prefix");
+  const realDomainEl = document.getElementById("real-domain");
   let sigValid = false;
   if (verdict.brand) {
     sigValid = await verifySignature(verdict.brand);
@@ -974,7 +966,16 @@ async function renderWarning() {
   }
   if (verdict.brand && verdict.brand.confidence >= 0.7 && sigValid) {
     btnMainText.textContent = dict.btn_main.replace("{brand}", verdict.brand.name);
-    btnSubText.textContent = dict.btn_sub.replace("{url}", verdict.brand.official_url);
+    try {
+      const u = new URL(verdict.brand.official_url);
+      opensPrefixEl.textContent = dict.opens_prefix;
+      realDomainEl.textContent = u.hostname;
+      realAddrContainer.hidden = false;
+      realAddrContainer.style.display = "block";
+    } catch {
+      realAddrContainer.hidden = true;
+      realAddrContainer.style.display = "none";
+    }
     btnGoReal.onclick = () => {
       window.location.replace(verdict.brand.official_url);
     };
@@ -983,6 +984,8 @@ async function renderWarning() {
   } else {
     btnGoReal.hidden = true;
     btnGoReal.style.display = "none";
+    realAddrContainer.hidden = true;
+    realAddrContainer.style.display = "none";
   }
   const continueBox = document.getElementById("continue-box");
   const btnContinue = document.getElementById("btn-continue");
@@ -1013,6 +1016,8 @@ async function renderWarning() {
       }
       window.location.replace("https://" + verdict.host);
     };
+  } else {
+    continueBox.hidden = true;
   }
   const linkReport = document.getElementById("link-report");
   linkReport.textContent = dict.report;
@@ -1084,5 +1089,11 @@ Signals: ${verdict.reasons.join(", ")}`
     }
   }
 }
-document.addEventListener("DOMContentLoaded", renderWarning);
+document.addEventListener("DOMContentLoaded", () => {
+  const initialLang = getBrowserLang();
+  document.getElementById("lang-en")?.addEventListener("click", () => renderWarning("en"));
+  document.getElementById("lang-hi")?.addEventListener("click", () => renderWarning("hi"));
+  document.getElementById("lang-mr")?.addEventListener("click", () => renderWarning("mr"));
+  renderWarning(initialLang);
+});
 //# sourceMappingURL=warning.js.map
