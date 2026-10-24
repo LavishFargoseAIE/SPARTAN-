@@ -51,6 +51,9 @@ def compute_risk_score(signals: Dict[str, Any], category: Optional[str] = None) 
     if (signals.get("subdomain_abuse") or signals.get("shared_hosting_abuse")) and signals.get("L", 0) >= 0.70:
         base = max(base, 0.85)
 
+    if signals.get("brand_impersonation_in_title") and signals.get("L", 0) >= 0.50:
+        base = max(base, 0.85)
+
     score = round(100 * base)
     return max(0, min(100, score))
 

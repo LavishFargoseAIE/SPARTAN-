@@ -132,7 +132,8 @@ async def check_host(req: CheckRequest) -> CheckResponse:
     lookalike_res = compute_lookalike(norm, all_brands)
 
     t_score, feed_reasons = await feeds_manager.check(norm.hostname, norm.registrable)
-    d_score, domain_reasons = await get_domain_intel(norm)
+    brand_tokens = lookalike_res.brand.tokens if lookalike_res.brand else None
+    d_score, domain_reasons = await get_domain_intel(norm, brand_tokens=brand_tokens)
 
     # Signals dict
     signals: Dict[str, Any] = {
@@ -141,6 +142,7 @@ async def check_host(req: CheckRequest) -> CheckResponse:
         "D": d_score,
         "subdomain_abuse": "subdomain_abuse" in lookalike_res.reasons,
         "shared_hosting_abuse": "shared_hosting_abuse" in domain_reasons,
+        "brand_impersonation_in_title": "brand_impersonation_in_title" in domain_reasons,
     }
 
     category = lookalike_res.brand.category if lookalike_res.brand else None

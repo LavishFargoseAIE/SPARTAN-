@@ -3300,15 +3300,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "dAfd+hHpErYz/W5dKrNlpGBxHuAV+AYZOe1siORju2by29fDoTwacymDLGxUmFWq7jcASKXmmtfrS5FD/eCABw=="
+    "signature": "HI+zQ/9Q6nsL89zIi29U4s7HOd9ktDsiz9idnXMQIqT6Sed7ijCjH8/7T9NbbmjZgUi3f8MO9K9FXiry9wBwDA=="
   },
   {
     "brand_id": "groww",
@@ -3332,15 +3332,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "ixsG9kKWxQPBZXQivwIVgvVaQade5+y7q/fkpQ3t2nE9fTT7bb8X0xTtMHBeB1EMfPUcZ9yhEJu7EOIksotoCw=="
+    "signature": "BHaZPAKpu41MfO8QRnR6JRENJs1LQmnHg/NUyJ0yLb72CDZV0POMaNuD37yi0jllkMN3K7u3C2b0BnU6Sm45AA=="
   },
   {
     "brand_id": "upstox",
@@ -4337,15 +4337,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "6FYTQVLhHO6TMV7QNn9wNHUuOJAyoq5sA8PHD9wzNayU0WmUCdTUZTYPQwH/k+nZ9PAhN2osTP7DmfKIYceeBQ=="
+    "signature": "9wxbFUC+DQ6MaF6SQzJUquMnPfwPvoTy1eE55YcACguMMsvFu4l+Xx5ILuwVDFuy+0dQk6vvtl2SjV06FqvOAw=="
   },
   {
     "brand_id": "phonepe",
@@ -4369,15 +4369,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "MSofpIhA6oOc0KTTA7TC+earv5m7nNa6vDWlG5gcaz6f26zXr8h0sARQ8OO9OukqAJtN+YqwAGs+GzXezBp1Bg=="
+    "signature": "VMe0fatqwr8thpysXBppZaPcxuywhjZmr5gsBdW2/k3C+cn3bC2KfCG96S26JwUmxZZI4mUGW+ZFTEUN+aulAA=="
   },
   {
     "brand_id": "bhim-upi",
@@ -5529,15 +5529,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "oqPsIaFEyAOFdzEMZWumtFr0uYnaQG5Vggc55hizergj0SJAVzOr7kmNcXiGCyvbpLsCA5G583hKgVJk3PfnBg=="
+    "signature": "8/BL7nzuvO9dtZ8OQyvZC2VGsmqc+MhltUGHkfz3zVHcRzq0UzsjqXXl9C4g9aJ/qa3SzrNuFeSN3bprSlJzDA=="
   },
   {
     "brand_id": "gst-portal",
@@ -5627,15 +5627,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "KovOhNlYU/sXRU1LIGUQTbnCNfWVz36lv0Y8o2nnwT7Nv8Sr2fhmIPKXtAGA48PqzI5JNcvJ9COdu8d1rjDvAw=="
+    "signature": "enfooiiu7XeD5FD7gHdRu+470G5eVwQaddWnascDJ5IueKLZctMi4wl14Dhm0AIkS3U9N18FoFCxtUDxjQ/eBw=="
   },
   {
     "brand_id": "passport-seva",
@@ -5725,15 +5725,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "u1rnRw/TBcIIPFTbadyZe5yCd55cDYSl2b5lFJW9rgdiSQ+EK9U7B/tHLzgf+i54w+nGSkT9QZwSOxs7npJPCw=="
+    "signature": "hybHG2jafJIapjJrUGUqul+7SJ2KV6RC9WaYJEhM249Klez8NYYplepH+7GTXhd57EcIL7dLcK0hEKYE6VUFAA=="
   },
   {
     "brand_id": "parivahan",
@@ -5757,15 +5757,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "LxzjJ/Zhus/3ZaK0M+tyJNjV4arVEYAdxuYZe+xwCPxixzT/fPZSJDISeySbptpSIF3hpIXupm8+pxdl4eGnAw=="
+    "signature": "DmP9CGMdgqBFyiLJj+1TwxX5CRoNDt/Y3D0uoKbzRGcoy1ZzO4SHF2CfQ2384DnohDghGBUr0cGlcrvkfk9eBw=="
   },
   {
     "brand_id": "election-commission-of-india",
@@ -8223,15 +8223,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": true,
-    "signature": "2E89/roIOiSj2fxsNI/Z6XtjUTzE7XEeMG3Vl9+fkXxTu9/VLFVjoY4owiIsnrEjWQVOhNom5ZoA0c1wbCSnBA=="
+    "signature": "WlN3oLf6bA+g+OfeKxjhJVBkJ/Iz9/TE0Zgl2qUn0/PdUebfRyT28xwDlNmrdcLhw5GfalZS/Wu1Zs81IlVgCg=="
   },
   {
     "brand_id": "amazon",
@@ -8255,15 +8255,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": true,
-    "signature": "3pAGby51o430U+D+Ab5qgYuZOgLJRil8FbGQyvmHlBPta3uOHF8AMr2zVu8EwywSS6jx/qHCnwhxPIbBD8RdAw=="
+    "signature": "l3pkKA0GZHR927x4t+nnnCNa39Zp3+RbNYRfUDL4O+F85D0YhdCXUdBUYnUtxCc/B5GPuICcdmzgseT+Gg5BAA=="
   },
   {
     "brand_id": "flipkart",
@@ -8287,15 +8287,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "Q5SeYkW9zCMQgO9M+xZuZ8vk+s6VgDki2lKUpGaZR7tNl+Wooa6aQgfzV78Zn3J7DEnIm/neLNOxosG9IZRNBg=="
+    "signature": "gB8oGsZV/HRPOrznG08R2WAeXPP1luq0hvOyl+CYY5io3cDkqZ6Gooh4yEbjlC+v4q4CKYiqdwrgOKBScG53Cg=="
   },
   {
     "brand_id": "myntra",
@@ -8608,15 +8608,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "vVIw11JPGNw7BiX0EszINR41jLpxu2AWOMFKXRWiIl69Wn+jqhpblar49OGNip4gR2aizWK5v228pbYQMAqVDw=="
+    "signature": "HTNQhMczmPv2y8yiOZoOrlun+5HHc1+a3XIVwhP7TD41+aevLe3e5zTV0tDE7fNLTtviGTOTVVtxoX72D4IoBA=="
   },
   {
     "brand_id": "zomato",
@@ -8640,15 +8640,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "ONB4zMh7+skOCMUHYEyUUefQVRKIGG7YW+aQmXko3zv1V/obSKY/Fem6CVKlsRNEDkcjVuDEQ2Ew8caUi07UBQ=="
+    "signature": "jSVV6ZALZLiqlNBm5EMAZKVguA39hFuTOB3je8GhwYrQ4r4P3BCre3rqVq3NFx7VHL055HClEoqE8lVRwR3fBQ=="
   },
   {
     "brand_id": "snapdeal",
@@ -10310,15 +10310,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "5UZltqUplWXalP9SVlZsWyEiTXLNYeC6rf6g3r+QsKkheFm1fFKRji7EI3uqAI/uIo0KB2mSDf/hQBWtPy1vDA=="
+    "signature": "kYNubUWygc31ZPyTk37iP1z8+//FFJZUXCp5jYbnVGNTcbnhuelws6yV3ZbsuLsajL+dfYj5vKhWA6fxTE0fDw=="
   },
   {
     "brand_id": "rapido",
@@ -12271,15 +12271,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": true,
-    "signature": "H5rAlR2CUfQviSeAkUtjJBfUA+1yxIlWSxhvPCGdQokqInVtQXqJISfUlQy70+0NVATWJ7YFGS2Xws+/rTJhCg=="
+    "signature": "GJ9W/G717039ZUH6Vjlci875/CFxgVXxBsVCuQu49tJSEg/npeyjXxHOp3Km5RUz8JEZ2uw+xqLKdpUhNTuNCQ=="
   },
   {
     "brand_id": "microsoft",
@@ -12306,15 +12306,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": true,
-    "signature": "RMhVk2Uk5+xYtV51m1FE0fWNrfHL1SrYXkRMT6ZEkwY2f3NIUvEmhpn+rfViCnmM/swb36YZi0WjBsYmu3J9CQ=="
+    "signature": "pr6wQQ5WT7dFk0a5Zbu0JtF9VciQN2oZEVNckfBnuz030C75zPDw8sfr8/pHmWNPCcCnHRr1IIyE1Ch7oRiiCQ=="
   },
   {
     "brand_id": "apple",
@@ -12339,15 +12339,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": true,
-    "signature": "ndv2k938VQCLOilBOoZAfeUfJ6sOP8RdoMJMz03P9rg0vnn799abHU3EkRQkxqsQYtSnai5/+t3fdCf9jmRIBw=="
+    "signature": "ouK224wu29QolgK23jd4MVmxngj2ALK4HPm1zzLLTa0WcFVtColoLkSLCmsAg5Sxg2/GKtCwndSQuGcSPZe4DA=="
   },
   {
     "brand_id": "meta",
@@ -13174,15 +13174,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-seed-verified",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "biS9J9dUDXf/E8nMAPvntHI8Wo3e1nWXkDzXB662sPaXKlVCZHYFyDH3PE85SQ4/u2W+8/qslKnGE15qLo9dAQ=="
+    "signature": "shw3lbpGjlf2bKW/YVj9Ba778BTzwj5mvdYfEbvn7Jqr6S+MeWTkzjT9aN5VP8l+OgI615oWLomXdk+3TnONCg=="
   },
   {
     "brand_id": "disney-plus-hotstar",

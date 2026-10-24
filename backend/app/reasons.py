@@ -60,6 +60,11 @@ REASON_TEMPLATES: Dict[str, Dict[str, str]] = {
         "hi": "वित्तीय या सरकारी ब्रांड एक मुफ्त सार्वजनिक साइट पर होस्ट किया गया है",
         "mr": "वित्तीय किंवा सरकारी ब्रँड एका विनामूल्य सार्वजनिक साइटवर होस्ट केला आहे",
     },
+    "brand_impersonation_in_title": {
+        "en": "The website content or title claims to be {brand}",
+        "hi": "वेबसाइट का शीर्षक या सामग्री {brand} होने का दावा करती है",
+        "mr": "वेबसाइटचे शीर्षक किंवा मजकूर {brand} असल्याचा दावा करतो",
+    },
     "api_unreachable": {
         "en": "Security server was unreachable (fail-open check)",
         "hi": "सुरक्षा सर्वर से संपर्क नहीं हो सका",
@@ -87,6 +92,7 @@ def select_top_reasons(reasons: List[str], max_count: int = 3) -> List[str]:
         "threat_feed_match",
         "listed_in_badlist",
         "credential_form_cross_domain",
+        "brand_impersonation_in_title",
         "shared_hosting_abuse",
         "imitates_brand",
         "subdomain_abuse",

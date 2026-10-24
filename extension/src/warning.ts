@@ -279,7 +279,15 @@ async function renderWarning() {
       }
     }, 1000);
 
-    btnContinue.onclick = () => {
+    btnContinue.onclick = async () => {
+      try {
+        await chrome.runtime.sendMessage({
+          action: "bypassHost",
+          host: verdict!.host,
+        });
+      } catch (e) {
+        console.warn("Bypass notification failed:", e);
+      }
       window.location.replace("https://" + verdict!.host);
     };
   }
