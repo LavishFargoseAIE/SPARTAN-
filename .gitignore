@@ -29,8 +29,10 @@ wheels/
 .coverage
 htmlcov/
 
-# Node / Extension
+# Node / Extension / Dashboard
 extension/node_modules/
+dashboard/node_modules/
+dashboard/.next/
 *.tsbuildinfo
 
 # OS
