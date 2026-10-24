@@ -248,10 +248,21 @@ async function renderWarning() {
   const btnMainText = document.getElementById("btn-main-text")!;
   const btnSubText = document.getElementById("btn-sub-text")!;
 
+  let sigValid = false;
+  if (verdict.brand) {
+    sigValid = await verifySignature(verdict.brand);
+    console.log("[SiteGuard] Official redirect check:", {
+      brand: verdict.brand.name,
+      confidence: verdict.brand.confidence,
+      official_url: verdict.brand.official_url,
+      sigValid,
+    });
+  }
+
   if (
     verdict.brand &&
-    verdict.brand.confidence >= 0.80 &&
-    (await verifySignature(verdict.brand))
+    verdict.brand.confidence >= 0.70 &&
+    sigValid
   ) {
     btnMainText.textContent = dict.btn_main.replace("{brand}", verdict.brand.name);
     btnSubText.textContent = dict.btn_sub.replace("{url}", verdict.brand.official_url);

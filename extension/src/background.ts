@@ -32,6 +32,9 @@ async function syncAllowlist(): Promise<void> {
       const data = await res.json();
       if (Array.isArray(data.official_domains)) {
         updateAllowlist(data.official_domains);
+        if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local) {
+          chrome.storage.local.set({ official_domains: data.official_domains }).catch(() => {});
+        }
       }
     }
   } catch (e) {
