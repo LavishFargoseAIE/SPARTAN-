@@ -22,6 +22,24 @@ logger = logging.getLogger(__name__)
 _RDAP_CACHE: Dict[str, Tuple[Optional[datetime], Optional[str]]] = {}
 _TRANCO_SET: Optional[Set[str]] = None
 
+SHARED_HOSTING_DOMAINS: Set[str] = {
+    "wixsite.com",
+    "weebly.com",
+    "wordpress.com",
+    "blogspot.com",
+    "blogger.com",
+    "firebaseapp.com",
+    "web.app",
+    "pages.dev",
+    "vercel.app",
+    "netlify.app",
+    "github.io",
+    "gitlab.io",
+    "000webhostapp.com",
+    "duckdns.org",
+    "ngrok-free.app",
+}
+
 
 def load_tranco_set(tranco_path: str = "./data/tranco.csv") -> Set[str]:
     """Load Tranco top domains from disk into memory if available."""
@@ -152,6 +170,11 @@ async def get_domain_intel(norm_host: NormalizedHost) -> Tuple[float, List[str]]
     if host.count("-") >= 2:
         d_score = max(d_score, 0.30)
         reasons.append("suspicious_domain_structure")
+
+    # Shared hosting risk (user-generated subdomains on free hosting)
+    if registrable in SHARED_HOSTING_DOMAINS:
+        d_score = max(d_score, 0.50)
+        reasons.append("shared_hosting_abuse")
 
     # 2. Check Tranco popularity list
     in_tranco = is_in_tranco(registrable)

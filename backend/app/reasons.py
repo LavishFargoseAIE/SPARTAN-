@@ -55,6 +55,11 @@ REASON_TEMPLATES: Dict[str, Dict[str, str]] = {
         "hi": "असली दिखने के लिए 'secure' या 'kyc' जैसे शब्दों का उपयोग करता है",
         "mr": "अधिकृत दिसण्यासाठी 'secure' किंवा 'kyc' सारख्या शब्दांचा वापर करतो",
     },
+    "shared_hosting_abuse": {
+        "en": "Financial or government brand hosted on a public free site",
+        "hi": "वित्तीय या सरकारी ब्रांड एक मुफ्त सार्वजनिक साइट पर होस्ट किया गया है",
+        "mr": "वित्तीय किंवा सरकारी ब्रँड एका विनामूल्य सार्वजनिक साइटवर होस्ट केला आहे",
+    },
     "api_unreachable": {
         "en": "Security server was unreachable (fail-open check)",
         "hi": "सुरक्षा सर्वर से संपर्क नहीं हो सका",
@@ -82,6 +87,7 @@ def select_top_reasons(reasons: List[str], max_count: int = 3) -> List[str]:
         "threat_feed_match",
         "listed_in_badlist",
         "credential_form_cross_domain",
+        "shared_hosting_abuse",
         "imitates_brand",
         "subdomain_abuse",
         "combosquatting",

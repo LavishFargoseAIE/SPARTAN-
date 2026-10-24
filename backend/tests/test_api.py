@@ -54,6 +54,29 @@ async def test_check_dangerous_fake_site():
 
 
 @pytest.mark.asyncio
+async def test_check_shared_hosting_phishing_site():
+    """
+    Ensure user-generated subdomains on shared hosting platforms (e.g. wixsite.com)
+    impersonating financial brands are detected as DANGEROUS with verified redirect.
+    """
+    async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
+        res = await client.post("/v1/check", json={"host": "sbicardonlin78.wixsite.com"})
+        assert res.status_code == 200
+        data = res.json()
+        assert data["level"] == "DANGEROUS"
+        assert data["score"] >= 75
+        assert "shared_hosting_abuse" in data["reasons"] or "subdomain_abuse" in data["reasons"]
+        assert data["brand"] is not None
+        assert data["brand"]["name"] == "SBI Card"
+        assert data["brand"]["official_url"] == "https://sbicard.com/"
+        assert registry.verify_redirect(
+            data["brand"]["name"],
+            data["brand"]["official_url"],
+            data["brand"]["signature"],
+        ) is True
+
+
+@pytest.mark.asyncio
 async def test_no_path_query_in_check():
     """
     Ensure API normalizes and strips any accidental path, query parameters,

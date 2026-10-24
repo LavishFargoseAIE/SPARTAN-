@@ -120,11 +120,18 @@ class BrandRegistry:
         return self._domain_to_brand.get(domain.lower())
 
     def is_official(self, registrable_domain: str, hostname: Optional[str] = None) -> bool:
-        """Check if registrable domain or hostname is official."""
+        """Check if registrable domain or hostname (or any parent official domain) is official."""
         if registrable_domain.lower() in self._domain_to_brand:
             return True
-        if hostname and hostname.lower() in self._domain_to_brand:
-            return True
+        if hostname:
+            clean = hostname.lower()
+            if clean in self._domain_to_brand:
+                return True
+            parts = clean.split(".")
+            for i in range(1, len(parts) - 1):
+                parent = ".".join(parts[i:])
+                if parent in self._domain_to_brand:
+                    return True
         return False
 
     def all_brands(self) -> List[BrandEntry]:

@@ -33,15 +33,16 @@ from app.risk import (
 logging.basicConfig(level=logging.INFO if not settings.DEBUG else logging.DEBUG)
 logger = logging.getLogger("siteguard")
 
-# Global in-memory registry instance
-registry: BrandRegistry = BrandRegistry()
+# Global in-memory registry instance (pre-loaded)
+registry: BrandRegistry = load_registry()
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global registry
     logger.info("Initializing SiteGuard API...")
-    registry = load_registry()
+    if not registry._brands:
+        registry = load_registry()
     await verdict_cache.initialize()
     yield
     await verdict_cache.close()
@@ -138,6 +139,8 @@ async def check_host(req: CheckRequest) -> CheckResponse:
         "L": lookalike_res.score,
         "T": t_score,
         "D": d_score,
+        "subdomain_abuse": "subdomain_abuse" in lookalike_res.reasons,
+        "shared_hosting_abuse": "shared_hosting_abuse" in domain_reasons,
     }
 
     category = lookalike_res.brand.category if lookalike_res.brand else None

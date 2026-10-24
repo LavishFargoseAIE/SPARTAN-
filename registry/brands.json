@@ -27,12 +27,12 @@
     "verified": true,
     "needs_verification": false,
     "last_verified": "2026-10-24",
-    "verified_by": "admin-test",
+    "verified_by": "admin-audit",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 2,
+    "version": 3,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "9JWfq4tN/NaQqwUpftUQ580F6IAH7k2Tcg/+bXhjFj9kTTV7MSXiPT2csnS/PNdA5TO4u+y7mGiYfuwdkOaCCA=="
+    "signature": "eo5eq/sPSQ5d+JjO/vQDf5zYBVzKszPTA6P31moSFLwR2oWksq0YStPIkQlTT43WZ0CadW4h8xe4rYLUFQWGAw=="
   },
   {
     "brand_id": "hdfc-bank",
@@ -3010,15 +3010,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-audit",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "0bh9Q40uLNBlKWaWEjPL45RQXIBOXGJMBWKvo9iPdPIVyDc0gFvcRWIZx6oJr60UlQaYTZBEJN+EUYkTgA6xDA=="
+    "signature": "2D4nU2FDdE9yELMKMTihjh7bzBprXG4yKX7RbyVdEm1z0iQj4YwXLpTvae48HGNa/nN1Vq7XXMlQEiQA9Bx/BQ=="
   },
   {
     "brand_id": "aditya-birla-capital",
