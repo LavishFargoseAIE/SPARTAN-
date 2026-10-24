@@ -887,6 +887,14 @@
     return "en";
   }
   var cachedVerdict = null;
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message?.action === "getWarningVerdict") {
+      loadVerdict().then((v) => {
+        sendResponse({ verdict: v });
+      });
+      return true;
+    }
+  });
   async function loadVerdict() {
     if (cachedVerdict)
       return cachedVerdict;
@@ -900,13 +908,20 @@
       const key = "v" + tabId;
       let sessionRes = {};
       if (chrome.storage?.session) {
-        sessionRes = await chrome.storage.session.get(key);
+        try {
+          sessionRes = await chrome.storage.session.get([key, "latest_verdict"]);
+        } catch {
+        }
       }
-      if (!sessionRes[key] && chrome.storage?.local) {
-        sessionRes = await chrome.storage.local.get(key);
+      if (!sessionRes[key] && !sessionRes["latest_verdict"] && chrome.storage?.local) {
+        try {
+          sessionRes = await chrome.storage.local.get([key, "latest_verdict"]);
+        } catch {
+        }
       }
-      if (sessionRes[key]) {
-        cachedVerdict = sessionRes[key];
+      const found = sessionRes[key] || sessionRes["latest_verdict"];
+      if (found) {
+        cachedVerdict = found;
         return cachedVerdict;
       }
     }

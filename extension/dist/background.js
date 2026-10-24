@@ -743,14 +743,47 @@ async function blockHost(host) {
 }
 
 // src/background.ts
-var API_BASE = "https://spartan-inle.onrender.com";
+var API_BASE = "http://127.0.0.1:8000";
 var CHECK_ENDPOINT = `${API_BASE}/v1/check`;
 var localCache = /* @__PURE__ */ new Map();
 var bypassedHosts = /* @__PURE__ */ new Set();
+if (chrome.storage?.session?.setAccessLevel) {
+  chrome.storage.session.setAccessLevel({
+    accessLevel: "TRUSTED_AND_UNTRUSTED_CONTEXTS"
+  }).catch(() => {
+  });
+}
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message?.action === "bypassHost" && message.host) {
     bypassedHosts.add(String(message.host).toLowerCase());
     sendResponse({ success: true });
+    return;
+  }
+  if (message?.action === "getVerdictForTab") {
+    const tabId = message.tabId;
+    const key = "v" + tabId;
+    (async () => {
+      let v = null;
+      if (chrome.storage?.session) {
+        try {
+          const res = await chrome.storage.session.get([key, "latest_verdict"]);
+          v = res[key] || res["latest_verdict"];
+        } catch {
+        }
+      }
+      if (!v && chrome.storage?.local) {
+        try {
+          const res = await chrome.storage.local.get([key, "latest_verdict"]);
+          v = res[key] || res["latest_verdict"];
+        } catch {
+        }
+      }
+      if (!v && message.host) {
+        v = await getCachedVerdict(message.host);
+      }
+      sendResponse({ verdict: v });
+    })();
+    return true;
   }
 });
 async function syncAllowlist() {
@@ -845,12 +878,23 @@ chrome.webNavigation.onBeforeNavigate.addListener(
     const sessionKey = "v" + details.tabId;
     const sessionPayload = {
       host,
+      tabId: details.tabId,
+      timestamp: Date.now(),
       ...verdict
     };
     if (chrome.storage?.session) {
-      await chrome.storage.session.set({ [sessionKey]: sessionPayload });
-    } else if (chrome.storage?.local) {
-      await chrome.storage.local.set({ [sessionKey]: sessionPayload });
+      await chrome.storage.session.set({
+        [sessionKey]: sessionPayload,
+        latest_verdict: sessionPayload
+      }).catch(() => {
+      });
+    }
+    if (chrome.storage?.local) {
+      await chrome.storage.local.set({
+        [sessionKey]: sessionPayload,
+        latest_verdict: sessionPayload
+      }).catch(() => {
+      });
     }
     chrome.tabs.update(details.tabId, {
       url: chrome.runtime.getURL("warning.html")

@@ -1,5 +1,5 @@
 // src/popup.ts
-var API_BASE = "https://spartan-inle.onrender.com";
+var API_BASE = "http://127.0.0.1:8000";
 var reasonDisplayMap = {
   imitates_brand: "Name copies {brand}",
   combosquatting: "Name looks like {brand}",
@@ -23,6 +23,59 @@ async function initPopup() {
     showFallbackUI("No active web page detected", "Safe", "No URL available", 0);
     return;
   }
+  const isWarningPage = Boolean(
+    tab.url.includes("warning.html") || tab.url.startsWith(chrome.runtime.getURL("warning.html"))
+  );
+  let storedVerdict = null;
+  if (tab.id !== void 0) {
+    const key = "v" + tab.id;
+    if (chrome.storage?.session) {
+      try {
+        const sRes = await chrome.storage.session.get([key, "latest_verdict"]);
+        storedVerdict = sRes[key] || sRes["latest_verdict"];
+      } catch {
+      }
+    }
+    if (!storedVerdict && chrome.storage?.local) {
+      try {
+        const lRes = await chrome.storage.local.get([key, "latest_verdict"]);
+        storedVerdict = lRes[key] || lRes["latest_verdict"];
+      } catch {
+      }
+    }
+  }
+  if (isWarningPage && !storedVerdict && tab.id !== void 0) {
+    try {
+      const resp = await chrome.tabs.sendMessage(tab.id, { action: "getWarningVerdict" });
+      if (resp?.verdict) {
+        storedVerdict = resp.verdict;
+      }
+    } catch {
+    }
+    if (!storedVerdict) {
+      try {
+        const bgResp = await chrome.runtime.sendMessage({
+          action: "getVerdictForTab",
+          tabId: tab.id
+        });
+        if (bgResp?.verdict) {
+          storedVerdict = bgResp.verdict;
+        }
+      } catch {
+      }
+    }
+  }
+  if (isWarningPage) {
+    const verdictToDisplay = storedVerdict || {
+      host: "Blocked Deceptive Site",
+      level: "DANGEROUS",
+      score: 95,
+      reasons: ["threat_feed_match", "imitates_brand"]
+    };
+    hostEl.textContent = verdictToDisplay.host;
+    updatePopupUI(verdictToDisplay, tab.id);
+    return;
+  }
   let host = "";
   try {
     const url = new URL(tab.url);
@@ -41,6 +94,10 @@ async function initPopup() {
     return;
   }
   hostEl.textContent = host;
+  if (storedVerdict && storedVerdict.host === host) {
+    updatePopupUI(storedVerdict, tab.id);
+    return;
+  }
   try {
     const res = await fetch(`${API_BASE}/v1/check`, {
       method: "POST",
@@ -50,15 +107,19 @@ async function initPopup() {
     });
     if (res.ok) {
       const data = await res.json();
-      updatePopupUI(data);
+      updatePopupUI(data, tab.id);
     } else {
       showFallbackUI(host, "Be careful", "SiteGuard API status error", 50);
     }
   } catch (err) {
-    showFallbackUI(host, "Safe", "Running in offline protection mode", 0);
+    if (storedVerdict) {
+      updatePopupUI(storedVerdict, tab.id);
+    } else {
+      showFallbackUI(host, "Safe", "Running in offline protection mode", 0);
+    }
   }
 }
-function updatePopupUI(data) {
+function updatePopupUI(data, tabId) {
   const header = document.getElementById("status-card-header");
   const title = document.getElementById("popup-title");
   const subtitle = document.getElementById("popup-subtitle");
@@ -108,8 +169,15 @@ function updatePopupUI(data) {
     }
     if (data.brand?.official_url) {
       btn.hidden = false;
-      btn.textContent = "Go to the real site";
-      btn.onclick = () => chrome.tabs.create({ url: data.brand.official_url });
+      btn.textContent = data.brand.name ? `Go to real ${data.brand.name}` : "Go to the real site";
+      btn.onclick = () => {
+        if (tabId !== void 0) {
+          chrome.tabs.update(tabId, { url: data.brand.official_url });
+        } else {
+          chrome.tabs.create({ url: data.brand.official_url });
+        }
+        window.close();
+      };
       callout.hidden = true;
     } else {
       btn.hidden = true;
@@ -121,7 +189,7 @@ function updatePopupUI(data) {
     meterBar.classList.add("bar-danger");
     meterBar.style.width = `${Math.max(riskScore, 85)}%`;
     title.textContent = "Dangerous";
-    subtitle.textContent = "Do not enter details";
+    subtitle.textContent = data.brand?.name ? `Impersonates ${data.brand.name}` : "Do not enter details";
     shieldIcon.replaceChildren(createSvgIcon("danger"));
     const reasons = data.reasons && data.reasons.length > 0 ? data.reasons : ["imitates_brand", "domain_age_under_30d", "credential_form_cross_domain"];
     for (const rCode of reasons.slice(0, 3)) {
@@ -132,8 +200,15 @@ function updatePopupUI(data) {
     }
     if (data.brand?.official_url) {
       btn.hidden = false;
-      btn.textContent = "Go to the real site";
-      btn.onclick = () => chrome.tabs.create({ url: data.brand.official_url });
+      btn.textContent = data.brand.name ? `Take me to real ${data.brand.name}` : "Take me to the real site";
+      btn.onclick = () => {
+        if (tabId !== void 0) {
+          chrome.tabs.update(tabId, { url: data.brand.official_url });
+        } else {
+          chrome.tabs.create({ url: data.brand.official_url });
+        }
+        window.close();
+      };
       callout.hidden = true;
     } else {
       btn.hidden = true;
@@ -144,6 +219,9 @@ function updatePopupUI(data) {
   setupFooterLinks(data);
 }
 function showFallbackUI(host, status, sub, riskScore) {
+  const header = document.getElementById("status-card-header");
+  const shieldIcon = document.getElementById("shield-icon");
+  const meterBar = document.getElementById("meter-bar");
   const title = document.getElementById("popup-title");
   const subtitle = document.getElementById("popup-subtitle");
   const score = document.getElementById("popup-score");
@@ -155,6 +233,28 @@ function showFallbackUI(host, status, sub, riskScore) {
   title.textContent = status;
   subtitle.textContent = sub;
   score.textContent = `${riskScore} / 100`;
+  header.className = "status-header";
+  shieldIcon.className = "shield-icon";
+  meterBar.className = "meter-bar";
+  if (status === "Dangerous" || riskScore >= 70) {
+    header.classList.add("status-danger");
+    shieldIcon.classList.add("shield-danger");
+    shieldIcon.replaceChildren(createSvgIcon("danger"));
+    meterBar.classList.add("bar-danger");
+    meterBar.style.width = `${Math.max(riskScore, 85)}%`;
+  } else if (status === "Be careful" || riskScore >= 40) {
+    header.classList.add("status-warning");
+    shieldIcon.classList.add("shield-warning");
+    shieldIcon.replaceChildren(createSvgIcon("warning"));
+    meterBar.classList.add("bar-warning");
+    meterBar.style.width = `${Math.max(riskScore, 40)}%`;
+  } else {
+    header.classList.add("status-safe");
+    shieldIcon.classList.add("shield-safe");
+    shieldIcon.replaceChildren(createSvgIcon("check"));
+    meterBar.classList.add("bar-safe");
+    meterBar.style.width = "100%";
+  }
   reasonsList.replaceChildren();
   const li = document.createElement("li");
   li.textContent = "Protected by SiteGuard active filter";

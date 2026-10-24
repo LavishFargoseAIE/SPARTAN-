@@ -15,10 +15,42 @@ const localCache = new Map<string, { verdict: any; expiresAt: number }>();
 // Hosts explicitly bypassed by the user during this session ("continue anyway")
 const bypassedHosts = new Set<string>();
 
+// Allow popup and warning page to access session storage in Chromium MV3
+if ((chrome.storage as any)?.session?.setAccessLevel) {
+  (chrome.storage as any).session.setAccessLevel({
+    accessLevel: "TRUSTED_AND_UNTRUSTED_CONTEXTS",
+  }).catch(() => {});
+}
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message?.action === "bypassHost" && message.host) {
     bypassedHosts.add(String(message.host).toLowerCase());
     sendResponse({ success: true });
+    return;
+  }
+  if (message?.action === "getVerdictForTab") {
+    const tabId = message.tabId;
+    const key = "v" + tabId;
+    (async () => {
+      let v: any = null;
+      if (chrome.storage?.session) {
+        try {
+          const res = await chrome.storage.session.get([key, "latest_verdict"]);
+          v = res[key] || res["latest_verdict"];
+        } catch {}
+      }
+      if (!v && chrome.storage?.local) {
+        try {
+          const res = await chrome.storage.local.get([key, "latest_verdict"]);
+          v = res[key] || res["latest_verdict"];
+        } catch {}
+      }
+      if (!v && message.host) {
+        v = await getCachedVerdict(message.host);
+      }
+      sendResponse({ verdict: v });
+    })();
+    return true; // Keep message channel open for async response
   }
 });
 
@@ -131,16 +163,25 @@ chrome.webNavigation.onBeforeNavigate.addListener(
       return;
     }
 
-    // Step 5: Store verdict in session storage (NO DATA IN URL - Rule 6)
+    // Step 5: Store verdict in session & local storage (NO DATA IN URL - Rule 6)
     const sessionKey = "v" + details.tabId;
     const sessionPayload = {
       host,
+      tabId: details.tabId,
+      timestamp: Date.now(),
       ...verdict,
     };
     if (chrome.storage?.session) {
-      await chrome.storage.session.set({ [sessionKey]: sessionPayload });
-    } else if (chrome.storage?.local) {
-      await chrome.storage.local.set({ [sessionKey]: sessionPayload });
+      await chrome.storage.session.set({
+        [sessionKey]: sessionPayload,
+        latest_verdict: sessionPayload,
+      }).catch(() => {});
+    }
+    if (chrome.storage?.local) {
+      await chrome.storage.local.set({
+        [sessionKey]: sessionPayload,
+        latest_verdict: sessionPayload,
+      }).catch(() => {});
     }
 
     // Step 6: Replace tab URL with warning.html

@@ -147,6 +147,16 @@ function getBrowserLang(): string {
 
 let cachedVerdict: VerdictSessionData | null = null;
 
+// Allow toolbar popup to query active warning verdict directly
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message?.action === "getWarningVerdict") {
+    loadVerdict().then((v) => {
+      sendResponse({ verdict: v });
+    });
+    return true; // Keep message port open for async response
+  }
+});
+
 async function loadVerdict(): Promise<VerdictSessionData> {
   if (cachedVerdict) return cachedVerdict;
 
@@ -161,13 +171,18 @@ async function loadVerdict(): Promise<VerdictSessionData> {
     const key = "v" + tabId;
     let sessionRes: Record<string, any> = {};
     if (chrome.storage?.session) {
-      sessionRes = await chrome.storage.session.get(key);
+      try {
+        sessionRes = await chrome.storage.session.get([key, "latest_verdict"]);
+      } catch {}
     }
-    if (!sessionRes[key] && chrome.storage?.local) {
-      sessionRes = await chrome.storage.local.get(key);
+    if (!sessionRes[key] && !sessionRes["latest_verdict"] && chrome.storage?.local) {
+      try {
+        sessionRes = await chrome.storage.local.get([key, "latest_verdict"]);
+      } catch {}
     }
-    if (sessionRes[key]) {
-      cachedVerdict = sessionRes[key];
+    const found = sessionRes[key] || sessionRes["latest_verdict"];
+    if (found) {
+      cachedVerdict = found;
       return cachedVerdict!;
     }
   }
