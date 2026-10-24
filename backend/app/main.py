@@ -27,6 +27,11 @@ from app.web_surfer import analyze_web_reputation
 from app.url_model import predict_url_risk
 from app.cert_transparency import analyze_cert_transparency, brand_cert_sweep
 from app.content_classifier import analyze_page_content
+from app.visual_matcher import (
+    evaluate_visual_risk,
+    match_visual_brand,
+    compute_image_hashes,
+)
 from app.risk import (
     calculate_brand_confidence,
     compute_risk_score,
@@ -74,6 +79,13 @@ class CheckRequest(BaseModel):
     host: str = Field(..., description="The hostname to inspect (never full path or query)")
     client: Optional[str] = Field("ext-0.1.0", description="Client identifier")
     lang: Optional[str] = Field("en", description="Client language (e.g. en, hi, mr)")
+    screenshot: Optional[str] = Field(None, description="Optional base64 screenshot/logo for visual matching")
+
+
+class VisualMatchRequest(BaseModel):
+    image: str = Field(..., description="Base64 encoded image or data URL")
+    host: Optional[str] = Field(None, description="Current domain to evaluate visual spoofing risk")
+    top_k: Optional[int] = Field(3, description="Number of top matches to return")
 
 
 class BrandResponse(BaseModel):
@@ -103,6 +115,7 @@ class CheckResponse(BaseModel):
     web_reputation: Optional[WebReputationResult] = None
     url_ml_score: Optional[float] = None  # ML phishing probability (0-1), None if model unavailable
     content_risk_score: Optional[float] = None  # Page content analysis risk (0-1)
+    visual_score: Optional[float] = None  # Visual brand similarity risk V (0-1)
 
 
 class ReportRequest(BaseModel):
@@ -151,11 +164,23 @@ async def check_host(req: CheckRequest) -> CheckResponse:
     brand_tokens = lookalike_res.brand.tokens if lookalike_res.brand else None
     d_score, domain_reasons = await get_domain_intel(norm, brand_tokens=brand_tokens)
 
+    # Visual Matching: evaluate screenshot/logo if provided
+    v_score: Optional[float] = None
+    visual_reasons: List[str] = []
+    if req.screenshot:
+        try:
+            v_res = evaluate_visual_risk(req.screenshot, norm.hostname)
+            v_score = v_res["v_score"]
+            visual_reasons = v_res["reasons"]
+        except Exception as e:
+            logger.debug("Visual risk evaluation failed for %s: %s", norm.hostname, e)
+
     # Signals dict
     signals: Dict[str, Any] = {
         "L": lookalike_res.score,
         "T": t_score,
         "D": d_score,
+        "V": v_score,
         "subdomain_abuse": "subdomain_abuse" in lookalike_res.reasons,
         "shared_hosting_abuse": "shared_hosting_abuse" in domain_reasons,
         "brand_impersonation_in_title": "brand_impersonation_in_title" in domain_reasons,
@@ -165,13 +190,13 @@ async def check_host(req: CheckRequest) -> CheckResponse:
     score = compute_risk_score(signals, category=category)
     level = get_verdict_level(score)
 
-    all_reasons = lookalike_res.reasons + feed_reasons + domain_reasons
+    all_reasons = lookalike_res.reasons + feed_reasons + domain_reasons + visual_reasons
     top_reasons = select_top_reasons(all_reasons, max_count=3)
 
     # Resolve official brand redirect
     brand_resp = None
     if lookalike_res.brand:
-        conf = calculate_brand_confidence(lookalike_res.score)
+        conf = calculate_brand_confidence(lookalike_res.score, V=v_score)
         official_data = resolve_official_brand(lookalike_res.brand, conf, registry)
         if official_data:
             brand_resp = BrandResponse(
@@ -257,6 +282,7 @@ async def check_host(req: CheckRequest) -> CheckResponse:
         "web_reputation": web_rep_result.model_dump() if web_rep_result else None,
         "url_ml_score": url_ml_score,
         "content_risk_score": content_risk_score,
+        "visual_score": v_score,
     }
 
     # Cache verdict
@@ -350,6 +376,46 @@ async def content_analysis(host: str):
         timeout=10.0,
     )
     return {"host": norm.hostname, **result}
+
+
+@app.post("/v1/visual-match")
+async def visual_match_endpoint(req: VisualMatchRequest):
+    """
+    Visual brand matching endpoint using FAISS vector search and perceptual hashing.
+
+    Accepts a base64 encoded screenshot or logo image and an optional hostname.
+    Returns nearest brand matches, perceptual hashes, and visual spoofing evaluation (signal V).
+
+    Example: POST /v1/visual-match with {"image": "data:image/png;base64,...", "host": "fake-sbi.xyz"}
+    """
+    try:
+        from app.visual_matcher import decode_image_input
+        img = decode_image_input(req.image)
+        if img is None:
+            raise HTTPException(status_code=400, detail="Unable to decode image payload")
+
+        hashes = compute_image_hashes(img)
+        matches = match_visual_brand(img, top_k=req.top_k or 3)
+
+        v_eval = None
+        if req.host:
+            try:
+                norm = normalize_host(req.host)
+                v_eval = evaluate_visual_risk(img, norm.hostname)
+            except Exception:
+                pass
+
+        return {
+            "status": "success",
+            "matches": matches,
+            "hashes": hashes,
+            "visual_evaluation": v_eval,
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error("Visual match processing failed: %s", e)
+        raise HTTPException(status_code=500, detail=f"Visual matching error: {str(e)}")
 
 
 @app.get("/v1/cert-transparency")
