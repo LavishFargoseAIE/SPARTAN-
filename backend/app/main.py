@@ -25,6 +25,7 @@ from app.reasons import select_top_reasons
 from app.registry import BrandRegistry, load_registry
 from app.web_surfer import analyze_web_reputation
 from app.url_model import predict_url_risk
+from app.cert_transparency import analyze_cert_transparency, brand_cert_sweep
 from app.risk import (
     calculate_brand_confidence,
     compute_risk_score,
@@ -303,6 +304,49 @@ async def url_features_debug(url: str):
         "url": url,
         "features": features,
         "ml_prediction": ml_prediction,
+    }
+
+
+@app.get("/v1/cert-transparency")
+async def cert_transparency_check(host: str, brand: Optional[str] = None):
+    """
+    Query Certificate Transparency logs (crt.sh) for a specific host.
+
+    Optional `brand` param: comma-separated brand tokens to detect SAN abuse.
+
+    Example: GET /v1/cert-transparency?host=paypal-secure.tk&brand=paypal
+    """
+    try:
+        norm = normalize_host(host)
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid host format")
+
+    brand_tokens = [b.strip() for b in brand.split(",")] if brand else None
+
+    result = await analyze_cert_transparency(
+        norm.hostname, norm.registrable, brand_tokens=brand_tokens, max_age_days=90
+    )
+    return {"host": norm.hostname, "registrable": norm.registrable, **result}
+
+
+@app.get("/v1/ct-sweep")
+async def ct_brand_sweep(brand: str, official_domains: Optional[str] = None, days: int = 30):
+    """
+    Analyst endpoint: sweep CT logs for certificates impersonating a brand.
+
+    - `brand`: brand token to search (e.g. "paypal")
+    - `official_domains`: comma-separated list of official domains to exclude
+    - `days`: how far back to look (default 30)
+
+    Example: GET /v1/ct-sweep?brand=paypal&official_domains=paypal.com,paypal.me&days=30
+    """
+    official = [d.strip() for d in official_domains.split(",")] if official_domains else []
+    findings = await brand_cert_sweep(brand, official, max_results=50, max_age_days=days)
+    return {
+        "brand": brand,
+        "days_back": days,
+        "total_suspicious_certs": len(findings),
+        "findings": findings,
     }
 
 

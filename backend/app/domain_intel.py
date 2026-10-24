@@ -1,6 +1,6 @@
 """
-Domain intelligence signals: age, registrar, DNS, and popularity.
-Phase 2 Intelligence enhancements including RDAP age, DNS health, and Tranco ranking.
+Domain intelligence signals: age, registrar, DNS, popularity, and Certificate Transparency.
+Phase 2 Intelligence enhancements including RDAP age, DNS health, Tranco ranking, and CT logs.
 """
 
 from __future__ import annotations
@@ -16,6 +16,7 @@ import dns.exception
 
 from app.config import settings
 from app.normalize import NormalizedHost
+from app.cert_transparency import analyze_cert_transparency
 
 logger = logging.getLogger(__name__)
 
@@ -233,5 +234,24 @@ async def get_domain_intel(norm_host: NormalizedHost, brand_tokens: Optional[Lis
                         break
         except Exception as e:
             logger.debug("Web content probe error for %s: %s", host, e)
+
+    # 5. Certificate Transparency — detect freshly-minted certs and brand-name SANs
+    # CT is only applied as a boosting signal — it never raises d_score from 0
+    # (a clean domain with no other risk signals shouldn't be penalised by CT timeouts)
+    if d_score > 0:
+        try:
+            ct = await asyncio.wait_for(
+                analyze_cert_transparency(host, registrable, brand_tokens=brand_tokens, max_age_days=90),
+                timeout=5.0,
+            )
+            if ct["available"]:
+                ct_score = ct["ct_risk_score"]
+                if ct_score > 0:
+                    d_score = max(d_score, ct_score)
+                for r in ct["reasons"]:
+                    if r not in reasons:
+                        reasons.append(r)
+        except Exception as e:
+            logger.debug("CT analysis error for %s: %s", host, e)
 
     return round(min(1.0, d_score), 2), reasons
