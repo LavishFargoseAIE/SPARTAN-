@@ -56,11 +56,11 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS Middleware
+# CORS Middleware - allows any device or browser extension
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origin_list + ["chrome-extension://*", "moz-extension://*"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
