@@ -7,6 +7,15 @@
 
 import { verifySignature } from "./verify";
 
+interface WebReputationResult {
+  status: string;
+  is_genuine: boolean;
+  summary: string;
+  sources: string[];
+  wiki_article?: string;
+  discussion_sample: string[];
+}
+
 interface VerdictSessionData {
   host: string;
   level: string;
@@ -18,6 +27,7 @@ interface VerdictSessionData {
     official_url: string;
     signature: string;
   };
+  web_reputation?: WebReputationResult;
 }
 
 // Translations dictionary
@@ -308,6 +318,69 @@ async function renderWarning() {
       `SiteGuard Risk Analysis\nScore: ${verdict!.score}/100\nLevel: ${verdict!.level}\nSignals: ${verdict!.reasons.join(", ")}`
     );
   };
+
+  // Web Reputation Panel
+  const webRepPanel = document.getElementById("web-rep-panel")!;
+  const webRepHeaderText = document.getElementById("web-rep-header-text")!;
+  const webRepStatusBadge = document.getElementById("web-rep-status-badge")!;
+  const webRepSummary = document.getElementById("web-rep-summary")!;
+  const webRepSnippet1 = document.getElementById("web-rep-snippet-1")!;
+  const webRepSnippet2 = document.getElementById("web-rep-snippet-2")!;
+  const autoRedirectBanner = document.getElementById("auto-redirect-banner")!;
+  const redirectCountdownEl = document.getElementById("redirect-countdown")!;
+
+  if (verdict.web_reputation) {
+    const wr = verdict.web_reputation;
+
+    webRepStatusBadge.textContent = wr.status.replace(/_/g, " ");
+    if (wr.is_genuine) {
+      webRepStatusBadge.className = "web-rep-status genuine";
+    } else if (wr.status === "SCAM_REPORTED") {
+      webRepStatusBadge.className = "web-rep-status scam";
+    } else {
+      webRepStatusBadge.className = "web-rep-status unverified";
+    }
+
+    webRepSummary.textContent = wr.summary;
+
+    if (wr.wiki_article) {
+      webRepHeaderText.textContent = `🔍 Web Research: Wikipedia — ${wr.wiki_article}`;
+    } else {
+      webRepHeaderText.textContent = "🔍 Web Reputation Research";
+    }
+
+    // Discussion snippets
+    if (wr.discussion_sample && wr.discussion_sample.length > 0) {
+      webRepSnippet1.textContent = `"${wr.discussion_sample[0]}"`;
+      webRepSnippet1.hidden = false;
+      webRepSnippet1.style.display = "block";
+    }
+    if (wr.discussion_sample && wr.discussion_sample.length > 1) {
+      webRepSnippet2.textContent = `"${wr.discussion_sample[1]}"`;
+      webRepSnippet2.hidden = false;
+      webRepSnippet2.style.display = "block";
+    }
+
+    webRepPanel.hidden = false;
+    webRepPanel.style.display = "block";
+
+    // Auto-redirect if site confirmed genuine
+    if (wr.is_genuine && wr.status !== "SCAM_REPORTED") {
+      autoRedirectBanner.hidden = false;
+      autoRedirectBanner.style.display = "block";
+      let redirectSecs = 3;
+      redirectCountdownEl.textContent = String(redirectSecs);
+      const redirectTimer = setInterval(() => {
+        redirectSecs--;
+        if (redirectSecs <= 0) {
+          clearInterval(redirectTimer);
+          window.location.replace("https://" + verdict!.host);
+        } else {
+          redirectCountdownEl.textContent = String(redirectSecs);
+        }
+      }, 1000);
+    }
+  }
 }
 
 document.addEventListener("DOMContentLoaded", renderWarning);

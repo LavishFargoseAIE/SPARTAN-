@@ -294,6 +294,70 @@
     .btn-continue:hover {
       color: var(--text-main);
     }
+
+    .web-rep-panel {
+      margin-top: 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .web-rep-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .web-rep-body {
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .web-rep-status {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      margin-bottom: 0.5rem;
+    }
+
+    .web-rep-status.genuine { background: #d1fae5; color: #065f46; }
+    .web-rep-status.scam { background: #fee2e2; color: #991b1b; }
+    .web-rep-status.unverified { background: #f1f5f9; color: #475569; }
+
+    .web-rep-snippet {
+      margin-top: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      background: #f8fafc;
+      border-left: 3px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #475569;
+    }
+
+    .auto-redirect-banner {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      background: #d1fae5;
+      border: 1px solid #6ee7b7;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #065f46;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -343,6 +407,23 @@
         <button id="btn-continue" class="btn-continue">
           I understand the risk, continue anyway (<span id="countdown">5</span>s)
         </button>
+      </div>
+
+      <div id="web-rep-panel" class="web-rep-panel" hidden>
+        <div id="web-rep-header" class="web-rep-header">
+          <span>🔍</span>
+          <span id="web-rep-header-text">Web Reputation Research</span>
+        </div>
+        <div id="web-rep-body" class="web-rep-body">
+          <span id="web-rep-status-badge" class="web-rep-status unverified"></span>
+          <div id="web-rep-summary"></div>
+          <div id="web-rep-snippet-1" class="web-rep-snippet" hidden></div>
+          <div id="web-rep-snippet-2" class="web-rep-snippet" hidden></div>
+        </div>
+      </div>
+
+      <div id="auto-redirect-banner" class="auto-redirect-banner" hidden>
+        ✅ Site verified as genuine — redirecting in <span id="redirect-countdown">3</span>s…
       </div>
 
       <div class="footer-links">
