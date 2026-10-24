@@ -1,5 +1,5 @@
 // src/popup.ts
-var API_BASE = "http://127.0.0.1:8000";
+var API_BASE = "http://172.16.10.45:8000";
 var reasonDisplayMap = {
   imitates_brand: "Name copies {brand}",
   combosquatting: "Name looks like {brand}",
