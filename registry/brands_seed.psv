@@ -1,624 +1,3533 @@
-State Bank of India|bank|sbi.co.in;onlinesbi.sbi;onlinesbi.com
-HDFC Bank|bank|hdfcbank.com
-ICICI Bank|bank|icicibank.com
-Axis Bank|bank|axisbank.com
-Kotak Mahindra Bank|bank|kotak.com
-Punjab National Bank|bank|pnbindia.in;netpnb.com
-Bank of Baroda|bank|bankofbaroda.in;bobibanking.com
-Canara Bank|bank|canarabank.com
-Union Bank of India|bank|unionbankofindia.co.in
-Bank of India|bank|bankofindia.co.in
-Indian Bank|bank|indianbank.in;indianbank.net.in
-Central Bank of India|bank|centralbankofindia.co.in
-Indian Overseas Bank|bank|iob.in
-UCO Bank|bank|ucobank.com
-Bank of Maharashtra|bank|bankofmaharashtra.in
-Punjab and Sind Bank|bank|psbindia.com
-IDBI Bank|bank|idbibank.in
-Yes Bank|bank|yesbank.in
-IndusInd Bank|bank|indusind.com
-Federal Bank|bank|federalbank.co.in
-South Indian Bank|bank|southindianbank.com
-Karur Vysya Bank|bank|kvb.co.in
-City Union Bank|bank|cityunionbank.com
-Bandhan Bank|bank|bandhanbank.com
-IDFC First Bank|bank|idfcfirstbank.com
-RBL Bank|bank|rblbank.com
-AU Small Finance Bank|bank|aubank.in
-Equitas Small Finance Bank|bank|equitasbank.com
-Ujjivan Small Finance Bank|bank|ujjivansfb.in
-Jammu and Kashmir Bank|bank|jkbank.com
-Karnataka Bank|bank|karnatakabank.com
-Tamilnad Mercantile Bank|bank|tmbnet.in
-Dhanlaxmi Bank|bank|dhanbank.com
-DCB Bank|bank|dcbbank.com
-CSB Bank|bank|csb.co.in
-Nainital Bank|bank|nainitalbank.co.in
-Standard Chartered|bank|sc.com
-HSBC|bank|hsbc.co.in;hsbc.com
-Citibank|bank|citi.com;citibank.co.in
-Deutsche Bank|bank|db.com
-DBS Bank|bank|dbs.com
-Paytm Payments Bank|bank|paytmbank.com
-India Post Payments Bank|bank|ippbonline.com
-Fino Payments Bank|bank|finobank.com
-JPMorgan Chase|bank|chase.com;jpmorganchase.com
-Bank of America|bank|bankofamerica.com
-Wells Fargo|bank|wellsfargo.com
-Goldman Sachs|bank|goldmansachs.com
-Morgan Stanley|bank|morganstanley.com
-Barclays|bank|barclays.co.uk;barclays.com
-Lloyds Bank|bank|lloydsbank.com
-NatWest|bank|natwest.com
-Santander|bank|santander.com
-BNP Paribas|bank|bnpparibas.com
-UBS|bank|ubs.com
-Capital One|bank|capitalone.com
-Discover Financial|bank|discover.com
-Revolut|bank|revolut.com
-Monzo|bank|monzo.com
-Reserve Bank of India|government|rbi.org.in
-NPCI|payment|npci.org.in
-HDFC Life|insurance|hdfclife.com
-ICICI Prudential Life|insurance|iciciprulife.com
-SBI Life Insurance|insurance|sbilife.co.in
-Life Insurance Corporation of India|insurance|licindia.in
-Max Life Insurance|insurance|maxlifeinsurance.com
-Bajaj Allianz|insurance|bajajallianz.com
-Star Health Insurance|insurance|starhealth.in
-HDFC Ergo|insurance|hdfcergo.com
-ICICI Lombard|insurance|icicilombard.com
-New India Assurance|insurance|newindia.co.in
-Tata AIG|insurance|tataaig.com
-Tata AIA Life|insurance|tataaia.com
-Care Health Insurance|insurance|careinsurance.com
-Niva Bupa|insurance|nivabupa.com
-ManipalCigna|insurance|manipalcigna.com
-Digit Insurance|insurance|godigit.com
-Acko|insurance|acko.com
-PNB MetLife|insurance|pnbmetlife.com
-Kotak Life|insurance|kotaklife.com
-Aditya Birla Sun Life Insurance|insurance|adityabirlasunlifeinsurance.com
-Oriental Insurance|insurance|orientalinsurance.org.in
-United India Insurance|insurance|uiic.co.in
-National Insurance|insurance|nationalinsurance.nic.co.in
-SBI General Insurance|insurance|sbigeneral.in
-IFFCO Tokio|insurance|iffcotokio.co.in
-Policybazaar|insurance|policybazaar.com
-Bajaj Finserv|finance|bajajfinserv.in;bajajfinance.in
-Muthoot Finance|finance|muthootfinance.com
-Manappuram Finance|finance|manappuram.com
-Tata Capital|finance|tatacapital.com
-Mahindra Finance|finance|mahindrafinance.com
-SBI Card|finance|sbicard.com
-Aditya Birla Capital|finance|adityabirlacapital.com
-Shriram Finance|finance|shriramfinance.in
-L and T Finance|finance|ltfs.com
-Hero FinCorp|finance|herofincorp.com
-CIBIL|finance|cibil.com
-Experian|finance|experian.com;experian.in
-Equifax|finance|equifax.com
-TransUnion|finance|transunion.com
-Zerodha|finance|zerodha.com
-Groww|finance|groww.in
-Upstox|finance|upstox.com
-Angel One|finance|angelone.in
+0.0030|tech|00030.com
+1047 Games|tech|1047games.com
+1KMXC|tech|1kmxc.com
+1Password|security|1password.com
+3i|finance|3i.com
+4Paradigm|tech|4paradigm.com
+56PINGTAI|logistics|56pingtai.com
+58 Daojia|tech|58daojia.com
 5paisa|finance|5paisa.com
-ICICI Direct|finance|icicidirect.com
-HDFC Securities|finance|hdfcsec.com
-Kotak Securities|finance|kotaksecurities.com
-Motilal Oswal|finance|motilaloswal.com
-Sharekhan|finance|sharekhan.com
-Dhan|finance|dhan.co
-Kuvera|finance|kuvera.in
-NSE India|finance|nseindia.com
-BSE India|finance|bseindia.com
-CDSL|finance|cdslindia.com
-NSDL|finance|nsdl.co.in
-CAMS|finance|camsonline.com
-KFintech|finance|kfintech.com
-AMFI|finance|amfiindia.com
-MF Utilities|finance|mfuindia.com
-SBI Mutual Fund|finance|sbimf.com
-HDFC Mutual Fund|finance|hdfcfund.com
-ICICI Prudential Mutual Fund|finance|icicipruamc.com
-Axis Mutual Fund|finance|axismf.com
-Nippon India Mutual Fund|finance|nipponindiamf.com
-Kotak Mutual Fund|finance|kotakmf.com
-UTI Mutual Fund|finance|utimf.com
-Charles Schwab|finance|schwab.com
-Fidelity|finance|fidelity.com
-Vanguard|finance|vanguard.com
-Robinhood|finance|robinhood.com
-Intuit|finance|intuit.com
-Paytm|payment|paytm.com
-PhonePe|payment|phonepe.com
-BHIM UPI|payment|bhimupi.org.in
-Razorpay|payment|razorpay.com
-PayU|payment|payu.in
-Cashfree|payment|cashfree.com
-CCAvenue|payment|ccavenue.com
-BillDesk|payment|billdesk.com
-Instamojo|payment|instamojo.com
-MobiKwik|payment|mobikwik.com
-Freecharge|payment|freecharge.in
-CRED|payment|cred.club
-Slice|payment|sliceit.com
-Jupiter Money|payment|jupiter.money
-Fi Money|payment|fi.money
-RuPay|payment|rupay.co.in
-PayPal|payment|paypal.com
-Stripe|payment|stripe.com
-Wise|payment|wise.com
-Western Union|payment|westernunion.com
-Visa|payment|visa.com
-Mastercard|payment|mastercard.com
-American Express|payment|americanexpress.com
-Zelle|payment|zellepay.com
-Venmo|payment|venmo.com
-Cash App|payment|cash.app
-Klarna|payment|klarna.com
-Affirm|payment|affirm.com
-Alipay|payment|alipay.com
-Binance|crypto|binance.com
-Coinbase|crypto|coinbase.com
-WazirX|crypto|wazirx.com
-CoinDCX|crypto|coindcx.com
-Kraken|crypto|kraken.com
-MetaMask|crypto|metamask.io
-Government of India Portal|government|india.gov.in
-Income Tax e-Filing|government|incometax.gov.in
-Income Tax Department|government|incometaxindia.gov.in
-GST Portal|government|gst.gov.in
-UIDAI Aadhaar|government|uidai.gov.in
-DigiLocker|government|digilocker.gov.in
-Passport Seva|government|passportindia.gov.in
-UMANG|government|umang.gov.in
-EPFO|government|epfindia.gov.in
-Parivahan|government|parivahan.gov.in
-Election Commission of India|government|eci.gov.in
-Ministry of Corporate Affairs|government|mca.gov.in
-CBIC Customs|government|cbic.gov.in
-PM-KISAN|government|pmkisan.gov.in
-Ayushman Bharat PMJAY|government|pmjay.gov.in
-CoWIN|government|cowin.gov.in
-MyGov India|government|mygov.in
-PFMS|government|pfms.nic.in
-NPS Trust|government|npstrust.org.in
-Protean eGov|government|proteantech.in
-IRCTC|government|irctc.co.in
-Indian Railways|government|indianrailways.gov.in
-India Post|government|indiapost.gov.in
-Cyber Crime Portal|government|cybercrime.gov.in
-CERT-In|government|cert-in.org.in
-Ministry of Home Affairs|government|mha.gov.in
-Supreme Court of India|government|sci.gov.in
-eCourts|government|ecourts.gov.in
-Parliament of India|government|sansad.in
-Prime Minister's Office India|government|pmindia.gov.in
-Ministry of External Affairs|government|mea.gov.in
-Indian Visa Online|government|indianvisaonline.gov.in
-e-Shram|government|eshram.gov.in
-National Scholarship Portal|government|scholarships.gov.in
-NIC India|government|nic.in
-NHAI|government|nhai.gov.in
-CBSE|government|cbse.gov.in
-UGC|government|ugc.gov.in
-NTA|government|nta.ac.in
-UPSC|government|upsc.gov.in
-SSC|government|ssc.gov.in
-SEBI|government|sebi.gov.in
-TRAI|government|trai.gov.in
-Department of Telecommunications|government|dot.gov.in
-Sanchar Saathi|government|sancharsaathi.gov.in
-Government of Maharashtra|government|maharashtra.gov.in
-MahaOnline|government|mahaonline.gov.in
-MSRTC|government|msrtc.gov.in
-Pune Municipal Corporation|government|pmc.gov.in
-USA.gov|government|usa.gov
-IRS|government|irs.gov
-GOV.UK|government|gov.uk
-USCIS|government|uscis.gov
-Social Security Administration|government|ssa.gov
-Canada.ca|government|canada.ca
-Australian Government|government|australia.gov.au
-Australian Taxation Office|government|ato.gov.au
-European Union|government|europa.eu
-World Health Organization|government|who.int
-United Nations|government|un.org
-Reliance Jio|telecom|jio.com
-Airtel|telecom|airtel.in
-Vodafone Idea|telecom|myvi.in
-BSNL|telecom|bsnl.co.in
-MTNL|telecom|mtnl.net.in
+6Sense|tech|6sense.com
+77 Bank|bank|77bank.com
+A.P. Moller-Maersk|logistics|apmollermaersk.com
+A24 Films|tech|a24films.com
+A2A|utility|a2a.com
+Aaj Tak|news|aajtak.in
+ABB|tech|abb.com
+Abbott Laboratories|health|abbottlaboratories.com
+AbbVie|health|abbvie.com
+ABL Space Systems|tech|ablspacesystems.com
+Abogen|health|abogen.com
+ABP Live|news|abplive.com
+Absa|bank|absa.com
+Abu Dhabi Commercial Bank|bank|abudhabicommercialbank.com
+Abu Dhabi Islamic Bank|bank|abudhabiislamicbank.com
+Accelerant|tech|accelerant.com
+Accenture|tech|accenture.com
+Acciona|tech|acciona.com
+Accor|travel|accor.com
+Acko|insurance|acko.com
+Acko General Insurance|finance|ackogeneralinsurance.com
+Acorns|finance|acorns.com
+Acronis|security|acronis.com
+ACS Actividades de Construccion y Servicios|tech|acsactividadesdeconstruccionyservicios.com
 ACT Fibernet|telecom|actcorp.in
-Hathway|telecom|hathway.com
-Tata Play|telecom|tataplay.com
-Dish TV|telecom|dishtv.in
-Sun Direct|telecom|sundirect.in
-Verizon|telecom|verizon.com
-AT and T|telecom|att.com
-T-Mobile|telecom|t-mobile.com
-Vodafone|telecom|vodafone.com
-Tata Power|utility|tatapower.com
+ActiveCampaign|tech|activecampaign.com
+ACWA Power|utility|acwapower.com
+Ada Support|tech|adasupport.com
 Adani Electricity|utility|adanielectricity.com
-BSES Delhi|utility|bsesdelhi.com
-Torrent Power|utility|torrentpower.com
-MSEDCL Mahavitaran|utility|mahadiscom.in
-Indian Oil|utility|iocl.com
-Bharat Petroleum|utility|bharatpetroleum.in
-Hindustan Petroleum|utility|hindustanpetroleum.com
-Mahanagar Gas|utility|mahanagargas.com
-Indraprastha Gas|utility|iglonline.net
-BEST Undertaking|utility|bestundertaking.com
-Amazon India|ecommerce|amazon.in
-Amazon|ecommerce|amazon.com
-Flipkart|ecommerce|flipkart.com
-Myntra|ecommerce|myntra.com
-Ajio|ecommerce|ajio.com
-Meesho|ecommerce|meesho.com
-Nykaa|ecommerce|nykaa.com
-Tata Neu|ecommerce|tataneu.com
-JioMart|ecommerce|jiomart.com
-BigBasket|ecommerce|bigbasket.com
-Blinkit|ecommerce|blinkit.com
-Zepto|ecommerce|zeptonow.com
-Swiggy|food|swiggy.com
-Zomato|food|zomato.com
-Snapdeal|ecommerce|snapdeal.com
-FirstCry|ecommerce|firstcry.com
-Lenskart|ecommerce|lenskart.com
-Tata 1mg|health|1mg.com
-PharmEasy|health|pharmeasy.in
-Apollo Pharmacy|health|apollopharmacy.in
-Netmeds|health|netmeds.com
-Practo|health|practo.com
-Dr Lal PathLabs|health|lalpathlabs.com
-Max Healthcare|health|maxhealthcare.in
-Fortis Healthcare|health|fortishealthcare.com
-Manipal Hospitals|health|manipalhospitals.com
-AIIMS|health|aiims.edu
-Cult.fit|health|cult.fit
-HealthifyMe|health|healthifyme.com
-Urban Company|ecommerce|urbancompany.com
-OLX India|ecommerce|olx.in
-Quikr|ecommerce|quikr.com
-Cars24|auto|cars24.com
-CarDekho|auto|cardekho.com
-Spinny|auto|spinny.com
-Decathlon India|ecommerce|decathlon.in
-Croma|ecommerce|croma.com
-Reliance Digital|ecommerce|reliancedigital.in
-Vijay Sales|ecommerce|vijaysales.com
-IKEA|ecommerce|ikea.com
-Pepperfry|ecommerce|pepperfry.com
-Tanishq|ecommerce|tanishq.com
-Titan|ecommerce|titan.co.in
-Mamaearth|ecommerce|mamaearth.in
-boAt|ecommerce|boat-lifestyle.com
-Bata|ecommerce|bata.in
-Pantaloons|ecommerce|pantaloons.com
-Westside|ecommerce|westside.com
-Shoppers Stop|ecommerce|shoppersstop.com
-Lifestyle Stores|ecommerce|lifestylestores.com
-DMart|ecommerce|dmart.in
-Reliance Retail|ecommerce|relianceretail.com
-Blue Dart|logistics|bluedart.com
-Delhivery|logistics|delhivery.com
-DTDC|logistics|dtdc.in
-Ecom Express|logistics|ecomexpress.in
-Shiprocket|logistics|shiprocket.in
-FedEx|logistics|fedex.com
-UPS|logistics|ups.com
-DHL|logistics|dhl.com
-USPS|logistics|usps.com
-Royal Mail|logistics|royalmail.com
-Aramex|logistics|aramex.com
-Maersk|logistics|maersk.com
-Ola Cabs|travel|olacabs.com
-Uber|travel|uber.com
-Rapido|travel|rapido.bike
-Lyft|travel|lyft.com
-redBus|travel|redbus.in
-MakeMyTrip|travel|makemytrip.com
-Goibibo|travel|goibibo.com
-Cleartrip|travel|cleartrip.com
-EaseMyTrip|travel|easemytrip.com
-Yatra|travel|yatra.com
-ixigo|travel|ixigo.com
-IndiGo|travel|goindigo.in
-Air India|travel|airindia.com
-Vistara|travel|airvistara.com
-SpiceJet|travel|spicejet.com
-Akasa Air|travel|akasaair.com
-Air India Express|travel|airindiaexpress.com
-OYO|travel|oyorooms.com
-Booking.com|travel|booking.com
-Airbnb|travel|airbnb.com
-Expedia|travel|expedia.com
+Adani Enterprises|tech|adanienterprises.com
+Adani Group|finance|adani.com
+Adani Ports & Special Economic Zone|logistics|adaniportsspecialeconomiczone.com
+Adani Power|utility|adanipower.com
+Addepar|finance|addepar.com
+Adecco|tech|adecco.com
+Adidas|ecommerce|adidas.com
+Aditya Birla Capital|finance|adityabirlacapital.com
+Aditya Birla Sun Life Insurance|insurance|adityabirlasunlifeinsurance.com
+Admiral|insurance|admiral.com
+Adobe|tech|adobe.com
+Advance Intelligence|tech|advanceintelligence.com
+Advanced Info Service|telecom|advancedinfoservice.com
+Advanced Micro Devices|tech|advancedmicrodevices.com
+Advantest|tech|advantest.com
+Adyen|bank|adyen.com
+AECOM|tech|aecom.com
+Aegon|insurance|aegon.com
+Aena|logistics|aena.com
+Aeon|food|aeon.com
+AerCap|tech|aercap.com
+Aeroports de Paris|logistics|aeroportsdeparis.com
+AES|utility|aes.com
+Affirm|payment|affirm.com
+Afiniti|tech|afiniti.com
+Aflac|insurance|aflac.com
+Ag|food|ag.com
+AGC|tech|agc.com
+Age of Learning|education|ageoflearning.com
+Ageas|insurance|ageas.com
+AgentSync|finance|agentsync.com
+Agile Robots|tech|agilerobots.com
+Agilent Technologies|health|agilenttechnologies.com
+AGNC Investment|finance|agncinvestment.com
+Agnico Eagle Mines|tech|agnicoeaglemines.com
 Agoda|travel|agoda.com
-TripAdvisor|travel|tripadvisor.com
-Taj Hotels|travel|tajhotels.com
-Marriott|travel|marriott.com
-Hilton|travel|hilton.com
-Hyatt|travel|hyatt.com
-Grab|travel|grab.com
-Gojek|travel|gojek.com
-eBay|ecommerce|ebay.com
-Walmart|ecommerce|walmart.com
-Target|ecommerce|target.com
-Best Buy|ecommerce|bestbuy.com
-Costco|ecommerce|costco.com
+Agricultural Bank of China|bank|agriculturalbankofchina.com
+AIA|insurance|aia.com
+AIB|bank|aib.com
+Aibee|tech|aibee.com
+Aichi Financial|bank|aichifinancial.com
+Aier Eye Hospital|health|aiereyehospital.com
+AIIMS|health|aiims.edu
+Air Canada|logistics|aircanada.com
+Air France-KLM|logistics|airfranceklm.com
+Air India|travel|airindia.com
+Air India Express|travel|airindiaexpress.com
+Air Liquide|tech|airliquide.com
+Air Products & Chemicals|tech|airproductschemicals.com
+Airbnb|travel|airbnb.com
+AIRBUS|tech|airbus.com
+Airbyte|tech|airbyte.com
+Aircall|tech|aircall.com
+Airports of Thailand|logistics|airportsofthailand.com
+Airtable|tech|airtable.com
+Airtel|telecom|airtel.in
+Airwallex|finance|airwallex.com
+Aisin Seiki|tech|aisinseiki.com
+Aiven|tech|aiven.com
+AIWAYS|auto|aiways.com
+Ajaib|finance|ajaib.com
+Ajinomoto|food|ajinomoto.com
+Ajio|ecommerce|ajio.com
+Akasa Air|travel|akasaair.com
+Akbank|bank|akbank.com
+Akulaku|ecommerce|akulaku.com
+Akzo Nobel|tech|akzonobel.com
+Al Jazeera|news|aljazeera.com
+Al Rajhi Bank|bank|alrajhibank.com
+Alan|finance|alan.com
+Alaska Air|logistics|alaskaair.com
+Alation|tech|alation.com
+Albertsons|food|albertsons.com
+Alchemy|finance|alchemy.com
+Alcoa|tech|alcoa.com
+Alcon|health|alcon.com
+Aldar Properties|tech|aldarproperties.com
+Aledade|health|aledade.com
+Aleo|security|aleo.com
+Alexandria Real Estate Equities|finance|alexandriarealestateequities.com
+Alfa Laval|tech|alfalaval.com
+Alfresa|health|alfresa.com
+Algolia|tech|algolia.com
 Alibaba|ecommerce|alibaba.com
 AliExpress|ecommerce|aliexpress.com
-Etsy|ecommerce|etsy.com
-Shopify|ecommerce|shopify.com
-Temu|ecommerce|temu.com
-Shein|ecommerce|shein.com
-Zalando|ecommerce|zalando.com
-Rakuten|ecommerce|rakuten.com
-Mercado Libre|ecommerce|mercadolibre.com
-Shopee|ecommerce|shopee.com
-Lazada|ecommerce|lazada.com
-Nike|ecommerce|nike.com
-Adidas|ecommerce|adidas.com
-Zara|ecommerce|zara.com
-H and M|ecommerce|hm.com
-DoorDash|food|doordash.com
-Instacart|food|instacart.com
-Grubhub|food|grubhub.com
-Uber Eats|food|ubereats.com
-McDonald's|food|mcdonalds.com
-Starbucks|food|starbucks.com
-Dominos|food|dominos.com;dominos.co.in
-Pizza Hut|food|pizzahut.com;pizzahut.co.in
-KFC|food|kfc.com;kfc.co.in
-Burger King|food|burgerking.in
-Subway|food|subway.com
-Haldiram's|food|haldirams.com
+Alinma Bank|bank|alinmabank.com
+Alior Bank|bank|aliorbank.com
+Alipay|payment|alipay.com
+All Nippon Airways|logistics|allnipponairways.com
+Allegion|tech|allegion.com
+Alliant Energy|utility|alliantenergy.com
+Allianz|insurance|allianz.com
+Alloy|finance|alloy.com
+Allstate|insurance|allstate.com
+Ally Financial|bank|allyfinancial.com
+Almarai|food|almarai.com
+Alnylam Pharmaceuticals|health|alnylampharmaceuticals.com
+Alpha Bank|bank|alphabank.com
+Alphabet|tech|alphabet.com
+AlRayan Bank|finance|alrayanbank.com
+Alstom|tech|alstom.com
+AltaGas|utility|altagas.com
+Altice USA|telecom|alticeusa.com
+Alto Pharmacy|health|altopharmacy.com
+Altria|food|altria.com
+Aluminum|tech|aluminum.com
+Alzheon|health|alzheon.com
+América Móvil|telecom|amricamvil.com
+Amadeus IT|tech|amadeusit.com
+Amagi|tech|amagi.com
+Amazon|ecommerce|amazon.com
+Amazon India|ecommerce|amazon.in
+AmBank|bank|ambank.com
+Amber|finance|amber.com
+Ambuja Cements|tech|ambujacements.com
+Amcor|tech|amcor.com
+AMD|tech|amd.com
+Ameren|utility|ameren.com
+American Airlines|logistics|americanairlines.com
+American Electric|utility|americanelectric.com
+American Express|payment|americanexpress.com
+American Financial|insurance|americanfinancial.com
+American International|insurance|americaninternational.com
+American Tower|finance|americantower.com
+American Water Works|utility|americanwaterworks.com
+Americanas|ecommerce|americanas.com
+Ameriprise Financial|finance|ameriprisefinancial.com
+Ametek|tech|ametek.com
+AMFI|finance|amfiindia.com
+Amgen|health|amgen.com
+Amman Mineral Internasional|tech|ammanmineralinternasional.com
+Amount|finance|amount.com
+Amperity|tech|amperity.com
+Amphenol|tech|amphenol.com
+Ampol|utility|ampol.com
 Amul|food|amul.com
-Google|tech|google.com;google.co.in
-Microsoft|tech|microsoft.com;live.com;office.com;microsoftonline.com
+Analog Devices|tech|analogdevices.com
+Anchorage Digital|finance|anchoragedigital.com
+Andela|tech|andela.com
+Anduril|tech|anduril.com
+Angel One|finance|angelone.in
+Anglo American|tech|angloamerican.com
+AngloGold Ashanti|tech|anglogoldashanti.com
+Anheuser-Busch InBev|food|anheuserbuschinbev.com
+Anhui Conch Cement|tech|anhuiconchcement.com
+Anhui Construction Engineering|tech|anhuiconstructionengineering.com
+Anhui Gujing Distillery|food|anhuigujingdistillery.com
+Ankorstore|ecommerce|ankorstore.com
+Annaly Capital Management|finance|annalycapitalmanagement.com
+Ansys|tech|ansys.com
+Anta Sports Products|tech|antasportsproducts.com
+AntarChile|finance|antarchile.com
+Anthropic|tech|anthropic.com;claude.ai
+Antofagasta|tech|antofagasta.com
+Anyscale|tech|anyscale.com
+ANZ|bank|anz.com
+Aon|insurance|aon.com
+Aozora Bank|finance|aozorabank.com
+APA|utility|apa.com
+Apeel Sciences|tech|apeelsciences.com
+apna|tech|apna.com
+Apollo Global Management|finance|apolloglobalmanagement.com
+Apollo Pharmacy|health|apollopharmacy.in
+AppDirect|ecommerce|appdirect.com
 Apple|tech|apple.com;icloud.com
-Meta|social|meta.com
-Facebook|social|facebook.com
-Instagram|social|instagram.com
-WhatsApp|social|whatsapp.com
-Messenger|social|messenger.com
-Threads|social|threads.net
-X Twitter|social|x.com;twitter.com
-LinkedIn|social|linkedin.com
-Snapchat|social|snapchat.com
-Pinterest|social|pinterest.com
-Reddit|social|reddit.com
-Telegram|social|telegram.org;t.me
-Discord|social|discord.com
-Signal|social|signal.org
-TikTok|social|tiktok.com
-YouTube|media|youtube.com
-Quora|social|quora.com
-Medium|social|medium.com
-ShareChat|social|sharechat.com
-Tencent|tech|tencent.com
-WeChat|social|wechat.com
+Applied Intuition|tech|appliedintuition.com
+Applied Materials|tech|appliedmaterials.com
+AppLovin|tech|applovin.com
+ApplyBoard|education|applyboard.com
+AppsFlyer|telecom|appsflyer.com
+Aprogen|health|aprogen.com
+Aptiv|tech|aptiv.com
+Aptos|tech|aptos.com
+Apus|telecom|apus.com
+Aqua Security|security|aquasecurity.com
+Arab Bank|bank|arabbank.com
+Arab Banking|bank|arabbanking.com
+Arab National Bank|bank|arabnationalbank.com
+Aramark|travel|aramark.com
+Aramex|logistics|aramex.com
+ARC Resources|utility|arcresources.com
+Arca Continental|food|arcacontinental.com
+ArcelorMittal|tech|arcelormittal.com
+Arch Capital|insurance|archcapital.com
+Archer Daniels Midland|food|archerdanielsmidland.com
+Arctic Wolf Networks|security|arcticwolfnetworks.com
+Ares Management|finance|aresmanagement.com
+arGEN-X|health|argenx.com
+Argo AI|tech|argoai.com
+Arista Networks|tech|aristanetworks.com
+Aristocrat Leisure|travel|aristocratleisure.com
+Arrow Electronics|tech|arrowelectronics.com
+Articulate|education|articulate.com
+Asahi|food|asahi.com
+Asahi Kasei|tech|asahikasei.com
+ASAPP|tech|asapp.com
+Asbury Automotive|ecommerce|asburyautomotive.com
+Ascend Money|finance|ascendmoney.com
+ASE Technology|tech|asetechnology.com
+Ashtead|tech|ashtead.com
+Asia Commercial Bank|bank|asiacommercialbank.com
+Asian Paints|tech|asianpaints.com
+ASM International|tech|asminternational.com
+ASML|tech|asml.com
+Asr Nederland|insurance|asrnederland.com
+Assa Abloy|tech|assaabloy.com
+Assembly|tech|assembly.com
+Assent|logistics|assent.com
+Associated Banc|bank|associatedbanc.com
+Associated British Foods|food|associatedbritishfoods.com
+Assurant|insurance|assurant.com
+Astellas Pharma|health|astellaspharma.com
+Astranis Space Technologies|telecom|astranisspacetechnologies.com
+AstraZeneca|health|astrazeneca.com
+Asus|tech|asus.com
+Asustek Computer|tech|asustekcomputer.com
+AT and T|telecom|att.com
+At-Bay|finance|atbay.com
+Athelas|health|athelas.com
+Ather Energy|auto|atherenergy.com
+Athletic Greens|health|athleticgreens.com
+Atlas Copco|tech|atlascopco.com
+Atlassian|tech|atlassian.com;atlassian.net
+Atmos Energy|utility|atmosenergy.com
+Attentive|telecom|attentive.com
+Attijariwafa Bank|bank|attijariwafabank.com
+AU Small Finance Bank|bank|aubank.in
+Audi|auto|audi.com
+Augury|tech|augury.com
+Aura|security|aura.com
+Aurora Solar|tech|aurorasolar.com
+Aurubis|tech|aurubis.com
+Australian Government|government|australia.gov.au
+Australian Taxation Office|government|ato.gov.au
+Autodesk|tech|autodesk.com
+Autoliv|tech|autoliv.com
+Automatic Data Processing|tech|automaticdataprocessing.com
+Automation Anywhere|tech|automationanywhere.com
+Automattic|tech|automattic.com
+AutoNation|ecommerce|autonation.com
+AutoZone|ecommerce|autozone.com
+AvalonBay Communities|finance|avalonbaycommunities.com
+Avant|tech|avant.com
+Avast|security|avast.com
+Avenue Supermarts|ecommerce|avenuesupermarts.com
+Avery Dennison|tech|averydennison.com
+Aviatrix|tech|aviatrix.com
+AVIC Capital|tech|aviccapital.com
+AVIC Chengdu Aircraft|tech|avicchengduaircraft.com
+AviChina Industry & Technology|tech|avichinaindustrytechnology.com
+Avis Budget|tech|avisbudget.com
+Aviva|insurance|aviva.com
+Avnet|tech|avnet.com
+Avolta|ecommerce|avolta.com
+Away|ecommerce|away.com
+AXA|insurance|axa.com
+Axelar|tech|axelar.com
+Axiom Space|tech|axiomspace.com
+Axis Bank|bank|axisbank.com
+Axis Capital|insurance|axiscapital.com
+Axis Mutual Fund|finance|axismf.com
+Axon Enterprise|tech|axonenterprise.com
+Axonius|security|axonius.com
+Axtria|tech|axtria.com
+Ayala|tech|ayala.com
+Ayushman Bharat PMJAY|government|pmjay.gov.in
+Bâloise|insurance|bloise.com
+B3|finance|b3.com
+BAC|tech|bac.com
+Back Market|ecommerce|backmarket.com
+BAE Systems|tech|baesystems.com
+BAIC Motor|tech|baicmotor.com
 Baidu|tech|baidu.com
-Yandex|tech|yandex.com
-Naver|tech|naver.com
-LINE|social|line.me
-Netflix|media|netflix.com
-Disney Plus Hotstar|media|hotstar.com
-JioCinema|media|jiocinema.com
-Prime Video|media|primevideo.com
-Sony LIV|media|sonyliv.com
-ZEE5|media|zee5.com
-Spotify|media|spotify.com
-Gaana|media|gaana.com
-JioSaavn|media|jiosaavn.com
-Twitch|media|twitch.tv
-Disney|media|disney.com
-Max HBO|media|max.com
-Hulu|media|hulu.com
-Paramount Plus|media|paramountplus.com
-Crunchyroll|media|crunchyroll.com
-BookMyShow|media|bookmyshow.com
-PVR INOX|media|pvrcinemas.com
-Steam|gaming|steampowered.com;steamcommunity.com
-Epic Games|gaming|epicgames.com
-Xbox|gaming|xbox.com
-PlayStation|gaming|playstation.com
-Nintendo|gaming|nintendo.com
-Roblox|gaming|roblox.com
-Riot Games|gaming|riotgames.com
-Dream11|gaming|dream11.com
-MPL|gaming|mpl.live
-Ubisoft|gaming|ubisoft.com
-Electronic Arts|gaming|ea.com
+Baiwang|finance|baiwang.com
+Bajaj|finance|bajaj.com
+Bajaj Allianz|insurance|bajajallianz.com
+Bajaj Auto|auto|bajajauto.com
+Bajaj Finserv|finance|bajajfinserv.in;bajajfinance.in
+Baker Hughes|utility|bakerhughes.com
+Ball|tech|ball.com
+Banca Mediolanum|bank|bancamediolanum.com
+Banca MPS|bank|bancamps.com
+Banca Popolare di Sondrio|bank|bancapopolaredisondrio.com
+Banca Transilvania|bank|bancatransilvania.com
+Banco BPM|bank|bancobpm.com
+Banco Bradesco|bank|bancobradesco.com
+Banco Btg Pactual|finance|bancobtgpactual.com
+Banco Comercial Portugues|bank|bancocomercialportugues.com
+Banco Davivienda|bank|bancodavivienda.com
+Banco de Sabadell|bank|bancodesabadell.com
+Banco do Brasil|bank|bancodobrasil.com
+Bancolombia|bank|bancolombia.com
+Bandai Namco|tech|bandainamco.com
+Bandhan Bank|bank|bandhanbank.com
+Bangchak|ecommerce|bangchak.com
+Bangkok Bank|bank|bangkokbank.com
+Bank Albilad|bank|bankalbilad.com
+Bank Central Asia|bank|bankcentralasia.com
+Bank Hapoalim|bank|bankhapoalim.com
+Bank Leumi|bank|bankleumi.com
+Bank Mandiri|bank|bankmandiri.com
+Bank Muscat|bank|bankmuscat.com
+Bank Negara Indonesia|bank|banknegaraindonesia.com
+Bank of America|bank|bankofamerica.com
+Bank of Baroda|bank|bankofbaroda.in;bobibanking.com
+Bank of Beijing|bank|bankofbeijing.com
+Bank of Changsha|bank|bankofchangsha.com
+Bank Of Chengdu|bank|bankofchengdu.com
+Bank of China|bank|bankofchina.com
+Bank of Chongqing|bank|bankofchongqing.com
+Bank of Communications|bank|bankofcommunications.com
+Bank of Cyprus|bank|bankofcyprus.com
+Bank of East Asia|bank|bankofeastasia.com
+Bank Of Gansu|bank|bankofgansu.com
+Bank of Greece|bank|bankofgreece.com
+Bank Of Guiyang|bank|bankofguiyang.com
+Bank of Guizhou|bank|bankofguizhou.com
+Bank Of Hangzhou|bank|bankofhangzhou.com
+Bank of India|bank|bankofindia.co.in
+Bank of Ireland|bank|bankofireland.com
+Bank Of Jiangsu|bank|bankofjiangsu.com
+Bank of Jiujiang|bank|bankofjiujiang.com
+Bank of Lanzhou|bank|bankoflanzhou.com
+Bank of Maharashtra|bank|bankofmaharashtra.in
+Bank of Nanjing|bank|bankofnanjing.com
+Bank of New York Mellon|finance|bankofnewyorkmellon.com
+Bank of Ningbo|bank|bankofningbo.com
+Bank of Nova Scotia|bank|bankofnovascotia.com
+Bank of Qingdao|bank|bankofqingdao.com
+Bank of Queensland|bank|bankofqueensland.com
+Bank Of Shanghai|bank|bankofshanghai.com
+Bank of Suzhou|bank|bankofsuzhou.com
+Bank of Tianjin|bank|bankoftianjin.com
+Bank of Xi'an|bank|bankofxian.com
+Bank of Zhengzhou|bank|bankofzhengzhou.com
+Bank OZK|bank|bankozk.com
+Bank Pekao|bank|bankpekao.com
+Bank Rakyat Indonesia|bank|bankrakyatindonesia.com
+Bankinter|bank|bankinter.com
+Banma Network Technologies|auto|banmanetworktechnologies.com
+Banorte|bank|banorte.com
+Banque Cantonale Vaudoise|bank|banquecantonalevaudoise.com
+Banque Centrale Populaire|bank|banquecentralepopulaire.com
+Banque Saudi Fransi|bank|banquesaudifransi.com
+Baoshan Iron & Steel|tech|baoshanironsteel.com
+Barclays|bank|barclays.co.uk;barclays.com
+Barrick Gold|tech|barrickgold.com
+Barry Callebaut|food|barrycallebaut.com
+BASF|tech|basf.com
+Basler Kantonalbank|bank|baslerkantonalbank.com
+Bata|ecommerce|bata.in
+Bath & Body Works|ecommerce|bathbodyworks.com
+Bausch Health Companies|health|bauschhealthcompanies.com
+Bawag|bank|bawag.com
+Baxter International|health|baxterinternational.com
+Bayan Resources|tech|bayanresources.com
+Bayer|health|bayer.com
+BayWa|tech|baywa.com
+BBC|news|bbc.com;bbc.co.uk
+BBMG|tech|bbmg.com
+BBVA-Banco Bilbao Vizcaya|bank|bbvabancobilbaovizcaya.com
+BCE|telecom|bce.com
+BCI-Banco Credito|bank|bcibancocredito.com
+BDO Unibank|bank|bdounibank.com
+Beazley|insurance|beazley.com
+Becton Dickinson|health|bectondickinson.com
+BeiBei|ecommerce|beibei.com
+Beiersdorf|tech|beiersdorf.com
+BeiGene|health|beigene.com
+Beijing Enterprises|utility|beijingenterprises.com
+Beijing-Shanghai High-Speed Railway|logistics|beijingshanghaihighspeedrailway.com
+Beijing Shougang|tech|beijingshougang.com
+Beisen|tech|beisen.com
+BEKB-BCBE|bank|bekbbcbe.com
+Benchling|tech|benchling.com
+Bendigo & Adelaide Bank|bank|bendigoadelaidebank.com
+BenevolentAI|tech|benevolentai.com
+Berkshire Hathaway|insurance|berkshirehathaway.com
+Berlin Brands|ecommerce|berlinbrands.com
+Berry Global|tech|berryglobal.com
+Best Buy|ecommerce|bestbuy.com
+BEST Undertaking|utility|bestundertaking.com
+Better.com|finance|better.com
+Betterfly|tech|betterfly.com
+Betterment|finance|betterment.com
+BetterUp|tech|betterup.com
+Beyond Identity|security|beyondidentity.com
+BG Financial|bank|bgfinancial.com
+BGL|finance|bgl.com
+Bharat Electronics|tech|bharatelectronics.com
+Bharat Petroleum|utility|bharatpetroleum.in
+BharatPe|finance|bharatpe.com
+Bharti Airtel|telecom|bhartiairtel.com
+BHIM UPI|payment|bhimupi.org.in
+BHP|tech|bhp.com
+Bid|travel|bid.com
+BigBasket|ecommerce|bigbasket.com
+BigID|security|bigid.com
+BigPanda|tech|bigpanda.com
+BillDesk|payment|billdesk.com
+BIM Birlesik Magazalar|food|bimbirlesikmagazalar.com
+Binance|crypto|binance.com
+Bing|tech|bing.com
+Biogen|health|biogen.com
+Biosplice Therapeutics|health|biosplicetherapeutics.com
+Biren Technology|tech|birentechnology.com
+Bitbucket|tech|bitbucket.org
+BitFury|tech|bitfury.com
+Bitmain|tech|bitmain.com
+BitPanda|finance|bitpanda.com
+BitSight Technologies|security|bitsighttechnologies.com
+Bitso|finance|bitso.com
+Bitwarden|security|bitwarden.com
+BJ's Wholesale Club|ecommerce|bjswholesaleclub.com
+BlaBlaCar|auto|blablacar.com
+Black Sesame Technologies|tech|blacksesametechnologies.com
+Black Unicorn Factory|tech|blackunicornfactory.com
+BlackBuck|logistics|blackbuck.com
+BlackRock|finance|blackrock.com
+Blackstone|finance|blackstone.com
+Blinkit|ecommerce|blinkit.com
 Blizzard|gaming|blizzard.com
+Block|bank|block.com
+Blockchain.com|finance|blockchain.com
+BlockDaemon|finance|blockdaemon.com
+BlockFi|finance|blockfi.com
+Blockstream|finance|blockstream.com
+Blom Bank|bank|blombank.com
+Bloomberg|news|bloomberg.com
+BloomReach|tech|bloomreach.com
+Blue Dart|logistics|bluedart.com
+Bluecore|tech|bluecore.com
+BlueVoyant|security|bluevoyant.com
+BMO|bank|bmo.com
+BMW|auto|bmw.com
+BNK Financial|bank|bnkfinancial.com
+BNP Paribas|bank|bnpparibas.com
+boAt|ecommerce|boat-lifestyle.com
+Boba|finance|boba.com
+BOE Technology|tech|boetechnology.com
+Boeing|tech|boeing.com
+BOK Financial|bank|bokfinancial.com
+Boliden|tech|boliden.com
+Bolsa de Valores de Colombia|finance|bolsadevaloresdecolombia.com
+Bolt|auto|bolt.com
+bolttech|finance|bolttech.com
+Booking.com|travel|booking.com
+BookMyShow|media|bookmyshow.com
+Boom Supersonic|tech|boomsupersonic.com
+Booz Allen Hamilton|tech|boozallenhamilton.com
+Bordrin Motors|auto|bordrinmotors.com
+Borouge|tech|borouge.com
+Boston Scientific|health|bostonscientific.com
+Bought By Many|finance|boughtbymany.com
+Bouygues|tech|bouygues.com
+Bowery Farming|tech|boweryfarming.com
+Box|tech|box.com
+BP|utility|bp.com
+BPER Banca|bank|bperbanca.com
+Brambles|logistics|brambles.com
+Branch|telecom|branch.com
+Braskem|tech|braskem.com
+Brave|tech|brave.com
+Brenntag|tech|brenntag.com
+BrewDog|ecommerce|brewdog.com
+Brex|finance|brex.com
+Bridgestone|tech|bridgestone.com
+Brighthouse Financial|insurance|brighthousefinancial.com
+Bringg|logistics|bringg.com
+Bristol Myers Squibb|health|bristolmyerssquibb.com
+British American Tobacco|food|britishamericantobacco.com
+Broadcom|tech|broadcom.com
+Broadridge Financial|tech|broadridgefinancial.com
+Brookfield|finance|brookfield.com
+Brookfield Renewable|utility|brookfieldrenewable.com
+Brookfield Wealth Solutions|finance|brookfieldwealthsolutions.com
+Brown & Brown|insurance|brownbrown.com
+Brown-Forman|food|brownforman.com
+BrowserStack|tech|browserstack.com
+BSE India|finance|bseindia.com
+BSES Delhi|utility|bsesdelhi.com
+BSNL|telecom|bsnl.co.in
+BT|telecom|bt.com
+Builders FirstSource|ecommerce|buildersfirstsource.com
+Built|tech|built.com
+Bunge Global|food|bungeglobal.com
+Bunq|finance|bunq.com
+Bunzl|tech|bunzl.com
+Bureau Veritas|tech|bureauveritas.com
+Burger King|food|burgerking.in
+Burlington Stores|ecommerce|burlingtonstores.com
+Business Standard|news|business-standard.com
+Buzzi Unicem|tech|buzziunicem.com
+BXP|finance|bxp.com
+BYD|tech|byd.com
+BYJU'S|education|byjus.com
+Bytedance|tech|bytedance.com
+BYTON|auto|byton.com
+C.H. Robinson|tech|chrobinson.com
+C2FO|finance|c2fo.com
+C6 Bank|finance|c6bank.com
+Cabify|auto|cabify.com
+Cadence|health|cadence.com
+Cadence Bank|bank|cadencebank.com
+Cadence Design|tech|cadencedesign.com
+Caesars Entertainment|travel|caesarsentertainment.com
+CAIS|finance|cais.com
+CaixaBank|bank|caixabank.com
+Calendly|tech|calendly.com
+Calm|ecommerce|calm.com
+Cambricon Technologies|tech|cambricontechnologies.com
+Cambridge Mobile Telematics|telecom|cambridgemobiletelematics.com
+Cameo|tech|cameo.com
+Campbell Soup|food|campbellsoup.com
+CAMS|finance|camsonline.com
+Canada.ca|government|canada.ca
+Canadian Imperial Bank|bank|canadianimperialbank.com
+Canadian National Railway|logistics|canadiannationalrailway.com
+Canadian Natural Resources|utility|canadiannaturalresources.com
+Canadian Pacific Kansas City|logistics|canadianpacifickansascity.com
+Canadian Tire|ecommerce|canadiantire.com
+Canara Bank|bank|canarabank.com
+candy.com|finance|candy.com
+Canon|tech|canon.com
+Canva|tech|canva.com
+Cao Cao Mobility|auto|caocaomobility.com
+Capgemini|tech|capgemini.com
+Capital One|bank|capitalone.com
+CapitaLand Integrated Commercial Trust|finance|capitalandintegratedcommercialtrust.com
+CAPITEC|insurance|capitec.com
+Capitolis|finance|capitolis.com
+Capsule|health|capsule.com
+CaptivateIQ|finance|captivateiq.com
+Carbon|tech|carbon.com
+Carbon Health|health|carbonhealth.com
+CarDekho|auto|cardekho.com
+Cardinal Health|health|cardinalhealth.com
+Care Health Insurance|insurance|careinsurance.com
+CargoX|logistics|cargox.com
+Caris Life Sciences|health|carislifesciences.com
+Carlisle Cos|tech|carlislecos.com
+Carlsberg|food|carlsberg.com
+Carlyle|finance|carlyle.com
+CarMax|ecommerce|carmax.com
+Carnival|travel|carnival.com
+Carousell|ecommerce|carousell.com
+Carrefour|ecommerce|carrefour.com
+Carrier Global|tech|carrierglobal.com
+Carro|ecommerce|carro.com
+Cars24|auto|cars24.com
+Carsome|ecommerce|carsome.com
+Carson|finance|carson.com
+Carta|finance|carta.com
+Carvana|ecommerce|carvana.com
+Carzone|ecommerce|carzone.com
+Casey's General Stores|ecommerce|caseysgeneralstores.com
+Cash App|payment|cash.app
+Cashfree|payment|cashfree.com
+Caterpillar|tech|caterpillar.com
+Cathay Financial|insurance|cathayfinancial.com
+Cathay Pacific Airways|logistics|cathaypacificairways.com
+Cato Networks|security|catonetworks.com
+Cava|tech|cava.com
+CBIC Customs|government|cbic.gov.in
+CBOE Global Markets|finance|cboeglobalmarkets.com
+CBRE|tech|cbre.com
+CBSE|government|cbse.gov.in
+CCAvenue|payment|ccavenue.com
+CDSL|finance|cdslindia.com
+CDW|tech|cdw.com
+Ceconomy|ecommerce|ceconomy.com
+Cedar|finance|cedar.com
+Celanese|tech|celanese.com
+Celestica|tech|celestica.com
+Cell C|telecom|cellc.com
+Cellnex Telecom|telecom|cellnextelecom.com
+Celltrion|health|celltrion.com
+Celonis|tech|celonis.com
+Celsius Network|finance|celsiusnetwork.com
+Cemex|tech|cemex.com
+Cencora|health|cencora.com
+Cencosud|ecommerce|cencosud.com
+Cenovus Energy|utility|cenovusenergy.com
+Centene|health|centene.com
+CenterPoint Energy|utility|centerpointenergy.com
+Central Bank of India|bank|centralbankofindia.co.in
+Central Japan Railway|logistics|centraljapanrailway.com
+Centrica|utility|centrica.com
+Cerebral|health|cerebral.com
+Cerebras Systems|tech|cerebrassystems.com
+CERT-In|government|cert-in.org.in
+CEZ|utility|cez.com
+CF Industries|tech|cfindustries.com
+CFGI|finance|cfgi.com
+CGI|tech|cgi.com
+CGN Power|utility|cgnpower.com
+Cgtz|finance|cgtz.com
+Chailease|tech|chailease.com
+Chainalysis|finance|chainalysis.com
+Chandra Asri Petrochemical|tech|chandraasripetrochemical.com
+Chang Hwa Bank|bank|changhwabank.com
+Changingedu|education|changingedu.com
+ChargeBee Technologies|finance|chargebeetechnologies.com
+Charles Schwab|finance|schwab.com
+Charoen Pokphand|food|charoenpokphand.com
+Charter Communications|media|chartercommunications.com
+Check Point Software|tech|checkpointsoftware.com
+Checkout.com|finance|checkout.com
+Checkr|tech|checkr.com
+Chehaoduo|ecommerce|chehaoduo.com
+Cheniere Energy|utility|cheniereenergy.com
+CHEQ|security|cheq.com
+Chevron|utility|chevron.com
+Chewy|ecommerce|chewy.com
+Chiba Bank|bank|chibabank.com
+Chief|tech|chief.com
+Chime|finance|chime.com
+China Aviation Oil|tech|chinaaviationoil.com
+China Bohai Bank|bank|chinabohaibank.com
+China Cinda Asset Management|finance|chinacindaassetmanagement.com
+China Citic Bank|bank|chinaciticbank.com
+China Cloud|tech|chinacloud.com
+China Coal Energy|tech|chinacoalenergy.com
+China Communications Construction|tech|chinacommunicationsconstruction.com
+China Communications Services|tech|chinacommunicationsservices.com
+China Construction Bank|bank|chinaconstructionbank.com
+China CSSC|tech|chinacssc.com
+China Development Bank Financial Leasing|tech|chinadevelopmentbankfinancialleasing.com
+China Eastern Airlines|logistics|chinaeasternairlines.com
+China Energy Engineering|tech|chinaenergyengineering.com
+China Everbright Bank|bank|chinaeverbrightbank.com
+China Fortune Land Development|tech|chinafortunelanddevelopment.com
+China Galaxy Securities|finance|chinagalaxysecurities.com
+China Gas|utility|chinagas.com
+China Hongqiao|tech|chinahongqiao.com
+China Huarong Asset Management|finance|chinahuarongassetmanagement.com
+China International Capital|finance|chinainternationalcapital.com
+China International Marine|tech|chinainternationalmarine.com
+China Jinmao|tech|chinajinmao.com
+China Life Insurance|insurance|chinalifeinsurance.com
+China Longyuan Power|utility|chinalongyuanpower.com
+China Mengniu Dairy|food|chinamengniudairy.com
+China Merchants Bank|bank|chinamerchantsbank.com
+China Merchants Expressway Network & Technology|logistics|chinamerchantsexpresswaynetworktechnology.com
+China Merchants Port|logistics|chinamerchantsport.com
+China Merchants Securities|finance|chinamerchantssecurities.com
+China Merchants Shekou Industrial Zone|tech|chinamerchantsshekouindustrialzone.com
+China Minsheng Bank|bank|chinaminshengbank.com
+China Mobile|telecom|chinamobile.com
+China National Building|tech|chinanationalbuilding.com
+China National Chemical|tech|chinanationalchemical.com
+China National Nuclear Power|utility|chinanationalnuclearpower.com
+China Nuclear Engineering|tech|chinanuclearengineering.com
+China Pacific Insurance|insurance|chinapacificinsurance.com
+China Power International Development|utility|chinapowerinternationaldevelopment.com
+China Railway|tech|chinarailway.com
+China Railway Construction|tech|chinarailwayconstruction.com
+China Reinsurance|insurance|chinareinsurance.com
+China Resources Beer|food|chinaresourcesbeer.com
+China Resources Gas|utility|chinaresourcesgas.com
+China Resources Land|tech|chinaresourcesland.com
+China Resources Pharmaceutical|health|chinaresourcespharmaceutical.com
+China Resources Power|utility|chinaresourcespower.com
+China Shenhua Energy|tech|chinashenhuaenergy.com
+China Shipbuilding Industry|tech|chinashipbuildingindustry.com
+China Southern Airlines|logistics|chinasouthernairlines.com
+China State Construction Engineering|tech|chinastateconstructionengineering.com
+China Steel|tech|chinasteel.com
+China Taiping Insurance|insurance|chinataipinginsurance.com
+China Telecom|telecom|chinatelecom.com
+China Three Gorges Renewables|utility|chinathreegorgesrenewables.com
+China Tourism|ecommerce|chinatourism.com
+China Tower|telecom|chinatower.com
+China Unicom|telecom|chinaunicom.com
+China Vanke|tech|chinavanke.com
+China Yangtze Power|utility|chinayangtzepower.com
+China Zheshang Bank|bank|chinazheshangbank.com
+Chipone|tech|chipone.com
+Chipotle Mexican Grill|travel|chipotlemexicangrill.com
+Chipper Cash|finance|chippercash.com
+Cholamandalam Investment and Finance|tech|cholamandalaminvestmentandfinance.com
+Chongqing Changan Auto|tech|chongqingchanganauto.com
+Chongqing Rural Bank|bank|chongqingruralbank.com
+Chow Tai Fook Jewellery|tech|chowtaifookjewellery.com
+Chronosphere|tech|chronosphere.com
+Chubb|insurance|chubb.com
+Chubu Electric Power|utility|chubuelectricpower.com
+Chugin Financial|bank|chuginfinancial.com
+Chugoku Electric Power|utility|chugokuelectricpower.com
+Chunghwa Telecom|telecom|chunghwatelecom.com
+Church & Dwight|tech|churchdwight.com
+CIBIL|finance|cibil.com
+Cider|ecommerce|cider.com
+CIFI|tech|cifi.com
+Cigna|insurance|cigna.com
+CIMB|bank|cimb.com
+Cincinnati Financial|insurance|cincinnatifinancial.com
+Cintas|tech|cintas.com
+Cipla|health|cipla.com
+Circle|finance|circle.com
+CircleCI|tech|circleci.com
+Cisco|tech|cisco.com
+Cisco Systems|tech|ciscosystems.com
+Citibank|bank|citi.com;citibank.co.in
+CITIC|tech|citic.com
+Citic Securities|finance|citicsecurities.com
+Citigroup|bank|citigroup.com
+Citizens Financial|bank|citizensfinancial.com
+City Union Bank|bank|cityunionbank.com
+Cityblock Health|health|cityblockhealth.com
+CJ|food|cj.com
+CJ Cheiljedang|logistics|cjcheiljedang.com
+CK Asset|tech|ckasset.com
+CK Hutchison|ecommerce|ckhutchison.com
+Clal Insurance Enterprises|insurance|clalinsuranceenterprises.com
+Clara|finance|clara.com
+Clari|tech|clari.com
+Clarify Health|health|clarifyhealth.com
+Claroty|security|claroty.com
+Clearco|finance|clearco.com
+Clearcover|finance|clearcover.com
+Cleartrip|travel|cleartrip.com
+Cleveland-Cliffs|tech|clevelandcliffs.com
+ClickHouse|tech|clickhouse.com
+ClickUp|tech|clickup.com
+Clio|tech|clio.com
+Clip|finance|clip.com
+Clorox|tech|clorox.com
+CloudBees|tech|cloudbees.com
+Cloudflare|tech|cloudflare.com
+Cloudinary|tech|cloudinary.com
+CloudWalk|finance|cloudwalk.com
+CloudWalk Technology|tech|cloudwalktechnology.com
+CLP|utility|clp.com
+Clubhouse|telecom|clubhouse.com
+CME|finance|cme.com
+CMOC|tech|cmoc.com
+CMR Surgical|health|cmrsurgical.com
+CMS Energy|utility|cmsenergy.com
+CNBC|news|cnbc.com
+CNH Industrial|tech|cnhindustrial.com
+CNN|news|cnn.com
+CNOOC|utility|cnooc.com
+CNPC Capital|bank|cnpccapital.com
+Coal India|tech|coalindia.com
+Coalition|security|coalition.com
+Coca-Cola|food|cocacola.com
+Coca-Cola Bottling Consolidated|food|cocacolabottlingconsolidated.com
+Coca-Cola Europacific Partners|food|cocacolaeuropacificpartners.com
+Coca-Cola HBC|food|cocacolahbc.com
+Cockroach Labs|tech|cockroachlabs.com
+Coda|tech|coda.com
+Codecademy|education|codecademy.com
+Cognite|tech|cognite.com
+Cognizant|tech|cognizant.com
+Cohesity|tech|cohesity.com
+Coinbase|crypto|coinbase.com
+CoinDCX|crypto|coindcx.com
+CoinList|finance|coinlist.com
+CoinSwitch Kuber|finance|coinswitchkuber.com
+CoinTracker|finance|cointracker.com
+Coles|food|coles.com
+Colgate-Palmolive|tech|colgatepalmolive.com
+Collective Health|finance|collectivehealth.com
+Collibra|tech|collibra.com
+Coloplast|health|coloplast.com
+Color|health|color.com
+Columbia Banking System|bank|columbiabankingsystem.com
+Comcast|media|comcast.com
+Comerica|bank|comerica.com
+Comfort Systems USA|tech|comfortsystemsusa.com
+Commerce Bancshares|bank|commercebancshares.com
+CommerceIQ|tech|commerceiq.com
+Commercial Bank Dubai|bank|commercialbankdubai.com
+Commercial Bank For Investment & Development Of Vietnam|bank|commercialbankforinvestmentdevelopmentofvietnam.com
+Commercial Bank of Qatar|finance|commercialbankofqatar.com
+Commercial International Bank|bank|commercialinternationalbank.com
+Commerzbank|bank|commerzbank.com
+Commonwealth Bank|bank|commonwealthbank.com
+Commure|tech|commure.com
+Compagnie de l'Odet|logistics|compagniedelodet.com
+Compal Electronics|tech|compalelectronics.com
+Companhia Energetica de Minas Gerais|utility|companhiaenergeticademinasgerais.com
+Compass|travel|compass.com
+Computershare|tech|computershare.com
+Conagra Brands|food|conagrabrands.com
+ConcertAI|tech|concertai.com
+Concordia Financial|bank|concordiafinancial.com
+ConocoPhillips|utility|conocophillips.com
+ConsenSys|finance|consensys.com
+Consolidated Edison|utility|consolidatededison.com
+Constellation Brands|food|constellationbrands.com
+Constellation Energy|utility|constellationenergy.com
+Constellation Software|tech|constellationsoftware.com
+Contemporary Amperex Technology|tech|contemporaryamperextechnology.com
+Contentful|tech|contentful.com
+ContentSquare|tech|contentsquare.com
+Continental Automotive Systems|tech|continentalautomotivesystems.com
+Contrast Security|security|contrastsecurity.com
+Convoy|logistics|convoy.com
+Coocaa|tech|coocaa.com
+Copado|tech|copado.com
+Copart|ecommerce|copart.com
+Corebridge Financial|finance|corebridgefinancial.com
+CoreWeave|tech|coreweave.com
+Corning|tech|corning.com
+Corpay|tech|corpay.com
+Corteva|food|corteva.com
+Cosco Shipping|logistics|coscoshipping.com
+Cosmo Energy|utility|cosmoenergy.com
+CoStar|tech|costar.com
+Costco|ecommerce|costco.com
+Costco Wholesale|ecommerce|costcowholesale.com
+Coterra Energy|utility|coterraenergy.com
+Couche Tard|ecommerce|couchetard.com
+Country Garden|tech|countrygarden.com
+Coupang|ecommerce|coupang.com
+Course Hero|education|coursehero.com
+Coursera|education|coursera.org
+Covestro|tech|covestro.com
+CoWIN|government|cowin.gov.in
+CP All|food|cpall.com
+CP Axtra|food|cpaxtra.com
+CPFL Energia|utility|cpflenergia.com
+Craigslist|ecommerce|craigslist.org
+CRED|payment|cred.club
+CredAvenue|finance|credavenue.com
+Credicorp|bank|credicorp.com
+Credit Agricole|bank|creditagricole.com
+Creditas|finance|creditas.com
+Credito Emiliano|bank|creditoemiliano.com
+Cresta|tech|cresta.com
+CRH|tech|crh.com
+Croma|ecommerce|croma.com
+Cross River Bank|finance|crossriverbank.com
+CrowdStrike|security|crowdstrike.com
+Crown|tech|crown.com
+Crown Castle International|finance|crowncastleinternational.com
+CRRC|tech|crrc.com
+Crunchyroll|media|crunchyroll.com
+CSB Bank|bank|csb.co.in
+Csc Financial|finance|cscfinancial.com
+CSL|health|csl.com
+CSX|logistics|csx.com
+CTBC Financial|bank|ctbcfinancial.com
+CTP|tech|ctp.com
+Cullen/Frost Bankers|bank|cullenfrostbankers.com
+Cult.fit|health|cult.fit
+Culture Amp|tech|cultureamp.com
+Cummins|tech|cummins.com
+CureFit|health|curefit.com
+Current|finance|current.com
+CVS Health|ecommerce|cvshealth.com
+Cyber Crime Portal|government|cybercrime.gov.in
+Cybereason|security|cybereason.com
+D.R. Horton|tech|drhorton.com
+Dadi Cinema|tech|dadicinema.com
+Dai-ichi Life Insurance|insurance|daiichilifeinsurance.com
+Dai Nippon Printing|tech|dainipponprinting.com
+Daiichi Sankyo|health|daiichisankyo.com
+Daikin Industries|tech|daikinindustries.com
+Daily Harvest|ecommerce|dailyharvest.com
+DailyHunt|tech|dailyhunt.com
+DailyPay|finance|dailypay.com
+Daimler Truck|tech|daimlertruck.com
+Daishi Hokuetsu Financial|bank|daishihokuetsufinancial.com
+Daito Trust Construction|tech|daitotrustconstruction.com
+Daiwa House Industry|tech|daiwahouseindustry.com
+Daiwa Securities|finance|daiwasecurities.com
+Danaher|health|danaher.com
+Danone|food|danone.com
+Danske Bank|bank|danskebank.com
+Daou Data|tech|daoudata.com
+Daou Technology|finance|daoutechnology.com
+Dapper Labs|finance|dapperlabs.com
+Daqin Railway|logistics|daqinrailway.com
+Darden Restaurants|travel|dardenrestaurants.com
+Darwinbox|tech|darwinbox.com
+Dassault Aviation|tech|dassaultaviation.com
+Dassault Systemes|tech|dassaultsystemes.com
+Databricks|tech|databricks.com
+Datadog|tech|datadog.com
+Dataiku|tech|dataiku.com
+Dataminr|tech|dataminr.com
+Datang International Power|utility|datanginternationalpower.com
+DataRobot|tech|datarobot.com
+DaVita|health|davita.com
+Db Insurance|insurance|dbinsurance.com
+DBS Bank|bank|dbs.com
+dbt Labs|tech|dbtlabs.com
+DCB Bank|bank|dcbbank.com
+DCC|utility|dcc.com
+DCI Indonesia|tech|dciindonesia.com
+DealShare|ecommerce|dealshare.com
+Decathlon India|ecommerce|decathlon.in
+Deckers Outdoor|tech|deckersoutdoor.com
+Deel|finance|deel.com
+DeepBlue Technology|tech|deepbluetechnology.com
+Deezer|tech|deezer.com
+Degreed|education|degreed.com
+Delhi University|education|du.ac.in
+Delhivery|logistics|delhivery.com
+Deliverect|finance|deliverect.com
+Deliverr|logistics|deliverr.com
+Delivery Hero|tech|deliveryhero.com
+Dell|tech|dell.com
+Dell Technologies|tech|delltechnologies.com
+Delta Air Lines|logistics|deltaairlines.com
+Delta Electronics|tech|deltaelectronics.com
+Density|tech|density.com
+Denso|tech|denso.com
+Dental Monitoring|health|dentalmonitoring.com
+Dentsu|media|dentsu.com
+Department of Telecommunications|government|dot.gov.in
+Deutsche Bank|bank|db.com
+Deutsche Boerse|finance|deutscheboerse.com
+Deutsche Lufthansa|logistics|deutschelufthansa.com
+Deutsche Pfandbriefbank|bank|deutschepfandbriefbank.com
+Deutsche Post|logistics|deutschepost.com
+Deutsche Telekom|telecom|deutschetelekom.com
+Devo|tech|devo.com
+Devon Energy|utility|devonenergy.com
+Devoted Health|health|devotedhealth.com
+Dexcom|health|dexcom.com
+Dhan|finance|dhan.co
+Dhanlaxmi Bank|bank|dhanbank.com
+DHL|logistics|dhl.com
+Diageo|food|diageo.com
+Dialpad|tech|dialpad.com
+Diamond Foundry|tech|diamondfoundry.com
+Diamondback Energy|utility|diamondbackenergy.com
+DianRong|ecommerce|dianrong.com
+Dick's Sporting Goods|ecommerce|dickssportinggoods.com
+DiDi Global|tech|didiglobal.com
+DigiLocker|government|digilocker.gov.in
+Digit Insurance|insurance|godigit.com
+Digital China|tech|digitalchina.com
+Digital Currency|finance|digitalcurrency.com
+Digital Realty Trust|finance|digitalrealtytrust.com
+DigitalOcean|tech|digitalocean.com
+Dino Polska|food|dinopolska.com
+DISCO|tech|disco.com
+Discord|social|discord.com
+Discover Financial|bank|discover.com
+Discover Financial Services|tech|discoverfinancialservices.com
+Dish TV|telecom|dishtv.in
+Disney|media|disney.com
+Disney Plus Hotstar|media|hotstar.com
+DispatchHealth|health|dispatchhealth.com
+DistroKid|tech|distrokid.com
+Divvy Homes|finance|divvyhomes.com
+DJI Innovations|tech|djiinnovations.com
+DLF|tech|dlf.com
+DMart|ecommerce|dmart.in
+dMed Biopharmaceutical|health|dmedbiopharmaceutical.com
+DNB Bank|bank|dnbbank.com
+Docker|tech|docker.com
+Doctolib|health|doctolib.com
+DocuSign|tech|docusign.com
+Dollar General|ecommerce|dollargeneral.com
+Dollar Tree|ecommerce|dollartree.com
+Dollarama|ecommerce|dollarama.com
+Domestika|tech|domestika.com
+Dominion Energy|utility|dominionenergy.com
+Domino's Pizza|travel|dominospizza.com
+Dominos|food|dominos.com;dominos.co.in
+Dongfeng Motor|tech|dongfengmotor.com
+Dongguan Rural Commercial Bank|bank|dongguanruralcommercialbank.com
+DoorDash|food|doordash.com
+Doosan|tech|doosan.com
+Dover|tech|dover.com
+Dow|tech|dow.com
+Dr Lal PathLabs|health|lalpathlabs.com
+Dr. Sulaiman Al-Habib Medical Services|health|drsulaimanalhabibmedicalservices.com
+Dragos|security|dragos.com
+Drata|security|drata.com
+Dream Games|telecom|dreamgames.com
+Dream11|gaming|dream11.com
+Dremio|tech|dremio.com
+DriveNets|tech|drivenets.com
+DriveWealth|finance|drivewealth.com
+Dropbox|tech|dropbox.com
+Druva|tech|druva.com
+DSM-Firmenich|tech|dsmfirmenich.com
+DSV|logistics|dsv.com
+DT Dream|tech|dtdream.com
+DTDC|logistics|dtdc.in
+DTE Energy|utility|dteenergy.com
+Dubai Islamic Bank|bank|dubaiislamicbank.com
+DuckDuckGo|tech|duckduckgo.com
+Duke Energy|utility|dukeenergy.com
+Dunamu|finance|dunamu.com
+Dune Analytics|tech|duneanalytics.com
+Duolingo|education|duolingo.com
+DuPont De Nemours|tech|dupontdenemours.com
+Dutchie|ecommerce|dutchie.com
+Dxy.cn|health|dxy.cn
+E-L Financial|insurance|elfinancial.com
+E-mart|ecommerce|emart.com
+E.ON|utility|e.on
+e-Shram|government|eshram.gov.in
+E.Sun Financial|bank|esunfinancial.com
+Earnix|finance|earnix.com
+EaseMyTrip|travel|easemytrip.com
+East Japan Railway|logistics|eastjapanrailway.com
+East Money Information|tech|eastmoneyinformation.com
+East West Bancorp|bank|eastwestbancorp.com
+Eastman|tech|eastman.com
+Eastroc Beverage|food|eastrocbeverage.com
+Easyhome|ecommerce|easyhome.com
+EasyJet|logistics|easyjet.com
+Eat Just|ecommerce|eatjust.com
+Eaton|tech|eaton.com
+EBANX|finance|ebanx.com
+eBay|ecommerce|ebay.com
+ECARX|auto|ecarx.com
+Echostar|telecom|echostar.com
+EcoFlow|tech|ecoflow.com
+Ecolab|tech|ecolab.com
+Ecom Express|logistics|ecomexpress.in
+Ecopetrol|utility|ecopetrol.com
+eCourts|government|ecourts.gov.in
+eDaili|ecommerce|edaili.com
+Edison International|utility|edisoninternational.com
+Edp-energias De Portugal|utility|edpenergiasdeportugal.com
+Edwards Lifesciences|health|edwardslifesciences.com
+edX|education|edx.org
+EFG International|finance|efginternational.com
+Eicher Motors|tech|eichermotors.com
+Eiffage|tech|eiffage.com
+Eightfold.ai|tech|eightfold.ai
+Einride|auto|einride.com
+El Puerto de Liverpool|ecommerce|elpuertodeliverpool.com
+ElasticRun|logistics|elasticrun.com
+Elbit Systems|tech|elbitsystems.com
+Election Commission of India|government|eci.gov.in
+Electric|security|electric.com
+Electric Power Development|utility|electricpowerdevelopment.com
+Electronic Arts|gaming|ea.com
+Elemy|health|elemy.com
+Eletrobrás|utility|eletrobrs.com
+Elevance Health|health|elevancehealth.com
+Eli Lilly|health|elililly.com
+Elia System Operator|utility|eliasystemoperator.com
+ELM|tech|elm.com
+Emaar Properties|tech|emaarproperties.com
+EMCOR|tech|emcor.com
+Emera|utility|emera.com
+Emerging Markets Property|tech|emergingmarketsproperty.com
+Emerson Electric|tech|emersonelectric.com
+Emirates NBD|bank|emiratesnbd.com
+Empire|food|empire.com
+EMS-Chemie|tech|emschemie.com
+Enbridge|utility|enbridge.com
+EnBW Energie Baden-Wurttemberg|utility|enbwenergiebadenwurttemberg.com
+Endo|health|endo.com
+Enel|utility|enel.com
+ENEOS|utility|eneos.com
+Enflame|tech|enflame.com
+ENGIE|utility|engie.com
+Eni|utility|eni.com
+ENN Energy|utility|ennenergy.com
+ENN Natural Gas|utility|ennnaturalgas.com
+ENOVATE|auto|enovate.com
+Enpal|tech|enpal.com
+Entergy|utility|entergy.com
+Envoy|tech|envoy.com
+EOG Resources|utility|eogresources.com
+EPFO|government|epfindia.gov.in
+Epic Games|gaming|epicgames.com
+Epidemic Sound|tech|epidemicsound.com
+Epiroc|tech|epiroc.com
+Epirus|tech|epirus.com
+EQRx|health|eqrx.com
+EQT|utility|eqt.com
+Equatorial Energia|utility|equatorialenergia.com
+Equifax|finance|equifax.com
+Equinix|finance|equinix.com
+Equinor|utility|equinor.com
+Equitable|insurance|equitable.com
+Equitas Small Finance Bank|bank|equitasbank.com
+Equity Residential|finance|equityresidential.com
+Ericsson|tech|ericsson.com
+Erie Indemnity|insurance|erieindemnity.com
+Erste|bank|erste.com
+Eruditus Executive Education|education|eruditusexecutiveeducation.com
+eSentire|security|esentire.com
+Essential Utilities|utility|essentialutilities.com
+Essex Property Trust|finance|essexpropertytrust.com
+EssilorLuxottica|health|essilorluxottica.com
+Essity|tech|essity.com
+Esusu|finance|esusu.com
+Eternal|logistics|eternal.com
+Ethos|finance|ethos.com
+Etisalat|telecom|etisalat.com
+Etsy|ecommerce|etsy.com
+Eurobank Ergasias|bank|eurobankergasias.com
+Euronext|finance|euronext.com
+European Union|government|europa.eu
+Eva Airways|logistics|evaairways.com
+Eve Energy|tech|eveenergy.com
+Everest Re|insurance|everestre.com
+Evergreen Marine|logistics|evergreenmarine.com
+Evergy|utility|evergy.com
+Everlaw|tech|everlaw.com
+Everly Health|ecommerce|everlyhealth.com
+Eversource Energy|utility|eversourceenergy.com
+Evidation|health|evidation.com
+Evolution Gaming|tech|evolutiongaming.com
+Evonik Industries|tech|evonikindustries.com
+Exabeam|security|exabeam.com
+Exelon|utility|exelon.com
+EXOR|finance|exor.com
+Exotec|tech|exotec.com
+Expand Energy|utility|expandenergy.com
+Expedia|travel|expedia.com
+Expeditors International|logistics|expeditorsinternational.com
+Expel|security|expel.com
+Experian|finance|experian.com;experian.in
+ExpressVPN|security|expressvpn.com
+Extend|finance|extend.com
+Extra Space Storage|finance|extraspacestorage.com
+ExxonMobil|utility|exxonmobil.com
+ezCater|logistics|ezcater.com
+F.N.B|bank|fnb.com
+F5|tech|f5.com
+fabric|ecommerce|fabric.com
+Facebook|social|facebook.com
+FactSet Research Systems|tech|factsetresearchsystems.com
+Fair|auto|fair.com
+Faire|tech|faire.com
+Fairfax Financial|insurance|fairfaxfinancial.com
+Falabella|ecommerce|falabella.com
+FalconX|finance|falconx.com
+Fanatics|ecommerce|fanatics.com
+Fannie Mae|tech|fanniemae.com
+Fanuc|tech|fanuc.com
+Far East Horizon|tech|fareasthorizon.com
+Farmers Business Network|tech|farmersbusinessnetwork.com
+Fast Retailing|ecommerce|fastretailing.com
+Fastenal|tech|fastenal.com
+Federal Bank|bank|federalbank.co.in
+FedEx|logistics|fedex.com
+Feedzai|tech|feedzai.com
+Femsa|food|femsa.com
+Fenbi Education|education|fenbieducation.com
+Ferguson Enterprises|tech|fergusonenterprises.com
+Ferrari|tech|ferrari.com
+Ferrovial|tech|ferrovial.com
+Fetch Rewards|ecommerce|fetchrewards.com
+Fever Labs|tech|feverlabs.com
+Fi Money|payment|fi.money
+FIBI|bank|fibi.com
+FICO|tech|fico.com
+Fidelity|finance|fidelity.com
+Fidelity National Financial|insurance|fidelitynationalfinancial.com
+Fidelity National Information|tech|fidelitynationalinformation.com
+Fifth Third Bank|bank|fifththirdbank.com
+Figma|tech|figma.com
+Figment|tech|figment.com
+Financial Times|news|ft.com
+FinecoBank|bank|finecobank.com
+Fino Payments Bank|bank|finobank.com
+Fireblocks|finance|fireblocks.com
+Firebolt|tech|firebolt.com
+Firefly Aerospace|tech|fireflyaerospace.com
+First Abu Dhabi Bank|bank|firstabudhabibank.com
+First Citizens Bank|bank|firstcitizensbank.com
+First Financial|bank|firstfinancial.com
+First Horizon|bank|firsthorizon.com
+First National Of Nebraska|bank|firstnationalofnebraska.com
+First Pacific|food|firstpacific.com
+First Quantum Minerals|tech|firstquantumminerals.com
+First Solar|tech|firstsolar.com
+FirstCry|ecommerce|firstcry.com
+FirstEnergy|utility|firstenergy.com
+FirstRand|bank|firstrand.com
+Fiserv|bank|fiserv.com
+Fiture|health|fiture.com
+Five Star Business Finance|tech|fivestarbusinessfinance.com
+FiveTran|tech|fivetran.com
+Flagstar Financial|bank|flagstarfinancial.com
+FLASH|finance|flash.com
+Flash Express|logistics|flashexpress.com
+FlashEx|logistics|flashex.com
+Flex|tech|flex.com
+Flexport|logistics|flexport.com
+Flink Food|ecommerce|flinkfood.com
+Flipboard|tech|flipboard.com
+Flipdish|tech|flipdish.com
+Flipkart|ecommerce|flipkart.com
+FlixBus|auto|flixbus.com
+Flock Freight|logistics|flockfreight.com
+Flock Safety|tech|flocksafety.com
+FloQast|finance|floqast.com
+Fluor|tech|fluor.com
+Flutter Entertainment|travel|flutterentertainment.com
+Flutterwave|finance|flutterwave.com
+Focus Media Information Technology|tech|focusmediainformationtechnology.com
+Forbes|news|forbes.com
+Ford|auto|ford.com
+Ford Motor|tech|fordmotor.com
+Ford Otosan|tech|fordotosan.com
+Formlabs|tech|formlabs.com
+Formosa Petrochemical|utility|formosapetrochemical.com
+Forte Labs|finance|fortelabs.com
+Forter|security|forter.com
+Fortescue Metals|tech|fortescuemetals.com
+Fortinet|tech|fortinet.com
+Fortis|utility|fortis.com
+Fortis Healthcare|health|fortishealthcare.com
+Fortive|tech|fortive.com
+Forto|logistics|forto.com
+Fortum|utility|fortum.com
+Forvia|tech|forvia.com
+Foshan Haitian Flavouring and Food|food|foshanhaitianflavouringandfood.com
+Fosun International|insurance|fosuninternational.com
+Foundit|tech|foundit.in
+Fox|media|fox.com
+Fractal Analytics|tech|fractalanalytics.com
+Franco-Nevada|tech|franconevada.com
+Franklin Resources|finance|franklinresources.com
+Freddie Mac|tech|freddiemac.com
+Freecharge|payment|freecharge.in
+Freeport-McMoRan|tech|freeportmcmoran.com
+Fresenius|health|fresenius.com
+Freshbooks|finance|freshbooks.com
+Freshworks|tech|freshworks.com
+FTX|finance|ftx.com
+Fubon Financial|insurance|fubonfinancial.com
+Fujifilm|health|fujifilm.com
+Fujitsu|tech|fujitsu.com
+Fukuoka Financial|bank|fukuokafinancial.com
+FullStory|tech|fullstory.com
+Fundbox|finance|fundbox.com
+Fuyao Glass Industry|tech|fuyaoglassindustry.com
+FXiaoKe|telecom|fxiaoke.com
+G2|tech|g2.com
+G7 Networks|logistics|g7networks.com
+Gaana|media|gaana.com
+GAIL India|utility|gailindia.com
+Galaxy Entertainment|travel|galaxyentertainment.com
+GalaxySpace|telecom|galaxyspace.com
+Gallagher|insurance|gallagher.com
+Galp Energia|utility|galpenergia.com
+Games24x7|tech|games24x7.com
+Gaming And Leisure Properties|finance|gamingandleisureproperties.com
+Gap|ecommerce|gap.com
+Garmin|tech|garmin.com
+Gartner|tech|gartner.com
+Gauntlet Networks|finance|gauntletnetworks.com
+Gaussian Robotics|tech|gaussianrobotics.com
+GD Power Development|utility|gdpowerdevelopment.com
+GE Aerospace|tech|geaerospace.com
+GE HealthCare Technologies|health|gehealthcaretechnologies.com
+GE Vernova|tech|gevernova.com
+Geberit|tech|geberit.com
+Geek+|tech|geek.com
+GeeksforGeeks|education|geeksforgeeks.org
+Geely Automobile|tech|geelyautomobile.com
+Gelato|ecommerce|gelato.com
+Gem|tech|gem.com
+Gemdale|tech|gemdale.com
+Gemini|finance|gemini.com
+Gen Digital|tech|gendigital.com
+General Dynamics|tech|generaldynamics.com
+General Insurance|insurance|generalinsurance.com
+General Mills|food|generalmills.com
+General Motors|tech|generalmotors.com
+Generali|insurance|generali.com
+Genki Forest|ecommerce|genkiforest.com
+Genmab|health|genmab.com
+Genuine Parts|tech|genuineparts.com
+Genworth Financial|insurance|genworthfinancial.com
+George Weston|food|georgeweston.com
+Gerdau|tech|gerdau.com
+Getir|ecommerce|getir.com
+Gett|auto|gett.com
+GetYourGuide|travel|getyourguide.com
+GF Securities|finance|gfsecurities.com
+GFL Environmental|tech|gflenvironmental.com
+Gilead Sciences|health|gileadsciences.com
 GitHub|tech|github.com
 GitLab|tech|gitlab.com
-Bitbucket|tech|bitbucket.org
-Atlassian|tech|atlassian.com;atlassian.net
-Slack|tech|slack.com
-Zoom|tech|zoom.us
-Dropbox|tech|dropbox.com
-Box|tech|box.com
-Adobe|tech|adobe.com
-Canva|tech|canva.com
-Figma|tech|figma.com
-Notion|tech|notion.so
-Salesforce|tech|salesforce.com
-Oracle|tech|oracle.com
-SAP|tech|sap.com
-IBM|tech|ibm.com
-Cisco|tech|cisco.com
-Intel|tech|intel.com
-AMD|tech|amd.com
-NVIDIA|tech|nvidia.com
-Qualcomm|tech|qualcomm.com
-Microsoft Azure|tech|azure.com
-Cloudflare|tech|cloudflare.com
-Heroku|tech|heroku.com
-Vercel|tech|vercel.com
-Netlify|tech|netlify.com
-DigitalOcean|tech|digitalocean.com
-GoDaddy|tech|godaddy.com
-Namecheap|tech|namecheap.com
-Hostinger|tech|hostinger.com
-WordPress|tech|wordpress.com;wordpress.org
-Wix|tech|wix.com
-Squarespace|tech|squarespace.com
-OpenAI|tech|openai.com;chatgpt.com
-Anthropic|tech|anthropic.com;claude.ai
-Hugging Face|tech|huggingface.co
-Stack Overflow|tech|stackoverflow.com
-npm|tech|npmjs.com
-PyPI|tech|pypi.org
-Docker|tech|docker.com
-Kaggle|tech|kaggle.com
-Postman|tech|postman.com
-JetBrains|tech|jetbrains.com
-Mozilla|tech|mozilla.org
-Brave|tech|brave.com
-Opera|tech|opera.com
-Proton|tech|proton.me
-DuckDuckGo|tech|duckduckgo.com
-Bing|tech|bing.com
-Yahoo|tech|yahoo.com
-Outlook|tech|outlook.com
-Rediff|tech|rediff.com
-Zoho|tech|zoho.com
-Freshworks|tech|freshworks.com
-Truecaller|tech|truecaller.com
-DocuSign|tech|docusign.com
-Infosys|tech|infosys.com
-Tata Consultancy Services|tech|tcs.com
-Wipro|tech|wipro.com
-HCLTech|tech|hcltech.com
-Tech Mahindra|tech|techmahindra.com
-Samsung|tech|samsung.com
-Sony|tech|sony.com
-LG|tech|lg.com
-Dell|tech|dell.com
-HP|tech|hp.com
-Lenovo|tech|lenovo.com
-Asus|tech|asus.com
-Xiaomi|tech|xiaomi.com;mi.com
-OnePlus|tech|oneplus.com
-Realme|tech|realme.com
-Vivo|tech|vivo.com
-Oppo|tech|oppo.com
-Nothing|tech|nothing.tech
-Logitech|tech|logitech.com
-LastPass|security|lastpass.com
-1Password|security|1password.com
-Bitwarden|security|bitwarden.com
-NordVPN|security|nordvpn.com
-ExpressVPN|security|expressvpn.com
-Norton|security|norton.com
-McAfee|security|mcafee.com
-Kaspersky|security|kaspersky.com
-Avast|security|avast.com
-Quick Heal|security|quickheal.com
-CrowdStrike|security|crowdstrike.com
-Okta|security|okta.com
-Naukri|tech|naukri.com
-Indeed|tech|indeed.com
+Givaudan|food|givaudan.com
 Glassdoor|tech|glassdoor.com
-Foundit|tech|foundit.in
-Internshala|tech|internshala.com
-Unstop|tech|unstop.com
-Shaadi.com|social|shaadi.com
-Justdial|tech|justdial.com
-Craigslist|ecommerce|craigslist.org
-Yelp|tech|yelp.com
-Trustpilot|tech|trustpilot.com
-Coursera|education|coursera.org
-edX|education|edx.org
-Udemy|education|udemy.com
-Khan Academy|education|khanacademy.org
-BYJU'S|education|byjus.com
-Unacademy|education|unacademy.com
-PhysicsWallah|education|pw.live
-Vedantu|education|vedantu.com
-upGrad|education|upgrad.com
-Simplilearn|education|simplilearn.com
+Glencore International|tech|glencoreinternational.com
+Glia|finance|glia.com
+Global Payments|tech|globalpayments.com
+Global Switch|tech|globalswitch.com
+GlobalBees|ecommerce|globalbees.com
+Globalfoundries|tech|globalfoundries.com
+Globality|tech|globality.com
+Globalization Partners|tech|globalizationpartners.com
+Globe Life|insurance|globelife.com
+Glossier|ecommerce|glossier.com
+GO1|tech|go1.com
+GOAT|ecommerce|goat.com
+GoCardless|finance|gocardless.com
+GoDaddy|tech|godaddy.com
+Goertek|tech|goertek.com
+Goibibo|travel|goibibo.com
+Gojek|travel|gojek.com
+Gold Fields|tech|goldfields.com
+Goldman Sachs|bank|goldmansachs.com
+Goneo|tech|goneo.com
+Gong|tech|gong.com
+GoodLeap|tech|goodleap.com
+Goodman|finance|goodman.com
+Goodyear|tech|goodyear.com
+Google|tech|google.com;google.co.in
+goPuff|ecommerce|gopuff.com
+Gorillas|ecommerce|gorillas.com
+GoStudent|education|gostudent.com
+Gousto|logistics|gousto.com
+GOV.UK|government|gov.uk
+Government of India Portal|government|india.gov.in
+Government of Maharashtra|government|maharashtra.gov.in
+GPclub|tech|gpclub.com
+Grab|travel|grab.com
+Grafana Labs|tech|grafanalabs.com
+Grammarly|education|grammarly.com
+Graphcore|tech|graphcore.com
+Graphic Packaging|tech|graphicpackaging.com
+Grasim Industries|tech|grasimindustries.com
 Great Learning|education|mygreatlearning.com
-NPTEL|education|nptel.ac.in
-SWAYAM|education|swayam.gov.in
+Great Wall Motor|tech|greatwallmotor.com
+Gree Electric Appliances|tech|greeelectricappliances.com
+Greenland|tech|greenland.com
+Greenlight|finance|greenlight.com
+Greensill|finance|greensill.com
+Greentown China|tech|greentownchina.com
+Groq|tech|groq.com
+Group|ecommerce|group.com
+Grove Collaborative|ecommerce|grovecollaborative.com
+Groww|finance|groww.in
+Grubhub|food|grubhub.com
+GrubMarket|ecommerce|grubmarket.com
+Grupa PZU|insurance|grupapzu.com
+Grupo Aval|bank|grupoaval.com
+Grupo Bimbo|food|grupobimbo.com
+Grupo Bolivar|bank|grupobolivar.com
+Grupo Carso|ecommerce|grupocarso.com
+Grupo Catalana Occidente|insurance|grupocatalanaoccidente.com
+Grupo De Inversiones Suramericana|insurance|grupodeinversionessuramericana.com
+Grupo Elektra|ecommerce|grupoelektra.com
+Grupo Galicia|bank|grupogalicia.com
+Grupo Inbursa|bank|grupoinbursa.com
+Grupo Mexico|tech|grupomexico.com
+GS|tech|gs.com
+GSK|health|gsk.com
+GST Portal|government|gst.gov.in
+Guangdong Haid|food|guangdonghaid.com
+Guangzhou Automobile|tech|guangzhouautomobile.com
+Guangzhou Rural Commercial Bank|bank|guangzhoururalcommercialbank.com
+Guideline|finance|guideline.com
+Guild Education|tech|guildeducation.com
+Gunma Bank|bank|gunmabank.com
+Guoquan Shihui|ecommerce|guoquanshihui.com
+Guosen Securities|finance|guosensecurities.com
+Guotai Junan Securities|finance|guotaijunansecurities.com
+GupShup|tech|gupshup.com
+Gusto|finance|gusto.com
+Gympass|tech|gympass.com
+Gymshark|ecommerce|gymshark.com
+H and M|ecommerce|hm.com
+H&M - Hennes & Mauritz|ecommerce|hmhennesmauritz.com
+H2O.ai|tech|h2o.ai
+Hachijuni Bank|bank|hachijunibank.com
+HackerRank|education|hackerrank.com
+Haidilao International|travel|haidilaointernational.com
+Haier Smart Home|tech|haiersmarthome.com
+Hailo|tech|hailo.com
+Hainan Airlines|logistics|hainanairlines.com
+HAL Trust|finance|haltrust.com
+Haldiram's|food|haldirams.com
+Haleon|health|haleon.com
+Halkbank|bank|halkbank.com
+Halliburton|utility|halliburton.com
+Halyk Bank|bank|halykbank.com
+Hana Financial|bank|hanafinancial.com
+Hancock|bank|hancock.com
+Handshake|tech|handshake.com
+Hangzhou Binjiang Real Estate|tech|hangzhoubinjiangrealestate.com
+Hansoh Pharmaceutical|health|hansohpharmaceutical.com
+Hanwa|tech|hanwa.com
+Hanwha|tech|hanwha.com
+Hanwha Aerospace|tech|hanwhaaerospace.com
+Hanwha Ocean|tech|hanwhaocean.com
+Haomao.AI|tech|haomao.ai
+Happy Money|finance|happymoney.com
+Harbin Bank|bank|harbinbank.com
+Harel Insurance Investments & Financial Services|insurance|harelinsuranceinvestmentsfinancialservices.com
+Harness|tech|harness.com
+Harry's|ecommerce|harrys.com
+Hartford Financial Services|insurance|hartfordfinancialservices.com
+Harvard University|education|harvard.edu
+Hasura|tech|hasura.com
+Hathway|telecom|hathway.com
+HAYDON|ecommerce|haydon.com
+HBIS|tech|hbis.com
+HCA Healthcare|health|hcahealthcare.com
+HCLTech|tech|hcltech.com
+HD HYUNDAI|tech|hdhyundai.com
+HDFC Bank|bank|hdfcbank.com
+HDFC Ergo|insurance|hdfcergo.com
+HDFC Life|insurance|hdfclife.com
+HDFC Mutual Fund|finance|hdfcfund.com
+HDFC Securities|finance|hdfcsec.com
+HealthifyMe|health|healthifyme.com
+HeartFlow|health|heartflow.com
+Heico|tech|heico.com
+HeidelbergCement|tech|heidelbergcement.com
+Heineken|food|heineken.com
+Helium Systems|tech|heliumsystems.com
+Hello TransTech|auto|hellotranstech.com
+Helvetia|insurance|helvetia.com
+Henderson Land|tech|hendersonland.com
+Hengli Petrochemical|tech|henglipetrochemical.com
+Hengyi Petrochemical|tech|hengyipetrochemical.com
+Henkel|tech|henkel.com
+Hera|utility|hera.com
+Hermès International|tech|hermsinternational.com
+Hero FinCorp|finance|herofincorp.com
+Hero MotoCorp|auto|heromotocorp.com
+Heroku|tech|heroku.com
+Hertz Global|tech|hertzglobal.com
+Hesai Tech|tech|hesaitech.com
+Hess|utility|hess.com
+Hewlett Packard Enterprise|tech|hewlettpackardenterprise.com
+Hexagon|tech|hexagon.com
+Heyday|ecommerce|heyday.com
+HEYTEA|tech|heytea.com
+HF Sinclair|utility|hfsinclair.com
+Hibob|tech|hibob.com
+HighRadius|finance|highradius.com
+Highspot|tech|highspot.com
+Hikari Tsushin|utility|hikaritsushin.com
+Hikvision|tech|hikvision.com
+Hilton|travel|hilton.com
+Hilton Worldwide|travel|hiltonworldwide.com
+Hindalco Industries|tech|hindalcoindustries.com
+Hindustan Petroleum|utility|hindustanpetroleum.com
+Hindustan Times|news|hindustantimes.com
+Hinge Health|health|hingehealth.com
+Hirogin|bank|hirogin.com
+Hisense Kelon Electrical|tech|hisensekelonelectrical.com
+Hitachi|tech|hitachi.com
+Hive|tech|hive.com
+Hive Box|logistics|hivebox.com
+HMD Global|telecom|hmdglobal.com
+HMM|logistics|hmm.com
+Hokuhoku Financial|bank|hokuhokufinancial.com
+Holcim|tech|holcim.com
+Hologic|health|hologic.com
+HomeLight|finance|homelight.com
+Hon Hai Precision|tech|honhaiprecision.com
+Honda|auto|honda.com
+Honda Motor|tech|hondamotor.com
+HoneyBook|tech|honeybook.com
+Honeywell International|tech|honeywellinternational.com
+Hong Kong Exchanges|finance|hongkongexchanges.com
+Hong Leong Financial|bank|hongleongfinancial.com
+Honor Technology|tech|honortechnology.com
+Hopin|tech|hopin.com
+Hopper|travel|hopper.com
+Horizon Robotics|tech|horizonrobotics.com
+Hormel Foods|food|hormelfoods.com
+Hosjoy|ecommerce|hosjoy.com
+Hostinger|tech|hostinger.com
+Hotai Motor|tech|hotaimotor.com
+Hotmart|ecommerce|hotmart.com
+Houzz|ecommerce|houzz.com
+Howden|tech|howden.com
+Howmet Aerospace|tech|howmetaerospace.com
+Hoya|health|hoya.com
+Hozon Auto|auto|hozonauto.com
+HP|tech|hp.com
+HSBC|bank|hsbc.co.in;hsbc.com
+Hua Nan Financial|bank|huananfinancial.com
+Huadian Power International|utility|huadianpowerinternational.com
+Huaibei Mining|tech|huaibeimining.com
+Huaneng Power International|utility|huanengpowerinternational.com
+Huaqin Technology|tech|huaqintechnology.com
+Huaqin Telecom Technology|telecom|huaqintelecomtechnology.com
+Huatai Securities|finance|huataisecurities.com
+Huaxia Bank|bank|huaxiabank.com
+Hubbell|tech|hubbell.com
+HubSpot|tech|hubspot.com
+Hugging Face|tech|huggingface.co
+Huike|education|huike.com
+HuiMin|ecommerce|huimin.com
+Huishang Bank|bank|huishangbank.com
+Huisuanzhang|finance|huisuanzhang.com
+HuJiang|education|hujiang.com
+Hulic|tech|hulic.com
+Hulu|media|hulu.com
+Human Interest|finance|humaninterest.com
+Humana|insurance|humana.com
+Hunan Valin Steel|tech|hunanvalinsteel.com
+Huntington Bank|bank|huntingtonbank.com
+Huntington Ingalls Industries|tech|huntingtoningallsindustries.com
+Hyakugo Bank|bank|hyakugobank.com
+HyalRoute|telecom|hyalroute.com
+Hyatt|travel|hyatt.com
+Hyatt Hotels|travel|hyatthotels.com
+Hydro One|utility|hydroone.com
+Hygon Information Technology|tech|hygoninformationtechnology.com
+Hyperchain|finance|hyperchain.com
+Hyundai|auto|hyundai.com
+Hyundai Engineering|tech|hyundaiengineering.com
+Hyundai Glovis|logistics|hyundaiglovis.com
+Hyundai Marine & Fire|insurance|hyundaimarinefire.com
+Hyundai Mobis|tech|hyundaimobis.com
+Hyundai Motor|tech|hyundaimotor.com
+Hyundai Steel|tech|hyundaisteel.com
+iA Financial|finance|iafinancial.com
+Iberdrola|utility|iberdrola.com
+IBM|tech|ibm.com
+Ibotta|finance|ibotta.com
+iCapital Network|finance|icapitalnetwork.com
+iCarbonX|tech|icarbonx.com
+ICBC|bank|icbc.com
+Icertis|tech|icertis.com
+ICICI Bank|bank|icicibank.com
+ICICI Direct|finance|icicidirect.com
+ICICI Lombard|insurance|icicilombard.com
+ICICI Prudential Life|insurance|iciciprulife.com
+ICICI Prudential Mutual Fund|finance|icicipruamc.com
+ICON|tech|icon.com
+ID.me|security|id.me
+IDBI Bank|bank|idbibank.in
+Idemitsu Kosan|utility|idemitsukosan.com
+IDEXX Laboratories|health|idexxlaboratories.com
+IDFC First Bank|bank|idfcfirstbank.com
+IEIT Systems|tech|ieitsystems.com
+IFFCO Tokio|insurance|iffcotokio.co.in
+iFood|logistics|ifood.com
+IHH Healthcare|health|ihhhealthcare.com
+IHI|tech|ihi.com
 IIT Bombay|education|iitb.ac.in
 IIT Delhi|education|iitd.ac.in
 IIT Madras|education|iitm.ac.in
-Indian Institute of Science|education|iisc.ac.in
-University of Mumbai|education|mu.ac.in
-Savitribai Phule Pune University|education|unipune.ac.in
-Delhi University|education|du.ac.in
-JNU|education|jnu.ac.in
-Harvard University|education|harvard.edu
-MIT|education|mit.edu
-Stanford University|education|stanford.edu
-University of Oxford|education|ox.ac.uk
-University of Cambridge|education|cam.ac.uk
-Wikipedia|education|wikipedia.org
-Wikimedia|education|wikimedia.org
-Internet Archive|education|archive.org
-Duolingo|education|duolingo.com
-Grammarly|education|grammarly.com
-LeetCode|education|leetcode.com
-HackerRank|education|hackerrank.com
-GeeksforGeeks|education|geeksforgeeks.org
-W3Schools|education|w3schools.com
-Codecademy|education|codecademy.com
-Times of India|news|indiatimes.com
-Hindustan Times|news|hindustantimes.com
-The Hindu|news|thehindu.com
-NDTV|news|ndtv.com
+IKEA|ecommerce|ikea.com
+Il Makiage|ecommerce|ilmakiage.com
+Illinois Tool Works|tech|illinoistoolworks.com
+Illumio|security|illumio.com
+Iluvatar CoreX|tech|iluvatarcorex.com
+iM Financial|bank|imfinancial.com
+Immutable|finance|immutable.com
+impact.com|tech|impact.com
+Imperial Brands|food|imperialbrands.com
+Impossible Foods|ecommerce|impossiblefoods.com
+Improbable|tech|improbable.com
+Inari|tech|inari.com
+Inchcape|tech|inchcape.com
+Incode Technologies|security|incodetechnologies.com
+Income Tax Department|government|incometaxindia.gov.in
+Income Tax e-Filing|government|incometax.gov.in
+Indeed|tech|indeed.com
+India Post|government|indiapost.gov.in
+India Post Payments Bank|bank|ippbonline.com
 India Today|news|indiatoday.in
+Indian Bank|bank|indianbank.in;indianbank.net.in
 Indian Express|news|indianexpress.com
-Mint|news|livemint.com
-Moneycontrol|news|moneycontrol.com
-Business Standard|news|business-standard.com
-News18|news|news18.com
-Zee News|news|india.com
-Aaj Tak|news|aajtak.in
-ABP Live|news|abplive.com
+Indian Institute of Science|education|iisc.ac.in
+Indian Oil|utility|iocl.com
+Indian Overseas Bank|bank|iob.in
+Indian Railway Finance|tech|indianrailwayfinance.com
+Indian Railways|government|indianrailways.gov.in
+Indian Visa Online|government|indianvisaonline.gov.in
+IndiGo|travel|goindigo.in
+Inditex|ecommerce|inditex.com
+Indorama Ventures|tech|indoramaventures.com
+Indraprastha Gas|utility|iglonline.net
+IndusInd Bank|bank|indusind.com
+Industrial Bank|bank|industrialbank.com
+Industrial Bank of Korea|tech|industrialbankofkorea.com
+Industries Qatar|tech|industriesqatar.com
+InFarm|tech|infarm.com
+Infineon Technologies|tech|infineontechnologies.com
+Infinidat|tech|infinidat.com
+Infobip|telecom|infobip.com
+Infosys|tech|infosys.com
+Infra.Market|ecommerce|infra.market
+ING|bank|ing.com
+Ingersoll Rand|tech|ingersollrand.com
+Ingram Micro|tech|ingrammicro.com
+Inhibrx Biosciences|health|inhibrxbiosciences.com
+Injective Protocol|finance|injectiveprotocol.com
+InMobi|telecom|inmobi.com
+Inner Mongolia Baotou Steel|tech|innermongoliabaotousteel.com
+Inner Mongolia Yili|food|innermongoliayili.com
+Innovaccer|health|innovaccer.com
+Inpex|utility|inpex.com
+Insider|tech|insider.com
+InSightec|health|insightec.com
+Instabase|tech|instabase.com
+Instacart|food|instacart.com
+Instagram|social|instagram.com
+Instamojo|payment|instamojo.com
+Insurance Australia|insurance|insuranceaustralia.com
+Intact Financial|insurance|intactfinancial.com
+Intarcia Therapeutics|health|intarciatherapeutics.com
+Intel|tech|intel.com
+Intellifusion|tech|intellifusion.com
+Interactive Brokers|finance|interactivebrokers.com
+Intercom|tech|intercom.com
+InterContinental Hotels|travel|intercontinentalhotels.com
+IntercontinentalExchange|finance|intercontinentalexchange.com
+InterGlobe Aviation|logistics|interglobeaviation.com
+International|tech|international.com
+International Airlines|logistics|internationalairlines.com
+International Container Terminal Services|logistics|internationalcontainerterminalservices.com
+International Distributions Services|logistics|internationaldistributionsservices.com
+International Flavors & Fragrances|food|internationalflavorsfragrances.com
+International Paper|tech|internationalpaper.com
+Internet Archive|education|archive.org
+Internshala|tech|internshala.com
+Interos|finance|interos.com
+Interpublic|media|interpublic.com
+Intesa Sanpaolo Assicura|insurance|intesasanpaoloassicura.com
+Intuit|finance|intuit.com
+Intuitive Surgical|health|intuitivesurgical.com
+Inventec|tech|inventec.com
+Invesco|finance|invesco.com
+Investec|finance|investec.com
+Investor|finance|investor.com
+InVision|tech|invision.com
+Invitation Homes|finance|invitationhomes.com
+Inxeption|finance|inxeption.com
+Iodine Software|tech|iodinesoftware.com
+IQVIA|health|iqvia.com
+IRCTC|government|irctc.co.in
+IRL|tech|irl.com
+Iron Mountain|finance|ironmountain.com
+Ironclad|tech|ironclad.com
+IRS|government|irs.gov
+Isbank|bank|isbank.com
+Island|tech|island.com
+ISN|logistics|isn.com
+Israel Discount Bank|bank|israeldiscountbank.com
+Isuzu Motors|tech|isuzumotors.com
+Itaúsa|finance|itasa.com
+Itaú Unibanco|bank|itaunibanco.com
+ITC|food|itc.com
+Iterable|tech|iterable.com
+Itochu|food|itochu.com
+iTrustCapital|finance|itrustcapital.com
+iTutorGroup|education|itutorgroup.com
+Ivalua|finance|ivalua.com
+Iveco|tech|iveco.com
+ixigo|travel|ixigo.com
+Iyogin|bank|iyogin.com
+J.B. Hunt Transport Services|logistics|jbhunttransportservices.com
+J Sainsbury|food|jsainsbury.com
+J&T Express|logistics|jtexpress.com
+Jabil Circuit|tech|jabilcircuit.com
+Jackson Financial|insurance|jacksonfinancial.com
+Jacobs Solutions|tech|jacobssolutions.com
+Jammu and Kashmir Bank|bank|jkbank.com
+Japan Airlines|logistics|japanairlines.com
+Japan Exchange|finance|japanexchange.com
+Japan Post|insurance|japanpost.com
+Japan Securities Finance|finance|japansecuritiesfinance.com
+Japan Tobacco|food|japantobacco.com
+Jardine Matheson|tech|jardinematheson.com
+JB Financial|bank|jbfinancial.com
+JBS|food|jbs.com
+JD.com|ecommerce|jd.com
+JDE Peet's|food|jdepeets.com
+Jeeves|finance|jeeves.com
+Jefferies Financial|finance|jefferiesfinancial.com
+Jeronimo Martins|food|jeronimomartins.com
+Jet2|tech|jet2.com
+JetBrains|tech|jetbrains.com
+JFE|tech|jfe.com
+Jiangsu Changshu Rural Commercial Bank|bank|jiangsuchangshururalcommercialbank.com
+Jiangsu Eastern Shenghong|utility|jiangsueasternshenghong.com
+Jiangsu Hengrui Medicine|health|jiangsuhengruimedicine.com
+Jiangsu Yanghe Brewery|food|jiangsuyanghebrewery.com
+Jiangxi Bank|bank|jiangxibank.com
+Jiangxi Copper|tech|jiangxicopper.com
+Jiangxi Zhengbang Technology|food|jiangxizhengbangtechnology.com
+JimuBox|finance|jimubox.com
+Jinshang Bank|bank|jinshangbank.com
+Jio Financial Services|finance|jiofinancialservices.com
+JioCinema|media|jiocinema.com
+JioMart|ecommerce|jiomart.com
+JioSaavn|media|jiosaavn.com
+Jiuxian|ecommerce|jiuxian.com
+JM Smucker|food|jmsmucker.com
+JNU|education|jnu.ac.in
+Jobandtalent|tech|jobandtalent.com
+John Deere|tech|johndeere.com
+Johnson Controls International|tech|johnsoncontrolsinternational.com
+Johnson & Johnson|health|johnsonjohnson.com
+Johnson Matthey|tech|johnsonmatthey.com
+Joint Stock Commercial Bank for Foreign Trade of Vietnam|bank|jointstockcommercialbankforforeigntradeofvietnam.com
+Jointown Pharmaceutical|health|jointownpharmaceutical.com
+Jokr|ecommerce|jokr.com
+JOLLY Information Technology|ecommerce|jollyinformationtechnology.com
+Jones Lang LaSalle|tech|joneslanglasalle.com
+JoyTunes|education|joytunes.com
+JPMorgan Chase|bank|chase.com;jpmorganchase.com
+JSW Steel|tech|jswsteel.com
+Juanpi|ecommerce|juanpi.com
+Julius Baer|finance|juliusbaer.com
+Juma Peisong|logistics|jumapeisong.com
+JumpCloud|tech|jumpcloud.com
+Jupiter Money|payment|jupiter.money
+Juroku Financial|bank|jurokufinancial.com
+Jusfoun Big Data|tech|jusfounbigdata.com
+Just|insurance|just.com
+Justdial|tech|justdial.com
+Justworks|tech|justworks.com
+JUUL Labs|ecommerce|juullabs.com
+Jyske Bank|bank|jyskebank.com
+K Health|health|khealth.com
+Kaggle|tech|kaggle.com
+Kajabi|tech|kajabi.com
+Kajima|tech|kajima.com
+KakaoBank|bank|kakaobank.com
+Kansai Electric Power|utility|kansaielectricpower.com
+Kao|tech|kao.com
+Karat|tech|karat.com
+Karnataka Bank|bank|karnatakabank.com
+Karur Vysya Bank|bank|kvb.co.in
+Kaseya|security|kaseya.com
+Kasikornbank|bank|kasikornbank.com
+Kaspersky|security|kaspersky.com
+Kaspi.kz|tech|kaspikz.com
+Kavak|ecommerce|kavak.com
+Kawasaki Heavy Industries|tech|kawasakiheavyindustries.com
+Kawasaki Kisen Kaisha|logistics|kawasakikisenkaisha.com
+KB Financial|bank|kbfinancial.com
+KBC|bank|kbc.com
+KDDI|telecom|kddi.com
+KE|tech|ke.com
+Keenon Robotics|logistics|keenonrobotics.com
+Keep|telecom|keep.com
+KeepTruckin|logistics|keeptruckin.com
+Keiyo Bank|bank|keiyobank.com
+Kellanova|food|kellanova.com
+Kendra Scott|ecommerce|kendrascott.com
+Kenvue|tech|kenvue.com
+Keppel|tech|keppel.com
+Kering|tech|kering.com
+Kerry|food|kerry.com
+Kesko|food|kesko.com
+Keurig Dr Pepper|food|keurigdrpepper.com
+KeyCorp|bank|keycorp.com
+Keyence|tech|keyence.com
+Keysight Technologies|tech|keysighttechnologies.com
+KFC|food|kfc.com;kfc.co.in
+KFintech|finance|kfintech.com
+KGHM Polska Miedz|tech|kghmpolskamiedz.com
+KGI Financial|insurance|kgifinancial.com
+Khan Academy|education|khanacademy.org
+Kia|auto|kia.com
+Kimberly-Clark|tech|kimberlyclark.com
+Kimco Realty|finance|kimcorealty.com
+Kinder Morgan|utility|kindermorgan.com
+Kingfisher|ecommerce|kingfisher.com
+Kingspan|tech|kingspan.com
+Kinross Gold|tech|kinrossgold.com
+KION|tech|kion.com
+Kirin|food|kirin.com
+Kitopi|logistics|kitopi.com
+Kiwoom Securities|finance|kiwoomsecurities.com
+KK|ecommerce|kk.com
+KKR|finance|kkr.com
+KLA|tech|kla.com
+Klarna|payment|klarna.com
+Klaviyo|tech|klaviyo.com
+Klepierre|tech|klepierre.com
+Klook|travel|klook.com
+Knorr-Bremse|tech|knorrbremse.com
+KnowBox|education|knowbox.com
+Koç|utility|ko.com
+Kobe Steel|tech|kobesteel.com
+Kohl's|ecommerce|kohls.com
+Komatsu|tech|komatsu.com
+Komodo Health|health|komodohealth.com
+Konami|tech|konami.com
+Kone|tech|kone.com
+Konfio|finance|konfio.com
+Kong|tech|kong.com
+Kongsberg Gruppen|tech|kongsberggruppen.com
+Kopi Kenangan|ecommerce|kopikenangan.com
+Korea Electric Power|utility|koreaelectricpower.com
+Korea Gas|utility|koreagas.com
+Korea Investment|finance|koreainvestment.com
+Korea Shipbuilding & Offshore Engineering|tech|koreashipbuildingoffshoreengineering.com
+Korean Air|logistics|koreanair.com
+Kotak Life|insurance|kotaklife.com
+Kotak Mahindra Bank|bank|kotak.com
+Kotak Mutual Fund|finance|kotakmf.com
+Kotak Securities|finance|kotaksecurities.com
+Koudai|ecommerce|koudai.com
+KPN|telecom|kpn.com
+Kraft Heinz|food|kraftheinz.com
+Krafton|tech|krafton.com
+Kraken|crypto|kraken.com
+Kroger|food|kroger.com
+Krung Thai Bank|bank|krungthaibank.com
+KRY|health|kry.com
+KT|telecom|kt.com
+Kuaigou Dache|logistics|kuaigoudache.com
+Kuaikan Manhua|tech|kuaikanmanhua.com
+Kuaishou Technology|media|kuaishoutechnology.com
+Kubota|tech|kubota.com
+Kuehne & Nagel International|logistics|kuehnenagelinternational.com
+Kujiale|tech|kujiale.com
+Kurly|logistics|kurly.com
+Kuvera|finance|kuvera.in
+Kuwait Finance House|bank|kuwaitfinancehouse.com
+Kweichow Moutai|food|kweichowmoutai.com
+Kyocera|tech|kyocera.com
+Kyoto Financial|bank|kyotofinancial.com
+Kyushu Electric Power|utility|kyushuelectricpower.com
+Kyushu Financial|bank|kyushufinancial.com
+L and T Finance|finance|ltfs.com
+L'Oréal|tech|loral.com
+L&P Cosmetic|ecommerce|lpcosmetic.com
+L3Harris Technologies|tech|l3harristechnologies.com
+Labcorp|health|labcorp.com
+Lacework|security|lacework.com
+Lalamove|logistics|lalamove.com
+Lam Research|tech|lamresearch.com
+Lamabang|ecommerce|lamabang.com
+Larsen & Toubro|tech|larsentoubro.com
+Las Vegas Sands|travel|lasvegassands.com
+LastPass|security|lastpass.com
+Latam Airlines|logistics|latamairlines.com
+Latour|finance|latour.com
+Lattice|tech|lattice.com
+LaunchDarkly|tech|launchdarkly.com
+LayerZero Labs|tech|layerzerolabs.com
+Lazada|ecommerce|lazada.com
+LEAD School|education|leadschool.com
+Leap Motor|auto|leapmotor.com
+Lear|tech|lear.com
+Ledger|tech|ledger.com
+LeetCode|education|leetcode.com
+Legal & General|insurance|legalgeneral.com
+Legend|finance|legend.com
+Legrand|tech|legrand.com
+Leidos|tech|leidos.com
+Lendable|finance|lendable.com
+Lennar|tech|lennar.com
+Lennox International|tech|lennoxinternational.com
+Lenovo|tech|lenovo.com
+Lens Technology|tech|lenstechnology.com
+Lenskart|ecommerce|lenskart.com
+Leonardo|tech|leonardo.com
+Lessen|tech|lessen.com
+LetsGetChecked|health|letsgetchecked.com
+LG|tech|lg.com
+LG Chem|tech|lgchem.com
+LG Display|tech|lgdisplay.com
+LG Electronics|tech|lgelectronics.com
+LG Innotek|tech|lginnotek.com
+Li Auto|tech|liauto.com
+Lianjia|ecommerce|lianjia.com
+Liberty Broadband|telecom|libertybroadband.com
+Liberty Global|telecom|libertyglobal.com
+Liberty Media|media|libertymedia.com
+LIC Housing Finance|tech|lichousingfinance.com
+Licious|ecommerce|licious.com
+Life Insurance|insurance|lifeinsurance.com
+Life Insurance Corporation of India|insurance|licindia.in
+LifeMiles|tech|lifemiles.com
+Lifestyle Stores|ecommerce|lifestylestores.com
+Lightricks|tech|lightricks.com
+Lincoln National|insurance|lincolnnational.com
+Linde|tech|linde.com
+Lindt & Sprungli|food|lindtsprungli.com
+LINE|social|line.me
+Link REIT|finance|linkreit.com
+LinkDoc Technology|health|linkdoctechnology.com
+LinkedIn|social|linkedin.com
+LinkSure Network|telecom|linksurenetwork.com
+LinkTree|tech|linktree.com
+Lion Finance|bank|lionfinance.com
+Lithia Motors|ecommerce|lithiamotors.com
+Live Nation Entertainment|media|livenationentertainment.com
+LivSpace|ecommerce|livspace.com
+LKQ|tech|lkq.com
+Lloyds Bank|bank|lloydsbank.com
+Lloyds Banking|bank|lloydsbanking.com
+Loadsmart|logistics|loadsmart.com
+Lockheed Martin|tech|lockheedmartin.com
+Locus Robotics|tech|locusrobotics.com
+Loews|insurance|loews.com
+Loft|ecommerce|loft.com
+Loggi|logistics|loggi.com
+Logitech|tech|logitech.com
+Logitech International|tech|logitechinternational.com
 Lokmat|news|lokmat.com
 Loksatta|news|loksatta.com
-BBC|news|bbc.com;bbc.co.uk
-CNN|news|cnn.com
-Reuters|news|reuters.com
-New York Times|news|nytimes.com
-Washington Post|news|washingtonpost.com
-The Guardian|news|theguardian.com
-Bloomberg|news|bloomberg.com
-Forbes|news|forbes.com
-Wall Street Journal|news|wsj.com
-Al Jazeera|news|aljazeera.com
-CNBC|news|cnbc.com
-Financial Times|news|ft.com
-The Economist|news|economist.com
-TechCrunch|news|techcrunch.com
-The Verge|news|theverge.com
-Wired|news|wired.com
-Tata Group|auto|tata.com
-Reliance Industries|finance|ril.com
-Adani Group|finance|adani.com
+London Stock Exchange|tech|londonstockexchange.com
+Longfor|tech|longfor.com
+Longi Green Energy Technology|tech|longigreenenergytechnology.com
+Lonza|health|lonza.com
+Lookout|security|lookout.com
+Loom|tech|loom.com
+Lotte Chemical|tech|lottechemical.com
+Lotte Shopping|ecommerce|lotteshopping.com
+Lowe's|ecommerce|lowes.com
+LPL Financial|finance|lplfinancial.com
+LS|tech|ls.com
+LTK|tech|ltk.com
+Lucid|tech|lucid.com
+Lukka|finance|lukka.com
+Lululemon Athletica|tech|lululemonathletica.com
+Lumen Technologies|telecom|lumentechnologies.com
+Lunar|finance|lunar.com
+Lundbergs|finance|lundbergs.com
+Luoji Siwei|education|luojisiwei.com
+Lusha|tech|lusha.com
+Luxshare Precision Industry|tech|luxshareprecisionindustry.com
+Luzerner Kantonalbank|bank|luzernerkantonalbank.com
+Luzhou Lao Jiao|food|luzhoulaojiao.com
+LVMH Louis Vuitton Moet Hennessy|tech|lvmhlouisvuittonmoethennessy.com
+Lydia|finance|lydia.com
+Lyft|travel|lyft.com
+LyondellBasell Industries|tech|lyondellbasellindustries.com
+Lyra Health|health|lyrahealth.com
+M&G|finance|mg.com
+M&T Bank|bank|mtbank.com
+M1 Finance|finance|m1finance.com
+Macquarie|finance|macquarie.com
+Macy's|ecommerce|macys.com
+MadeiraMadeira|ecommerce|madeiramadeira.com
+Maersk|logistics|maersk.com
+Mafengwo|travel|mafengwo.com
+Magic Leap|tech|magicleap.com
+Magna International|tech|magnainternational.com
+Mahanagar Gas|utility|mahanagargas.com
+MahaOnline|government|mahaonline.gov.in
 Mahindra|auto|mahindra.com
+Mahindra Finance|finance|mahindrafinance.com
+Mahindra & Mahindra|tech|mahindramahindra.com
+Maimai|telecom|maimai.com
+MakeMyTrip|travel|makemytrip.com
+Mamaearth|ecommerce|mamaearth.in
+Mambu|finance|mambu.com
+Mammoth Biosciences|health|mammothbiosciences.com
+Manappuram Finance|finance|manappuram.com
+Manila Electric|utility|manilaelectric.com
+Manipal Hospitals|health|manipalhospitals.com
+ManipalCigna|insurance|manipalcigna.com
+Manner|tech|manner.com
+ManoMano|ecommerce|manomano.com
+Manpower|tech|manpower.com
+Manulife|insurance|manulife.com
+Mapfre|insurance|mapfre.com
+Marathon Petroleum|utility|marathonpetroleum.com
+Marfrig Global Foods|food|marfrigglobalfoods.com
+Markel|insurance|markel.com
+Marks & Spencer|ecommerce|marksspencer.com
+Marriott|travel|marriott.com
+Marriott International|travel|marriottinternational.com
+Marsh McLennan|insurance|marshmclennan.com
+Marshmallow|finance|marshmallow.com
+Martin Marietta Materials|tech|martinmariettamaterials.com
+Marubeni|food|marubeni.com
 Maruti Suzuki|auto|marutisuzuki.com
-Hyundai|auto|hyundai.com
-Tata Motors|auto|tatamotors.com
-Honda|auto|honda.com
-Toyota|auto|toyota.com;toyotabharat.com
-Kia|auto|kia.com
-MG Motor India|auto|mgmotor.co.in
-Hero MotoCorp|auto|heromotocorp.com
-Bajaj Auto|auto|bajajauto.com
-TVS Motor|auto|tvsmotor.com
-Royal Enfield|auto|royalenfield.com
-Ola Electric|auto|olaelectric.com
-Ather Energy|auto|atherenergy.com
-Tesla|auto|tesla.com
-Ford|auto|ford.com
-BMW|auto|bmw.com
+Marvell Technology|tech|marvelltechnology.com
+Masco|tech|masco.com
+Mashreq Bank|bank|mashreqbank.com
+MasTec|tech|mastec.com
+Mastercard|payment|mastercard.com
+MasterClass|education|masterclass.com
+Masterworks|finance|masterworks.com
+Matillion|tech|matillion.com
+Matrixport|finance|matrixport.com
+Maven Clinic|health|mavenclinic.com
+Max HBO|media|max.com
+Max Healthcare|health|maxhealthcare.in
+Max Life Insurance|insurance|maxlifeinsurance.com
+Maybank|bank|maybank.com
+Mazda Motor|tech|mazdamotor.com
+MBH Bank|bank|mbhbank.com
+McAfee|security|mcafee.com
+McCormick|food|mccormick.com
+McDonald's|food|mcdonalds.com
+McKesson|health|mckesson.com
+Mebuki Financial|bank|mebukifinancial.com
+Medable|tech|medable.com
+MediaMath|tech|mediamath.com
+MediaTek|tech|mediatek.com
+Mediobanca|bank|mediobanca.com
+Medipal|health|medipal.com
+Medium|social|medium.com
+Medlinker|health|medlinker.com
+Medtronic|health|medtronic.com
+Meero|tech|meero.com
+Meesho|ecommerce|meesho.com
+Mega Financial|bank|megafinancial.com
+MEGVII|tech|megvii.com
+Meicai|telecom|meicai.com
+Meituan|logistics|meituan.com
+Meizu Technology|tech|meizutechnology.com
+Melio|finance|melio.com
+Mensa Brands|tech|mensabrands.com
+Merama|ecommerce|merama.com
+Mercado Libre|ecommerce|mercadolibre.com
 Mercedes-Benz|auto|mercedes-benz.com
+Merck &|health|merck.com
+Mercuries & Associates|insurance|mercuriesassociates.com
+Mercury|finance|mercury.com
+Meritz Financial|finance|meritzfinancial.com
+MessageBird|telecom|messagebird.com
+Messenger|social|messenger.com
+Meta|social|meta.com
+Meta Platforms|tech|metaplatforms.com
+Metallurgical|tech|metallurgical.com
+MetaMask|crypto|metamask.io
+MetLife|insurance|metlife.com
+Metro|food|metro.com
+Metropolitan Bank & Trust|bank|metropolitanbanktrust.com
+Mettler-Toledo International|health|mettlertoledointernational.com
+MF Utilities|finance|mfuindia.com
+MG Motor India|auto|mgmotor.co.in
+MGM Resorts|travel|mgmresorts.com
+Mia.com|ecommerce|mia.com
+Miaoshou Doctor|ecommerce|miaoshoudoctor.com
+Michelin|tech|michelin.com
+Microchip Technology|tech|microchiptechnology.com
+Micron Technology|tech|microntechnology.com
+Microsoft|tech|microsoft.com;live.com;office.com;microsoftonline.com
+Microsoft Azure|tech|azure.com
+MicroStrategy|tech|microstrategy.com
+Mid-america Apartment Communities|finance|midamericaapartmentcommunities.com
+Midea|tech|midea.com
+Migdal Insurance|insurance|migdalinsurance.com
+Military Commercial Joint Stock Bank|bank|militarycommercialjointstockbank.com
+MindMaze|health|mindmaze.com
+MindTickle|tech|mindtickle.com
+Mininglamp Technology|tech|mininglamptechnology.com
+Minio|tech|minio.com
+Ministry of Corporate Affairs|government|mca.gov.in
+Ministry of External Affairs|government|mea.gov.in
+Ministry of Home Affairs|government|mha.gov.in
+Mint|news|livemint.com
+Mirae Asset Financial|finance|miraeassetfinancial.com
+Mirakl|ecommerce|mirakl.com
+Miro|tech|miro.com
+Misfits Market|ecommerce|misfitsmarket.com
+MIT|education|mit.edu
+Mitsubishi|tech|mitsubishi.com
+Mitsubishi Chemical|tech|mitsubishichemical.com
+Mitsubishi Electric|tech|mitsubishielectric.com
+Mitsubishi Estate|tech|mitsubishiestate.com
+Mitsubishi Heavy Industries|tech|mitsubishiheavyindustries.com
+Mitsubishi Motors|tech|mitsubishimotors.com
+Mitsubishi UFJ Financial|bank|mitsubishiufjfinancial.com
+Mitsubishi UFJ Lease|tech|mitsubishiufjlease.com
+Mitsui|tech|mitsui.com
+Mitsui Fudosan|tech|mitsuifudosan.com
+Mitsui OSK Lines|logistics|mitsuiosklines.com
+Mixpanel|tech|mixpanel.com
+MIXUE|food|mixue.com
+Mizrahi Tefahot Bank|bank|mizrahitefahotbank.com
+Mizuho Financial|bank|mizuhofinancial.com
+MobiKwik|payment|mobikwik.com
+Mobile Premier League|tech|mobilepremierleague.com
+MobileCoin|finance|mobilecoin.com
+Mobily|telecom|mobily.com
+Mobvoi|ecommerce|mobvoi.com
+Modern Health|health|modernhealth.com
+Modern Treasury|finance|moderntreasury.com
+Modernizing Medicine|health|modernizingmedicine.com
+Modon|finance|modon.com
+Mofang Living|ecommerce|mofangliving.com
+Moglix|ecommerce|moglix.com
+Moka|tech|moka.com
+MOL Hungarian Oil|utility|molhungarianoil.com
+Molina Healthcare|health|molinahealthcare.com
+Mollie|finance|mollie.com
+MOLOCO|tech|moloco.com
+Molson Coors Brewing|food|molsoncoorsbrewing.com
+Momenta|tech|momenta.com
+Momentum Metropolitan|insurance|momentummetropolitan.com
+MoMo|finance|momo.com
+Moncler|tech|moncler.com
+Mondelez International|food|mondelezinternational.com
+Moneycontrol|news|moneycontrol.com
+Monolithic Power Systems|tech|monolithicpowersystems.com
+Monster Beverage|food|monsterbeverage.com
+Monzo|bank|monzo.com
+Moody's|tech|moodys.com
+Moon Active|telecom|moonactive.com
+MoonPay|finance|moonpay.com
+Morgan Stanley|bank|morganstanley.com
+Morning Consult|tech|morningconsult.com
+Motilal Oswal|finance|motilaloswal.com
+Motorola Solutions|tech|motorolasolutions.com
+Motorway|ecommerce|motorway.com
+Moveworks|tech|moveworks.com
+Movile|telecom|movile.com
+Mozilla|tech|mozilla.org
+MPL|gaming|mpl.live
+MS&AD Insurance|insurance|msadinsurance.com
+MSCI|tech|msci.com
+MSEDCL Mahavitaran|utility|mahadiscom.in
+MSRTC|government|msrtc.gov.in
+MTN|telecom|mtn.com
+MTNL|telecom|mtnl.net.in
+MTR|logistics|mtr.com
+MTU Aero Engines|tech|mtuaeroengines.com
+Mu Sigma|tech|musigma.com
+Munich Re|insurance|munichre.com
+MURAL|tech|mural.com
+Murata Manufacturing|tech|muratamanufacturing.com
+Murphy USA|ecommerce|murphyusa.com
+MUSINSA|ecommerce|musinsa.com
+Muthoot Finance|finance|muthootfinance.com
+Mux|tech|mux.com
+Muyuan Foodstuff|food|muyuanfoodstuff.com
+MX Technologies|finance|mxtechnologies.com
+MyGlamm|ecommerce|myglamm.com
+MyGov India|government|mygov.in
+Mynt|finance|mynt.com
+Myntra|ecommerce|myntra.com
+Mythical Games|tech|mythicalgames.com
+N26|finance|n26.com
+NAB - National Australia Bank|bank|nabnationalaustraliabank.com
+Nainital Bank|bank|nainitalbank.co.in
+Namecheap|tech|namecheap.com
+Nanto Bank|bank|nantobank.com
+NARI Technology Development|tech|naritechnologydevelopment.com
+NASDAQ|finance|nasdaq.com
+Naspers|tech|naspers.com
+National Bank of Canada|bank|nationalbankofcanada.com
+National Bank of Greece|bank|nationalbankofgreece.com
+National Bank of Kuwait|bank|nationalbankofkuwait.com
+National Bank of Ras Al-Khaimah|bank|nationalbankofrasalkhaimah.com
+National Grid|utility|nationalgrid.com
+National Insurance|insurance|nationalinsurance.nic.co.in
+National Scholarship Portal|government|scholarships.gov.in
+National Stock Exchange of India|finance|nationalstockexchangeofindia.com
+Nature's Fynd|tech|naturesfynd.com
+Naturgy Energy|utility|naturgyenergy.com
+NatWest|bank|natwest.com
+Naukri|tech|naukri.com
+NAURA Technology|tech|nauratechnology.com
+Naver|tech|naver.com
+Navient|tech|navient.com
+NDTV|news|ndtv.com
+NEC|tech|nec.com
+Nedbank|bank|nedbank.com
+Neo4j|tech|neo4j.com
+Neon|finance|neon.com
+Neste|utility|neste.com
+Nestlé|food|nestl.com
+NetApp|tech|netapp.com
+NetEase|tech|netease.com
+Netflix|media|netflix.com
+Netlify|tech|netlify.com
+Netmeds|health|netmeds.com
+Netskope|security|netskope.com
+New China Life Insurance|insurance|newchinalifeinsurance.com
+New Hope Liuhe|food|newhopeliuhe.com
+New India Assurance|insurance|newindia.co.in
+New World Development|tech|newworlddevelopment.com
+New York Times|news|nytimes.com
+Newlink|ecommerce|newlink.com
+Newmont|tech|newmont.com
+News|media|news.com
+News Break|tech|newsbreak.com
+News18|news|news18.com
+Newsela|tech|newsela.com
+Nexi S.p.A|bank|nexispa.com
+Nexii|tech|nexii.com
+NEXON|tech|nexon.com
+Next|ecommerce|next.com
+Next Insurance|finance|nextinsurance.com
+Next Silicon|tech|nextsilicon.com
+NextEra Energy|utility|nexteraenergy.com
+Nexthink|tech|nexthink.com
+Nextiva|tech|nextiva.com
+NH Investment & Securities|finance|nhinvestmentsecurities.com
+NHAI|government|nhai.gov.in
+Niantic|telecom|niantic.com
+NIC India|government|nic.in
+Nidec|tech|nidec.com
+Nike|ecommerce|nike.com
+Ningbo Jintian Copper|tech|ningbojintiancopper.com
+Ningxia Baofeng Energy|tech|ningxiabaofengenergy.com
+Ninja Van|logistics|ninjavan.com
+Nintendo|gaming|nintendo.com
+Nippon Express|logistics|nipponexpress.com
+Nippon India Mutual Fund|finance|nipponindiamf.com
+Nippon Paint|tech|nipponpaint.com
+Nippon Steel|tech|nipponsteel.com
+Nippon Telegraph & Tel|telecom|nippontelegraphtel.com
+Nippon Yusen|logistics|nipponyusen.com
+Nishi-nippon Financial|bank|nishinipponfinancial.com
+NiSource|utility|nisource.com
+Nissan Motor|tech|nissanmotor.com
+Nitori|ecommerce|nitori.com
+Nitto Denko|tech|nittodenko.com
+NIUM|finance|nium.com
+Niva Bupa|insurance|nivabupa.com
+NN|insurance|nn.com
+NoBroker|tech|nobroker.com
+Nokia|tech|nokia.com
+Nomura|finance|nomura.com
+Nomura Research Institute|tech|nomuraresearchinstitute.com
+Noname Security|security|nonamesecurity.com
+Nongfu Spring|food|nongfuspring.com
+Noom|health|noom.com
+Nordea Bank|bank|nordeabank.com
+NordVPN|security|nordvpn.com
+Norfolk Southern|logistics|norfolksouthern.com
+Norsk Hydro|tech|norskhydro.com
+North Pacific Bank|bank|northpacificbank.com
+Northern Star Resources|tech|northernstarresources.com
+Northern Trust|finance|northerntrust.com
+Northrop Grumman|tech|northropgrumman.com
+Northvolt|tech|northvolt.com
+Norton|security|norton.com
+Norwegian Cruise Line|travel|norwegiancruiseline.com
+NotCo|tech|notco.com
+Nothing|tech|nothing.tech
+Notion|tech|notion.so
+Notion Labs|tech|notionlabs.com
+NOV|utility|nov.com
+Nova Ljubljanska Banka|bank|novaljubljanskabanka.com
+Novartis|health|novartis.com
+Novo Nordisk|health|novonordisk.com
+Novonesis A/S|tech|novonesisas.com
+NPCI|payment|npci.org.in
+npm|tech|npmjs.com
+NPS Trust|government|npstrust.org.in
+NPTEL|education|nptel.ac.in
+NRG Energy|utility|nrgenergy.com
+NSDL|finance|nsdl.co.in
+NSE India|finance|nseindia.com
+NTA|government|nta.ac.in
+NTPC|utility|ntpc.com
+Nu|bank|nu.com
+NuCom|tech|nucom.com
+Nucor|tech|nucor.com
+Numbrs|finance|numbrs.com
+Nuro|auto|nuro.com
+Nutrien|tech|nutrien.com
+Nuvemshop|ecommerce|nuvemshop.com
+NVIDIA|tech|nvidia.com
+NVR|tech|nvr.com
+Nxin|tech|nxin.com
+NXP Semiconductors|tech|nxpsemiconductors.com
+Nykaa|ecommerce|nykaa.com
+O'Reilly Automotive|ecommerce|oreillyautomotive.com
+o9 Solutions|tech|o9solutions.com
+OakNorth Bank|finance|oaknorthbank.com
+Obayashi|tech|obayashi.com
+Occidental Petroleum|utility|occidentalpetroleum.com
+OCSiAl|tech|ocsial.com
+Oda|ecommerce|oda.com
+Odoo|tech|odoo.com
+OfBusiness|ecommerce|ofbusiness.com
+Offchain Labs|tech|offchainlabs.com
+Ogaki Kyoritsu Bank|bank|ogakikyoritsubank.com
+Oi|telecom|oi.com
+Oil & Natural Gas|utility|oilnaturalgas.com
+Okta|security|okta.com
+Ola Cabs|travel|olacabs.com
+Ola Electric|auto|olaelectric.com
+Ola Electric Mobility|auto|olaelectricmobility.com
+Olam|food|olam.com
+Old Dominion Freight Line|logistics|olddominionfreightline.com
+Old Mutual|insurance|oldmutual.com
+Old National Bank|bank|oldnationalbank.com
+Old Republic International|insurance|oldrepublicinternational.com
+Olist|ecommerce|olist.com
+Olive|tech|olive.com
+OLX India|ecommerce|olx.in
+Olympus|health|olympus.com
+Omada Health|health|omadahealth.com
+Omio|travel|omio.com
+Omnicom|media|omnicom.com
+OMV|utility|omv.com
+ON Semiconductor|tech|onsemiconductor.com
+ONE|tech|one.com
+Oneok|utility|oneok.com
+OnePlus|tech|oneplus.com
+OneTrust|tech|onetrust.com
+Ooredoo Q.P.S.C|telecom|ooredooqpsc.com
+Opay|finance|opay.com
+OpenAI|tech|openai.com;chatgpt.com
+OpenSea|ecommerce|opensea.com
+Opentrons|tech|opentrons.com
+OpenWeb|tech|openweb.com
+Opera|tech|opera.com
+Oppo|tech|oppo.com
+Optimism|tech|optimism.com
+Oracle|tech|oracle.com
+Orange|telecom|orange.com
+Orbbec Technology|tech|orbbectechnology.com
+Orca Bio|health|orcabio.com
+Orca Security|security|orcasecurity.com
+OrCam Technologies|tech|orcamtechnologies.com
+Orchard|finance|orchard.com
+Orient Securities|finance|orientsecurities.com
+Oriental Insurance|insurance|orientalinsurance.org.in
+Oriental Land|media|orientalland.com
+Origin Energy|utility|originenergy.com
+Orix|tech|orix.com
+ORLEN Spolka Akcyjna|utility|orlenspolkaakcyjna.com
+Orsted|utility|orsted.com
+Osaka Gas|utility|osakagas.com
+Oshkosh|tech|oshkosh.com
+Otis Worldwide|tech|otisworldwide.com
+OTP Bank|bank|otpbank.com
+Otsuka|health|otsuka.com
+Otto Bock HealthCare|health|ottobockhealthcare.com
+Oura|health|oura.com
+Outlook|tech|outlook.com
+Outreach|tech|outreach.com
+Outschool|education|outschool.com
+OutSystems|tech|outsystems.com
+Ouyeel|tech|ouyeel.com
+Oversea-Chinese Banking|bank|overseachinesebanking.com
+OVH|tech|ovh.com
+Ovintiv|utility|ovintiv.com
+OVO Energy|tech|ovoenergy.com
+Owens Corning|tech|owenscorning.com
+Owkin|tech|owkin.com
+OwnBackup|tech|ownbackup.com
+OYO|travel|oyorooms.com
+Pacaso|finance|pacaso.com
+Paccar|tech|paccar.com
+Packaging|tech|packaging.com
+Pagaya|finance|pagaya.com
+Palantir Technologies|tech|palantirtechnologies.com
+Palo Alto Networks|tech|paloaltonetworks.com
+Pan Pacific International|ecommerce|panpacificinternational.com
+Panasonic|tech|panasonic.com
+PandaDoc|tech|pandadoc.com
+Pandora|tech|pandora.com
+Pantaloons|ecommerce|pantaloons.com
+Pantheon Systems|tech|pantheonsystems.com
+Panther Labs|security|pantherlabs.com
+Papa|health|papa.com
+Papaya Global|tech|papayaglobal.com
+Paradox|tech|paradox.com
+Paramount|media|paramount.com
+Paramount Plus|media|paramountplus.com
+Parivahan|government|parivahan.gov.in
+Parker-Hannifin|tech|parkerhannifin.com
+Parkland|tech|parkland.com
+Parliament of India|government|sansad.in
+Partners|finance|partners.com
+Passport Seva|government|passportindia.gov.in
+Pat McGrath Labs|ecommerce|patmcgrathlabs.com
+Patreon|tech|patreon.com
+PatSnap|tech|patsnap.com
+Pattern|tech|pattern.com
+PAX|ecommerce|pax.com
+Paxos|finance|paxos.com
+Paychex|tech|paychex.com
+PayFit|finance|payfit.com
+Payhawk|finance|payhawk.com
+PayPal|payment|paypal.com
+Paytm|payment|paytm.com
+Paytm Payments Bank|bank|paytmbank.com
+PayU|payment|payu.in
+PBF Energy|utility|pbfenergy.com
+PDD|ecommerce|pdd.com
+Pegatron|tech|pegatron.com
+Pembina Pipeline|utility|pembinapipeline.com
+Pendo|tech|pendo.com
+Penske Automotive|ecommerce|penskeautomotive.com
+Pentair|tech|pentair.com
+Pentera|security|pentera.com
+People.ai|tech|people.ai
+Pepperfry|ecommerce|pepperfry.com
+PepsiCo|food|pepsico.com
+Performance Food|logistics|performancefood.com
+Permian Resources|utility|permianresources.com
+Pernod Ricard|food|pernodricard.com
+Persona|security|persona.com
+Personio|tech|personio.com
+Pet Circle|ecommerce|petcircle.com
+Petrobras|utility|petrobras.com
+PetroChina|utility|petrochina.com
+Pfizer|health|pfizer.com
+PFMS|government|pfms.nic.in
+PG&E|utility|pge.com
+PGE Polska Grupa Energetyczna|utility|pgepolskagrupaenergetyczna.com
+Phantom|finance|phantom.com
+Pharmapacks|ecommerce|pharmapacks.com
+PharmEasy|health|pharmeasy.in
+Phenom People|tech|phenompeople.com
+Philip Morris International|food|philipmorrisinternational.com
+Philips|health|philips.com
+Phillips 66|utility|phillips66.com
+Phoenix|insurance|phoenix.com
+PhonePe|payment|phonepe.com
+PhysicsWallah|education|pw.live
+PICC|insurance|picc.com
+PicsArt|telecom|picsart.com
+Pilot.com|finance|pilot.com
+Pine Labs|finance|pinelabs.com
+Ping An Insurance|insurance|pinganinsurance.com
+Pinnacle Financial Partners|bank|pinnaclefinancialpartners.com
+Pinnacle West|utility|pinnaclewest.com
+Pinterest|social|pinterest.com
+Pipa Coding|education|pipacoding.com
+Pipe|finance|pipe.com
+Piraeus Financial|bank|piraeusfinancial.com
+Pizza Hut|food|pizzahut.com;pizzahut.co.in
+PKO Bank Polski|bank|pkobankpolski.com
+PLACE|tech|place.com
+Placer.ai|tech|placer.ai
+Plaid|finance|plaid.com
+Playco|tech|playco.com
+PlayStation|gaming|playstation.com
+Pleo|finance|pleo.com
+Plume|tech|plume.com
+PM-KISAN|government|pmkisan.gov.in
+PNB MetLife|insurance|pnbmetlife.com
+PNC Financial Services|bank|pncfinancialservices.com
+Podium|tech|podium.com
+PointClickCare|tech|pointclickcare.com
+Poizon|telecom|poizon.com
+Policybazaar|insurance|policybazaar.com
+Poly Developments &|tech|polydevelopments.com
+Pony.ai|tech|pony.ai
+Pop Mart International|media|popmartinternational.com
+Popular|bank|popular.com
+Porsche Automobil|tech|porscheautomobil.com
+Posco|tech|posco.com
+Postal Savings Bank Of China|bank|postalsavingsbankofchina.com
+Poste Italiane|bank|posteitaliane.com
+Postman|tech|postman.com
+Power|insurance|power.com
+Power Assets|utility|powerassets.com
+Power Construction|tech|powerconstruction.com
+Power Finance|tech|powerfinance.com
+Power Grid of India|utility|powergridofindia.com
+PPG|tech|ppg.com
+PPL|utility|ppl.com
+PPRO|finance|ppro.com
+Practo|health|practo.com
+Prada|tech|prada.com
+Preferred Networks|tech|preferrednetworks.com
+Prime Medicine|health|primemedicine.com
+Prime Minister's Office India|government|pmindia.gov.in
+Prime Video|media|primevideo.com
+Principal Financial|finance|principalfinancial.com
+Printful|tech|printful.com
+Prio|utility|prio.com
+Pristyn Care|health|pristyncare.com
+Procter & Gamble|tech|proctergamble.com
+Productboard|tech|productboard.com
+Progressive|insurance|progressive.com
+Project44|logistics|project44.com
+Prologis|finance|prologis.com
+Prologis Property Mexico|finance|prologispropertymexico.com
+Promasidor|ecommerce|promasidor.com
+Prosperity Bancshares|bank|prosperitybancshares.com
+Protean eGov|government|proteantech.in
+Proton|tech|proton.me
+Prudential|insurance|prudential.com
+Prudential Financial|insurance|prudentialfinancial.com
+Prysmian|tech|prysmian.com
+PsiQuantum|tech|psiquantum.com
+Pt Adaro Andalan Indonesia|tech|ptadaroandalanindonesia.com
+PT Adaro Energy Indonesia|tech|ptadaroenergyindonesia.com
+PT Lippo Karawaci|tech|ptlippokarawaci.com
+PTT|utility|ptt.com
+PTT Global Chemical|utility|pttglobalchemical.com
+Public|finance|public.com
+Public Bank|bank|publicbank.com
+Public Power|utility|publicpower.com
+Public Service Enterprise|utility|publicserviceenterprise.com
+Public Storage|finance|publicstorage.com
+Publicis Groupe|media|publicisgroupe.com
+PulteGroup|tech|pultegroup.com
+Pune Municipal Corporation|government|pmc.gov.in
+Punjab and Sind Bank|bank|psbindia.com
+Punjab National Bank|bank|pnbindia.in;netpnb.com
+PVR INOX|media|pvrcinemas.com
+PyPI|tech|pypi.org
+Qantas Airways|logistics|qantasairways.com
+Qatar Islamic Bank|bank|qatarislamicbank.com
+Qatar National Bank|bank|qatarnationalbank.com
+QBE Insurance|insurance|qbeinsurance.com
+Qilu Bank|bank|qilubank.com
+Qingdao Rural Commercial Bank|bank|qingdaoruralcommercialbank.com
+Qinghai Salt Lake Industry|tech|qinghaisaltlakeindustry.com
+Qingting FM|tech|qingtingfm.com
+Qonto|finance|qonto.com
+Qualcomm|tech|qualcomm.com
+Qualia|finance|qualia.com
+Quanta Computer|tech|quantacomputer.com
+Quanta Services|tech|quantaservices.com
+Quantum Metric|tech|quantummetric.com
+Quest Diagnostics|health|questdiagnostics.com
+Quick Heal|security|quickheal.com
+Quikr|ecommerce|quikr.com
+Quilter|finance|quilter.com
+Quinenco|bank|quinenco.com
+QuintoAndar|ecommerce|quintoandar.com
+Quizlet|education|quizlet.com
+Qumulo|tech|qumulo.com
+Quora|social|quora.com
+Rad Power Bikes|auto|radpowerbikes.com
+Radiology Partners|health|radiologypartners.com
+Radius Payment Solutions|finance|radiuspaymentsolutions.com
+Raiffeisen Bank International|bank|raiffeisenbankinternational.com
+Raizen|ecommerce|raizen.com
+Rajesh Exports|tech|rajeshexports.com
+Rakuten|ecommerce|rakuten.com
+Ralph Lauren|tech|ralphlauren.com
+Ramp|finance|ramp.com
+Randstad N.V|tech|randstadnv.com
+RapidAPI|tech|rapidapi.com
+Rapido|travel|rapido.bike
+Rappi|logistics|rappi.com
+Rapyd|finance|rapyd.com
+RattanIndia Power|utility|rattanindiapower.com
+Raymond James Financial|finance|raymondjamesfinancial.com
+Razor|ecommerce|razor.com
+Razorpay|payment|razorpay.com
+RBC|bank|rbc.com
+RBL Bank|bank|rblbank.com
+Realme|tech|realme.com
+Realty Income|finance|realtyincome.com
+Rebel Foods|ecommerce|rebelfoods.com
+Rebellion Defense|tech|rebelliondefense.com
+Rec Room|tech|recroom.com
+ReCharge|finance|recharge.com
+Reckitt Benckiser|tech|reckittbenckiser.com
+Recruit|tech|recruit.com
+Red Ventures|tech|redventures.com
+redBus|travel|redbus.in
+Reddit|social|reddit.com
+Rede D'Oro Luiz|health|rededoroluiz.com
+Rediff|tech|rediff.com
+Redis Labs|tech|redislabs.com
+Redwood Materials|tech|redwoodmaterials.com
+REEF Technology|logistics|reeftechnology.com
+Regeneron Pharmaceuticals|health|regeneronpharmaceuticals.com
+Regions Financial|bank|regionsfinancial.com
+Reify Health|health|reifyhealth.com
+Reinsurance|insurance|reinsurance.com
+Relativity|tech|relativity.com
+Relativity Space|tech|relativityspace.com
+RELEX Solutions|logistics|relexsolutions.com
+Reliance Digital|ecommerce|reliancedigital.in
+Reliance Industries|finance|ril.com
+Reliance Jio|telecom|jio.com
+Reliance Retail|ecommerce|relianceretail.com
+Reliance Steel|tech|reliancesteel.com
+ReliaQuest|security|reliaquest.com
+Reltio|tech|reltio.com
+RELX|tech|relx.com
+Remote|finance|remote.com
+RenaissanceRe|insurance|renaissancere.com
+Renault|tech|renault.com
+Renesas Electronics|tech|renesaselectronics.com
+Repsol|utility|repsol.com
+Republic Services|tech|republicservices.com
+Reserve Bank of India|government|rbi.org.in
+ResMed|health|resmed.com
+Resona|bank|resona.com
+Restaurant Brands International|travel|restaurantbrandsinternational.com
+Retool|tech|retool.com
+Reuters|news|reuters.com
+Revolut|bank|revolut.com
+Revolution Precrafted|tech|revolutionprecrafted.com
+Rexel|tech|rexel.com
+RHB Bank|bank|rhbbank.com
+Rheinmetall|tech|rheinmetall.com
+Richemont|tech|richemont.com
+Ricoh|tech|ricoh.com
+RIDI|ecommerce|ridi.com
+Rightway|health|rightway.com
+Rio Tinto|tech|riotinto.com
+Riot Games|gaming|riotgames.com
+Ripple|finance|ripple.com
+Rippling|tech|rippling.com
+Rithm Capital|finance|rithmcapital.com
+Rivigo|logistics|rivigo.com
+Riyad Bank|bank|riyadbank.com
+Ro|health|ro.com
+Robinhood|finance|robinhood.com
+Robinhood Markets|finance|robinhoodmarkets.com
+Roblox|gaming|roblox.com
+Roche|health|roche.com
+Rockwell Automation|tech|rockwellautomation.com
+Rogers Communications|telecom|rogerscommunications.com
+Rohlik|logistics|rohlik.com
+Rokt|tech|rokt.com
+Rollins|tech|rollins.com
+Rolls-Royce|tech|rollsroyce.com
+Rongsheng Petrochemical|tech|rongshengpetrochemical.com
+Roofstock|finance|roofstock.com
+Roper Technologies|tech|ropertechnologies.com
+Ross Stores|ecommerce|rossstores.com
+Rothy's|ecommerce|rothys.com
+Route|logistics|route.com
+Royal Ahold Delhaize N.V|food|royalaholddelhaizenv.com
+Royal Caribbean|travel|royalcaribbean.com
+Royal Enfield|auto|royalenfield.com
+Royal Mail|logistics|royalmail.com
+Royalty Pharma|finance|royaltypharma.com
+Royole|tech|royole.com
+RPM International|tech|rpminternational.com
+RTX|tech|rtx.com
+Rubicon|tech|rubicon.com
+Rubrik|tech|rubrik.com
+RuPay|payment|rupay.co.in
+RWE|utility|rwe.com
+Ryanair|logistics|ryanair.com
+Ryder System|logistics|rydersystem.com
+S.F|logistics|sf.com
+S-Oil|utility|soil.com
+S&P Global|tech|spglobal.com
+Saab|tech|saab.com
+Sabanci|bank|sabanci.com
+Sabesp|utility|sabesp.com
+SafetyCulture|tech|safetyculture.com
+Safran|tech|safran.com
+SAIC Motor|tech|saicmotor.com
+Saint-Gobain|tech|saintgobain.com
+Saipem|tech|saipem.com
+Salesforce|tech|salesforce.com
+Salt Security|security|saltsecurity.com
+SaltPay|finance|saltpay.com
+SambaNova Systems|tech|sambanovasystems.com
+Sampo|insurance|sampo.com
+Samsara|tech|samsara.com
+Samsung|tech|samsung.com
+Samsung C&T|tech|samsungct.com
+Samsung Electronics|tech|samsungelectronics.com
+Samsung Fire & Marine|insurance|samsungfiremarine.com
+Samsung Life Insurance|insurance|samsunglifeinsurance.com
+Samsung SDI|tech|samsungsdi.com
+Samsung Securities|finance|samsungsecurities.com
+Samvardhana Motherson International|tech|samvardhanamothersoninternational.com
+San-In Godo Bank|bank|saningodobank.com
+Sanchar Saathi|government|sancharsaathi.gov.in
+Sandoz|health|sandoz.com
+Sandvik|tech|sandvik.com
+Sanlam|insurance|sanlam.com
+Sanofi|health|sanofi.com
+Santander|bank|santander.com
+Santos|utility|santos.com
+Sany Heavy Industry|tech|sanyheavyindustry.com
+SAP|tech|sap.com
+Sasol|tech|sasol.com
+Satellite Chemical|tech|satellitechemical.com
+Saudi Arabian Mining|tech|saudiarabianmining.com
+Saudi Arabian Oil|utility|saudiarabianoil.com
+Saudi British Bank|bank|saudibritishbank.com
+Saudi Electricity|utility|saudielectricity.com
+Saudi Investment Bank|bank|saudiinvestmentbank.com
+Saudi Telecom|telecom|sauditelecom.com
+Savage X Fenty|ecommerce|savagexfenty.com
+Savitribai Phule Pune University|education|unipune.ac.in
+Savola|food|savola.com
+SBA Communications|finance|sbacommunications.com
+SBI|finance|sbi.com
+SBI Card|finance|sbicard.com
+SBI General Insurance|insurance|sbigeneral.in
+SBI Life Insurance|insurance|sbilife.co.in
+SBI Mutual Fund|finance|sbimf.com
+SBI Sumishin Net Bank|bank|sbisumishinnetbank.com
+Scalable Capital|finance|scalablecapital.com
+Scalapay|finance|scalapay.com
+Scale AI|tech|scaleai.com
+Scandit|logistics|scandit.com
+SCB X Public|bank|scbxpublic.com
+Scentre|finance|scentre.com
+Schaeffler|tech|schaeffler.com
+Schindler|tech|schindler.com
+Schneider Electric|tech|schneiderelectric.com
+Schweizerische Nationalbank|bank|schweizerischenationalbank.com
+Scopely|telecom|scopely.com
+Scor|insurance|scor.com
+SDIC Power|utility|sdicpower.com
+Seagate Technology|tech|seagatetechnology.com
+Seazen|tech|seazen.com
+SEB|bank|seb.com
+SEBI|government|sebi.gov.in
+Secom|tech|secom.com
+Securitas|tech|securitas.com
+SeekOut|tech|seekout.com
+Segro|finance|segro.com
+Seismic|tech|seismic.com
+Sekisui House|tech|sekisuihouse.com
+SellerX|ecommerce|sellerx.com
+Semiconductor Manufacturing International|tech|semiconductormanufacturinginternational.com
+Sempra|utility|sempra.com
+Sendbird|telecom|sendbird.com
+Sennder|logistics|sennder.com
+Sentry|tech|sentry.com
+Seres|tech|seres.com
+ServiceNow|tech|servicenow.com
+ServiceTitan|tech|servicetitan.com
+Seven & I|food|seveni.com
+SGH|tech|sgh.com
+SGS|tech|sgs.com
+Shaadi.com|social|shaadi.com
+Shaanxi Coal Industry|tech|shaanxicoalindustry.com
+Shaanxi Construction Engineering|tech|shaanxiconstructionengineering.com
+Shandong Gold Mining|tech|shandonggoldmining.com
+Shandong Hi-Speed Road & Bridge|tech|shandonghispeedroadbridge.com
+Shanghai Commercial & Savings Bank|bank|shanghaicommercialsavingsbank.com
+Shanghai Construction|tech|shanghaiconstruction.com
+Shanghai Electric|tech|shanghaielectric.com
+Shanghai International Port|logistics|shanghaiinternationalport.com
+Shanghai Pharmaceuticals|health|shanghaipharmaceuticals.com
+Shanghai Pudong Development|bank|shanghaipudongdevelopment.com
+Shanghai Rural Commercial Bank|bank|shanghairuralcommercialbank.com
+Shanghai Tunnel Engineering|tech|shanghaitunnelengineering.com
+Shanxi Xinghuacun Fen Wine Factory|food|shanxixinghuacunfenwinefactory.com
+ShareChat|social|sharechat.com
+Sharekhan|finance|sharekhan.com
+Shein|ecommerce|shein.com
+Shell|utility|shell.com
+Shengjing Bank|bank|shengjingbank.com
+Shenwan Hongyuan|finance|shenwanhongyuan.com
+Shenzhen Inovance Technology|tech|shenzheninovancetechnology.com
+Shenzhen Mindray Bio-Medical Electronics|health|shenzhenmindraybiomedicalelectronics.com
+Shenzhen Overseas|media|shenzhenoverseas.com
+Shenzhen Transsion|tech|shenzhentranssion.com
+Shenzhou International|tech|shenzhouinternational.com
+Sherwin-Williams|tech|sherwinwilliams.com
+Shield AI|tech|shieldai.com
+Shift Technology|tech|shifttechnology.com
+Shiga Bank|bank|shigabank.com
+Shimao Property|tech|shimaoproperty.com
+Shimizu|tech|shimizu.com
+Shin-Etsu Chemical|tech|shinetsuchemical.com
+Shin Kong Financial|insurance|shinkongfinancial.com
+Shinhan Financial|bank|shinhanfinancial.com
+Shionogi|health|shionogi.com
+ShipBob|logistics|shipbob.com
+Shippo|logistics|shippo.com
+Shiprocket|logistics|shiprocket.in
+Shizuoka Financial|bank|shizuokafinancial.com
+Shopee|ecommerce|shopee.com
+Shopify|ecommerce|shopify.com
+Shoppers Stop|ecommerce|shoppersstop.com
+Shriram Finance|finance|shriramfinance.in
+Shukun Technology|tech|shukuntechnology.com
+Shulan Health|health|shulanhealth.com
+Siam Cement|tech|siamcement.com
+Sichuan Biokin Pharmaceutical|health|sichuanbiokinpharmaceutical.com
+Sichuan Road & Bridge|tech|sichuanroadbridge.com
+Side|tech|side.com
+Sidecar Health|finance|sidecarhealth.com
+Siemens|tech|siemens.com
+Siemens Energy|tech|siemensenergy.com
+SiFive|tech|sifive.com
+Sift|tech|sift.com
+Sigma Healthcare|health|sigmahealthcare.com
+Signal|social|signal.org
+Signifyd|finance|signifyd.com
+Sika|tech|sika.com
+Sila Nanotechnologies|tech|silananotechnologies.com
+Sime Darby|tech|simedarby.com
+Simon Property|tech|simonproperty.com
+Simplilearn|education|simplilearn.com
+Singapore Airlines|logistics|singaporeairlines.com
+SingTel|telecom|singtel.com
+SinoPac Financial|bank|sinopacfinancial.com
+Sinopec|utility|sinopec.com
+Sinopharm|health|sinopharm.com
+Sinotrans|logistics|sinotrans.com
+Sinotruk Hong Kong|tech|sinotrukhongkong.com
+SiriusXM|media|siriusxm.com
+Sisense|tech|sisense.com
+SITECH DEV|tech|sitechdev.com
+SK|finance|sk.com
+SK Hynix|tech|skhynix.com
+SK Innovation|utility|skinnovation.com
+SK Square|finance|sksquare.com
+SK Telecom|telecom|sktelecom.com
+Skanska|tech|skanska.com
+Skechers USA|tech|skechersusa.com
+SKF|tech|skf.com
+Skims|ecommerce|skims.com
+Sky Mavis|tech|skymavis.com
+Skydance Media|tech|skydancemedia.com
+Skydio|logistics|skydio.com
+Slack|tech|slack.com
+SLB|utility|slb.com
+Slice|payment|sliceit.com
+SLM|tech|slm.com
+SM Investments|ecommerce|sminvestments.com
+SmartAsset|finance|smartasset.com
+SmartHR|finance|smarthr.com
+SmartMore|tech|smartmore.com
+SmartNews|telecom|smartnews.com
+SmartRecruiters|tech|smartrecruiters.com
+SMC|tech|smc.com
+Smithfield Foods|food|smithfieldfoods.com
+SMS Assist|tech|smsassist.com
+Smurfit Westrock|tech|smurfitwestrock.com
+Snam|utility|snam.com
+Snap-on|tech|snapon.com
+Snapchat|social|snapchat.com
+Snapdeal|ecommerce|snapdeal.com
+Snapdocs|finance|snapdocs.com
+SnapLogic|tech|snaplogic.com
+Snorkel AI|tech|snorkelai.com
+Snowflake|tech|snowflake.com
+Snyk|security|snyk.com
+Socar|auto|socar.com
+Société Générale|bank|socitgnrale.com
+Social Security Administration|government|ssa.gov
+Socure|security|socure.com
+Sodexo|travel|sodexo.com
+SoFi|tech|sofi.com
+Sofina|finance|sofina.com
+Softbank|telecom|softbank.com
+Sojitz|tech|sojitz.com
+solarisBank|finance|solarisbank.com
+Solo.io|tech|solo.io
+Solugen|tech|solugen.com
+Solventum|health|solventum.com
+Somatus|health|somatus.com
+Sompo|insurance|sompo.com
+SonderMind|health|sondermind.com
+Sonova|health|sonova.com
+Sony|tech|sony.com
+Sony LIV|media|sonyliv.com
+Sorare|ecommerce|sorare.com
+SouChe|ecommerce|souche.com
+SoundHound|tech|soundhound.com
+Sourcegraph|tech|sourcegraph.com
+South Indian Bank|bank|southindianbank.com
+South State|bank|southstate.com
+Southern|utility|southern.com
+Southwest Airlines|logistics|southwestairlines.com
+SpaceX|tech|spacex.com
+SpareBank 1 SR-Bank|bank|sparebank1srbank.com
+SparkCognition|tech|sparkcognition.com
+Spendesk|finance|spendesk.com
+Spiber|tech|spiber.com
+SpiceJet|travel|spicejet.com
+Spinny|auto|spinny.com
+Splashtop|tech|splashtop.com
+Spotify|media|spotify.com
+Spotify Technology|tech|spotifytechnology.com
+SpotOn|finance|spoton.com
+Spotter|finance|spotter.com
+Spring Health|health|springhealth.com
+Sprouts Farmers Markets|food|sproutsfarmersmarkets.com
+Squarespace|tech|squarespace.com
+SS&C Technologies|tech|ssctechnologies.com
+SSAB|tech|ssab.com
+SSC|government|ssc.gov.in
+SSE|utility|sse.com
+SSENSE|ecommerce|ssense.com
+ST Engineering|tech|stengineering.com
+St. Galler Kantonalbank|bank|stgallerkantonalbank.com
+St. James's Place|insurance|stjamessplace.com
+Stack Overflow|tech|stackoverflow.com
+Staffbase|tech|staffbase.com
+Standard|tech|standard.com
+Standard Bank|bank|standardbank.com
+Standard Chartered|bank|sc.com
+Stanford University|education|stanford.edu
+Stanley Black & Decker|tech|stanleyblackdecker.com
+Star Charge|auto|starcharge.com
+Star Health Insurance|insurance|starhealth.in
+Starbucks|food|starbucks.com
+Starburst|tech|starburst.com
+StarkWare|security|starkware.com
+Starling Bank|finance|starlingbank.com
+Starwood Property Trust|finance|starwoodpropertytrust.com
+Stash|finance|stash.com
+State Bank of India|bank|sbi.co.in;onlinesbi.sbi;onlinesbi.com
+State Street|finance|statestreet.com
+Steam|gaming|steampowered.com;steamcommunity.com
+Steel Dynamics|tech|steeldynamics.com
+Stellantis|tech|stellantis.com
+Steris|health|steris.com
+Stifel Financial|finance|stifelfinancial.com
+STMicroelectronics|tech|stmicroelectronics.com
+StockX|ecommerce|stockx.com
+StoneX|finance|stonex.com
+Stora Enso|tech|storaenso.com
+STORD|logistics|stord.com
+Storebrand|bank|storebrand.com
+StoreDot|tech|storedot.com
+STRABAG|tech|strabag.com
+Straumann|health|straumann.com
+Strava|tech|strava.com
+Stripe|payment|stripe.com
+Stryker|health|stryker.com
+Stytch|security|stytch.com
+Subaru|tech|subaru.com
+Subway|food|subway.com
+Sumec|tech|sumec.com
+Sumitomo|tech|sumitomo.com
+Sumitomo Chemical|tech|sumitomochemical.com
+Sumitomo Electric|tech|sumitomoelectric.com
+Sumitomo Forestry|tech|sumitomoforestry.com
+Sumitomo Mitsui Financial|bank|sumitomomitsuifinancial.com
+Sumitomo Mitsui Trust|bank|sumitomomitsuitrust.com
+Sumitomo Realty|tech|sumitomorealty.com
+SumUp|finance|sumup.com
+Sun Direct|telecom|sundirect.in
+Sun Hung Kai Properties|tech|sunhungkaiproperties.com
+Sun Life Financial|insurance|sunlifefinancial.com
+Sun Pharma Industries|health|sunpharmaindustries.com
+Sunac China|tech|sunacchina.com
+Sunbit|finance|sunbit.com
+Suncor Energy|utility|suncorenergy.com
+Suncorp|insurance|suncorp.com
+Sungrow Power Supply|tech|sungrowpowersupply.com
+Sunshine Insurance|insurance|sunshineinsurance.com
+Suntory Beverage & Food|food|suntorybeveragefood.com
+Super Micro Computer|tech|supermicrocomputer.com
+Supreme Court of India|government|sci.gov.in
+Suzano|tech|suzano.com
+Suzuken|health|suzuken.com
+Suzuki Motor|tech|suzukimotor.com
+Svenska Handelsbanken|bank|svenskahandelsbanken.com
+SVOLT|auto|svolt.com
+SWAYAM|education|swayam.gov.in
+Swedbank|bank|swedbank.com
+Swiggy|food|swiggy.com
+Swile|finance|swile.com
+Swire Pacific|food|swirepacific.com
+Swiss Life|insurance|swisslife.com
+Swiss Re|insurance|swissre.com
+Swisscom|telecom|swisscom.com
+SWORD Health|health|swordhealth.com
+Symphony|finance|symphony.com
+Symrise|tech|symrise.com
+Synchrony Financial|tech|synchronyfinancial.com
+Synopsys|tech|synopsys.com
+Synovus|bank|synovus.com
+Sysco|food|sysco.com
+Sysdig|security|sysdig.com
+T&D|insurance|td.com
+T-Mobile|telecom|t-mobile.com
+T Rowe Price|finance|troweprice.com
+Tackle.io|tech|tackle.io
+Taisei|tech|taisei.com
+Taishin Financial|finance|taishinfinancial.com
+Taiwan Business Bank|bank|taiwanbusinessbank.com
+Taiwan Cooperative Financial|bank|taiwancooperativefinancial.com
+Taiwan Semiconductor|tech|taiwansemiconductor.com
+Taj Hotels|travel|tajhotels.com
+Take-Two Interactive Software|tech|taketwointeractivesoftware.com
+Takeda Pharmaceutical|health|takedapharmaceutical.com
+Talanx|insurance|talanx.com
+Talen Energy|utility|talenenergy.com
+Talkdesk|tech|talkdesk.com
+TalkingData|telecom|talkingdata.com
+Tamilnad Mercantile Bank|bank|tmbnet.in
+TangoMe|telecom|tangome.com
+Tanishq|ecommerce|tanishq.com
+Tanium|security|tanium.com
+Tapestry|ecommerce|tapestry.com
+TAQA|utility|taqa.com
+Tarana Wireless|telecom|taranawireless.com
+Targa Resources|utility|targaresources.com
+Target|ecommerce|target.com
+Tata 1mg|health|1mg.com
+Tata AIA Life|insurance|tataaia.com
+Tata AIG|insurance|tataaig.com
+Tata Capital|finance|tatacapital.com
+Tata Consultancy Services|tech|tcs.com
+Tata Group|auto|tata.com
+Tata Motors|auto|tatamotors.com
+Tata Neu|ecommerce|tataneu.com
+Tata Play|telecom|tataplay.com
+Tata Power|utility|tatapower.com
+Tata Steel|tech|tatasteel.com
+TaxBit|finance|taxbit.com
+Taylor Morrison|tech|taylormorrison.com
+TBEA|tech|tbea.com
+TC Energy|utility|tcenergy.com
+TCL|tech|tcl.com
+TD Bank|bank|tdbank.com
+TD SYNNEX|tech|tdsynnex.com
+TDK|tech|tdk.com
+TE Connectivity|tech|teconnectivity.com
+Tealium|tech|tealium.com
+Tech Mahindra|tech|techmahindra.com
+TechCrunch|news|techcrunch.com
+TechnipFMC|utility|technipfmc.com
+TechStyle Fashion|ecommerce|techstylefashion.com
+Techtronic Industries|tech|techtronicindustries.com
+Teck Resources|tech|teckresources.com
+Tekion|tech|tekion.com
+TELD|finance|teld.com
+Telecom Italia|telecom|telecomitalia.com
+Teledyne Technologies|tech|teledynetechnologies.com
+Telefónica|telecom|telefnica.com
+Telegram|social|telegram.org;t.me
+Telenor|telecom|telenor.com
+Teleperformance|tech|teleperformance.com
+Telia|telecom|telia.com
+Telkom Indonesia|telecom|telkomindonesia.com
+Telstra|telecom|telstra.com
+TELUS|telecom|telus.com
+Temporal|tech|temporal.com
+Tempus|health|tempus.com
+Temu|ecommerce|temu.com
+Tenaga Nasional|utility|tenaganasional.com
+Tenaris|tech|tenaris.com
+Tencent|tech|tencent.com
+Tenet Healthcare|health|tenethealthcare.com
+TensTorrent|tech|tenstorrent.com
+TERMINUS Technology|tech|terminustechnology.com
+Terna|utility|terna.com
+Ternium|tech|ternium.com
+Terumo|health|terumo.com
+Tesco|food|tesco.com
+Tesla|auto|tesla.com
+Teva Pharmaceutical|health|tevapharmaceutical.com
+Texas Instruments|tech|texasinstruments.com
+Textron|tech|textron.com
+Tezign|tech|tezign.com
+Thai Beverage|food|thaibeverage.com
+Thales|tech|thales.com
+The Bank of London|finance|thebankoflondon.com
+The Brandtech|tech|thebrandtech.com
+The Economist|news|economist.com
+The Estée Lauder Companies|tech|theestelaudercompanies.com
+The Guardian|news|theguardian.com
+The Hershey|food|thehershey.com
+The Hindu|news|thehindu.com
+The Home Depot|ecommerce|thehomedepot.com
+The Mosaic|tech|themosaic.com
+The Saudi National Bank|bank|thesaudinationalbank.com
+The Verge|news|theverge.com
+The Walt Disney|media|thewaltdisney.com
+The Zebra|ecommerce|thezebra.com
+Thermo Fisher Scientific|health|thermofisherscientific.com
+Thirty Madison|health|thirtymadison.com
+Thomson Reuters|tech|thomsonreuters.com
+Thought Machine|finance|thoughtmachine.com
+ThoughtSpot|tech|thoughtspot.com
+Thrasio|tech|thrasio.com
+Threads|social|threads.net
+Thumbtack|ecommerce|thumbtack.com
+ThyssenKrupp|tech|thyssenkrupp.com
+Tianshan Material|tech|tianshanmaterial.com
+Tier|travel|tier.com
+TikTok|social|tiktok.com
+Times of India|news|indiatimes.com
+Timescale|tech|timescale.com
+Tingyi|food|tingyi.com
+Tipalti|finance|tipalti.com
+Titan|ecommerce|titan.co.in
+TJX Cos|ecommerce|tjxcos.com
+TMBThanachart Bank|bank|tmbthanachartbank.com
+TMX|finance|tmx.com
+Tohoku Electric Power|utility|tohokuelectricpower.com
+Tokio Marine|insurance|tokiomarine.com
+Tokyo Century|tech|tokyocentury.com
+Tokyo Electric Power|utility|tokyoelectricpower.com
+Tokyo Electron|tech|tokyoelectron.com
+Tokyo Gas|utility|tokyogas.com
+Tokyo Kiraboshi Financial|bank|tokyokiraboshifinancial.com
+Toll Brothers|tech|tollbrothers.com
+Tonal|ecommerce|tonal.com
+Tongdun Technology|security|tongduntechnology.com
+Tongling Nonferrous Metals|tech|tonglingnonferrousmetals.com
+Tongwei|food|tongwei.com
+Top Frontier Investment|utility|topfrontierinvestment.com
+Toppan Printing|tech|toppanprinting.com
+Toray Industries|tech|torayindustries.com
+Torrent Power|utility|torrentpower.com
+Toss|finance|toss.com
+TotalEnergies|utility|totalenergies.com
+Tourmaline Oil|utility|tourmalineoil.com
+Towngas|utility|towngas.com
+Toyota|auto|toyota.com;toyotabharat.com
+Toyota Industries|tech|toyotaindustries.com
+Toyota Motor|tech|toyotamotor.com
+Toyota Tsusho|tech|toyotatsusho.com
+Tractable|tech|tractable.com
+Tractor Supply|ecommerce|tractorsupply.com
+Trade Desk|tech|tradedesk.com
+Trade Republic|finance|traderepublic.com
+Trader Interactive|tech|traderinteractive.com
+Tradeshift|finance|tradeshift.com
+Tradeweb Markets|finance|tradewebmarkets.com
+TradingView|finance|tradingview.com
+TRAI|government|trai.gov.in
+Trane Technologies|tech|tranetechnologies.com
+Transcarent|health|transcarent.com
+TransDigm|tech|transdigm.com
+Transmit Security|security|transmitsecurity.com
+TransUnion|finance|transunion.com
+Transurban|logistics|transurban.com
+Travelers|insurance|travelers.com
+Traveloka|travel|traveloka.com
+TravelPerk|travel|travelperk.com
+Trax|tech|trax.com
+Trendy|ecommerce|trendy.com
+Trent|ecommerce|trent.com
+Tresata|finance|tresata.com
+TrialSpark|health|trialspark.com
+Trimble|tech|trimble.com
+Trip.com|tech|tripcom.com
+TripActions|travel|tripactions.com
+TripAdvisor|travel|tripadvisor.com
+Tripledot|telecom|tripledot.com
+Truecaller|tech|truecaller.com
+TrueLayer|finance|truelayer.com
+Truepill|health|truepill.com
+Truist Financial|bank|truistfinancial.com
+Trulioo|security|trulioo.com
+Trumid|finance|trumid.com
+Trustpilot|tech|trustpilot.com
+Tryg|insurance|tryg.com
+Tubatu.com|ecommerce|tubatu.com
+Tuhu|auto|tuhu.com
+TUI|tech|tui.com
+TuJia|travel|tujia.com
+TUNGEE|tech|tungee.com
+Turing|tech|turing.com
+Turkish Airlines|logistics|turkishairlines.com
+TVS Motor|auto|tvsmotor.com
+Twitch|media|twitch.tv
+Tyler Technologies|tech|tylertechnologies.com
+Tyson Foods|food|tysonfoods.com
+U-Haul|tech|uhaul.com
+Uala|finance|uala.com
+Uber|travel|uber.com
+Uber Eats|food|ubereats.com
+Ubiquiti|tech|ubiquiti.com
+Ubisoft|gaming|ubisoft.com
+UBS|bank|ubs.com
+UBTECH Robotics|tech|ubtechrobotics.com
+UCB|health|ucb.com
+UCO Bank|bank|ucobank.com
+Udaan|logistics|udaan.com
+Udemy|education|udemy.com
+UGC|government|ugc.gov.in
+UIDAI Aadhaar|government|uidai.gov.in
+UISEE Technology|logistics|uiseetechnology.com
+Ujjivan Small Finance Bank|bank|ujjivansfb.in
+Ulta Beauty|ecommerce|ultabeauty.com
+Ultrapar Participacoes|ecommerce|ultraparparticipacoes.com
+UMANG|government|umang.gov.in
+UMB Financial|bank|umbfinancial.com
+Umicore|tech|umicore.com
+Unacademy|education|unacademy.com
+Uni-President|food|unipresident.com
+Unibail-Rodamco-Westfield|finance|unibailrodamcowestfield.com
+Unicaja Banco|bank|unicajabanco.com
+Unicharm|tech|unicharm.com
+Unico|tech|unico.com
+UniCredit|bank|unicredit.com
+Unilever|tech|unilever.com
+Union Bank of India|bank|unionbankofindia.co.in
+Union Pacific|logistics|unionpacific.com
+Uniphore|tech|uniphore.com
+Unipol Gruppo|insurance|unipolgruppo.com
+Uniqa|insurance|uniqa.com
+Unisound|tech|unisound.com
+Unisplendour|tech|unisplendour.com
+Unite Us|health|uniteus.com
+United Airlines|logistics|unitedairlines.com
+United Imaging Healthcare|health|unitedimaginghealthcare.com
+United India Insurance|insurance|uiic.co.in
+United Microelectronics|tech|unitedmicroelectronics.com
+United Nations|government|un.org
+United Natural Foods|food|unitednaturalfoods.com
+United Overseas Bank|bank|unitedoverseasbank.com
+United Parcel Service|logistics|unitedparcelservice.com
+United Rentals|tech|unitedrentals.com
+United Therapeutics|health|unitedtherapeutics.com
+UnitedHealth|insurance|unitedhealth.com
+Universal Health Services|health|universalhealthservices.com
+Universal Music|tech|universalmusic.com
+University of Cambridge|education|cam.ac.uk
+University of Mumbai|education|mu.ac.in
+University of Oxford|education|ox.ac.uk
+Unqork|finance|unqork.com
+Unstop|tech|unstop.com
+Unum|insurance|unum.com
+upGrad|education|upgrad.com
+Upgrade|finance|upgrade.com
+Uplight|tech|uplight.com
+UPM-Kymmene|tech|upmkymmene.com
+UPS|logistics|ups.com
+UPSC|government|upsc.gov.in
+Upstox|finance|upstox.com
+Uptake|tech|uptake.com
+Urban|ecommerce|urban.com
+Urban Company|ecommerce|urbancompany.com
+US Bancorp|bank|usbancorp.com
+US Foods|food|usfoods.com
+US Steel|tech|ussteel.com
+USA.gov|government|usa.gov
+USCIS|government|uscis.gov
+USPS|logistics|usps.com
+UTI Mutual Fund|finance|utimf.com
+Vagaro|tech|vagaro.com
+VakifBank|bank|vakifbank.com
+Vale|tech|vale.com
+Valeo|tech|valeo.com
+Valero Energy|utility|valeroenergy.com
+Valgen Medtech|health|valgenmedtech.com
+Valley National Bancorp|bank|valleynationalbancorp.com
+Vanguard|finance|vanguard.com
+Varo Bank|finance|varobank.com
+VAST Data|tech|vastdata.com
+Vectra Networks|tech|vectranetworks.com
+Vedanta|tech|vedanta.com
+Vedantu|education|vedantu.com
+Veepee|ecommerce|veepee.com
+Veev|tech|veev.com
+Veeva Systems|tech|veevasystems.com
+Veho|logistics|veho.com
+Venafi|security|venafi.com
+Venmo|payment|venmo.com
+Ventas|finance|ventas.com
+Venture Global|utility|ventureglobal.com
+Veolia Environnement|utility|veoliaenvironnement.com
+Veralto|tech|veralto.com
+VerbIT|tech|verbit.com
+Verbund|utility|verbund.com
+Vercel|tech|vercel.com
+Veriff|tech|veriff.com
+VeriSign|tech|verisign.com
+Verisk Analytics|tech|veriskanalytics.com
+Verizon|telecom|verizon.com
+Verizon Communications|telecom|verizoncommunications.com
+Verkada|security|verkada.com
+Vertex Pharmaceuticals|health|vertexpharmaceuticals.com
+Vertiv|tech|vertiv.com
+Vestas Wind Systems|tech|vestaswindsystems.com
+Vestiaire Collective|ecommerce|vestiairecollective.com
+Via|auto|via.com
+Viatris|health|viatris.com
+Vibra Energia|ecommerce|vibraenergia.com
+Vice Media|tech|vicemedia.com
+VICI Properties|finance|viciproperties.com
+VideoAmp|tech|videoamp.com
+Vienna Insurance|insurance|viennainsurance.com
+Vietin Bank|bank|vietinbank.com
+Vietnam Prosperity Joint-sock Commercial Bank|bank|vietnamprosperityjointsockcommercialbank.com
+Vietnam Technological & Commercial Joint Stock Bank|bank|vietnamtechnologicalcommercialjointstockbank.com
+Vijay Sales|ecommerce|vijaysales.com
+VINCI|tech|vinci.com
+Vingroup|tech|vingroup.com
+Vinted|ecommerce|vinted.com
+VIPKid|education|vipkid.com
+Vipshop|ecommerce|vipshop.com
+Virta Health|health|virtahealth.com
+Visa|payment|visa.com
+Vise|finance|vise.com
+Visier|tech|visier.com
+Vista Global|tech|vistaglobal.com
+Vistara|travel|airvistara.com
+Vistra Energy|utility|vistraenergy.com
+Viva Energy|utility|vivaenergy.com
+Vivo|tech|vivo.com
+Vodafone|telecom|vodafone.com
+Vodafone Idea|telecom|myvi.in
+Voestalpine|tech|voestalpine.com
+VOI|travel|voi.com
 Volkswagen|auto|volkswagen.com
-Audi|auto|audi.com
+Volocopter|auto|volocopter.com
+Volvo|tech|volvo.com
+Volvo Car|tech|volvocar.com
+Vonovia|tech|vonovia.com
+Voodoo|tech|voodoo.com
+Vox Media|tech|voxmedia.com
+Voya Financial|insurance|voyafinancial.com
+VTS|tech|vts.com
+Vulcan Materials|tech|vulcanmaterials.com
+Vuori|ecommerce|vuori.com
+W. P. Carey|finance|wpcarey.com
+W. R. Berkley|insurance|wrberkley.com
+Wärtsilä|tech|wrtsil.com
+W3Schools|education|w3schools.com
+Wacai|telecom|wacai.com
+Walgreens Boots Alliance|ecommerce|walgreensbootsalliance.com
+Wall Street Journal|news|wsj.com
+Walmart|ecommerce|walmart.com
+Wan Hai Lines|logistics|wanhailines.com
+Wanhua Chemical|tech|wanhuachemical.com
+Warner Bros. Discovery|media|warnerbrosdiscovery.com
+Warner Music|tech|warnermusic.com
+Washington Post|news|washingtonpost.com
+Waste Connections|tech|wasteconnections.com
+Waste Management|tech|wastemanagement.com
+Waters|health|waters.com
+Watershed|tech|watershed.com
+Watsco|tech|watsco.com
+Wave|finance|wave.com
+Wayflyer|finance|wayflyer.com
+WazirX|crypto|wazirx.com
+Webflow|tech|webflow.com
+Webster Financial|bank|websterfinancial.com
+Webuild|tech|webuild.com
+WeBull|finance|webull.com
+WEC Energy|utility|wecenergy.com
+WeChat|social|wechat.com
+WeDoctor|health|wedoctor.com
+Weee!|logistics|weee.com
+wefox|finance|wefox.com
+WEG|tech|weg.com
+Weichai Power|tech|weichaipower.com
+Weights & Biases|tech|weightsbiases.com
+Weihai City Commercial Bank|bank|weihaicitycommercialbank.com
+Weilong Foods|ecommerce|weilongfoods.com
+WeLab|finance|welab.com
+Wells Fargo|bank|wellsfargo.com
+Welltower|finance|welltower.com
+WEMAKEPRICE|ecommerce|wemakeprice.com
+Wen's Foodstuff|food|wensfoodstuff.com
+Wenheyou|tech|wenheyou.com
+WeRide|auto|weride.com
+WESCO International|tech|wescointernational.com
+Wesfarmers|ecommerce|wesfarmers.com
+West Japan Railway|logistics|westjapanrailway.com
+Western Alliance Bancorp|bank|westernalliancebancorp.com
+Western Digital|tech|westerndigital.com
+Western Union|payment|westernunion.com
+Westinghouse Air Brake Technologies|tech|westinghouseairbraketechnologies.com
+Westlake|tech|westlake.com
+Westpac Banking|bank|westpacbanking.com
+Westside|ecommerce|westside.com
+Weyerhaeuser|finance|weyerhaeuser.com
+WH|food|wh.com
+Whatnot|ecommerce|whatnot.com
+WhatsApp|social|whatsapp.com
+Wheaton Precious Metals|tech|wheatonpreciousmetals.com
+Whirlpool|tech|whirlpool.com
+Whoop|ecommerce|whoop.com
+Wikimedia|education|wikimedia.org
+Wikipedia|education|wikipedia.org
+Wildlife Studios|tech|wildlifestudios.com
+Will Semiconductor|tech|willsemiconductor.com
+Williams|utility|williams.com
+Williams-Sonoma|ecommerce|williamssonoma.com
+Wilmar International|food|wilmarinternational.com
+Wintrust Financial|bank|wintrustfinancial.com
+Wipro|tech|wipro.com
+Wired|news|wired.com
+Wise|payment|wise.com
+Wistron|tech|wistron.com
+Wix|tech|wix.com
+Wiz|security|wiz.com
+WM Motor|auto|wmmotor.com
+Wolters Kluwer|tech|wolterskluwer.com
+Womai|ecommerce|womai.com
+Woodside Energy|utility|woodsideenergy.com
+Woolworths|food|woolworths.com
+Woori Financial|bank|woorifinancial.com
+WordPress|tech|wordpress.com;wordpress.org
+Workato|tech|workato.com
+Workday|tech|workday.com
+Workhuman|tech|workhuman.com
+Workrise|tech|workrise.com
+World Fuel Services|tech|worldfuelservices.com
+World Health Organization|government|who.int
+Worldcoin|finance|worldcoin.com
+WPG|tech|wpg.com
+WPP|media|wpp.com
+Wrapbook|finance|wrapbook.com
+WSP|tech|wsp.com
+WT Microelectronics|tech|wtmicroelectronics.com
+WTOIP|tech|wtoip.com
+WTW|insurance|wtw.com
+Wuchan Zhongda|tech|wuchanzhongda.com
+Wuestenrot & Wuerttembergische|insurance|wuestenrotwuerttembergische.com
+Wuliangye Yibin|food|wuliangyeyibin.com
+Wuxi Apptec|health|wuxiapptec.com
+WW Grainger|tech|wwgrainger.com
+X Twitter|social|x.com;twitter.com
+Xbox|gaming|xbox.com
+Xcel Energy|utility|xcelenergy.com
+XCMG Construction Machinery|tech|xcmgconstructionmachinery.com
+Xendit|finance|xendit.com
+XForcePlus|tech|xforceplus.com
+Xiamen Bank|bank|xiamenbank.com
+Xiamen C&D|logistics|xiamencd.com
+Xiamen International Trade|logistics|xiameninternationaltrade.com
+Xiamen Xiangyu|logistics|xiamenxiangyu.com
+Xiaobing|finance|xiaobing.com
+Xiaoe Tech|tech|xiaoetech.com
+Xiaohongshu|ecommerce|xiaohongshu.com
+Xiaomi|tech|xiaomi.com;mi.com
+XiaoZhu|travel|xiaozhu.com
+Ximalaya FM|telecom|ximalayafm.com
+Xinchao Media|tech|xinchaomedia.com
+Xingsheng Selected|ecommerce|xingshengselected.com
+Xingyun|ecommerce|xingyun.com
+XP|finance|xp.com
+Xpressbees|logistics|xpressbees.com
+XtalPi|tech|xtalpi.com
+Xylem|tech|xylem.com
+Yahoo|tech|yahoo.com
+Yamaguchi Financial|bank|yamaguchifinancial.com
+Yamaha Motor|tech|yamahamotor.com
+Yandex|tech|yandex.com
+Yang Ming Marine Transport|logistics|yangmingmarinetransport.com
+Yankuang Energy|tech|yankuangenergy.com
+Yanolja|travel|yanolja.com
+Yaoshibang|health|yaoshibang.com
+Yara International|tech|yarainternational.com
+Yatra|travel|yatra.com
+Yello Mobile|telecom|yellomobile.com
+Yelp|tech|yelp.com
+Yes Bank|bank|yesbank.in
+YH Global|logistics|yhglobal.com
+Yidian Zixun|telecom|yidianzixun.com
+Yiguo|logistics|yiguo.com
+Yijiupi|ecommerce|yijiupi.com
+Yimidida|logistics|yimidida.com
+Yipin Shengxian|ecommerce|yipinshengxian.com
+YipitData|tech|yipitdata.com
+YITU Technology|tech|yitutechnology.com
+Yixia|telecom|yixia.com
+Ynsect|tech|ynsect.com
+Yotpo|tech|yotpo.com
+YouTube|media|youtube.com
+Youxia Motors|auto|youxiamotors.com
+YPF|utility|ypf.com
+Yuanfudao|education|yuanfudao.com
+Yuanta Financial|finance|yuantafinancial.com
+Yuexiu Property|tech|yuexiuproperty.com
+Yuga Labs|finance|yugalabs.com
+YugaByte|tech|yugabyte.com
+Yum! Brands|travel|yumbrands.com
+Yum China|travel|yumchina.com
+Yunnan Baiyao|health|yunnanbaiyao.com
+Yunnan Copper|tech|yunnancopper.com
+Yunnan Yuntianhua|logistics|yunnanyuntianhua.com
+YunQuNa|logistics|yunquna.com
+Yunxuetang|education|yunxuetang.com
+Zalando|ecommerce|zalando.com
+Zall Smart Commerce|logistics|zallsmartcommerce.com
+Zapier|tech|zapier.com
+Zara|ecommerce|zara.com
+Zee News|news|india.com
+ZEE5|media|zee5.com
+Zego|finance|zego.com
+Zelle|payment|zellepay.com
+ZenBusiness|finance|zenbusiness.com
+Zenoti|tech|zenoti.com
+Zepto|ecommerce|zeptonow.com
+ZEPZ|finance|zepz.com
+Zerodha|finance|zerodha.com
+Zeta|finance|zeta.com
+Zetwerk|tech|zetwerk.com
+Zhaogang|ecommerce|zhaogang.com
+Zhejiang Chint Electrics|tech|zhejiangchintelectrics.com
+Zhejiang Expressway|logistics|zhejiangexpressway.com
+Zhejiang Huayou Cobalt|tech|zhejianghuayoucobalt.com
+Zhejiang Zheneng Electric Power|utility|zhejiangzhenengelectricpower.com
+Zheshang Development|tech|zheshangdevelopment.com
+Zhongji Innolight|tech|zhongjiinnolight.com
+Zhongsheng|ecommerce|zhongsheng.com
+Zhongyuan Bank|bank|zhongyuanbank.com
+Zhuan Zhuan|ecommerce|zhuanzhuan.com
+Zhubajie|tech|zhubajie.com
+Zhuhai Huafa Properties|tech|zhuhaihuafaproperties.com
+Zihaiguo|ecommerce|zihaiguo.com
+Zijin Mining|tech|zijinmining.com
+Zilch|finance|zilch.com
+ZIM Integrated Shipping Services|logistics|zimintegratedshippingservices.com
+Zimmer Biomet|health|zimmerbiomet.com
+Zions Bancorp|bank|zionsbancorp.com
+Zipline|logistics|zipline.com
+Ziroom|ecommerce|ziroom.com
+ZocDoc|health|zocdoc.com
+Zoetis|health|zoetis.com
+Zoho|tech|zoho.com
+Zomato|food|zomato.com
+ZongMu Technology|auto|zongmutechnology.com
+Zoom|tech|zoom.us
+Zoom Video Communications|tech|zoomvideocommunications.com
+Zopa|finance|zopa.com
+Zscaler|tech|zscaler.com
+ZTE|tech|zte.com
+ZTO Express|logistics|ztoexpress.com
+Zume|ecommerce|zume.com
+Zuoyebang|education|zuoyebang.com
+Zurich Insurance|insurance|zurichinsurance.com
+Zwift|ecommerce|zwift.com
