@@ -20,8 +20,8 @@ function getEnv() {
 
 async function build() {
   const env = getEnv();
-  const publicKey = env.REGISTRY_SIGNING_PUBLIC_KEY || "eRjZf+kmHCyhdjhsIr42p0zz3ecrWatwGNNQ4TjdmJY=";
-  const apiUrl = env.SITEGUARD_API_URL || "http://127.0.0.1:8000";
+  const publicKey = process.env.REGISTRY_SIGNING_PUBLIC_KEY || env.REGISTRY_SIGNING_PUBLIC_KEY || "eRjZf+kmHCyhdjhsIr42p0zz3ecrWatwGNNQ4TjdmJY=";
+  const apiUrl = process.env.SITEGUARD_API_URL || env.SITEGUARD_API_URL || "http://127.0.0.1:8000";
 
   const distDir = path.resolve(__dirname, "dist");
   if (!fs.existsSync(distDir)) {
