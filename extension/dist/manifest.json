@@ -1,7 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "SPARTAN — SiteGuard",
-  "short_name": "SPARTAN",
+  "name": "SiteGuard",
   "version": "0.1.0",
   "description": "Warns about fake bank and government sites and takes you to the real one.",
   "icons": {
@@ -27,7 +26,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "SPARTAN — SiteGuard",
+    "default_title": "SiteGuard",
     "default_icon": {
       "16": "icons/icon-16.png",
       "19": "icons/icon-19.png",
