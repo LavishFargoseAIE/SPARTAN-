@@ -23,6 +23,7 @@ from app.lookalike import compute_lookalike
 from app.normalize import normalize_host
 from app.reasons import select_top_reasons
 from app.registry import BrandRegistry, load_registry
+from app.web_surfer import analyze_web_reputation
 from app.risk import (
     calculate_brand_confidence,
     compute_risk_score,
@@ -33,15 +34,16 @@ from app.risk import (
 logging.basicConfig(level=logging.INFO if not settings.DEBUG else logging.DEBUG)
 logger = logging.getLogger("siteguard")
 
-# Global in-memory registry instance
-registry: BrandRegistry = BrandRegistry()
+# Global in-memory registry instance (pre-loaded)
+registry: BrandRegistry = load_registry()
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global registry
     logger.info("Initializing SiteGuard API...")
-    registry = load_registry()
+    if not registry._brands:
+        registry = load_registry()
     await verdict_cache.initialize()
     yield
     await verdict_cache.close()
@@ -78,6 +80,15 @@ class BrandResponse(BaseModel):
     signature: str
 
 
+class WebReputationResult(BaseModel):
+    status: str
+    is_genuine: bool
+    summary: str
+    sources: List[str] = []
+    wiki_article: Optional[str] = None
+    discussion_sample: List[str] = []
+
+
 class CheckResponse(BaseModel):
     host: str
     level: str  # SAFE, SUSPICIOUS, DANGEROUS
@@ -86,6 +97,7 @@ class CheckResponse(BaseModel):
     brand: Optional[BrandResponse] = None
     ttl: int = 3600
     analysis: str = "completed"
+    web_reputation: Optional[WebReputationResult] = None
 
 
 class ReportRequest(BaseModel):
@@ -131,13 +143,17 @@ async def check_host(req: CheckRequest) -> CheckResponse:
     lookalike_res = compute_lookalike(norm, all_brands)
 
     t_score, feed_reasons = await feeds_manager.check(norm.hostname, norm.registrable)
-    d_score, domain_reasons = await get_domain_intel(norm)
+    brand_tokens = lookalike_res.brand.tokens if lookalike_res.brand else None
+    d_score, domain_reasons = await get_domain_intel(norm, brand_tokens=brand_tokens)
 
     # Signals dict
     signals: Dict[str, Any] = {
         "L": lookalike_res.score,
         "T": t_score,
         "D": d_score,
+        "subdomain_abuse": "subdomain_abuse" in lookalike_res.reasons,
+        "shared_hosting_abuse": "shared_hosting_abuse" in domain_reasons,
+        "brand_impersonation_in_title": "brand_impersonation_in_title" in domain_reasons,
     }
 
     category = lookalike_res.brand.category if lookalike_res.brand else None
@@ -162,6 +178,31 @@ async def check_host(req: CheckRequest) -> CheckResponse:
 
     ttl = 86400 if level == "SAFE" else 3600
 
+    # Web Surfer: for unknown domains (no brand match) that are flagged, run web reputation
+    web_rep_result: Optional[WebReputationResult] = None
+    if lookalike_res.brand is None and level in ("SUSPICIOUS", "DANGEROUS"):
+        try:
+            rep = await asyncio.wait_for(
+                analyze_web_reputation(norm.hostname, norm.registrable),
+                timeout=5.0,
+            )
+            # If web surfer confirms genuine → override to SAFE
+            if rep.get("unlock") and rep.get("is_genuine"):
+                level = "SAFE"
+                score = 0
+                ttl = 86400
+                top_reasons = []
+            web_rep_result = WebReputationResult(
+                status=rep["status"],
+                is_genuine=rep["is_genuine"],
+                summary=rep["summary"],
+                sources=rep.get("sources", []),
+                wiki_article=rep.get("wiki_article"),
+                discussion_sample=rep.get("discussion_sample", []),
+            )
+        except Exception as e:
+            logger.debug("Web surfer timed out or failed for %s: %s", norm.hostname, e)
+
     resp_dict = {
         "host": norm.hostname,
         "level": level,
@@ -170,6 +211,7 @@ async def check_host(req: CheckRequest) -> CheckResponse:
         "brand": brand_resp.model_dump() if brand_resp else None,
         "ttl": ttl,
         "analysis": "completed",
+        "web_reputation": web_rep_result.model_dump() if web_rep_result else None,
     }
 
     # Cache verdict
@@ -194,6 +236,36 @@ async def report_host(req: ReportRequest):
         "host": norm.hostname,
         "message": "Report queued for analyst review.",
     }
+
+
+@app.post("/v1/web-reputation")
+async def web_reputation_check(req: CheckRequest):
+    """Surf Wikipedia, Reddit, and community web to verify if an unknown site is genuine."""
+    try:
+        norm = normalize_host(req.host)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Invalid host format: {str(e)}")
+    try:
+        result = await asyncio.wait_for(
+            analyze_web_reputation(norm.hostname, norm.registrable),
+            timeout=8.0,
+        )
+    except asyncio.TimeoutError:
+        result = {
+            "host": norm.hostname,
+            "registrable": norm.registrable,
+            "is_genuine": False,
+            "unlock": False,
+            "status": "UNVERIFIED_NEW",
+            "summary": "Web reputation check timed out.",
+            "sources": [],
+            "scam_reports": 0,
+            "legit_reports": 0,
+            "wiki_article": None,
+            "discussion_sample": [],
+        }
+    return result
+
 
 
 @app.get("/v1/registry/snapshot")

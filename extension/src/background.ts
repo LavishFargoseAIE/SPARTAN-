@@ -12,6 +12,15 @@ const CHECK_ENDPOINT = `${API_BASE}/v1/check`;
 
 // In-memory host verdict cache (survives worker lifetime, supplemented by session storage)
 const localCache = new Map<string, { verdict: any; expiresAt: number }>();
+// Hosts explicitly bypassed by the user during this session ("continue anyway")
+const bypassedHosts = new Set<string>();
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message?.action === "bypassHost" && message.host) {
+    bypassedHosts.add(String(message.host).toLowerCase());
+    sendResponse({ success: true });
+  }
+});
 
 // Sync allowlist snapshot on worker startup
 async function syncAllowlist(): Promise<void> {
@@ -23,6 +32,9 @@ async function syncAllowlist(): Promise<void> {
       const data = await res.json();
       if (Array.isArray(data.official_domains)) {
         updateAllowlist(data.official_domains);
+        if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local) {
+          chrome.storage.local.set({ official_domains: data.official_domains }).catch(() => {});
+        }
       }
     }
   } catch (e) {
@@ -94,6 +106,11 @@ chrome.webNavigation.onBeforeNavigate.addListener(
 
     // Don't intercept extension pages themselves
     if (host === chrome.runtime.id.toLowerCase() || details.url.startsWith(chrome.runtime.getURL(""))) {
+      return;
+    }
+
+    // Check if user explicitly clicked "continue anyway" for this host
+    if (bypassedHosts.has(host)) {
       return;
     }
 

@@ -10,6 +10,7 @@ import logging
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 import httpx
+import re
 import dns.asyncresolver
 import dns.exception
 
@@ -21,6 +22,24 @@ logger = logging.getLogger(__name__)
 # In-memory caches for fast sub-millisecond retrieval
 _RDAP_CACHE: Dict[str, Tuple[Optional[datetime], Optional[str]]] = {}
 _TRANCO_SET: Optional[Set[str]] = None
+
+SHARED_HOSTING_DOMAINS: Set[str] = {
+    "wixsite.com",
+    "weebly.com",
+    "wordpress.com",
+    "blogspot.com",
+    "blogger.com",
+    "firebaseapp.com",
+    "web.app",
+    "pages.dev",
+    "vercel.app",
+    "netlify.app",
+    "github.io",
+    "gitlab.io",
+    "000webhostapp.com",
+    "duckdns.org",
+    "ngrok-free.app",
+}
 
 
 def load_tranco_set(tranco_path: str = "./data/tranco.csv") -> Set[str]:
@@ -132,10 +151,31 @@ async def check_dns_health(hostname: str, timeout_seconds: float = 0.4) -> Dict[
     return results
 
 
-async def get_domain_intel(norm_host: NormalizedHost) -> Tuple[float, List[str]]:
+async def probe_web_content(hostname: str, timeout_seconds: float = 0.4) -> Tuple[Optional[str], bool]:
+    """
+    Fast, non-blocking HTTP probe to inspect page title and detect content impersonation.
+    Fail-safe: times out in 400ms without blocking request.
+    """
+    headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15"}
+    for scheme in ("https", "http"):
+        try:
+            url = f"{scheme}://{hostname}"
+            async with httpx.AsyncClient(timeout=timeout_seconds, verify=False, follow_redirects=True) as client:
+                resp = await client.get(url, headers=headers)
+                if resp.status_code == 200 and resp.text:
+                    match = re.search(r"<title[^>]*>(.*?)</title>", resp.text, re.IGNORECASE | re.DOTALL)
+                    if match:
+                        title = match.group(1).strip()
+                        return title, True
+        except Exception:
+            continue
+    return None, False
+
+
+async def get_domain_intel(norm_host: NormalizedHost, brand_tokens: Optional[List[str]] = None) -> Tuple[float, List[str]]:
     """
     Compute domain intelligence signal D (0.0 to 1.0).
-    Aggregates TLD risk, hyphen structures, RDAP registration age, and Tranco presence.
+    Aggregates TLD risk, hyphen structures, RDAP registration age, Tranco presence, and live web probe.
     """
     reasons: List[str] = []
     d_score = 0.0
@@ -152,6 +192,11 @@ async def get_domain_intel(norm_host: NormalizedHost) -> Tuple[float, List[str]]
     if host.count("-") >= 2:
         d_score = max(d_score, 0.30)
         reasons.append("suspicious_domain_structure")
+
+    # Shared hosting risk (user-generated subdomains on free hosting)
+    if registrable in SHARED_HOSTING_DOMAINS:
+        d_score = max(d_score, 0.50)
+        reasons.append("shared_hosting_abuse")
 
     # 2. Check Tranco popularity list
     in_tranco = is_in_tranco(registrable)
@@ -174,5 +219,19 @@ async def get_domain_intel(norm_host: NormalizedHost) -> Tuple[float, List[str]]
                 d_score = max(d_score, 0.40)
     except Exception as e:
         logger.debug("Error calculating RDAP age: %s", e)
+
+    # 4. Live web content probe (title inspection for brand impersonation)
+    if brand_tokens:
+        try:
+            page_title, probed = await probe_web_content(host, timeout_seconds=0.35)
+            if probed and page_title:
+                title_lower = page_title.lower()
+                for token in brand_tokens:
+                    if len(token) >= 4 and token in title_lower:
+                        d_score = max(d_score, 0.80)
+                        reasons.append("brand_impersonation_in_title")
+                        break
+        except Exception as e:
+            logger.debug("Web content probe error for %s: %s", host, e)
 
     return round(min(1.0, d_score), 2), reasons
