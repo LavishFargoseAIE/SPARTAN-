@@ -1,0 +1,624 @@
+State Bank of India|bank|sbi.co.in;onlinesbi.sbi;onlinesbi.com
+HDFC Bank|bank|hdfcbank.com
+ICICI Bank|bank|icicibank.com
+Axis Bank|bank|axisbank.com
+Kotak Mahindra Bank|bank|kotak.com
+Punjab National Bank|bank|pnbindia.in;netpnb.com
+Bank of Baroda|bank|bankofbaroda.in;bobibanking.com
+Canara Bank|bank|canarabank.com
+Union Bank of India|bank|unionbankofindia.co.in
+Bank of India|bank|bankofindia.co.in
+Indian Bank|bank|indianbank.in;indianbank.net.in
+Central Bank of India|bank|centralbankofindia.co.in
+Indian Overseas Bank|bank|iob.in
+UCO Bank|bank|ucobank.com
+Bank of Maharashtra|bank|bankofmaharashtra.in
+Punjab and Sind Bank|bank|psbindia.com
+IDBI Bank|bank|idbibank.in
+Yes Bank|bank|yesbank.in
+IndusInd Bank|bank|indusind.com
+Federal Bank|bank|federalbank.co.in
+South Indian Bank|bank|southindianbank.com
+Karur Vysya Bank|bank|kvb.co.in
+City Union Bank|bank|cityunionbank.com
+Bandhan Bank|bank|bandhanbank.com
+IDFC First Bank|bank|idfcfirstbank.com
+RBL Bank|bank|rblbank.com
+AU Small Finance Bank|bank|aubank.in
+Equitas Small Finance Bank|bank|equitasbank.com
+Ujjivan Small Finance Bank|bank|ujjivansfb.in
+Jammu and Kashmir Bank|bank|jkbank.com
+Karnataka Bank|bank|karnatakabank.com
+Tamilnad Mercantile Bank|bank|tmbnet.in
+Dhanlaxmi Bank|bank|dhanbank.com
+DCB Bank|bank|dcbbank.com
+CSB Bank|bank|csb.co.in
+Nainital Bank|bank|nainitalbank.co.in
+Standard Chartered|bank|sc.com
+HSBC|bank|hsbc.co.in;hsbc.com
+Citibank|bank|citi.com;citibank.co.in
+Deutsche Bank|bank|db.com
+DBS Bank|bank|dbs.com
+Paytm Payments Bank|bank|paytmbank.com
+India Post Payments Bank|bank|ippbonline.com
+Fino Payments Bank|bank|finobank.com
+JPMorgan Chase|bank|chase.com;jpmorganchase.com
+Bank of America|bank|bankofamerica.com
+Wells Fargo|bank|wellsfargo.com
+Goldman Sachs|bank|goldmansachs.com
+Morgan Stanley|bank|morganstanley.com
+Barclays|bank|barclays.co.uk;barclays.com
+Lloyds Bank|bank|lloydsbank.com
+NatWest|bank|natwest.com
+Santander|bank|santander.com
+BNP Paribas|bank|bnpparibas.com
+UBS|bank|ubs.com
+Capital One|bank|capitalone.com
+Discover Financial|bank|discover.com
+Revolut|bank|revolut.com
+Monzo|bank|monzo.com
+Reserve Bank of India|government|rbi.org.in
+NPCI|payment|npci.org.in
+HDFC Life|insurance|hdfclife.com
+ICICI Prudential Life|insurance|iciciprulife.com
+SBI Life Insurance|insurance|sbilife.co.in
+Life Insurance Corporation of India|insurance|licindia.in
+Max Life Insurance|insurance|maxlifeinsurance.com
+Bajaj Allianz|insurance|bajajallianz.com
+Star Health Insurance|insurance|starhealth.in
+HDFC Ergo|insurance|hdfcergo.com
+ICICI Lombard|insurance|icicilombard.com
+New India Assurance|insurance|newindia.co.in
+Tata AIG|insurance|tataaig.com
+Tata AIA Life|insurance|tataaia.com
+Care Health Insurance|insurance|careinsurance.com
+Niva Bupa|insurance|nivabupa.com
+ManipalCigna|insurance|manipalcigna.com
+Digit Insurance|insurance|godigit.com
+Acko|insurance|acko.com
+PNB MetLife|insurance|pnbmetlife.com
+Kotak Life|insurance|kotaklife.com
+Aditya Birla Sun Life Insurance|insurance|adityabirlasunlifeinsurance.com
+Oriental Insurance|insurance|orientalinsurance.org.in
+United India Insurance|insurance|uiic.co.in
+National Insurance|insurance|nationalinsurance.nic.co.in
+SBI General Insurance|insurance|sbigeneral.in
+IFFCO Tokio|insurance|iffcotokio.co.in
+Policybazaar|insurance|policybazaar.com
+Bajaj Finserv|finance|bajajfinserv.in;bajajfinance.in
+Muthoot Finance|finance|muthootfinance.com
+Manappuram Finance|finance|manappuram.com
+Tata Capital|finance|tatacapital.com
+Mahindra Finance|finance|mahindrafinance.com
+SBI Card|finance|sbicard.com
+Aditya Birla Capital|finance|adityabirlacapital.com
+Shriram Finance|finance|shriramfinance.in
+L and T Finance|finance|ltfs.com
+Hero FinCorp|finance|herofincorp.com
+CIBIL|finance|cibil.com
+Experian|finance|experian.com;experian.in
+Equifax|finance|equifax.com
+TransUnion|finance|transunion.com
+Zerodha|finance|zerodha.com
+Groww|finance|groww.in
+Upstox|finance|upstox.com
+Angel One|finance|angelone.in
+5paisa|finance|5paisa.com
+ICICI Direct|finance|icicidirect.com
+HDFC Securities|finance|hdfcsec.com
+Kotak Securities|finance|kotaksecurities.com
+Motilal Oswal|finance|motilaloswal.com
+Sharekhan|finance|sharekhan.com
+Dhan|finance|dhan.co
+Kuvera|finance|kuvera.in
+NSE India|finance|nseindia.com
+BSE India|finance|bseindia.com
+CDSL|finance|cdslindia.com
+NSDL|finance|nsdl.co.in
+CAMS|finance|camsonline.com
+KFintech|finance|kfintech.com
+AMFI|finance|amfiindia.com
+MF Utilities|finance|mfuindia.com
+SBI Mutual Fund|finance|sbimf.com
+HDFC Mutual Fund|finance|hdfcfund.com
+ICICI Prudential Mutual Fund|finance|icicipruamc.com
+Axis Mutual Fund|finance|axismf.com
+Nippon India Mutual Fund|finance|nipponindiamf.com
+Kotak Mutual Fund|finance|kotakmf.com
+UTI Mutual Fund|finance|utimf.com
+Charles Schwab|finance|schwab.com
+Fidelity|finance|fidelity.com
+Vanguard|finance|vanguard.com
+Robinhood|finance|robinhood.com
+Intuit|finance|intuit.com
+Paytm|payment|paytm.com
+PhonePe|payment|phonepe.com
+BHIM UPI|payment|bhimupi.org.in
+Razorpay|payment|razorpay.com
+PayU|payment|payu.in
+Cashfree|payment|cashfree.com
+CCAvenue|payment|ccavenue.com
+BillDesk|payment|billdesk.com
+Instamojo|payment|instamojo.com
+MobiKwik|payment|mobikwik.com
+Freecharge|payment|freecharge.in
+CRED|payment|cred.club
+Slice|payment|sliceit.com
+Jupiter Money|payment|jupiter.money
+Fi Money|payment|fi.money
+RuPay|payment|rupay.co.in
+PayPal|payment|paypal.com
+Stripe|payment|stripe.com
+Wise|payment|wise.com
+Western Union|payment|westernunion.com
+Visa|payment|visa.com
+Mastercard|payment|mastercard.com
+American Express|payment|americanexpress.com
+Zelle|payment|zellepay.com
+Venmo|payment|venmo.com
+Cash App|payment|cash.app
+Klarna|payment|klarna.com
+Affirm|payment|affirm.com
+Alipay|payment|alipay.com
+Binance|crypto|binance.com
+Coinbase|crypto|coinbase.com
+WazirX|crypto|wazirx.com
+CoinDCX|crypto|coindcx.com
+Kraken|crypto|kraken.com
+MetaMask|crypto|metamask.io
+Government of India Portal|government|india.gov.in
+Income Tax e-Filing|government|incometax.gov.in
+Income Tax Department|government|incometaxindia.gov.in
+GST Portal|government|gst.gov.in
+UIDAI Aadhaar|government|uidai.gov.in
+DigiLocker|government|digilocker.gov.in
+Passport Seva|government|passportindia.gov.in
+UMANG|government|umang.gov.in
+EPFO|government|epfindia.gov.in
+Parivahan|government|parivahan.gov.in
+Election Commission of India|government|eci.gov.in
+Ministry of Corporate Affairs|government|mca.gov.in
+CBIC Customs|government|cbic.gov.in
+PM-KISAN|government|pmkisan.gov.in
+Ayushman Bharat PMJAY|government|pmjay.gov.in
+CoWIN|government|cowin.gov.in
+MyGov India|government|mygov.in
+PFMS|government|pfms.nic.in
+NPS Trust|government|npstrust.org.in
+Protean eGov|government|proteantech.in
+IRCTC|government|irctc.co.in
+Indian Railways|government|indianrailways.gov.in
+India Post|government|indiapost.gov.in
+Cyber Crime Portal|government|cybercrime.gov.in
+CERT-In|government|cert-in.org.in
+Ministry of Home Affairs|government|mha.gov.in
+Supreme Court of India|government|sci.gov.in
+eCourts|government|ecourts.gov.in
+Parliament of India|government|sansad.in
+Prime Minister's Office India|government|pmindia.gov.in
+Ministry of External Affairs|government|mea.gov.in
+Indian Visa Online|government|indianvisaonline.gov.in
+e-Shram|government|eshram.gov.in
+National Scholarship Portal|government|scholarships.gov.in
+NIC India|government|nic.in
+NHAI|government|nhai.gov.in
+CBSE|government|cbse.gov.in
+UGC|government|ugc.gov.in
+NTA|government|nta.ac.in
+UPSC|government|upsc.gov.in
+SSC|government|ssc.gov.in
+SEBI|government|sebi.gov.in
+TRAI|government|trai.gov.in
+Department of Telecommunications|government|dot.gov.in
+Sanchar Saathi|government|sancharsaathi.gov.in
+Government of Maharashtra|government|maharashtra.gov.in
+MahaOnline|government|mahaonline.gov.in
+MSRTC|government|msrtc.gov.in
+Pune Municipal Corporation|government|pmc.gov.in
+USA.gov|government|usa.gov
+IRS|government|irs.gov
+GOV.UK|government|gov.uk
+USCIS|government|uscis.gov
+Social Security Administration|government|ssa.gov
+Canada.ca|government|canada.ca
+Australian Government|government|australia.gov.au
+Australian Taxation Office|government|ato.gov.au
+European Union|government|europa.eu
+World Health Organization|government|who.int
+United Nations|government|un.org
+Reliance Jio|telecom|jio.com
+Airtel|telecom|airtel.in
+Vodafone Idea|telecom|myvi.in
+BSNL|telecom|bsnl.co.in
+MTNL|telecom|mtnl.net.in
+ACT Fibernet|telecom|actcorp.in
+Hathway|telecom|hathway.com
+Tata Play|telecom|tataplay.com
+Dish TV|telecom|dishtv.in
+Sun Direct|telecom|sundirect.in
+Verizon|telecom|verizon.com
+AT and T|telecom|att.com
+T-Mobile|telecom|t-mobile.com
+Vodafone|telecom|vodafone.com
+Tata Power|utility|tatapower.com
+Adani Electricity|utility|adanielectricity.com
+BSES Delhi|utility|bsesdelhi.com
+Torrent Power|utility|torrentpower.com
+MSEDCL Mahavitaran|utility|mahadiscom.in
+Indian Oil|utility|iocl.com
+Bharat Petroleum|utility|bharatpetroleum.in
+Hindustan Petroleum|utility|hindustanpetroleum.com
+Mahanagar Gas|utility|mahanagargas.com
+Indraprastha Gas|utility|iglonline.net
+BEST Undertaking|utility|bestundertaking.com
+Amazon India|ecommerce|amazon.in
+Amazon|ecommerce|amazon.com
+Flipkart|ecommerce|flipkart.com
+Myntra|ecommerce|myntra.com
+Ajio|ecommerce|ajio.com
+Meesho|ecommerce|meesho.com
+Nykaa|ecommerce|nykaa.com
+Tata Neu|ecommerce|tataneu.com
+JioMart|ecommerce|jiomart.com
+BigBasket|ecommerce|bigbasket.com
+Blinkit|ecommerce|blinkit.com
+Zepto|ecommerce|zeptonow.com
+Swiggy|food|swiggy.com
+Zomato|food|zomato.com
+Snapdeal|ecommerce|snapdeal.com
+FirstCry|ecommerce|firstcry.com
+Lenskart|ecommerce|lenskart.com
+Tata 1mg|health|1mg.com
+PharmEasy|health|pharmeasy.in
+Apollo Pharmacy|health|apollopharmacy.in
+Netmeds|health|netmeds.com
+Practo|health|practo.com
+Dr Lal PathLabs|health|lalpathlabs.com
+Max Healthcare|health|maxhealthcare.in
+Fortis Healthcare|health|fortishealthcare.com
+Manipal Hospitals|health|manipalhospitals.com
+AIIMS|health|aiims.edu
+Cult.fit|health|cult.fit
+HealthifyMe|health|healthifyme.com
+Urban Company|ecommerce|urbancompany.com
+OLX India|ecommerce|olx.in
+Quikr|ecommerce|quikr.com
+Cars24|auto|cars24.com
+CarDekho|auto|cardekho.com
+Spinny|auto|spinny.com
+Decathlon India|ecommerce|decathlon.in
+Croma|ecommerce|croma.com
+Reliance Digital|ecommerce|reliancedigital.in
+Vijay Sales|ecommerce|vijaysales.com
+IKEA|ecommerce|ikea.com
+Pepperfry|ecommerce|pepperfry.com
+Tanishq|ecommerce|tanishq.com
+Titan|ecommerce|titan.co.in
+Mamaearth|ecommerce|mamaearth.in
+boAt|ecommerce|boat-lifestyle.com
+Bata|ecommerce|bata.in
+Pantaloons|ecommerce|pantaloons.com
+Westside|ecommerce|westside.com
+Shoppers Stop|ecommerce|shoppersstop.com
+Lifestyle Stores|ecommerce|lifestylestores.com
+DMart|ecommerce|dmart.in
+Reliance Retail|ecommerce|relianceretail.com
+Blue Dart|logistics|bluedart.com
+Delhivery|logistics|delhivery.com
+DTDC|logistics|dtdc.in
+Ecom Express|logistics|ecomexpress.in
+Shiprocket|logistics|shiprocket.in
+FedEx|logistics|fedex.com
+UPS|logistics|ups.com
+DHL|logistics|dhl.com
+USPS|logistics|usps.com
+Royal Mail|logistics|royalmail.com
+Aramex|logistics|aramex.com
+Maersk|logistics|maersk.com
+Ola Cabs|travel|olacabs.com
+Uber|travel|uber.com
+Rapido|travel|rapido.bike
+Lyft|travel|lyft.com
+redBus|travel|redbus.in
+MakeMyTrip|travel|makemytrip.com
+Goibibo|travel|goibibo.com
+Cleartrip|travel|cleartrip.com
+EaseMyTrip|travel|easemytrip.com
+Yatra|travel|yatra.com
+ixigo|travel|ixigo.com
+IndiGo|travel|goindigo.in
+Air India|travel|airindia.com
+Vistara|travel|airvistara.com
+SpiceJet|travel|spicejet.com
+Akasa Air|travel|akasaair.com
+Air India Express|travel|airindiaexpress.com
+OYO|travel|oyorooms.com
+Booking.com|travel|booking.com
+Airbnb|travel|airbnb.com
+Expedia|travel|expedia.com
+Agoda|travel|agoda.com
+TripAdvisor|travel|tripadvisor.com
+Taj Hotels|travel|tajhotels.com
+Marriott|travel|marriott.com
+Hilton|travel|hilton.com
+Hyatt|travel|hyatt.com
+Grab|travel|grab.com
+Gojek|travel|gojek.com
+eBay|ecommerce|ebay.com
+Walmart|ecommerce|walmart.com
+Target|ecommerce|target.com
+Best Buy|ecommerce|bestbuy.com
+Costco|ecommerce|costco.com
+Alibaba|ecommerce|alibaba.com
+AliExpress|ecommerce|aliexpress.com
+Etsy|ecommerce|etsy.com
+Shopify|ecommerce|shopify.com
+Temu|ecommerce|temu.com
+Shein|ecommerce|shein.com
+Zalando|ecommerce|zalando.com
+Rakuten|ecommerce|rakuten.com
+Mercado Libre|ecommerce|mercadolibre.com
+Shopee|ecommerce|shopee.com
+Lazada|ecommerce|lazada.com
+Nike|ecommerce|nike.com
+Adidas|ecommerce|adidas.com
+Zara|ecommerce|zara.com
+H and M|ecommerce|hm.com
+DoorDash|food|doordash.com
+Instacart|food|instacart.com
+Grubhub|food|grubhub.com
+Uber Eats|food|ubereats.com
+McDonald's|food|mcdonalds.com
+Starbucks|food|starbucks.com
+Dominos|food|dominos.com;dominos.co.in
+Pizza Hut|food|pizzahut.com;pizzahut.co.in
+KFC|food|kfc.com;kfc.co.in
+Burger King|food|burgerking.in
+Subway|food|subway.com
+Haldiram's|food|haldirams.com
+Amul|food|amul.com
+Google|tech|google.com;google.co.in
+Microsoft|tech|microsoft.com;live.com;office.com;microsoftonline.com
+Apple|tech|apple.com;icloud.com
+Meta|social|meta.com
+Facebook|social|facebook.com
+Instagram|social|instagram.com
+WhatsApp|social|whatsapp.com
+Messenger|social|messenger.com
+Threads|social|threads.net
+X Twitter|social|x.com;twitter.com
+LinkedIn|social|linkedin.com
+Snapchat|social|snapchat.com
+Pinterest|social|pinterest.com
+Reddit|social|reddit.com
+Telegram|social|telegram.org;t.me
+Discord|social|discord.com
+Signal|social|signal.org
+TikTok|social|tiktok.com
+YouTube|media|youtube.com
+Quora|social|quora.com
+Medium|social|medium.com
+ShareChat|social|sharechat.com
+Tencent|tech|tencent.com
+WeChat|social|wechat.com
+Baidu|tech|baidu.com
+Yandex|tech|yandex.com
+Naver|tech|naver.com
+LINE|social|line.me
+Netflix|media|netflix.com
+Disney Plus Hotstar|media|hotstar.com
+JioCinema|media|jiocinema.com
+Prime Video|media|primevideo.com
+Sony LIV|media|sonyliv.com
+ZEE5|media|zee5.com
+Spotify|media|spotify.com
+Gaana|media|gaana.com
+JioSaavn|media|jiosaavn.com
+Twitch|media|twitch.tv
+Disney|media|disney.com
+Max HBO|media|max.com
+Hulu|media|hulu.com
+Paramount Plus|media|paramountplus.com
+Crunchyroll|media|crunchyroll.com
+BookMyShow|media|bookmyshow.com
+PVR INOX|media|pvrcinemas.com
+Steam|gaming|steampowered.com;steamcommunity.com
+Epic Games|gaming|epicgames.com
+Xbox|gaming|xbox.com
+PlayStation|gaming|playstation.com
+Nintendo|gaming|nintendo.com
+Roblox|gaming|roblox.com
+Riot Games|gaming|riotgames.com
+Dream11|gaming|dream11.com
+MPL|gaming|mpl.live
+Ubisoft|gaming|ubisoft.com
+Electronic Arts|gaming|ea.com
+Blizzard|gaming|blizzard.com
+GitHub|tech|github.com
+GitLab|tech|gitlab.com
+Bitbucket|tech|bitbucket.org
+Atlassian|tech|atlassian.com;atlassian.net
+Slack|tech|slack.com
+Zoom|tech|zoom.us
+Dropbox|tech|dropbox.com
+Box|tech|box.com
+Adobe|tech|adobe.com
+Canva|tech|canva.com
+Figma|tech|figma.com
+Notion|tech|notion.so
+Salesforce|tech|salesforce.com
+Oracle|tech|oracle.com
+SAP|tech|sap.com
+IBM|tech|ibm.com
+Cisco|tech|cisco.com
+Intel|tech|intel.com
+AMD|tech|amd.com
+NVIDIA|tech|nvidia.com
+Qualcomm|tech|qualcomm.com
+Microsoft Azure|tech|azure.com
+Cloudflare|tech|cloudflare.com
+Heroku|tech|heroku.com
+Vercel|tech|vercel.com
+Netlify|tech|netlify.com
+DigitalOcean|tech|digitalocean.com
+GoDaddy|tech|godaddy.com
+Namecheap|tech|namecheap.com
+Hostinger|tech|hostinger.com
+WordPress|tech|wordpress.com;wordpress.org
+Wix|tech|wix.com
+Squarespace|tech|squarespace.com
+OpenAI|tech|openai.com;chatgpt.com
+Anthropic|tech|anthropic.com;claude.ai
+Hugging Face|tech|huggingface.co
+Stack Overflow|tech|stackoverflow.com
+npm|tech|npmjs.com
+PyPI|tech|pypi.org
+Docker|tech|docker.com
+Kaggle|tech|kaggle.com
+Postman|tech|postman.com
+JetBrains|tech|jetbrains.com
+Mozilla|tech|mozilla.org
+Brave|tech|brave.com
+Opera|tech|opera.com
+Proton|tech|proton.me
+DuckDuckGo|tech|duckduckgo.com
+Bing|tech|bing.com
+Yahoo|tech|yahoo.com
+Outlook|tech|outlook.com
+Rediff|tech|rediff.com
+Zoho|tech|zoho.com
+Freshworks|tech|freshworks.com
+Truecaller|tech|truecaller.com
+DocuSign|tech|docusign.com
+Infosys|tech|infosys.com
+Tata Consultancy Services|tech|tcs.com
+Wipro|tech|wipro.com
+HCLTech|tech|hcltech.com
+Tech Mahindra|tech|techmahindra.com
+Samsung|tech|samsung.com
+Sony|tech|sony.com
+LG|tech|lg.com
+Dell|tech|dell.com
+HP|tech|hp.com
+Lenovo|tech|lenovo.com
+Asus|tech|asus.com
+Xiaomi|tech|xiaomi.com;mi.com
+OnePlus|tech|oneplus.com
+Realme|tech|realme.com
+Vivo|tech|vivo.com
+Oppo|tech|oppo.com
+Nothing|tech|nothing.tech
+Logitech|tech|logitech.com
+LastPass|security|lastpass.com
+1Password|security|1password.com
+Bitwarden|security|bitwarden.com
+NordVPN|security|nordvpn.com
+ExpressVPN|security|expressvpn.com
+Norton|security|norton.com
+McAfee|security|mcafee.com
+Kaspersky|security|kaspersky.com
+Avast|security|avast.com
+Quick Heal|security|quickheal.com
+CrowdStrike|security|crowdstrike.com
+Okta|security|okta.com
+Naukri|tech|naukri.com
+Indeed|tech|indeed.com
+Glassdoor|tech|glassdoor.com
+Foundit|tech|foundit.in
+Internshala|tech|internshala.com
+Unstop|tech|unstop.com
+Shaadi.com|social|shaadi.com
+Justdial|tech|justdial.com
+Craigslist|ecommerce|craigslist.org
+Yelp|tech|yelp.com
+Trustpilot|tech|trustpilot.com
+Coursera|education|coursera.org
+edX|education|edx.org
+Udemy|education|udemy.com
+Khan Academy|education|khanacademy.org
+BYJU'S|education|byjus.com
+Unacademy|education|unacademy.com
+PhysicsWallah|education|pw.live
+Vedantu|education|vedantu.com
+upGrad|education|upgrad.com
+Simplilearn|education|simplilearn.com
+Great Learning|education|mygreatlearning.com
+NPTEL|education|nptel.ac.in
+SWAYAM|education|swayam.gov.in
+IIT Bombay|education|iitb.ac.in
+IIT Delhi|education|iitd.ac.in
+IIT Madras|education|iitm.ac.in
+Indian Institute of Science|education|iisc.ac.in
+University of Mumbai|education|mu.ac.in
+Savitribai Phule Pune University|education|unipune.ac.in
+Delhi University|education|du.ac.in
+JNU|education|jnu.ac.in
+Harvard University|education|harvard.edu
+MIT|education|mit.edu
+Stanford University|education|stanford.edu
+University of Oxford|education|ox.ac.uk
+University of Cambridge|education|cam.ac.uk
+Wikipedia|education|wikipedia.org
+Wikimedia|education|wikimedia.org
+Internet Archive|education|archive.org
+Duolingo|education|duolingo.com
+Grammarly|education|grammarly.com
+LeetCode|education|leetcode.com
+HackerRank|education|hackerrank.com
+GeeksforGeeks|education|geeksforgeeks.org
+W3Schools|education|w3schools.com
+Codecademy|education|codecademy.com
+Times of India|news|indiatimes.com
+Hindustan Times|news|hindustantimes.com
+The Hindu|news|thehindu.com
+NDTV|news|ndtv.com
+India Today|news|indiatoday.in
+Indian Express|news|indianexpress.com
+Mint|news|livemint.com
+Moneycontrol|news|moneycontrol.com
+Business Standard|news|business-standard.com
+News18|news|news18.com
+Zee News|news|india.com
+Aaj Tak|news|aajtak.in
+ABP Live|news|abplive.com
+Lokmat|news|lokmat.com
+Loksatta|news|loksatta.com
+BBC|news|bbc.com;bbc.co.uk
+CNN|news|cnn.com
+Reuters|news|reuters.com
+New York Times|news|nytimes.com
+Washington Post|news|washingtonpost.com
+The Guardian|news|theguardian.com
+Bloomberg|news|bloomberg.com
+Forbes|news|forbes.com
+Wall Street Journal|news|wsj.com
+Al Jazeera|news|aljazeera.com
+CNBC|news|cnbc.com
+Financial Times|news|ft.com
+The Economist|news|economist.com
+TechCrunch|news|techcrunch.com
+The Verge|news|theverge.com
+Wired|news|wired.com
+Tata Group|auto|tata.com
+Reliance Industries|finance|ril.com
+Adani Group|finance|adani.com
+Mahindra|auto|mahindra.com
+Maruti Suzuki|auto|marutisuzuki.com
+Hyundai|auto|hyundai.com
+Tata Motors|auto|tatamotors.com
+Honda|auto|honda.com
+Toyota|auto|toyota.com;toyotabharat.com
+Kia|auto|kia.com
+MG Motor India|auto|mgmotor.co.in
+Hero MotoCorp|auto|heromotocorp.com
+Bajaj Auto|auto|bajajauto.com
+TVS Motor|auto|tvsmotor.com
+Royal Enfield|auto|royalenfield.com
+Ola Electric|auto|olaelectric.com
+Ather Energy|auto|atherenergy.com
+Tesla|auto|tesla.com
+Ford|auto|ford.com
+BMW|auto|bmw.com
+Mercedes-Benz|auto|mercedes-benz.com
+Volkswagen|auto|volkswagen.com
+Audi|auto|audi.com
