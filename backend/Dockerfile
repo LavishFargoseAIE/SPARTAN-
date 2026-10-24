@@ -7,10 +7,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY backend/requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY backend/ /app/
+COPY registry/ /app/registry/
+COPY data/ /app/data/
+
+ENV PYTHONPATH=/app
 
 EXPOSE 8000
 
