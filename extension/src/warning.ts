@@ -135,8 +135,12 @@ async function renderWarning() {
   const lang = getLang();
   const dict = translations[lang] || translations.en;
 
-  const tab = await chrome.tabs.getCurrent();
-  const tabId = tab?.id;
+  let tab = await chrome.tabs.getCurrent();
+  let tabId = tab?.id;
+  if (tabId === undefined) {
+    const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    tabId = activeTab?.id;
+  }
   let verdict: VerdictSessionData | null = null;
 
   if (tabId !== undefined) {
@@ -183,11 +187,14 @@ async function renderWarning() {
       const u = new URL(verdict.brand.official_url);
       realDomainEl.textContent = u.hostname;
       realAddrContainer.hidden = false;
+      realAddrContainer.style.display = "block";
     } catch {
       realAddrContainer.hidden = true;
+      realAddrContainer.style.display = "none";
     }
   } else {
     realAddrContainer.hidden = true;
+    realAddrContainer.style.display = "none";
   }
 
   // Score Dial & Badge
@@ -244,8 +251,10 @@ async function renderWarning() {
       window.location.replace(verdict!.brand!.official_url);
     };
     btnGoReal.hidden = false;
+    btnGoReal.style.display = "flex";
   } else {
     btnGoReal.hidden = true;
+    btnGoReal.style.display = "none";
   }
 
   // Suspicious mode continue anyway with 5-second delay

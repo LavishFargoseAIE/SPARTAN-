@@ -216,6 +216,10 @@
       background: var(--warning);
     }
 
+    [hidden] {
+      display: none !important;
+    }
+
     .action-container {
       margin-top: 1rem;
     }
@@ -297,18 +301,18 @@
     <div id="header-bar" class="header">
       <div id="header-icon" class="header-icon">✕</div>
       <div class="header-text">
-        <h1 id="title-text">This website is pretending to be Example Bank</h1>
+        <h1 id="title-text">Suspicious website blocked</h1>
         <p id="subtitle-text">SiteGuard stopped it before the page could load. Do not enter any details.</p>
       </div>
     </div>
 
     <div class="content">
       <div class="section-label" id="label-tried">You tried to open</div>
-      <div id="host-display" class="host-box">examplebank-secure-login.xyz</div>
+      <div id="host-display" class="host-box">...</div>
 
-      <div id="real-address-container" class="real-address-line">
+      <div id="real-address-container" class="real-address-line" hidden>
         <span id="label-real">The real address is</span>
-        <span id="real-domain" class="real-address-host">examplebank.bank.in</span>
+        <span id="real-domain" class="real-address-host"></span>
       </div>
 
       <div class="grid-info">
@@ -321,17 +325,17 @@
 
         <div class="dial-card">
           <div id="circle-dial" class="circle-dial">
-            <span id="score-text" class="dial-number">91</span>
+            <span id="score-text" class="dial-number">—</span>
             <span id="out-of-text" class="dial-sub">out of 100</span>
           </div>
-          <span id="level-badge" class="badge-pill">Dangerous</span>
+          <span id="level-badge" class="badge-pill">...</span>
         </div>
       </div>
 
       <div class="action-container">
         <button id="go-real" class="btn-real" hidden>
-          <span id="btn-main-text">Take me to the real Example Bank website</span>
-          <span id="btn-sub-text" class="btn-real-sub">www.examplebank.bank.in | verified in the official registry</span>
+          <span id="btn-main-text">Take me to the official website</span>
+          <span id="btn-sub-text" class="btn-real-sub">verified in the official registry</span>
         </button>
       </div>
 

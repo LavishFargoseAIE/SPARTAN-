@@ -27,12 +27,12 @@
     "verified": true,
     "needs_verification": false,
     "last_verified": "2026-10-24",
-    "verified_by": "admin-audit",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 3,
+    "version": 4,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "eo5eq/sPSQ5d+JjO/vQDf5zYBVzKszPTA6P31moSFLwR2oWksq0YStPIkQlTT43WZ0CadW4h8xe4rYLUFQWGAw=="
+    "signature": "g/IZigdWOT3nDFLcmeP3AOnyB+FpvTIfGxgohr/fDh4eyZwlPndhH7cEvB7wZZ/vKJxs2nTvY60m8thrzCWTAA=="
   },
   {
     "brand_id": "hdfc-bank",
@@ -56,15 +56,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "8VaZqR2u7tcLEo63Qdq37XnuvLDmdNczbWV6Eh/haOEdV1hnSzZgEUx2NnwVPwSs/OwlDeByx+If0e6Ll8dNBg=="
+    "signature": "j+f9NsNQXZ/kdF9jq7hRum7Y0VJLAWKY8+bhoTCop0yaQrdww1Z3HxfUszVDFMwIbQ/s2UAgd6NzwK/2n0XBBQ=="
   },
   {
     "brand_id": "icici-bank",
@@ -88,15 +88,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "tEo69syi20KlOY2SUGvlbMbGDiKT8Nr2+tNOJ7RDwSjxTa9X6AqBs0CIvnkUwO2ZNhp9/+EMdDh3/FT+WULbDQ=="
+    "signature": "jueS3BNWmcyjS6ZwpYOfO0+Af/v7bzkBCOpHb1HIS6bSER01MpGd8/Blnbpuz7+5hX6nWPfY2017kfDNXuozAA=="
   },
   {
     "brand_id": "axis-bank",
@@ -120,15 +120,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "cN4u7LeTuk8mhbWXdVOYdxmfEdyld6hhP3dbU+4Qoquyj6MgPPUSa40xc/cXjAuaV6SIfUT5ymSl3B97ssjqCQ=="
+    "signature": "Emg5fKhWeR+IhebRW6PAKAb9ptRGbEWF3LzfbQqBc0JWNVxJzKRRlg83UAHT61F7/7/QHaxNtlUotGWxyXGZBA=="
   },
   {
     "brand_id": "kotak-mahindra-bank",
@@ -153,15 +153,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "5AHU2croLwUMCJINuVMRbmDzb5uC8RDe7fsKfAXBzzC9Fri/ynuoQjeQoNWAFiNR0583kswk7/iQlGpikFxqCA=="
+    "signature": "mEXBaooP551QnNpv3mP3nD4Jgq7RJauL3Ulo07ip4Ks5m32EE8jGNq0TH7qa+gXjBig8t9Hqes/JgrjAWqwpAA=="
   },
   {
     "brand_id": "punjab-national-bank",
@@ -187,15 +187,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "ID3/9H+deJGRhQWtT1oGsPod//mZ2isfZmCu1mgcAYwPHrcUKQ3ttmqtUV5vomUecj6hHj+fZ44jAwFrvd9RAg=="
+    "signature": "UpDpClquJk3Y4qox5oj7nsDKXuRrwmoZAuNMi8smkF0MspjTnqDRsyX976uhrG6ryuTCGtQj3LvEeKP6EJebDQ=="
   },
   {
     "brand_id": "bank-of-baroda",
@@ -220,15 +220,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "n1GuKOq7GU8B56OS8bpR7M1rv/sOUkvmnLEkbJZTh48yR9LZufHMTcXwA0yL0WnXKHgsAaKVao5wzwh736rABg=="
+    "signature": "jEeKTx8mPkT1uaedfMhWrLehV5hDDngyBt5aFW/082j7E7QGtihDKn0WPhOGLsacH7v6GC877ImrSn1L/tz1BA=="
   },
   {
     "brand_id": "canara-bank",
@@ -252,15 +252,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "g+DBzKg1YRu82OFvngwld5buym6NgOctOvDrFBkf8Y8y+3AImf6l2KnsddMtrprwImjMlJy/dJ+nI3XXhT4uBA=="
+    "signature": "KnUQgYfhDHRZMaErBP8tNErJUfB8jLiJPoLwfKZXL2UGONcGhPq0QdyLfdkfb4zdvGfPER7imJ1A8gJGFNjSCw=="
   },
   {
     "brand_id": "union-bank-of-india",
@@ -284,15 +284,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "WDylgwKXTk3uZaJd8XHlBov/Fq+GucmWjsN9qUYquHd7v2ruBSq0IMPDhSIqlvrbDHUUCrozIYfmxGCzM3JGDQ=="
+    "signature": "X1j48N21Q5ji9yEYY59M2pRzz9lpeWezyJ/MlXi52wf5BNezy4LZ/rB/DqvLtMrjy/KIs7lUjBZE8e+wZ5TvCA=="
   },
   {
     "brand_id": "bank-of-india",
@@ -1942,15 +1942,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "4gfIZXPwU+OrnODy9HaFrPlZ1KbGqczVyANLI6zMbhW0wtHknGejJeTkbliyk8UDRZhYgT3AedFVVnaS8ZXmCw=="
+    "signature": "gC/ILNuMUOqTEt3zr1z1cmHobGsb89bqGvVuqJSXsfPcXJI+YgLTyfm3vRqb/zUX4cZCyxl95nJ/lBGQwl/UCg=="
   },
   {
     "brand_id": "npci",
@@ -1974,15 +1974,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "LUOtMXb9s5XiTaJVBqQrTKePZhZPSnzd401hLbXywlJdRUJXgL/nbAd+jr7TSLeFj+b9f23hFOSUCELdy2BCCA=="
+    "signature": "bsYv9ZQ56y6B1yNDnHY3IVz8tFo1EeGLyVEXx0j0gh2gNypb/AMQgpgp5R80GePeJfrYYoRZhiMbvLHVtTVKAw=="
   },
   {
     "brand_id": "hdfc-life",
@@ -3013,12 +3013,12 @@
     "verified": true,
     "needs_verification": false,
     "last_verified": "2026-10-24",
-    "verified_by": "admin-audit",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 2,
+    "version": 3,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "2D4nU2FDdE9yELMKMTihjh7bzBprXG4yKX7RbyVdEm1z0iQj4YwXLpTvae48HGNa/nN1Vq7XXMlQEiQA9Bx/BQ=="
+    "signature": "RLntKpFBIASQQPV6MM5sgEjjGkAvVLBtiSdEsoas/wLRAEcrM+S0fVUsZhJO+OteLFsuUMLqocnUWqTeRp8NCA=="
   },
   {
     "brand_id": "aditya-birla-capital",
@@ -6115,15 +6115,15 @@
     "languages": [
       "en"
     ],
-    "verified": false,
-    "needs_verification": true,
-    "last_verified": null,
-    "verified_by": null,
+    "verified": true,
+    "needs_verification": false,
+    "last_verified": "2026-10-24",
+    "verified_by": "admin-verified-official",
     "source": "claude-knowledge-seed-2026-10-24",
-    "version": 1,
+    "version": 2,
     "dev_only": false,
     "shared_hosting_risk": false,
-    "signature": "PPIKRk14BPGCtuvUs3tjYVoxzeVDBAl+CSblBTYUZbx2nXrfR0YAEdcZz0tMN8h1pr37028sYK8In8VvnqIBDQ=="
+    "signature": "qTFEvkqTj1XbHKsF7tTkhUtM0QEPiAezAWrPKFiSyZpO42iYDFldPFoaos1lc4wM4XRYl3amCymFQLsZVvTdCQ=="
   },
   {
     "brand_id": "indian-railways",
