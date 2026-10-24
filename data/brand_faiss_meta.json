@@ -1,0 +1,7676 @@
+[
+  {
+    "brand_id": "state-bank-of-india",
+    "display_name": "State Bank of India",
+    "category": "bank",
+    "official_domains": [
+      "sbi.co.in",
+      "onlinesbi.sbi",
+      "onlinesbi.com"
+    ],
+    "canonical_url": "https://sbi.co.in/",
+    "tokens": [
+      "sbi",
+      "statebankofindia"
+    ]
+  },
+  {
+    "brand_id": "hdfc-bank",
+    "display_name": "HDFC Bank",
+    "category": "bank",
+    "official_domains": [
+      "hdfcbank.com"
+    ],
+    "canonical_url": "https://hdfcbank.com/",
+    "tokens": [
+      "hdfcbank"
+    ]
+  },
+  {
+    "brand_id": "icici-bank",
+    "display_name": "ICICI Bank",
+    "category": "bank",
+    "official_domains": [
+      "icicibank.com"
+    ],
+    "canonical_url": "https://icicibank.com/",
+    "tokens": [
+      "icicibank"
+    ]
+  },
+  {
+    "brand_id": "axis-bank",
+    "display_name": "Axis Bank",
+    "category": "bank",
+    "official_domains": [
+      "axisbank.com"
+    ],
+    "canonical_url": "https://axisbank.com/",
+    "tokens": [
+      "axisbank"
+    ]
+  },
+  {
+    "brand_id": "kotak-mahindra-bank",
+    "display_name": "Kotak Mahindra Bank",
+    "category": "bank",
+    "official_domains": [
+      "kotak.com"
+    ],
+    "canonical_url": "https://kotak.com/",
+    "tokens": [
+      "kotak",
+      "kotakmahindrabank"
+    ]
+  },
+  {
+    "brand_id": "punjab-national-bank",
+    "display_name": "Punjab National Bank",
+    "category": "bank",
+    "official_domains": [
+      "pnbindia.in",
+      "netpnb.com"
+    ],
+    "canonical_url": "https://pnbindia.in/",
+    "tokens": [
+      "pnbindia",
+      "punjabnationalbank"
+    ]
+  },
+  {
+    "brand_id": "bank-of-baroda",
+    "display_name": "Bank of Baroda",
+    "category": "bank",
+    "official_domains": [
+      "bankofbaroda.in",
+      "bobibanking.com"
+    ],
+    "canonical_url": "https://bankofbaroda.in/",
+    "tokens": [
+      "bankofbaroda"
+    ]
+  },
+  {
+    "brand_id": "canara-bank",
+    "display_name": "Canara Bank",
+    "category": "bank",
+    "official_domains": [
+      "canarabank.com"
+    ],
+    "canonical_url": "https://canarabank.com/",
+    "tokens": [
+      "canarabank"
+    ]
+  },
+  {
+    "brand_id": "union-bank-of-india",
+    "display_name": "Union Bank of India",
+    "category": "bank",
+    "official_domains": [
+      "unionbankofindia.co.in"
+    ],
+    "canonical_url": "https://unionbankofindia.co.in/",
+    "tokens": [
+      "unionbankofindia"
+    ]
+  },
+  {
+    "brand_id": "bank-of-india",
+    "display_name": "Bank of India",
+    "category": "bank",
+    "official_domains": [
+      "bankofindia.co.in"
+    ],
+    "canonical_url": "https://bankofindia.co.in/",
+    "tokens": [
+      "bankofindia"
+    ]
+  },
+  {
+    "brand_id": "indian-bank",
+    "display_name": "Indian Bank",
+    "category": "bank",
+    "official_domains": [
+      "indianbank.in",
+      "indianbank.net.in"
+    ],
+    "canonical_url": "https://indianbank.in/",
+    "tokens": [
+      "indianbank"
+    ]
+  },
+  {
+    "brand_id": "central-bank-of-india",
+    "display_name": "Central Bank of India",
+    "category": "bank",
+    "official_domains": [
+      "centralbankofindia.co.in"
+    ],
+    "canonical_url": "https://centralbankofindia.co.in/",
+    "tokens": [
+      "centralbankofindia"
+    ]
+  },
+  {
+    "brand_id": "indian-overseas-bank",
+    "display_name": "Indian Overseas Bank",
+    "category": "bank",
+    "official_domains": [
+      "iob.in"
+    ],
+    "canonical_url": "https://iob.in/",
+    "tokens": [
+      "indianoverseasbank",
+      "iob"
+    ]
+  },
+  {
+    "brand_id": "uco-bank",
+    "display_name": "UCO Bank",
+    "category": "bank",
+    "official_domains": [
+      "ucobank.com"
+    ],
+    "canonical_url": "https://ucobank.com/",
+    "tokens": [
+      "ucobank"
+    ]
+  },
+  {
+    "brand_id": "bank-of-maharashtra",
+    "display_name": "Bank of Maharashtra",
+    "category": "bank",
+    "official_domains": [
+      "bankofmaharashtra.in"
+    ],
+    "canonical_url": "https://bankofmaharashtra.in/",
+    "tokens": [
+      "bankofmaharashtra"
+    ]
+  },
+  {
+    "brand_id": "punjab-and-sind-bank",
+    "display_name": "Punjab and Sind Bank",
+    "category": "bank",
+    "official_domains": [
+      "psbindia.com"
+    ],
+    "canonical_url": "https://psbindia.com/",
+    "tokens": [
+      "psbindia",
+      "punjabandsindbank"
+    ]
+  },
+  {
+    "brand_id": "idbi-bank",
+    "display_name": "IDBI Bank",
+    "category": "bank",
+    "official_domains": [
+      "idbibank.in"
+    ],
+    "canonical_url": "https://idbibank.in/",
+    "tokens": [
+      "idbibank"
+    ]
+  },
+  {
+    "brand_id": "yes-bank",
+    "display_name": "Yes Bank",
+    "category": "bank",
+    "official_domains": [
+      "yesbank.in"
+    ],
+    "canonical_url": "https://yesbank.in/",
+    "tokens": [
+      "yesbank"
+    ]
+  },
+  {
+    "brand_id": "indusind-bank",
+    "display_name": "IndusInd Bank",
+    "category": "bank",
+    "official_domains": [
+      "indusind.com"
+    ],
+    "canonical_url": "https://indusind.com/",
+    "tokens": [
+      "indusind",
+      "indusindbank"
+    ]
+  },
+  {
+    "brand_id": "federal-bank",
+    "display_name": "Federal Bank",
+    "category": "bank",
+    "official_domains": [
+      "federalbank.co.in"
+    ],
+    "canonical_url": "https://federalbank.co.in/",
+    "tokens": [
+      "federalbank"
+    ]
+  },
+  {
+    "brand_id": "south-indian-bank",
+    "display_name": "South Indian Bank",
+    "category": "bank",
+    "official_domains": [
+      "southindianbank.com"
+    ],
+    "canonical_url": "https://southindianbank.com/",
+    "tokens": [
+      "southindianbank"
+    ]
+  },
+  {
+    "brand_id": "karur-vysya-bank",
+    "display_name": "Karur Vysya Bank",
+    "category": "bank",
+    "official_domains": [
+      "kvb.co.in"
+    ],
+    "canonical_url": "https://kvb.co.in/",
+    "tokens": [
+      "karurvysyabank",
+      "kvb"
+    ]
+  },
+  {
+    "brand_id": "city-union-bank",
+    "display_name": "City Union Bank",
+    "category": "bank",
+    "official_domains": [
+      "cityunionbank.com"
+    ],
+    "canonical_url": "https://cityunionbank.com/",
+    "tokens": [
+      "cityunionbank"
+    ]
+  },
+  {
+    "brand_id": "bandhan-bank",
+    "display_name": "Bandhan Bank",
+    "category": "bank",
+    "official_domains": [
+      "bandhanbank.com"
+    ],
+    "canonical_url": "https://bandhanbank.com/",
+    "tokens": [
+      "bandhanbank"
+    ]
+  },
+  {
+    "brand_id": "idfc-first-bank",
+    "display_name": "IDFC First Bank",
+    "category": "bank",
+    "official_domains": [
+      "idfcfirstbank.com"
+    ],
+    "canonical_url": "https://idfcfirstbank.com/",
+    "tokens": [
+      "idfcfirstbank"
+    ]
+  },
+  {
+    "brand_id": "rbl-bank",
+    "display_name": "RBL Bank",
+    "category": "bank",
+    "official_domains": [
+      "rblbank.com"
+    ],
+    "canonical_url": "https://rblbank.com/",
+    "tokens": [
+      "rblbank"
+    ]
+  },
+  {
+    "brand_id": "au-small-finance-bank",
+    "display_name": "AU Small Finance Bank",
+    "category": "bank",
+    "official_domains": [
+      "aubank.in"
+    ],
+    "canonical_url": "https://aubank.in/",
+    "tokens": [
+      "aubank",
+      "ausmallfinancebank"
+    ]
+  },
+  {
+    "brand_id": "equitas-small-finance-bank",
+    "display_name": "Equitas Small Finance Bank",
+    "category": "bank",
+    "official_domains": [
+      "equitasbank.com"
+    ],
+    "canonical_url": "https://equitasbank.com/",
+    "tokens": [
+      "equitasbank",
+      "equitassmallfinancebank"
+    ]
+  },
+  {
+    "brand_id": "ujjivan-small-finance-bank",
+    "display_name": "Ujjivan Small Finance Bank",
+    "category": "bank",
+    "official_domains": [
+      "ujjivansfb.in"
+    ],
+    "canonical_url": "https://ujjivansfb.in/",
+    "tokens": [
+      "ujjivansfb",
+      "ujjivansmallfinancebank"
+    ]
+  },
+  {
+    "brand_id": "jammu-and-kashmir-bank",
+    "display_name": "Jammu and Kashmir Bank",
+    "category": "bank",
+    "official_domains": [
+      "jkbank.com"
+    ],
+    "canonical_url": "https://jkbank.com/",
+    "tokens": [
+      "jammuandkashmirbank",
+      "jkbank"
+    ]
+  },
+  {
+    "brand_id": "karnataka-bank",
+    "display_name": "Karnataka Bank",
+    "category": "bank",
+    "official_domains": [
+      "karnatakabank.com"
+    ],
+    "canonical_url": "https://karnatakabank.com/",
+    "tokens": [
+      "karnatakabank"
+    ]
+  },
+  {
+    "brand_id": "tamilnad-mercantile-bank",
+    "display_name": "Tamilnad Mercantile Bank",
+    "category": "bank",
+    "official_domains": [
+      "tmbnet.in"
+    ],
+    "canonical_url": "https://tmbnet.in/",
+    "tokens": [
+      "tamilnadmercantilebank",
+      "tmbnet"
+    ]
+  },
+  {
+    "brand_id": "dhanlaxmi-bank",
+    "display_name": "Dhanlaxmi Bank",
+    "category": "bank",
+    "official_domains": [
+      "dhanbank.com"
+    ],
+    "canonical_url": "https://dhanbank.com/",
+    "tokens": [
+      "dhanbank",
+      "dhanlaxmibank"
+    ]
+  },
+  {
+    "brand_id": "dcb-bank",
+    "display_name": "DCB Bank",
+    "category": "bank",
+    "official_domains": [
+      "dcbbank.com"
+    ],
+    "canonical_url": "https://dcbbank.com/",
+    "tokens": [
+      "dcbbank"
+    ]
+  },
+  {
+    "brand_id": "csb-bank",
+    "display_name": "CSB Bank",
+    "category": "bank",
+    "official_domains": [
+      "csb.co.in"
+    ],
+    "canonical_url": "https://csb.co.in/",
+    "tokens": [
+      "csb",
+      "csbbank"
+    ]
+  },
+  {
+    "brand_id": "nainital-bank",
+    "display_name": "Nainital Bank",
+    "category": "bank",
+    "official_domains": [
+      "nainitalbank.co.in"
+    ],
+    "canonical_url": "https://nainitalbank.co.in/",
+    "tokens": [
+      "nainitalbank"
+    ]
+  },
+  {
+    "brand_id": "standard-chartered",
+    "display_name": "Standard Chartered",
+    "category": "bank",
+    "official_domains": [
+      "sc.com"
+    ],
+    "canonical_url": "https://sc.com/",
+    "tokens": [
+      "sc",
+      "standardchartered"
+    ]
+  },
+  {
+    "brand_id": "hsbc",
+    "display_name": "HSBC",
+    "category": "bank",
+    "official_domains": [
+      "hsbc.co.in",
+      "hsbc.com"
+    ],
+    "canonical_url": "https://hsbc.co.in/",
+    "tokens": [
+      "hsbc"
+    ]
+  },
+  {
+    "brand_id": "citibank",
+    "display_name": "Citibank",
+    "category": "bank",
+    "official_domains": [
+      "citi.com",
+      "citibank.co.in"
+    ],
+    "canonical_url": "https://citi.com/",
+    "tokens": [
+      "citi",
+      "citibank"
+    ]
+  },
+  {
+    "brand_id": "deutsche-bank",
+    "display_name": "Deutsche Bank",
+    "category": "bank",
+    "official_domains": [
+      "db.com"
+    ],
+    "canonical_url": "https://db.com/",
+    "tokens": [
+      "db",
+      "deutschebank"
+    ]
+  },
+  {
+    "brand_id": "dbs-bank",
+    "display_name": "DBS Bank",
+    "category": "bank",
+    "official_domains": [
+      "dbs.com"
+    ],
+    "canonical_url": "https://dbs.com/",
+    "tokens": [
+      "dbs",
+      "dbsbank"
+    ]
+  },
+  {
+    "brand_id": "paytm-payments-bank",
+    "display_name": "Paytm Payments Bank",
+    "category": "bank",
+    "official_domains": [
+      "paytmbank.com"
+    ],
+    "canonical_url": "https://paytmbank.com/",
+    "tokens": [
+      "paytmbank",
+      "paytmpaymentsbank"
+    ]
+  },
+  {
+    "brand_id": "india-post-payments-bank",
+    "display_name": "India Post Payments Bank",
+    "category": "bank",
+    "official_domains": [
+      "ippbonline.com"
+    ],
+    "canonical_url": "https://ippbonline.com/",
+    "tokens": [
+      "indiapostpaymentsbank",
+      "ippbonline"
+    ]
+  },
+  {
+    "brand_id": "fino-payments-bank",
+    "display_name": "Fino Payments Bank",
+    "category": "bank",
+    "official_domains": [
+      "finobank.com"
+    ],
+    "canonical_url": "https://finobank.com/",
+    "tokens": [
+      "finobank",
+      "finopaymentsbank"
+    ]
+  },
+  {
+    "brand_id": "jpmorgan-chase",
+    "display_name": "JPMorgan Chase",
+    "category": "bank",
+    "official_domains": [
+      "chase.com",
+      "jpmorganchase.com"
+    ],
+    "canonical_url": "https://chase.com/",
+    "tokens": [
+      "chase",
+      "jpmorganchase"
+    ]
+  },
+  {
+    "brand_id": "bank-of-america",
+    "display_name": "Bank of America",
+    "category": "bank",
+    "official_domains": [
+      "bankofamerica.com"
+    ],
+    "canonical_url": "https://bankofamerica.com/",
+    "tokens": [
+      "bankofamerica"
+    ]
+  },
+  {
+    "brand_id": "wells-fargo",
+    "display_name": "Wells Fargo",
+    "category": "bank",
+    "official_domains": [
+      "wellsfargo.com"
+    ],
+    "canonical_url": "https://wellsfargo.com/",
+    "tokens": [
+      "wellsfargo"
+    ]
+  },
+  {
+    "brand_id": "goldman-sachs",
+    "display_name": "Goldman Sachs",
+    "category": "bank",
+    "official_domains": [
+      "goldmansachs.com"
+    ],
+    "canonical_url": "https://goldmansachs.com/",
+    "tokens": [
+      "goldmansachs"
+    ]
+  },
+  {
+    "brand_id": "morgan-stanley",
+    "display_name": "Morgan Stanley",
+    "category": "bank",
+    "official_domains": [
+      "morganstanley.com"
+    ],
+    "canonical_url": "https://morganstanley.com/",
+    "tokens": [
+      "morganstanley"
+    ]
+  },
+  {
+    "brand_id": "barclays",
+    "display_name": "Barclays",
+    "category": "bank",
+    "official_domains": [
+      "barclays.co.uk",
+      "barclays.com"
+    ],
+    "canonical_url": "https://barclays.co.uk/",
+    "tokens": [
+      "barclays"
+    ]
+  },
+  {
+    "brand_id": "lloyds-bank",
+    "display_name": "Lloyds Bank",
+    "category": "bank",
+    "official_domains": [
+      "lloydsbank.com"
+    ],
+    "canonical_url": "https://lloydsbank.com/",
+    "tokens": [
+      "lloydsbank"
+    ]
+  },
+  {
+    "brand_id": "natwest",
+    "display_name": "NatWest",
+    "category": "bank",
+    "official_domains": [
+      "natwest.com"
+    ],
+    "canonical_url": "https://natwest.com/",
+    "tokens": [
+      "natwest"
+    ]
+  },
+  {
+    "brand_id": "santander",
+    "display_name": "Santander",
+    "category": "bank",
+    "official_domains": [
+      "santander.com"
+    ],
+    "canonical_url": "https://santander.com/",
+    "tokens": [
+      "santander"
+    ]
+  },
+  {
+    "brand_id": "bnp-paribas",
+    "display_name": "BNP Paribas",
+    "category": "bank",
+    "official_domains": [
+      "bnpparibas.com"
+    ],
+    "canonical_url": "https://bnpparibas.com/",
+    "tokens": [
+      "bnpparibas"
+    ]
+  },
+  {
+    "brand_id": "ubs",
+    "display_name": "UBS",
+    "category": "bank",
+    "official_domains": [
+      "ubs.com"
+    ],
+    "canonical_url": "https://ubs.com/",
+    "tokens": [
+      "ubs"
+    ]
+  },
+  {
+    "brand_id": "capital-one",
+    "display_name": "Capital One",
+    "category": "bank",
+    "official_domains": [
+      "capitalone.com"
+    ],
+    "canonical_url": "https://capitalone.com/",
+    "tokens": [
+      "capitalone"
+    ]
+  },
+  {
+    "brand_id": "discover-financial",
+    "display_name": "Discover Financial",
+    "category": "bank",
+    "official_domains": [
+      "discover.com"
+    ],
+    "canonical_url": "https://discover.com/",
+    "tokens": [
+      "discover",
+      "discoverfinancial"
+    ]
+  },
+  {
+    "brand_id": "revolut",
+    "display_name": "Revolut",
+    "category": "bank",
+    "official_domains": [
+      "revolut.com"
+    ],
+    "canonical_url": "https://revolut.com/",
+    "tokens": [
+      "revolut"
+    ]
+  },
+  {
+    "brand_id": "monzo",
+    "display_name": "Monzo",
+    "category": "bank",
+    "official_domains": [
+      "monzo.com"
+    ],
+    "canonical_url": "https://monzo.com/",
+    "tokens": [
+      "monzo"
+    ]
+  },
+  {
+    "brand_id": "reserve-bank-of-india",
+    "display_name": "Reserve Bank of India",
+    "category": "government",
+    "official_domains": [
+      "rbi.org.in"
+    ],
+    "canonical_url": "https://rbi.org.in/",
+    "tokens": [
+      "rbi",
+      "reservebankofindia"
+    ]
+  },
+  {
+    "brand_id": "npci",
+    "display_name": "NPCI",
+    "category": "payment",
+    "official_domains": [
+      "npci.org.in"
+    ],
+    "canonical_url": "https://npci.org.in/",
+    "tokens": [
+      "npci"
+    ]
+  },
+  {
+    "brand_id": "hdfc-life",
+    "display_name": "HDFC Life",
+    "category": "insurance",
+    "official_domains": [
+      "hdfclife.com"
+    ],
+    "canonical_url": "https://hdfclife.com/",
+    "tokens": [
+      "hdfclife"
+    ]
+  },
+  {
+    "brand_id": "icici-prudential-life",
+    "display_name": "ICICI Prudential Life",
+    "category": "insurance",
+    "official_domains": [
+      "iciciprulife.com"
+    ],
+    "canonical_url": "https://iciciprulife.com/",
+    "tokens": [
+      "iciciprudentiallife",
+      "iciciprulife"
+    ]
+  },
+  {
+    "brand_id": "sbi-life-insurance",
+    "display_name": "SBI Life Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "sbilife.co.in"
+    ],
+    "canonical_url": "https://sbilife.co.in/",
+    "tokens": [
+      "sbilife",
+      "sbilifeinsurance"
+    ]
+  },
+  {
+    "brand_id": "life-insurance-corporation-of-india",
+    "display_name": "Life Insurance Corporation of India",
+    "category": "insurance",
+    "official_domains": [
+      "licindia.in"
+    ],
+    "canonical_url": "https://licindia.in/",
+    "tokens": [
+      "licindia",
+      "lifeinsurancecorporationofindia"
+    ]
+  },
+  {
+    "brand_id": "max-life-insurance",
+    "display_name": "Max Life Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "maxlifeinsurance.com"
+    ],
+    "canonical_url": "https://maxlifeinsurance.com/",
+    "tokens": [
+      "maxlifeinsurance"
+    ]
+  },
+  {
+    "brand_id": "bajaj-allianz",
+    "display_name": "Bajaj Allianz",
+    "category": "insurance",
+    "official_domains": [
+      "bajajallianz.com"
+    ],
+    "canonical_url": "https://bajajallianz.com/",
+    "tokens": [
+      "bajajallianz"
+    ]
+  },
+  {
+    "brand_id": "star-health-insurance",
+    "display_name": "Star Health Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "starhealth.in"
+    ],
+    "canonical_url": "https://starhealth.in/",
+    "tokens": [
+      "starhealth",
+      "starhealthinsurance"
+    ]
+  },
+  {
+    "brand_id": "hdfc-ergo",
+    "display_name": "HDFC Ergo",
+    "category": "insurance",
+    "official_domains": [
+      "hdfcergo.com"
+    ],
+    "canonical_url": "https://hdfcergo.com/",
+    "tokens": [
+      "hdfcergo"
+    ]
+  },
+  {
+    "brand_id": "icici-lombard",
+    "display_name": "ICICI Lombard",
+    "category": "insurance",
+    "official_domains": [
+      "icicilombard.com"
+    ],
+    "canonical_url": "https://icicilombard.com/",
+    "tokens": [
+      "icicilombard"
+    ]
+  },
+  {
+    "brand_id": "new-india-assurance",
+    "display_name": "New India Assurance",
+    "category": "insurance",
+    "official_domains": [
+      "newindia.co.in"
+    ],
+    "canonical_url": "https://newindia.co.in/",
+    "tokens": [
+      "newindia",
+      "newindiaassurance"
+    ]
+  },
+  {
+    "brand_id": "tata-aig",
+    "display_name": "Tata AIG",
+    "category": "insurance",
+    "official_domains": [
+      "tataaig.com"
+    ],
+    "canonical_url": "https://tataaig.com/",
+    "tokens": [
+      "tataaig"
+    ]
+  },
+  {
+    "brand_id": "tata-aia-life",
+    "display_name": "Tata AIA Life",
+    "category": "insurance",
+    "official_domains": [
+      "tataaia.com"
+    ],
+    "canonical_url": "https://tataaia.com/",
+    "tokens": [
+      "tataaia",
+      "tataaialife"
+    ]
+  },
+  {
+    "brand_id": "care-health-insurance",
+    "display_name": "Care Health Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "careinsurance.com"
+    ],
+    "canonical_url": "https://careinsurance.com/",
+    "tokens": [
+      "carehealthinsurance",
+      "careinsurance"
+    ]
+  },
+  {
+    "brand_id": "niva-bupa",
+    "display_name": "Niva Bupa",
+    "category": "insurance",
+    "official_domains": [
+      "nivabupa.com"
+    ],
+    "canonical_url": "https://nivabupa.com/",
+    "tokens": [
+      "nivabupa"
+    ]
+  },
+  {
+    "brand_id": "manipalcigna",
+    "display_name": "ManipalCigna",
+    "category": "insurance",
+    "official_domains": [
+      "manipalcigna.com"
+    ],
+    "canonical_url": "https://manipalcigna.com/",
+    "tokens": [
+      "manipalcigna"
+    ]
+  },
+  {
+    "brand_id": "digit-insurance",
+    "display_name": "Digit Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "godigit.com"
+    ],
+    "canonical_url": "https://godigit.com/",
+    "tokens": [
+      "digitinsurance",
+      "godigit"
+    ]
+  },
+  {
+    "brand_id": "acko",
+    "display_name": "Acko",
+    "category": "insurance",
+    "official_domains": [
+      "acko.com"
+    ],
+    "canonical_url": "https://acko.com/",
+    "tokens": [
+      "acko"
+    ]
+  },
+  {
+    "brand_id": "pnb-metlife",
+    "display_name": "PNB MetLife",
+    "category": "insurance",
+    "official_domains": [
+      "pnbmetlife.com"
+    ],
+    "canonical_url": "https://pnbmetlife.com/",
+    "tokens": [
+      "pnbmetlife"
+    ]
+  },
+  {
+    "brand_id": "kotak-life",
+    "display_name": "Kotak Life",
+    "category": "insurance",
+    "official_domains": [
+      "kotaklife.com"
+    ],
+    "canonical_url": "https://kotaklife.com/",
+    "tokens": [
+      "kotaklife"
+    ]
+  },
+  {
+    "brand_id": "aditya-birla-sun-life-insurance",
+    "display_name": "Aditya Birla Sun Life Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "adityabirlasunlifeinsurance.com"
+    ],
+    "canonical_url": "https://adityabirlasunlifeinsurance.com/",
+    "tokens": [
+      "adityabirlasunlifeinsurance"
+    ]
+  },
+  {
+    "brand_id": "oriental-insurance",
+    "display_name": "Oriental Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "orientalinsurance.org.in"
+    ],
+    "canonical_url": "https://orientalinsurance.org.in/",
+    "tokens": [
+      "orientalinsurance"
+    ]
+  },
+  {
+    "brand_id": "united-india-insurance",
+    "display_name": "United India Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "uiic.co.in"
+    ],
+    "canonical_url": "https://uiic.co.in/",
+    "tokens": [
+      "uiic",
+      "unitedindiainsurance"
+    ]
+  },
+  {
+    "brand_id": "national-insurance",
+    "display_name": "National Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "nationalinsurance.nic.co.in"
+    ],
+    "canonical_url": "https://nationalinsurance.nic.co.in/",
+    "tokens": [
+      "nationalinsurance"
+    ]
+  },
+  {
+    "brand_id": "sbi-general-insurance",
+    "display_name": "SBI General Insurance",
+    "category": "insurance",
+    "official_domains": [
+      "sbigeneral.in"
+    ],
+    "canonical_url": "https://sbigeneral.in/",
+    "tokens": [
+      "sbigeneral",
+      "sbigeneralinsurance"
+    ]
+  },
+  {
+    "brand_id": "iffco-tokio",
+    "display_name": "IFFCO Tokio",
+    "category": "insurance",
+    "official_domains": [
+      "iffcotokio.co.in"
+    ],
+    "canonical_url": "https://iffcotokio.co.in/",
+    "tokens": [
+      "iffcotokio"
+    ]
+  },
+  {
+    "brand_id": "policybazaar",
+    "display_name": "Policybazaar",
+    "category": "insurance",
+    "official_domains": [
+      "policybazaar.com"
+    ],
+    "canonical_url": "https://policybazaar.com/",
+    "tokens": [
+      "policybazaar"
+    ]
+  },
+  {
+    "brand_id": "bajaj-finserv",
+    "display_name": "Bajaj Finserv",
+    "category": "finance",
+    "official_domains": [
+      "bajajfinserv.in",
+      "bajajfinance.in"
+    ],
+    "canonical_url": "https://bajajfinserv.in/",
+    "tokens": [
+      "bajajfinserv"
+    ]
+  },
+  {
+    "brand_id": "muthoot-finance",
+    "display_name": "Muthoot Finance",
+    "category": "finance",
+    "official_domains": [
+      "muthootfinance.com"
+    ],
+    "canonical_url": "https://muthootfinance.com/",
+    "tokens": [
+      "muthootfinance"
+    ]
+  },
+  {
+    "brand_id": "manappuram-finance",
+    "display_name": "Manappuram Finance",
+    "category": "finance",
+    "official_domains": [
+      "manappuram.com"
+    ],
+    "canonical_url": "https://manappuram.com/",
+    "tokens": [
+      "manappuram",
+      "manappuramfinance"
+    ]
+  },
+  {
+    "brand_id": "tata-capital",
+    "display_name": "Tata Capital",
+    "category": "finance",
+    "official_domains": [
+      "tatacapital.com"
+    ],
+    "canonical_url": "https://tatacapital.com/",
+    "tokens": [
+      "tatacapital"
+    ]
+  },
+  {
+    "brand_id": "mahindra-finance",
+    "display_name": "Mahindra Finance",
+    "category": "finance",
+    "official_domains": [
+      "mahindrafinance.com"
+    ],
+    "canonical_url": "https://mahindrafinance.com/",
+    "tokens": [
+      "mahindrafinance"
+    ]
+  },
+  {
+    "brand_id": "sbi-card",
+    "display_name": "SBI Card",
+    "category": "finance",
+    "official_domains": [
+      "sbicard.com"
+    ],
+    "canonical_url": "https://sbicard.com/",
+    "tokens": [
+      "sbicard"
+    ]
+  },
+  {
+    "brand_id": "aditya-birla-capital",
+    "display_name": "Aditya Birla Capital",
+    "category": "finance",
+    "official_domains": [
+      "adityabirlacapital.com"
+    ],
+    "canonical_url": "https://adityabirlacapital.com/",
+    "tokens": [
+      "adityabirlacapital"
+    ]
+  },
+  {
+    "brand_id": "shriram-finance",
+    "display_name": "Shriram Finance",
+    "category": "finance",
+    "official_domains": [
+      "shriramfinance.in"
+    ],
+    "canonical_url": "https://shriramfinance.in/",
+    "tokens": [
+      "shriramfinance"
+    ]
+  },
+  {
+    "brand_id": "l-and-t-finance",
+    "display_name": "L and T Finance",
+    "category": "finance",
+    "official_domains": [
+      "ltfs.com"
+    ],
+    "canonical_url": "https://ltfs.com/",
+    "tokens": [
+      "landtfinance",
+      "ltfs"
+    ]
+  },
+  {
+    "brand_id": "hero-fincorp",
+    "display_name": "Hero FinCorp",
+    "category": "finance",
+    "official_domains": [
+      "herofincorp.com"
+    ],
+    "canonical_url": "https://herofincorp.com/",
+    "tokens": [
+      "herofincorp"
+    ]
+  },
+  {
+    "brand_id": "cibil",
+    "display_name": "CIBIL",
+    "category": "finance",
+    "official_domains": [
+      "cibil.com"
+    ],
+    "canonical_url": "https://cibil.com/",
+    "tokens": [
+      "cibil"
+    ]
+  },
+  {
+    "brand_id": "experian",
+    "display_name": "Experian",
+    "category": "finance",
+    "official_domains": [
+      "experian.com",
+      "experian.in"
+    ],
+    "canonical_url": "https://experian.com/",
+    "tokens": [
+      "experian"
+    ]
+  },
+  {
+    "brand_id": "equifax",
+    "display_name": "Equifax",
+    "category": "finance",
+    "official_domains": [
+      "equifax.com"
+    ],
+    "canonical_url": "https://equifax.com/",
+    "tokens": [
+      "equifax"
+    ]
+  },
+  {
+    "brand_id": "transunion",
+    "display_name": "TransUnion",
+    "category": "finance",
+    "official_domains": [
+      "transunion.com"
+    ],
+    "canonical_url": "https://transunion.com/",
+    "tokens": [
+      "transunion"
+    ]
+  },
+  {
+    "brand_id": "zerodha",
+    "display_name": "Zerodha",
+    "category": "finance",
+    "official_domains": [
+      "zerodha.com"
+    ],
+    "canonical_url": "https://zerodha.com/",
+    "tokens": [
+      "zerodha"
+    ]
+  },
+  {
+    "brand_id": "groww",
+    "display_name": "Groww",
+    "category": "finance",
+    "official_domains": [
+      "groww.in"
+    ],
+    "canonical_url": "https://groww.in/",
+    "tokens": [
+      "groww"
+    ]
+  },
+  {
+    "brand_id": "upstox",
+    "display_name": "Upstox",
+    "category": "finance",
+    "official_domains": [
+      "upstox.com"
+    ],
+    "canonical_url": "https://upstox.com/",
+    "tokens": [
+      "upstox"
+    ]
+  },
+  {
+    "brand_id": "angel-one",
+    "display_name": "Angel One",
+    "category": "finance",
+    "official_domains": [
+      "angelone.in"
+    ],
+    "canonical_url": "https://angelone.in/",
+    "tokens": [
+      "angelone"
+    ]
+  },
+  {
+    "brand_id": "5paisa",
+    "display_name": "5paisa",
+    "category": "finance",
+    "official_domains": [
+      "5paisa.com"
+    ],
+    "canonical_url": "https://5paisa.com/",
+    "tokens": [
+      "5paisa"
+    ]
+  },
+  {
+    "brand_id": "icici-direct",
+    "display_name": "ICICI Direct",
+    "category": "finance",
+    "official_domains": [
+      "icicidirect.com"
+    ],
+    "canonical_url": "https://icicidirect.com/",
+    "tokens": [
+      "icicidirect"
+    ]
+  },
+  {
+    "brand_id": "hdfc-securities",
+    "display_name": "HDFC Securities",
+    "category": "finance",
+    "official_domains": [
+      "hdfcsec.com"
+    ],
+    "canonical_url": "https://hdfcsec.com/",
+    "tokens": [
+      "hdfcsec",
+      "hdfcsecurities"
+    ]
+  },
+  {
+    "brand_id": "kotak-securities",
+    "display_name": "Kotak Securities",
+    "category": "finance",
+    "official_domains": [
+      "kotaksecurities.com"
+    ],
+    "canonical_url": "https://kotaksecurities.com/",
+    "tokens": [
+      "kotaksecurities"
+    ]
+  },
+  {
+    "brand_id": "motilal-oswal",
+    "display_name": "Motilal Oswal",
+    "category": "finance",
+    "official_domains": [
+      "motilaloswal.com"
+    ],
+    "canonical_url": "https://motilaloswal.com/",
+    "tokens": [
+      "motilaloswal"
+    ]
+  },
+  {
+    "brand_id": "sharekhan",
+    "display_name": "Sharekhan",
+    "category": "finance",
+    "official_domains": [
+      "sharekhan.com"
+    ],
+    "canonical_url": "https://sharekhan.com/",
+    "tokens": [
+      "sharekhan"
+    ]
+  },
+  {
+    "brand_id": "dhan",
+    "display_name": "Dhan",
+    "category": "finance",
+    "official_domains": [
+      "dhan.co"
+    ],
+    "canonical_url": "https://dhan.co/",
+    "tokens": [
+      "dhan"
+    ]
+  },
+  {
+    "brand_id": "kuvera",
+    "display_name": "Kuvera",
+    "category": "finance",
+    "official_domains": [
+      "kuvera.in"
+    ],
+    "canonical_url": "https://kuvera.in/",
+    "tokens": [
+      "kuvera"
+    ]
+  },
+  {
+    "brand_id": "nse-india",
+    "display_name": "NSE India",
+    "category": "finance",
+    "official_domains": [
+      "nseindia.com"
+    ],
+    "canonical_url": "https://nseindia.com/",
+    "tokens": [
+      "nseindia"
+    ]
+  },
+  {
+    "brand_id": "bse-india",
+    "display_name": "BSE India",
+    "category": "finance",
+    "official_domains": [
+      "bseindia.com"
+    ],
+    "canonical_url": "https://bseindia.com/",
+    "tokens": [
+      "bseindia"
+    ]
+  },
+  {
+    "brand_id": "cdsl",
+    "display_name": "CDSL",
+    "category": "finance",
+    "official_domains": [
+      "cdslindia.com"
+    ],
+    "canonical_url": "https://cdslindia.com/",
+    "tokens": [
+      "cdsl",
+      "cdslindia"
+    ]
+  },
+  {
+    "brand_id": "nsdl",
+    "display_name": "NSDL",
+    "category": "finance",
+    "official_domains": [
+      "nsdl.co.in"
+    ],
+    "canonical_url": "https://nsdl.co.in/",
+    "tokens": [
+      "nsdl"
+    ]
+  },
+  {
+    "brand_id": "cams",
+    "display_name": "CAMS",
+    "category": "finance",
+    "official_domains": [
+      "camsonline.com"
+    ],
+    "canonical_url": "https://camsonline.com/",
+    "tokens": [
+      "cams",
+      "camsonline"
+    ]
+  },
+  {
+    "brand_id": "kfintech",
+    "display_name": "KFintech",
+    "category": "finance",
+    "official_domains": [
+      "kfintech.com"
+    ],
+    "canonical_url": "https://kfintech.com/",
+    "tokens": [
+      "kfintech"
+    ]
+  },
+  {
+    "brand_id": "amfi",
+    "display_name": "AMFI",
+    "category": "finance",
+    "official_domains": [
+      "amfiindia.com"
+    ],
+    "canonical_url": "https://amfiindia.com/",
+    "tokens": [
+      "amfi",
+      "amfiindia"
+    ]
+  },
+  {
+    "brand_id": "mf-utilities",
+    "display_name": "MF Utilities",
+    "category": "finance",
+    "official_domains": [
+      "mfuindia.com"
+    ],
+    "canonical_url": "https://mfuindia.com/",
+    "tokens": [
+      "mfuindia",
+      "mfutilities"
+    ]
+  },
+  {
+    "brand_id": "sbi-mutual-fund",
+    "display_name": "SBI Mutual Fund",
+    "category": "finance",
+    "official_domains": [
+      "sbimf.com"
+    ],
+    "canonical_url": "https://sbimf.com/",
+    "tokens": [
+      "sbimf",
+      "sbimutualfund"
+    ]
+  },
+  {
+    "brand_id": "hdfc-mutual-fund",
+    "display_name": "HDFC Mutual Fund",
+    "category": "finance",
+    "official_domains": [
+      "hdfcfund.com"
+    ],
+    "canonical_url": "https://hdfcfund.com/",
+    "tokens": [
+      "hdfcfund",
+      "hdfcmutualfund"
+    ]
+  },
+  {
+    "brand_id": "icici-prudential-mutual-fund",
+    "display_name": "ICICI Prudential Mutual Fund",
+    "category": "finance",
+    "official_domains": [
+      "icicipruamc.com"
+    ],
+    "canonical_url": "https://icicipruamc.com/",
+    "tokens": [
+      "icicipruamc",
+      "iciciprudentialmutualfund"
+    ]
+  },
+  {
+    "brand_id": "axis-mutual-fund",
+    "display_name": "Axis Mutual Fund",
+    "category": "finance",
+    "official_domains": [
+      "axismf.com"
+    ],
+    "canonical_url": "https://axismf.com/",
+    "tokens": [
+      "axismf",
+      "axismutualfund"
+    ]
+  },
+  {
+    "brand_id": "nippon-india-mutual-fund",
+    "display_name": "Nippon India Mutual Fund",
+    "category": "finance",
+    "official_domains": [
+      "nipponindiamf.com"
+    ],
+    "canonical_url": "https://nipponindiamf.com/",
+    "tokens": [
+      "nipponindiamf",
+      "nipponindiamutualfund"
+    ]
+  },
+  {
+    "brand_id": "kotak-mutual-fund",
+    "display_name": "Kotak Mutual Fund",
+    "category": "finance",
+    "official_domains": [
+      "kotakmf.com"
+    ],
+    "canonical_url": "https://kotakmf.com/",
+    "tokens": [
+      "kotakmf",
+      "kotakmutualfund"
+    ]
+  },
+  {
+    "brand_id": "uti-mutual-fund",
+    "display_name": "UTI Mutual Fund",
+    "category": "finance",
+    "official_domains": [
+      "utimf.com"
+    ],
+    "canonical_url": "https://utimf.com/",
+    "tokens": [
+      "utimf",
+      "utimutualfund"
+    ]
+  },
+  {
+    "brand_id": "charles-schwab",
+    "display_name": "Charles Schwab",
+    "category": "finance",
+    "official_domains": [
+      "schwab.com"
+    ],
+    "canonical_url": "https://schwab.com/",
+    "tokens": [
+      "charlesschwab",
+      "schwab"
+    ]
+  },
+  {
+    "brand_id": "fidelity",
+    "display_name": "Fidelity",
+    "category": "finance",
+    "official_domains": [
+      "fidelity.com"
+    ],
+    "canonical_url": "https://fidelity.com/",
+    "tokens": [
+      "fidelity"
+    ]
+  },
+  {
+    "brand_id": "vanguard",
+    "display_name": "Vanguard",
+    "category": "finance",
+    "official_domains": [
+      "vanguard.com"
+    ],
+    "canonical_url": "https://vanguard.com/",
+    "tokens": [
+      "vanguard"
+    ]
+  },
+  {
+    "brand_id": "robinhood",
+    "display_name": "Robinhood",
+    "category": "finance",
+    "official_domains": [
+      "robinhood.com"
+    ],
+    "canonical_url": "https://robinhood.com/",
+    "tokens": [
+      "robinhood"
+    ]
+  },
+  {
+    "brand_id": "intuit",
+    "display_name": "Intuit",
+    "category": "finance",
+    "official_domains": [
+      "intuit.com"
+    ],
+    "canonical_url": "https://intuit.com/",
+    "tokens": [
+      "intuit"
+    ]
+  },
+  {
+    "brand_id": "paytm",
+    "display_name": "Paytm",
+    "category": "payment",
+    "official_domains": [
+      "paytm.com"
+    ],
+    "canonical_url": "https://paytm.com/",
+    "tokens": [
+      "paytm"
+    ]
+  },
+  {
+    "brand_id": "phonepe",
+    "display_name": "PhonePe",
+    "category": "payment",
+    "official_domains": [
+      "phonepe.com"
+    ],
+    "canonical_url": "https://phonepe.com/",
+    "tokens": [
+      "phonepe"
+    ]
+  },
+  {
+    "brand_id": "bhim-upi",
+    "display_name": "BHIM UPI",
+    "category": "payment",
+    "official_domains": [
+      "bhimupi.org.in"
+    ],
+    "canonical_url": "https://bhimupi.org.in/",
+    "tokens": [
+      "bhimupi"
+    ]
+  },
+  {
+    "brand_id": "razorpay",
+    "display_name": "Razorpay",
+    "category": "payment",
+    "official_domains": [
+      "razorpay.com"
+    ],
+    "canonical_url": "https://razorpay.com/",
+    "tokens": [
+      "razorpay"
+    ]
+  },
+  {
+    "brand_id": "payu",
+    "display_name": "PayU",
+    "category": "payment",
+    "official_domains": [
+      "payu.in"
+    ],
+    "canonical_url": "https://payu.in/",
+    "tokens": [
+      "payu"
+    ]
+  },
+  {
+    "brand_id": "cashfree",
+    "display_name": "Cashfree",
+    "category": "payment",
+    "official_domains": [
+      "cashfree.com"
+    ],
+    "canonical_url": "https://cashfree.com/",
+    "tokens": [
+      "cashfree"
+    ]
+  },
+  {
+    "brand_id": "ccavenue",
+    "display_name": "CCAvenue",
+    "category": "payment",
+    "official_domains": [
+      "ccavenue.com"
+    ],
+    "canonical_url": "https://ccavenue.com/",
+    "tokens": [
+      "ccavenue"
+    ]
+  },
+  {
+    "brand_id": "billdesk",
+    "display_name": "BillDesk",
+    "category": "payment",
+    "official_domains": [
+      "billdesk.com"
+    ],
+    "canonical_url": "https://billdesk.com/",
+    "tokens": [
+      "billdesk"
+    ]
+  },
+  {
+    "brand_id": "instamojo",
+    "display_name": "Instamojo",
+    "category": "payment",
+    "official_domains": [
+      "instamojo.com"
+    ],
+    "canonical_url": "https://instamojo.com/",
+    "tokens": [
+      "instamojo"
+    ]
+  },
+  {
+    "brand_id": "mobikwik",
+    "display_name": "MobiKwik",
+    "category": "payment",
+    "official_domains": [
+      "mobikwik.com"
+    ],
+    "canonical_url": "https://mobikwik.com/",
+    "tokens": [
+      "mobikwik"
+    ]
+  },
+  {
+    "brand_id": "freecharge",
+    "display_name": "Freecharge",
+    "category": "payment",
+    "official_domains": [
+      "freecharge.in"
+    ],
+    "canonical_url": "https://freecharge.in/",
+    "tokens": [
+      "freecharge"
+    ]
+  },
+  {
+    "brand_id": "cred",
+    "display_name": "CRED",
+    "category": "payment",
+    "official_domains": [
+      "cred.club"
+    ],
+    "canonical_url": "https://cred.club/",
+    "tokens": [
+      "cred"
+    ]
+  },
+  {
+    "brand_id": "slice",
+    "display_name": "Slice",
+    "category": "payment",
+    "official_domains": [
+      "sliceit.com"
+    ],
+    "canonical_url": "https://sliceit.com/",
+    "tokens": [
+      "slice",
+      "sliceit"
+    ]
+  },
+  {
+    "brand_id": "jupiter-money",
+    "display_name": "Jupiter Money",
+    "category": "payment",
+    "official_domains": [
+      "jupiter.money"
+    ],
+    "canonical_url": "https://jupiter.money/",
+    "tokens": [
+      "jupiter",
+      "jupitermoney"
+    ]
+  },
+  {
+    "brand_id": "fi-money",
+    "display_name": "Fi Money",
+    "category": "payment",
+    "official_domains": [
+      "fi.money"
+    ],
+    "canonical_url": "https://fi.money/",
+    "tokens": [
+      "fi",
+      "fimoney"
+    ]
+  },
+  {
+    "brand_id": "rupay",
+    "display_name": "RuPay",
+    "category": "payment",
+    "official_domains": [
+      "rupay.co.in"
+    ],
+    "canonical_url": "https://rupay.co.in/",
+    "tokens": [
+      "rupay"
+    ]
+  },
+  {
+    "brand_id": "paypal",
+    "display_name": "PayPal",
+    "category": "payment",
+    "official_domains": [
+      "paypal.com"
+    ],
+    "canonical_url": "https://paypal.com/",
+    "tokens": [
+      "paypal"
+    ]
+  },
+  {
+    "brand_id": "stripe",
+    "display_name": "Stripe",
+    "category": "payment",
+    "official_domains": [
+      "stripe.com"
+    ],
+    "canonical_url": "https://stripe.com/",
+    "tokens": [
+      "stripe"
+    ]
+  },
+  {
+    "brand_id": "wise",
+    "display_name": "Wise",
+    "category": "payment",
+    "official_domains": [
+      "wise.com"
+    ],
+    "canonical_url": "https://wise.com/",
+    "tokens": [
+      "wise"
+    ]
+  },
+  {
+    "brand_id": "western-union",
+    "display_name": "Western Union",
+    "category": "payment",
+    "official_domains": [
+      "westernunion.com"
+    ],
+    "canonical_url": "https://westernunion.com/",
+    "tokens": [
+      "westernunion"
+    ]
+  },
+  {
+    "brand_id": "visa",
+    "display_name": "Visa",
+    "category": "payment",
+    "official_domains": [
+      "visa.com"
+    ],
+    "canonical_url": "https://visa.com/",
+    "tokens": [
+      "visa"
+    ]
+  },
+  {
+    "brand_id": "mastercard",
+    "display_name": "Mastercard",
+    "category": "payment",
+    "official_domains": [
+      "mastercard.com"
+    ],
+    "canonical_url": "https://mastercard.com/",
+    "tokens": [
+      "mastercard"
+    ]
+  },
+  {
+    "brand_id": "american-express",
+    "display_name": "American Express",
+    "category": "payment",
+    "official_domains": [
+      "americanexpress.com"
+    ],
+    "canonical_url": "https://americanexpress.com/",
+    "tokens": [
+      "americanexpress"
+    ]
+  },
+  {
+    "brand_id": "zelle",
+    "display_name": "Zelle",
+    "category": "payment",
+    "official_domains": [
+      "zellepay.com"
+    ],
+    "canonical_url": "https://zellepay.com/",
+    "tokens": [
+      "zelle",
+      "zellepay"
+    ]
+  },
+  {
+    "brand_id": "venmo",
+    "display_name": "Venmo",
+    "category": "payment",
+    "official_domains": [
+      "venmo.com"
+    ],
+    "canonical_url": "https://venmo.com/",
+    "tokens": [
+      "venmo"
+    ]
+  },
+  {
+    "brand_id": "cash-app",
+    "display_name": "Cash App",
+    "category": "payment",
+    "official_domains": [
+      "cash.app"
+    ],
+    "canonical_url": "https://cash.app/",
+    "tokens": [
+      "cash",
+      "cashapp"
+    ]
+  },
+  {
+    "brand_id": "klarna",
+    "display_name": "Klarna",
+    "category": "payment",
+    "official_domains": [
+      "klarna.com"
+    ],
+    "canonical_url": "https://klarna.com/",
+    "tokens": [
+      "klarna"
+    ]
+  },
+  {
+    "brand_id": "affirm",
+    "display_name": "Affirm",
+    "category": "payment",
+    "official_domains": [
+      "affirm.com"
+    ],
+    "canonical_url": "https://affirm.com/",
+    "tokens": [
+      "affirm"
+    ]
+  },
+  {
+    "brand_id": "alipay",
+    "display_name": "Alipay",
+    "category": "payment",
+    "official_domains": [
+      "alipay.com"
+    ],
+    "canonical_url": "https://alipay.com/",
+    "tokens": [
+      "alipay"
+    ]
+  },
+  {
+    "brand_id": "binance",
+    "display_name": "Binance",
+    "category": "crypto",
+    "official_domains": [
+      "binance.com"
+    ],
+    "canonical_url": "https://binance.com/",
+    "tokens": [
+      "binance"
+    ]
+  },
+  {
+    "brand_id": "coinbase",
+    "display_name": "Coinbase",
+    "category": "crypto",
+    "official_domains": [
+      "coinbase.com"
+    ],
+    "canonical_url": "https://coinbase.com/",
+    "tokens": [
+      "coinbase"
+    ]
+  },
+  {
+    "brand_id": "wazirx",
+    "display_name": "WazirX",
+    "category": "crypto",
+    "official_domains": [
+      "wazirx.com"
+    ],
+    "canonical_url": "https://wazirx.com/",
+    "tokens": [
+      "wazirx"
+    ]
+  },
+  {
+    "brand_id": "coindcx",
+    "display_name": "CoinDCX",
+    "category": "crypto",
+    "official_domains": [
+      "coindcx.com"
+    ],
+    "canonical_url": "https://coindcx.com/",
+    "tokens": [
+      "coindcx"
+    ]
+  },
+  {
+    "brand_id": "kraken",
+    "display_name": "Kraken",
+    "category": "crypto",
+    "official_domains": [
+      "kraken.com"
+    ],
+    "canonical_url": "https://kraken.com/",
+    "tokens": [
+      "kraken"
+    ]
+  },
+  {
+    "brand_id": "metamask",
+    "display_name": "MetaMask",
+    "category": "crypto",
+    "official_domains": [
+      "metamask.io"
+    ],
+    "canonical_url": "https://metamask.io/",
+    "tokens": [
+      "metamask"
+    ]
+  },
+  {
+    "brand_id": "government-of-india-portal",
+    "display_name": "Government of India Portal",
+    "category": "government",
+    "official_domains": [
+      "india.gov.in"
+    ],
+    "canonical_url": "https://india.gov.in/",
+    "tokens": [
+      "governmentofindiaportal",
+      "india"
+    ]
+  },
+  {
+    "brand_id": "income-tax-e-filing",
+    "display_name": "Income Tax e-Filing",
+    "category": "government",
+    "official_domains": [
+      "incometax.gov.in"
+    ],
+    "canonical_url": "https://incometax.gov.in/",
+    "tokens": [
+      "incometax",
+      "incometaxefiling"
+    ]
+  },
+  {
+    "brand_id": "income-tax-department",
+    "display_name": "Income Tax Department",
+    "category": "government",
+    "official_domains": [
+      "incometaxindia.gov.in"
+    ],
+    "canonical_url": "https://incometaxindia.gov.in/",
+    "tokens": [
+      "incometaxdepartment",
+      "incometaxindia"
+    ]
+  },
+  {
+    "brand_id": "gst-portal",
+    "display_name": "GST Portal",
+    "category": "government",
+    "official_domains": [
+      "gst.gov.in"
+    ],
+    "canonical_url": "https://gst.gov.in/",
+    "tokens": [
+      "gst",
+      "gstportal"
+    ]
+  },
+  {
+    "brand_id": "uidai-aadhaar",
+    "display_name": "UIDAI Aadhaar",
+    "category": "government",
+    "official_domains": [
+      "uidai.gov.in"
+    ],
+    "canonical_url": "https://uidai.gov.in/",
+    "tokens": [
+      "uidai",
+      "uidaiaadhaar"
+    ]
+  },
+  {
+    "brand_id": "digilocker",
+    "display_name": "DigiLocker",
+    "category": "government",
+    "official_domains": [
+      "digilocker.gov.in"
+    ],
+    "canonical_url": "https://digilocker.gov.in/",
+    "tokens": [
+      "digilocker"
+    ]
+  },
+  {
+    "brand_id": "passport-seva",
+    "display_name": "Passport Seva",
+    "category": "government",
+    "official_domains": [
+      "passportindia.gov.in"
+    ],
+    "canonical_url": "https://passportindia.gov.in/",
+    "tokens": [
+      "passportindia",
+      "passportseva"
+    ]
+  },
+  {
+    "brand_id": "umang",
+    "display_name": "UMANG",
+    "category": "government",
+    "official_domains": [
+      "umang.gov.in"
+    ],
+    "canonical_url": "https://umang.gov.in/",
+    "tokens": [
+      "umang"
+    ]
+  },
+  {
+    "brand_id": "epfo",
+    "display_name": "EPFO",
+    "category": "government",
+    "official_domains": [
+      "epfindia.gov.in"
+    ],
+    "canonical_url": "https://epfindia.gov.in/",
+    "tokens": [
+      "epfindia",
+      "epfo"
+    ]
+  },
+  {
+    "brand_id": "parivahan",
+    "display_name": "Parivahan",
+    "category": "government",
+    "official_domains": [
+      "parivahan.gov.in"
+    ],
+    "canonical_url": "https://parivahan.gov.in/",
+    "tokens": [
+      "parivahan"
+    ]
+  },
+  {
+    "brand_id": "election-commission-of-india",
+    "display_name": "Election Commission of India",
+    "category": "government",
+    "official_domains": [
+      "eci.gov.in"
+    ],
+    "canonical_url": "https://eci.gov.in/",
+    "tokens": [
+      "eci",
+      "electioncommissionofindia"
+    ]
+  },
+  {
+    "brand_id": "ministry-of-corporate-affairs",
+    "display_name": "Ministry of Corporate Affairs",
+    "category": "government",
+    "official_domains": [
+      "mca.gov.in"
+    ],
+    "canonical_url": "https://mca.gov.in/",
+    "tokens": [
+      "mca",
+      "ministryofcorporateaffairs"
+    ]
+  },
+  {
+    "brand_id": "cbic-customs",
+    "display_name": "CBIC Customs",
+    "category": "government",
+    "official_domains": [
+      "cbic.gov.in"
+    ],
+    "canonical_url": "https://cbic.gov.in/",
+    "tokens": [
+      "cbic",
+      "cbiccustoms"
+    ]
+  },
+  {
+    "brand_id": "pm-kisan",
+    "display_name": "PM-KISAN",
+    "category": "government",
+    "official_domains": [
+      "pmkisan.gov.in"
+    ],
+    "canonical_url": "https://pmkisan.gov.in/",
+    "tokens": [
+      "pmkisan"
+    ]
+  },
+  {
+    "brand_id": "ayushman-bharat-pmjay",
+    "display_name": "Ayushman Bharat PMJAY",
+    "category": "government",
+    "official_domains": [
+      "pmjay.gov.in"
+    ],
+    "canonical_url": "https://pmjay.gov.in/",
+    "tokens": [
+      "ayushmanbharatpmjay",
+      "pmjay"
+    ]
+  },
+  {
+    "brand_id": "cowin",
+    "display_name": "CoWIN",
+    "category": "government",
+    "official_domains": [
+      "cowin.gov.in"
+    ],
+    "canonical_url": "https://cowin.gov.in/",
+    "tokens": [
+      "cowin"
+    ]
+  },
+  {
+    "brand_id": "mygov-india",
+    "display_name": "MyGov India",
+    "category": "government",
+    "official_domains": [
+      "mygov.in"
+    ],
+    "canonical_url": "https://mygov.in/",
+    "tokens": [
+      "mygov",
+      "mygovindia"
+    ]
+  },
+  {
+    "brand_id": "pfms",
+    "display_name": "PFMS",
+    "category": "government",
+    "official_domains": [
+      "pfms.nic.in"
+    ],
+    "canonical_url": "https://pfms.nic.in/",
+    "tokens": [
+      "pfms"
+    ]
+  },
+  {
+    "brand_id": "nps-trust",
+    "display_name": "NPS Trust",
+    "category": "government",
+    "official_domains": [
+      "npstrust.org.in"
+    ],
+    "canonical_url": "https://npstrust.org.in/",
+    "tokens": [
+      "npstrust"
+    ]
+  },
+  {
+    "brand_id": "protean-egov",
+    "display_name": "Protean eGov",
+    "category": "government",
+    "official_domains": [
+      "proteantech.in"
+    ],
+    "canonical_url": "https://proteantech.in/",
+    "tokens": [
+      "proteanegov",
+      "proteantech"
+    ]
+  },
+  {
+    "brand_id": "irctc",
+    "display_name": "IRCTC",
+    "category": "government",
+    "official_domains": [
+      "irctc.co.in"
+    ],
+    "canonical_url": "https://irctc.co.in/",
+    "tokens": [
+      "irctc"
+    ]
+  },
+  {
+    "brand_id": "indian-railways",
+    "display_name": "Indian Railways",
+    "category": "government",
+    "official_domains": [
+      "indianrailways.gov.in"
+    ],
+    "canonical_url": "https://indianrailways.gov.in/",
+    "tokens": [
+      "indianrailways"
+    ]
+  },
+  {
+    "brand_id": "india-post",
+    "display_name": "India Post",
+    "category": "government",
+    "official_domains": [
+      "indiapost.gov.in"
+    ],
+    "canonical_url": "https://indiapost.gov.in/",
+    "tokens": [
+      "indiapost"
+    ]
+  },
+  {
+    "brand_id": "cyber-crime-portal",
+    "display_name": "Cyber Crime Portal",
+    "category": "government",
+    "official_domains": [
+      "cybercrime.gov.in"
+    ],
+    "canonical_url": "https://cybercrime.gov.in/",
+    "tokens": [
+      "cybercrime",
+      "cybercrimeportal"
+    ]
+  },
+  {
+    "brand_id": "cert-in",
+    "display_name": "CERT-In",
+    "category": "government",
+    "official_domains": [
+      "cert-in.org.in"
+    ],
+    "canonical_url": "https://cert-in.org.in/",
+    "tokens": [
+      "certin"
+    ]
+  },
+  {
+    "brand_id": "ministry-of-home-affairs",
+    "display_name": "Ministry of Home Affairs",
+    "category": "government",
+    "official_domains": [
+      "mha.gov.in"
+    ],
+    "canonical_url": "https://mha.gov.in/",
+    "tokens": [
+      "mha",
+      "ministryofhomeaffairs"
+    ]
+  },
+  {
+    "brand_id": "supreme-court-of-india",
+    "display_name": "Supreme Court of India",
+    "category": "government",
+    "official_domains": [
+      "sci.gov.in"
+    ],
+    "canonical_url": "https://sci.gov.in/",
+    "tokens": [
+      "sci",
+      "supremecourtofindia"
+    ]
+  },
+  {
+    "brand_id": "ecourts",
+    "display_name": "eCourts",
+    "category": "government",
+    "official_domains": [
+      "ecourts.gov.in"
+    ],
+    "canonical_url": "https://ecourts.gov.in/",
+    "tokens": [
+      "ecourts"
+    ]
+  },
+  {
+    "brand_id": "parliament-of-india",
+    "display_name": "Parliament of India",
+    "category": "government",
+    "official_domains": [
+      "sansad.in"
+    ],
+    "canonical_url": "https://sansad.in/",
+    "tokens": [
+      "parliamentofindia",
+      "sansad"
+    ]
+  },
+  {
+    "brand_id": "prime-minister-s-office-india",
+    "display_name": "Prime Minister's Office India",
+    "category": "government",
+    "official_domains": [
+      "pmindia.gov.in"
+    ],
+    "canonical_url": "https://pmindia.gov.in/",
+    "tokens": [
+      "pmindia",
+      "primeministersofficeindia"
+    ]
+  },
+  {
+    "brand_id": "ministry-of-external-affairs",
+    "display_name": "Ministry of External Affairs",
+    "category": "government",
+    "official_domains": [
+      "mea.gov.in"
+    ],
+    "canonical_url": "https://mea.gov.in/",
+    "tokens": [
+      "mea",
+      "ministryofexternalaffairs"
+    ]
+  },
+  {
+    "brand_id": "indian-visa-online",
+    "display_name": "Indian Visa Online",
+    "category": "government",
+    "official_domains": [
+      "indianvisaonline.gov.in"
+    ],
+    "canonical_url": "https://indianvisaonline.gov.in/",
+    "tokens": [
+      "indianvisaonline"
+    ]
+  },
+  {
+    "brand_id": "e-shram",
+    "display_name": "e-Shram",
+    "category": "government",
+    "official_domains": [
+      "eshram.gov.in"
+    ],
+    "canonical_url": "https://eshram.gov.in/",
+    "tokens": [
+      "eshram"
+    ]
+  },
+  {
+    "brand_id": "national-scholarship-portal",
+    "display_name": "National Scholarship Portal",
+    "category": "government",
+    "official_domains": [
+      "scholarships.gov.in"
+    ],
+    "canonical_url": "https://scholarships.gov.in/",
+    "tokens": [
+      "nationalscholarshipportal",
+      "scholarships"
+    ]
+  },
+  {
+    "brand_id": "nic-india",
+    "display_name": "NIC India",
+    "category": "government",
+    "official_domains": [
+      "nic.in"
+    ],
+    "canonical_url": "https://nic.in/",
+    "tokens": [
+      "nic",
+      "nicindia"
+    ]
+  },
+  {
+    "brand_id": "nhai",
+    "display_name": "NHAI",
+    "category": "government",
+    "official_domains": [
+      "nhai.gov.in"
+    ],
+    "canonical_url": "https://nhai.gov.in/",
+    "tokens": [
+      "nhai"
+    ]
+  },
+  {
+    "brand_id": "cbse",
+    "display_name": "CBSE",
+    "category": "government",
+    "official_domains": [
+      "cbse.gov.in"
+    ],
+    "canonical_url": "https://cbse.gov.in/",
+    "tokens": [
+      "cbse"
+    ]
+  },
+  {
+    "brand_id": "ugc",
+    "display_name": "UGC",
+    "category": "government",
+    "official_domains": [
+      "ugc.gov.in"
+    ],
+    "canonical_url": "https://ugc.gov.in/",
+    "tokens": [
+      "ugc"
+    ]
+  },
+  {
+    "brand_id": "nta",
+    "display_name": "NTA",
+    "category": "government",
+    "official_domains": [
+      "nta.ac.in"
+    ],
+    "canonical_url": "https://nta.ac.in/",
+    "tokens": [
+      "nta"
+    ]
+  },
+  {
+    "brand_id": "upsc",
+    "display_name": "UPSC",
+    "category": "government",
+    "official_domains": [
+      "upsc.gov.in"
+    ],
+    "canonical_url": "https://upsc.gov.in/",
+    "tokens": [
+      "upsc"
+    ]
+  },
+  {
+    "brand_id": "ssc",
+    "display_name": "SSC",
+    "category": "government",
+    "official_domains": [
+      "ssc.gov.in"
+    ],
+    "canonical_url": "https://ssc.gov.in/",
+    "tokens": [
+      "ssc"
+    ]
+  },
+  {
+    "brand_id": "sebi",
+    "display_name": "SEBI",
+    "category": "government",
+    "official_domains": [
+      "sebi.gov.in"
+    ],
+    "canonical_url": "https://sebi.gov.in/",
+    "tokens": [
+      "sebi"
+    ]
+  },
+  {
+    "brand_id": "trai",
+    "display_name": "TRAI",
+    "category": "government",
+    "official_domains": [
+      "trai.gov.in"
+    ],
+    "canonical_url": "https://trai.gov.in/",
+    "tokens": [
+      "trai"
+    ]
+  },
+  {
+    "brand_id": "department-of-telecommunications",
+    "display_name": "Department of Telecommunications",
+    "category": "government",
+    "official_domains": [
+      "dot.gov.in"
+    ],
+    "canonical_url": "https://dot.gov.in/",
+    "tokens": [
+      "departmentoftelecommunications",
+      "dot"
+    ]
+  },
+  {
+    "brand_id": "sanchar-saathi",
+    "display_name": "Sanchar Saathi",
+    "category": "government",
+    "official_domains": [
+      "sancharsaathi.gov.in"
+    ],
+    "canonical_url": "https://sancharsaathi.gov.in/",
+    "tokens": [
+      "sancharsaathi"
+    ]
+  },
+  {
+    "brand_id": "government-of-maharashtra",
+    "display_name": "Government of Maharashtra",
+    "category": "government",
+    "official_domains": [
+      "maharashtra.gov.in"
+    ],
+    "canonical_url": "https://maharashtra.gov.in/",
+    "tokens": [
+      "governmentofmaharashtra",
+      "maharashtra"
+    ]
+  },
+  {
+    "brand_id": "mahaonline",
+    "display_name": "MahaOnline",
+    "category": "government",
+    "official_domains": [
+      "mahaonline.gov.in"
+    ],
+    "canonical_url": "https://mahaonline.gov.in/",
+    "tokens": [
+      "mahaonline"
+    ]
+  },
+  {
+    "brand_id": "msrtc",
+    "display_name": "MSRTC",
+    "category": "government",
+    "official_domains": [
+      "msrtc.gov.in"
+    ],
+    "canonical_url": "https://msrtc.gov.in/",
+    "tokens": [
+      "msrtc"
+    ]
+  },
+  {
+    "brand_id": "pune-municipal-corporation",
+    "display_name": "Pune Municipal Corporation",
+    "category": "government",
+    "official_domains": [
+      "pmc.gov.in"
+    ],
+    "canonical_url": "https://pmc.gov.in/",
+    "tokens": [
+      "pmc",
+      "punemunicipalcorporation"
+    ]
+  },
+  {
+    "brand_id": "usa-gov",
+    "display_name": "USA.gov",
+    "category": "government",
+    "official_domains": [
+      "usa.gov"
+    ],
+    "canonical_url": "https://usa.gov/",
+    "tokens": [
+      "usa",
+      "usagov"
+    ]
+  },
+  {
+    "brand_id": "irs",
+    "display_name": "IRS",
+    "category": "government",
+    "official_domains": [
+      "irs.gov"
+    ],
+    "canonical_url": "https://irs.gov/",
+    "tokens": [
+      "irs"
+    ]
+  },
+  {
+    "brand_id": "gov-uk",
+    "display_name": "GOV.UK",
+    "category": "government",
+    "official_domains": [
+      "gov.uk"
+    ],
+    "canonical_url": "https://gov.uk/",
+    "tokens": [
+      "gov",
+      "govuk"
+    ]
+  },
+  {
+    "brand_id": "uscis",
+    "display_name": "USCIS",
+    "category": "government",
+    "official_domains": [
+      "uscis.gov"
+    ],
+    "canonical_url": "https://uscis.gov/",
+    "tokens": [
+      "uscis"
+    ]
+  },
+  {
+    "brand_id": "social-security-administration",
+    "display_name": "Social Security Administration",
+    "category": "government",
+    "official_domains": [
+      "ssa.gov"
+    ],
+    "canonical_url": "https://ssa.gov/",
+    "tokens": [
+      "socialsecurityadministration",
+      "ssa"
+    ]
+  },
+  {
+    "brand_id": "canada-ca",
+    "display_name": "Canada.ca",
+    "category": "government",
+    "official_domains": [
+      "canada.ca"
+    ],
+    "canonical_url": "https://canada.ca/",
+    "tokens": [
+      "canada",
+      "canadaca"
+    ]
+  },
+  {
+    "brand_id": "australian-government",
+    "display_name": "Australian Government",
+    "category": "government",
+    "official_domains": [
+      "australia.gov.au"
+    ],
+    "canonical_url": "https://australia.gov.au/",
+    "tokens": [
+      "australia",
+      "australiangovernment"
+    ]
+  },
+  {
+    "brand_id": "australian-taxation-office",
+    "display_name": "Australian Taxation Office",
+    "category": "government",
+    "official_domains": [
+      "ato.gov.au"
+    ],
+    "canonical_url": "https://ato.gov.au/",
+    "tokens": [
+      "ato",
+      "australiantaxationoffice"
+    ]
+  },
+  {
+    "brand_id": "european-union",
+    "display_name": "European Union",
+    "category": "government",
+    "official_domains": [
+      "europa.eu"
+    ],
+    "canonical_url": "https://europa.eu/",
+    "tokens": [
+      "europa",
+      "europeanunion"
+    ]
+  },
+  {
+    "brand_id": "world-health-organization",
+    "display_name": "World Health Organization",
+    "category": "government",
+    "official_domains": [
+      "who.int"
+    ],
+    "canonical_url": "https://who.int/",
+    "tokens": [
+      "who",
+      "worldhealthorganization"
+    ]
+  },
+  {
+    "brand_id": "united-nations",
+    "display_name": "United Nations",
+    "category": "government",
+    "official_domains": [
+      "un.org"
+    ],
+    "canonical_url": "https://un.org/",
+    "tokens": [
+      "un",
+      "unitednations"
+    ]
+  },
+  {
+    "brand_id": "reliance-jio",
+    "display_name": "Reliance Jio",
+    "category": "telecom",
+    "official_domains": [
+      "jio.com"
+    ],
+    "canonical_url": "https://jio.com/",
+    "tokens": [
+      "jio",
+      "reliancejio"
+    ]
+  },
+  {
+    "brand_id": "airtel",
+    "display_name": "Airtel",
+    "category": "telecom",
+    "official_domains": [
+      "airtel.in"
+    ],
+    "canonical_url": "https://airtel.in/",
+    "tokens": [
+      "airtel"
+    ]
+  },
+  {
+    "brand_id": "vodafone-idea",
+    "display_name": "Vodafone Idea",
+    "category": "telecom",
+    "official_domains": [
+      "myvi.in"
+    ],
+    "canonical_url": "https://myvi.in/",
+    "tokens": [
+      "myvi",
+      "vodafoneidea"
+    ]
+  },
+  {
+    "brand_id": "bsnl",
+    "display_name": "BSNL",
+    "category": "telecom",
+    "official_domains": [
+      "bsnl.co.in"
+    ],
+    "canonical_url": "https://bsnl.co.in/",
+    "tokens": [
+      "bsnl"
+    ]
+  },
+  {
+    "brand_id": "mtnl",
+    "display_name": "MTNL",
+    "category": "telecom",
+    "official_domains": [
+      "mtnl.net.in"
+    ],
+    "canonical_url": "https://mtnl.net.in/",
+    "tokens": [
+      "mtnl"
+    ]
+  },
+  {
+    "brand_id": "act-fibernet",
+    "display_name": "ACT Fibernet",
+    "category": "telecom",
+    "official_domains": [
+      "actcorp.in"
+    ],
+    "canonical_url": "https://actcorp.in/",
+    "tokens": [
+      "actcorp",
+      "actfibernet"
+    ]
+  },
+  {
+    "brand_id": "hathway",
+    "display_name": "Hathway",
+    "category": "telecom",
+    "official_domains": [
+      "hathway.com"
+    ],
+    "canonical_url": "https://hathway.com/",
+    "tokens": [
+      "hathway"
+    ]
+  },
+  {
+    "brand_id": "tata-play",
+    "display_name": "Tata Play",
+    "category": "telecom",
+    "official_domains": [
+      "tataplay.com"
+    ],
+    "canonical_url": "https://tataplay.com/",
+    "tokens": [
+      "tataplay"
+    ]
+  },
+  {
+    "brand_id": "dish-tv",
+    "display_name": "Dish TV",
+    "category": "telecom",
+    "official_domains": [
+      "dishtv.in"
+    ],
+    "canonical_url": "https://dishtv.in/",
+    "tokens": [
+      "dishtv"
+    ]
+  },
+  {
+    "brand_id": "sun-direct",
+    "display_name": "Sun Direct",
+    "category": "telecom",
+    "official_domains": [
+      "sundirect.in"
+    ],
+    "canonical_url": "https://sundirect.in/",
+    "tokens": [
+      "sundirect"
+    ]
+  },
+  {
+    "brand_id": "verizon",
+    "display_name": "Verizon",
+    "category": "telecom",
+    "official_domains": [
+      "verizon.com"
+    ],
+    "canonical_url": "https://verizon.com/",
+    "tokens": [
+      "verizon"
+    ]
+  },
+  {
+    "brand_id": "at-and-t",
+    "display_name": "AT and T",
+    "category": "telecom",
+    "official_domains": [
+      "att.com"
+    ],
+    "canonical_url": "https://att.com/",
+    "tokens": [
+      "atandt",
+      "att"
+    ]
+  },
+  {
+    "brand_id": "t-mobile",
+    "display_name": "T-Mobile",
+    "category": "telecom",
+    "official_domains": [
+      "t-mobile.com"
+    ],
+    "canonical_url": "https://t-mobile.com/",
+    "tokens": [
+      "tmobile"
+    ]
+  },
+  {
+    "brand_id": "vodafone",
+    "display_name": "Vodafone",
+    "category": "telecom",
+    "official_domains": [
+      "vodafone.com"
+    ],
+    "canonical_url": "https://vodafone.com/",
+    "tokens": [
+      "vodafone"
+    ]
+  },
+  {
+    "brand_id": "tata-power",
+    "display_name": "Tata Power",
+    "category": "utility",
+    "official_domains": [
+      "tatapower.com"
+    ],
+    "canonical_url": "https://tatapower.com/",
+    "tokens": [
+      "tatapower"
+    ]
+  },
+  {
+    "brand_id": "adani-electricity",
+    "display_name": "Adani Electricity",
+    "category": "utility",
+    "official_domains": [
+      "adanielectricity.com"
+    ],
+    "canonical_url": "https://adanielectricity.com/",
+    "tokens": [
+      "adanielectricity"
+    ]
+  },
+  {
+    "brand_id": "bses-delhi",
+    "display_name": "BSES Delhi",
+    "category": "utility",
+    "official_domains": [
+      "bsesdelhi.com"
+    ],
+    "canonical_url": "https://bsesdelhi.com/",
+    "tokens": [
+      "bsesdelhi"
+    ]
+  },
+  {
+    "brand_id": "torrent-power",
+    "display_name": "Torrent Power",
+    "category": "utility",
+    "official_domains": [
+      "torrentpower.com"
+    ],
+    "canonical_url": "https://torrentpower.com/",
+    "tokens": [
+      "torrentpower"
+    ]
+  },
+  {
+    "brand_id": "msedcl-mahavitaran",
+    "display_name": "MSEDCL Mahavitaran",
+    "category": "utility",
+    "official_domains": [
+      "mahadiscom.in"
+    ],
+    "canonical_url": "https://mahadiscom.in/",
+    "tokens": [
+      "mahadiscom",
+      "msedclmahavitaran"
+    ]
+  },
+  {
+    "brand_id": "indian-oil",
+    "display_name": "Indian Oil",
+    "category": "utility",
+    "official_domains": [
+      "iocl.com"
+    ],
+    "canonical_url": "https://iocl.com/",
+    "tokens": [
+      "indianoil",
+      "iocl"
+    ]
+  },
+  {
+    "brand_id": "bharat-petroleum",
+    "display_name": "Bharat Petroleum",
+    "category": "utility",
+    "official_domains": [
+      "bharatpetroleum.in"
+    ],
+    "canonical_url": "https://bharatpetroleum.in/",
+    "tokens": [
+      "bharatpetroleum"
+    ]
+  },
+  {
+    "brand_id": "hindustan-petroleum",
+    "display_name": "Hindustan Petroleum",
+    "category": "utility",
+    "official_domains": [
+      "hindustanpetroleum.com"
+    ],
+    "canonical_url": "https://hindustanpetroleum.com/",
+    "tokens": [
+      "hindustanpetroleum"
+    ]
+  },
+  {
+    "brand_id": "mahanagar-gas",
+    "display_name": "Mahanagar Gas",
+    "category": "utility",
+    "official_domains": [
+      "mahanagargas.com"
+    ],
+    "canonical_url": "https://mahanagargas.com/",
+    "tokens": [
+      "mahanagargas"
+    ]
+  },
+  {
+    "brand_id": "indraprastha-gas",
+    "display_name": "Indraprastha Gas",
+    "category": "utility",
+    "official_domains": [
+      "iglonline.net"
+    ],
+    "canonical_url": "https://iglonline.net/",
+    "tokens": [
+      "iglonline",
+      "indraprasthagas"
+    ]
+  },
+  {
+    "brand_id": "best-undertaking",
+    "display_name": "BEST Undertaking",
+    "category": "utility",
+    "official_domains": [
+      "bestundertaking.com"
+    ],
+    "canonical_url": "https://bestundertaking.com/",
+    "tokens": [
+      "bestundertaking"
+    ]
+  },
+  {
+    "brand_id": "amazon-india",
+    "display_name": "Amazon India",
+    "category": "ecommerce",
+    "official_domains": [
+      "amazon.in"
+    ],
+    "canonical_url": "https://amazon.in/",
+    "tokens": [
+      "amazon",
+      "amazonindia"
+    ]
+  },
+  {
+    "brand_id": "amazon",
+    "display_name": "Amazon",
+    "category": "ecommerce",
+    "official_domains": [
+      "amazon.com"
+    ],
+    "canonical_url": "https://amazon.com/",
+    "tokens": [
+      "amazon"
+    ]
+  },
+  {
+    "brand_id": "flipkart",
+    "display_name": "Flipkart",
+    "category": "ecommerce",
+    "official_domains": [
+      "flipkart.com"
+    ],
+    "canonical_url": "https://flipkart.com/",
+    "tokens": [
+      "flipkart"
+    ]
+  },
+  {
+    "brand_id": "myntra",
+    "display_name": "Myntra",
+    "category": "ecommerce",
+    "official_domains": [
+      "myntra.com"
+    ],
+    "canonical_url": "https://myntra.com/",
+    "tokens": [
+      "myntra"
+    ]
+  },
+  {
+    "brand_id": "ajio",
+    "display_name": "Ajio",
+    "category": "ecommerce",
+    "official_domains": [
+      "ajio.com"
+    ],
+    "canonical_url": "https://ajio.com/",
+    "tokens": [
+      "ajio"
+    ]
+  },
+  {
+    "brand_id": "meesho",
+    "display_name": "Meesho",
+    "category": "ecommerce",
+    "official_domains": [
+      "meesho.com"
+    ],
+    "canonical_url": "https://meesho.com/",
+    "tokens": [
+      "meesho"
+    ]
+  },
+  {
+    "brand_id": "nykaa",
+    "display_name": "Nykaa",
+    "category": "ecommerce",
+    "official_domains": [
+      "nykaa.com"
+    ],
+    "canonical_url": "https://nykaa.com/",
+    "tokens": [
+      "nykaa"
+    ]
+  },
+  {
+    "brand_id": "tata-neu",
+    "display_name": "Tata Neu",
+    "category": "ecommerce",
+    "official_domains": [
+      "tataneu.com"
+    ],
+    "canonical_url": "https://tataneu.com/",
+    "tokens": [
+      "tataneu"
+    ]
+  },
+  {
+    "brand_id": "jiomart",
+    "display_name": "JioMart",
+    "category": "ecommerce",
+    "official_domains": [
+      "jiomart.com"
+    ],
+    "canonical_url": "https://jiomart.com/",
+    "tokens": [
+      "jiomart"
+    ]
+  },
+  {
+    "brand_id": "bigbasket",
+    "display_name": "BigBasket",
+    "category": "ecommerce",
+    "official_domains": [
+      "bigbasket.com"
+    ],
+    "canonical_url": "https://bigbasket.com/",
+    "tokens": [
+      "bigbasket"
+    ]
+  },
+  {
+    "brand_id": "blinkit",
+    "display_name": "Blinkit",
+    "category": "ecommerce",
+    "official_domains": [
+      "blinkit.com"
+    ],
+    "canonical_url": "https://blinkit.com/",
+    "tokens": [
+      "blinkit"
+    ]
+  },
+  {
+    "brand_id": "zepto",
+    "display_name": "Zepto",
+    "category": "ecommerce",
+    "official_domains": [
+      "zeptonow.com"
+    ],
+    "canonical_url": "https://zeptonow.com/",
+    "tokens": [
+      "zepto",
+      "zeptonow"
+    ]
+  },
+  {
+    "brand_id": "swiggy",
+    "display_name": "Swiggy",
+    "category": "food",
+    "official_domains": [
+      "swiggy.com"
+    ],
+    "canonical_url": "https://swiggy.com/",
+    "tokens": [
+      "swiggy"
+    ]
+  },
+  {
+    "brand_id": "zomato",
+    "display_name": "Zomato",
+    "category": "food",
+    "official_domains": [
+      "zomato.com"
+    ],
+    "canonical_url": "https://zomato.com/",
+    "tokens": [
+      "zomato"
+    ]
+  },
+  {
+    "brand_id": "snapdeal",
+    "display_name": "Snapdeal",
+    "category": "ecommerce",
+    "official_domains": [
+      "snapdeal.com"
+    ],
+    "canonical_url": "https://snapdeal.com/",
+    "tokens": [
+      "snapdeal"
+    ]
+  },
+  {
+    "brand_id": "firstcry",
+    "display_name": "FirstCry",
+    "category": "ecommerce",
+    "official_domains": [
+      "firstcry.com"
+    ],
+    "canonical_url": "https://firstcry.com/",
+    "tokens": [
+      "firstcry"
+    ]
+  },
+  {
+    "brand_id": "lenskart",
+    "display_name": "Lenskart",
+    "category": "ecommerce",
+    "official_domains": [
+      "lenskart.com"
+    ],
+    "canonical_url": "https://lenskart.com/",
+    "tokens": [
+      "lenskart"
+    ]
+  },
+  {
+    "brand_id": "tata-1mg",
+    "display_name": "Tata 1mg",
+    "category": "health",
+    "official_domains": [
+      "1mg.com"
+    ],
+    "canonical_url": "https://1mg.com/",
+    "tokens": [
+      "1mg",
+      "tata1mg"
+    ]
+  },
+  {
+    "brand_id": "pharmeasy",
+    "display_name": "PharmEasy",
+    "category": "health",
+    "official_domains": [
+      "pharmeasy.in"
+    ],
+    "canonical_url": "https://pharmeasy.in/",
+    "tokens": [
+      "pharmeasy"
+    ]
+  },
+  {
+    "brand_id": "apollo-pharmacy",
+    "display_name": "Apollo Pharmacy",
+    "category": "health",
+    "official_domains": [
+      "apollopharmacy.in"
+    ],
+    "canonical_url": "https://apollopharmacy.in/",
+    "tokens": [
+      "apollopharmacy"
+    ]
+  },
+  {
+    "brand_id": "netmeds",
+    "display_name": "Netmeds",
+    "category": "health",
+    "official_domains": [
+      "netmeds.com"
+    ],
+    "canonical_url": "https://netmeds.com/",
+    "tokens": [
+      "netmeds"
+    ]
+  },
+  {
+    "brand_id": "practo",
+    "display_name": "Practo",
+    "category": "health",
+    "official_domains": [
+      "practo.com"
+    ],
+    "canonical_url": "https://practo.com/",
+    "tokens": [
+      "practo"
+    ]
+  },
+  {
+    "brand_id": "dr-lal-pathlabs",
+    "display_name": "Dr Lal PathLabs",
+    "category": "health",
+    "official_domains": [
+      "lalpathlabs.com"
+    ],
+    "canonical_url": "https://lalpathlabs.com/",
+    "tokens": [
+      "drlalpathlabs",
+      "lalpathlabs"
+    ]
+  },
+  {
+    "brand_id": "max-healthcare",
+    "display_name": "Max Healthcare",
+    "category": "health",
+    "official_domains": [
+      "maxhealthcare.in"
+    ],
+    "canonical_url": "https://maxhealthcare.in/",
+    "tokens": [
+      "maxhealthcare"
+    ]
+  },
+  {
+    "brand_id": "fortis-healthcare",
+    "display_name": "Fortis Healthcare",
+    "category": "health",
+    "official_domains": [
+      "fortishealthcare.com"
+    ],
+    "canonical_url": "https://fortishealthcare.com/",
+    "tokens": [
+      "fortishealthcare"
+    ]
+  },
+  {
+    "brand_id": "manipal-hospitals",
+    "display_name": "Manipal Hospitals",
+    "category": "health",
+    "official_domains": [
+      "manipalhospitals.com"
+    ],
+    "canonical_url": "https://manipalhospitals.com/",
+    "tokens": [
+      "manipalhospitals"
+    ]
+  },
+  {
+    "brand_id": "aiims",
+    "display_name": "AIIMS",
+    "category": "health",
+    "official_domains": [
+      "aiims.edu"
+    ],
+    "canonical_url": "https://aiims.edu/",
+    "tokens": [
+      "aiims"
+    ]
+  },
+  {
+    "brand_id": "cult-fit",
+    "display_name": "Cult.fit",
+    "category": "health",
+    "official_domains": [
+      "cult.fit"
+    ],
+    "canonical_url": "https://cult.fit/",
+    "tokens": [
+      "cult",
+      "cultfit"
+    ]
+  },
+  {
+    "brand_id": "healthifyme",
+    "display_name": "HealthifyMe",
+    "category": "health",
+    "official_domains": [
+      "healthifyme.com"
+    ],
+    "canonical_url": "https://healthifyme.com/",
+    "tokens": [
+      "healthifyme"
+    ]
+  },
+  {
+    "brand_id": "urban-company",
+    "display_name": "Urban Company",
+    "category": "ecommerce",
+    "official_domains": [
+      "urbancompany.com"
+    ],
+    "canonical_url": "https://urbancompany.com/",
+    "tokens": [
+      "urbancompany"
+    ]
+  },
+  {
+    "brand_id": "olx-india",
+    "display_name": "OLX India",
+    "category": "ecommerce",
+    "official_domains": [
+      "olx.in"
+    ],
+    "canonical_url": "https://olx.in/",
+    "tokens": [
+      "olx",
+      "olxindia"
+    ]
+  },
+  {
+    "brand_id": "quikr",
+    "display_name": "Quikr",
+    "category": "ecommerce",
+    "official_domains": [
+      "quikr.com"
+    ],
+    "canonical_url": "https://quikr.com/",
+    "tokens": [
+      "quikr"
+    ]
+  },
+  {
+    "brand_id": "cars24",
+    "display_name": "Cars24",
+    "category": "auto",
+    "official_domains": [
+      "cars24.com"
+    ],
+    "canonical_url": "https://cars24.com/",
+    "tokens": [
+      "cars24"
+    ]
+  },
+  {
+    "brand_id": "cardekho",
+    "display_name": "CarDekho",
+    "category": "auto",
+    "official_domains": [
+      "cardekho.com"
+    ],
+    "canonical_url": "https://cardekho.com/",
+    "tokens": [
+      "cardekho"
+    ]
+  },
+  {
+    "brand_id": "spinny",
+    "display_name": "Spinny",
+    "category": "auto",
+    "official_domains": [
+      "spinny.com"
+    ],
+    "canonical_url": "https://spinny.com/",
+    "tokens": [
+      "spinny"
+    ]
+  },
+  {
+    "brand_id": "decathlon-india",
+    "display_name": "Decathlon India",
+    "category": "ecommerce",
+    "official_domains": [
+      "decathlon.in"
+    ],
+    "canonical_url": "https://decathlon.in/",
+    "tokens": [
+      "decathlon",
+      "decathlonindia"
+    ]
+  },
+  {
+    "brand_id": "croma",
+    "display_name": "Croma",
+    "category": "ecommerce",
+    "official_domains": [
+      "croma.com"
+    ],
+    "canonical_url": "https://croma.com/",
+    "tokens": [
+      "croma"
+    ]
+  },
+  {
+    "brand_id": "reliance-digital",
+    "display_name": "Reliance Digital",
+    "category": "ecommerce",
+    "official_domains": [
+      "reliancedigital.in"
+    ],
+    "canonical_url": "https://reliancedigital.in/",
+    "tokens": [
+      "reliancedigital"
+    ]
+  },
+  {
+    "brand_id": "vijay-sales",
+    "display_name": "Vijay Sales",
+    "category": "ecommerce",
+    "official_domains": [
+      "vijaysales.com"
+    ],
+    "canonical_url": "https://vijaysales.com/",
+    "tokens": [
+      "vijaysales"
+    ]
+  },
+  {
+    "brand_id": "ikea",
+    "display_name": "IKEA",
+    "category": "ecommerce",
+    "official_domains": [
+      "ikea.com"
+    ],
+    "canonical_url": "https://ikea.com/",
+    "tokens": [
+      "ikea"
+    ]
+  },
+  {
+    "brand_id": "pepperfry",
+    "display_name": "Pepperfry",
+    "category": "ecommerce",
+    "official_domains": [
+      "pepperfry.com"
+    ],
+    "canonical_url": "https://pepperfry.com/",
+    "tokens": [
+      "pepperfry"
+    ]
+  },
+  {
+    "brand_id": "tanishq",
+    "display_name": "Tanishq",
+    "category": "ecommerce",
+    "official_domains": [
+      "tanishq.com"
+    ],
+    "canonical_url": "https://tanishq.com/",
+    "tokens": [
+      "tanishq"
+    ]
+  },
+  {
+    "brand_id": "titan",
+    "display_name": "Titan",
+    "category": "ecommerce",
+    "official_domains": [
+      "titan.co.in"
+    ],
+    "canonical_url": "https://titan.co.in/",
+    "tokens": [
+      "titan"
+    ]
+  },
+  {
+    "brand_id": "mamaearth",
+    "display_name": "Mamaearth",
+    "category": "ecommerce",
+    "official_domains": [
+      "mamaearth.in"
+    ],
+    "canonical_url": "https://mamaearth.in/",
+    "tokens": [
+      "mamaearth"
+    ]
+  },
+  {
+    "brand_id": "boat",
+    "display_name": "boAt",
+    "category": "ecommerce",
+    "official_domains": [
+      "boat-lifestyle.com"
+    ],
+    "canonical_url": "https://boat-lifestyle.com/",
+    "tokens": [
+      "boat",
+      "boatlifestyle"
+    ]
+  },
+  {
+    "brand_id": "bata",
+    "display_name": "Bata",
+    "category": "ecommerce",
+    "official_domains": [
+      "bata.in"
+    ],
+    "canonical_url": "https://bata.in/",
+    "tokens": [
+      "bata"
+    ]
+  },
+  {
+    "brand_id": "pantaloons",
+    "display_name": "Pantaloons",
+    "category": "ecommerce",
+    "official_domains": [
+      "pantaloons.com"
+    ],
+    "canonical_url": "https://pantaloons.com/",
+    "tokens": [
+      "pantaloons"
+    ]
+  },
+  {
+    "brand_id": "westside",
+    "display_name": "Westside",
+    "category": "ecommerce",
+    "official_domains": [
+      "westside.com"
+    ],
+    "canonical_url": "https://westside.com/",
+    "tokens": [
+      "westside"
+    ]
+  },
+  {
+    "brand_id": "shoppers-stop",
+    "display_name": "Shoppers Stop",
+    "category": "ecommerce",
+    "official_domains": [
+      "shoppersstop.com"
+    ],
+    "canonical_url": "https://shoppersstop.com/",
+    "tokens": [
+      "shoppersstop"
+    ]
+  },
+  {
+    "brand_id": "lifestyle-stores",
+    "display_name": "Lifestyle Stores",
+    "category": "ecommerce",
+    "official_domains": [
+      "lifestylestores.com"
+    ],
+    "canonical_url": "https://lifestylestores.com/",
+    "tokens": [
+      "lifestylestores"
+    ]
+  },
+  {
+    "brand_id": "dmart",
+    "display_name": "DMart",
+    "category": "ecommerce",
+    "official_domains": [
+      "dmart.in"
+    ],
+    "canonical_url": "https://dmart.in/",
+    "tokens": [
+      "dmart"
+    ]
+  },
+  {
+    "brand_id": "reliance-retail",
+    "display_name": "Reliance Retail",
+    "category": "ecommerce",
+    "official_domains": [
+      "relianceretail.com"
+    ],
+    "canonical_url": "https://relianceretail.com/",
+    "tokens": [
+      "relianceretail"
+    ]
+  },
+  {
+    "brand_id": "blue-dart",
+    "display_name": "Blue Dart",
+    "category": "logistics",
+    "official_domains": [
+      "bluedart.com"
+    ],
+    "canonical_url": "https://bluedart.com/",
+    "tokens": [
+      "bluedart"
+    ]
+  },
+  {
+    "brand_id": "delhivery",
+    "display_name": "Delhivery",
+    "category": "logistics",
+    "official_domains": [
+      "delhivery.com"
+    ],
+    "canonical_url": "https://delhivery.com/",
+    "tokens": [
+      "delhivery"
+    ]
+  },
+  {
+    "brand_id": "dtdc",
+    "display_name": "DTDC",
+    "category": "logistics",
+    "official_domains": [
+      "dtdc.in"
+    ],
+    "canonical_url": "https://dtdc.in/",
+    "tokens": [
+      "dtdc"
+    ]
+  },
+  {
+    "brand_id": "ecom-express",
+    "display_name": "Ecom Express",
+    "category": "logistics",
+    "official_domains": [
+      "ecomexpress.in"
+    ],
+    "canonical_url": "https://ecomexpress.in/",
+    "tokens": [
+      "ecomexpress"
+    ]
+  },
+  {
+    "brand_id": "shiprocket",
+    "display_name": "Shiprocket",
+    "category": "logistics",
+    "official_domains": [
+      "shiprocket.in"
+    ],
+    "canonical_url": "https://shiprocket.in/",
+    "tokens": [
+      "shiprocket"
+    ]
+  },
+  {
+    "brand_id": "fedex",
+    "display_name": "FedEx",
+    "category": "logistics",
+    "official_domains": [
+      "fedex.com"
+    ],
+    "canonical_url": "https://fedex.com/",
+    "tokens": [
+      "fedex"
+    ]
+  },
+  {
+    "brand_id": "ups",
+    "display_name": "UPS",
+    "category": "logistics",
+    "official_domains": [
+      "ups.com"
+    ],
+    "canonical_url": "https://ups.com/",
+    "tokens": [
+      "ups"
+    ]
+  },
+  {
+    "brand_id": "dhl",
+    "display_name": "DHL",
+    "category": "logistics",
+    "official_domains": [
+      "dhl.com"
+    ],
+    "canonical_url": "https://dhl.com/",
+    "tokens": [
+      "dhl"
+    ]
+  },
+  {
+    "brand_id": "usps",
+    "display_name": "USPS",
+    "category": "logistics",
+    "official_domains": [
+      "usps.com"
+    ],
+    "canonical_url": "https://usps.com/",
+    "tokens": [
+      "usps"
+    ]
+  },
+  {
+    "brand_id": "royal-mail",
+    "display_name": "Royal Mail",
+    "category": "logistics",
+    "official_domains": [
+      "royalmail.com"
+    ],
+    "canonical_url": "https://royalmail.com/",
+    "tokens": [
+      "royalmail"
+    ]
+  },
+  {
+    "brand_id": "aramex",
+    "display_name": "Aramex",
+    "category": "logistics",
+    "official_domains": [
+      "aramex.com"
+    ],
+    "canonical_url": "https://aramex.com/",
+    "tokens": [
+      "aramex"
+    ]
+  },
+  {
+    "brand_id": "maersk",
+    "display_name": "Maersk",
+    "category": "logistics",
+    "official_domains": [
+      "maersk.com"
+    ],
+    "canonical_url": "https://maersk.com/",
+    "tokens": [
+      "maersk"
+    ]
+  },
+  {
+    "brand_id": "ola-cabs",
+    "display_name": "Ola Cabs",
+    "category": "travel",
+    "official_domains": [
+      "olacabs.com"
+    ],
+    "canonical_url": "https://olacabs.com/",
+    "tokens": [
+      "olacabs"
+    ]
+  },
+  {
+    "brand_id": "uber",
+    "display_name": "Uber",
+    "category": "travel",
+    "official_domains": [
+      "uber.com"
+    ],
+    "canonical_url": "https://uber.com/",
+    "tokens": [
+      "uber"
+    ]
+  },
+  {
+    "brand_id": "rapido",
+    "display_name": "Rapido",
+    "category": "travel",
+    "official_domains": [
+      "rapido.bike"
+    ],
+    "canonical_url": "https://rapido.bike/",
+    "tokens": [
+      "rapido"
+    ]
+  },
+  {
+    "brand_id": "lyft",
+    "display_name": "Lyft",
+    "category": "travel",
+    "official_domains": [
+      "lyft.com"
+    ],
+    "canonical_url": "https://lyft.com/",
+    "tokens": [
+      "lyft"
+    ]
+  },
+  {
+    "brand_id": "redbus",
+    "display_name": "redBus",
+    "category": "travel",
+    "official_domains": [
+      "redbus.in"
+    ],
+    "canonical_url": "https://redbus.in/",
+    "tokens": [
+      "redbus"
+    ]
+  },
+  {
+    "brand_id": "makemytrip",
+    "display_name": "MakeMyTrip",
+    "category": "travel",
+    "official_domains": [
+      "makemytrip.com"
+    ],
+    "canonical_url": "https://makemytrip.com/",
+    "tokens": [
+      "makemytrip"
+    ]
+  },
+  {
+    "brand_id": "goibibo",
+    "display_name": "Goibibo",
+    "category": "travel",
+    "official_domains": [
+      "goibibo.com"
+    ],
+    "canonical_url": "https://goibibo.com/",
+    "tokens": [
+      "goibibo"
+    ]
+  },
+  {
+    "brand_id": "cleartrip",
+    "display_name": "Cleartrip",
+    "category": "travel",
+    "official_domains": [
+      "cleartrip.com"
+    ],
+    "canonical_url": "https://cleartrip.com/",
+    "tokens": [
+      "cleartrip"
+    ]
+  },
+  {
+    "brand_id": "easemytrip",
+    "display_name": "EaseMyTrip",
+    "category": "travel",
+    "official_domains": [
+      "easemytrip.com"
+    ],
+    "canonical_url": "https://easemytrip.com/",
+    "tokens": [
+      "easemytrip"
+    ]
+  },
+  {
+    "brand_id": "yatra",
+    "display_name": "Yatra",
+    "category": "travel",
+    "official_domains": [
+      "yatra.com"
+    ],
+    "canonical_url": "https://yatra.com/",
+    "tokens": [
+      "yatra"
+    ]
+  },
+  {
+    "brand_id": "ixigo",
+    "display_name": "ixigo",
+    "category": "travel",
+    "official_domains": [
+      "ixigo.com"
+    ],
+    "canonical_url": "https://ixigo.com/",
+    "tokens": [
+      "ixigo"
+    ]
+  },
+  {
+    "brand_id": "indigo",
+    "display_name": "IndiGo",
+    "category": "travel",
+    "official_domains": [
+      "goindigo.in"
+    ],
+    "canonical_url": "https://goindigo.in/",
+    "tokens": [
+      "goindigo",
+      "indigo"
+    ]
+  },
+  {
+    "brand_id": "air-india",
+    "display_name": "Air India",
+    "category": "travel",
+    "official_domains": [
+      "airindia.com"
+    ],
+    "canonical_url": "https://airindia.com/",
+    "tokens": [
+      "airindia"
+    ]
+  },
+  {
+    "brand_id": "vistara",
+    "display_name": "Vistara",
+    "category": "travel",
+    "official_domains": [
+      "airvistara.com"
+    ],
+    "canonical_url": "https://airvistara.com/",
+    "tokens": [
+      "airvistara",
+      "vistara"
+    ]
+  },
+  {
+    "brand_id": "spicejet",
+    "display_name": "SpiceJet",
+    "category": "travel",
+    "official_domains": [
+      "spicejet.com"
+    ],
+    "canonical_url": "https://spicejet.com/",
+    "tokens": [
+      "spicejet"
+    ]
+  },
+  {
+    "brand_id": "akasa-air",
+    "display_name": "Akasa Air",
+    "category": "travel",
+    "official_domains": [
+      "akasaair.com"
+    ],
+    "canonical_url": "https://akasaair.com/",
+    "tokens": [
+      "akasaair"
+    ]
+  },
+  {
+    "brand_id": "air-india-express",
+    "display_name": "Air India Express",
+    "category": "travel",
+    "official_domains": [
+      "airindiaexpress.com"
+    ],
+    "canonical_url": "https://airindiaexpress.com/",
+    "tokens": [
+      "airindiaexpress"
+    ]
+  },
+  {
+    "brand_id": "oyo",
+    "display_name": "OYO",
+    "category": "travel",
+    "official_domains": [
+      "oyorooms.com"
+    ],
+    "canonical_url": "https://oyorooms.com/",
+    "tokens": [
+      "oyo",
+      "oyorooms"
+    ]
+  },
+  {
+    "brand_id": "booking-com",
+    "display_name": "Booking.com",
+    "category": "travel",
+    "official_domains": [
+      "booking.com"
+    ],
+    "canonical_url": "https://booking.com/",
+    "tokens": [
+      "booking",
+      "bookingcom"
+    ]
+  },
+  {
+    "brand_id": "airbnb",
+    "display_name": "Airbnb",
+    "category": "travel",
+    "official_domains": [
+      "airbnb.com"
+    ],
+    "canonical_url": "https://airbnb.com/",
+    "tokens": [
+      "airbnb"
+    ]
+  },
+  {
+    "brand_id": "expedia",
+    "display_name": "Expedia",
+    "category": "travel",
+    "official_domains": [
+      "expedia.com"
+    ],
+    "canonical_url": "https://expedia.com/",
+    "tokens": [
+      "expedia"
+    ]
+  },
+  {
+    "brand_id": "agoda",
+    "display_name": "Agoda",
+    "category": "travel",
+    "official_domains": [
+      "agoda.com"
+    ],
+    "canonical_url": "https://agoda.com/",
+    "tokens": [
+      "agoda"
+    ]
+  },
+  {
+    "brand_id": "tripadvisor",
+    "display_name": "TripAdvisor",
+    "category": "travel",
+    "official_domains": [
+      "tripadvisor.com"
+    ],
+    "canonical_url": "https://tripadvisor.com/",
+    "tokens": [
+      "tripadvisor"
+    ]
+  },
+  {
+    "brand_id": "taj-hotels",
+    "display_name": "Taj Hotels",
+    "category": "travel",
+    "official_domains": [
+      "tajhotels.com"
+    ],
+    "canonical_url": "https://tajhotels.com/",
+    "tokens": [
+      "tajhotels"
+    ]
+  },
+  {
+    "brand_id": "marriott",
+    "display_name": "Marriott",
+    "category": "travel",
+    "official_domains": [
+      "marriott.com"
+    ],
+    "canonical_url": "https://marriott.com/",
+    "tokens": [
+      "marriott"
+    ]
+  },
+  {
+    "brand_id": "hilton",
+    "display_name": "Hilton",
+    "category": "travel",
+    "official_domains": [
+      "hilton.com"
+    ],
+    "canonical_url": "https://hilton.com/",
+    "tokens": [
+      "hilton"
+    ]
+  },
+  {
+    "brand_id": "hyatt",
+    "display_name": "Hyatt",
+    "category": "travel",
+    "official_domains": [
+      "hyatt.com"
+    ],
+    "canonical_url": "https://hyatt.com/",
+    "tokens": [
+      "hyatt"
+    ]
+  },
+  {
+    "brand_id": "grab",
+    "display_name": "Grab",
+    "category": "travel",
+    "official_domains": [
+      "grab.com"
+    ],
+    "canonical_url": "https://grab.com/",
+    "tokens": [
+      "grab"
+    ]
+  },
+  {
+    "brand_id": "gojek",
+    "display_name": "Gojek",
+    "category": "travel",
+    "official_domains": [
+      "gojek.com"
+    ],
+    "canonical_url": "https://gojek.com/",
+    "tokens": [
+      "gojek"
+    ]
+  },
+  {
+    "brand_id": "ebay",
+    "display_name": "eBay",
+    "category": "ecommerce",
+    "official_domains": [
+      "ebay.com"
+    ],
+    "canonical_url": "https://ebay.com/",
+    "tokens": [
+      "ebay"
+    ]
+  },
+  {
+    "brand_id": "walmart",
+    "display_name": "Walmart",
+    "category": "ecommerce",
+    "official_domains": [
+      "walmart.com"
+    ],
+    "canonical_url": "https://walmart.com/",
+    "tokens": [
+      "walmart"
+    ]
+  },
+  {
+    "brand_id": "target",
+    "display_name": "Target",
+    "category": "ecommerce",
+    "official_domains": [
+      "target.com"
+    ],
+    "canonical_url": "https://target.com/",
+    "tokens": [
+      "target"
+    ]
+  },
+  {
+    "brand_id": "best-buy",
+    "display_name": "Best Buy",
+    "category": "ecommerce",
+    "official_domains": [
+      "bestbuy.com"
+    ],
+    "canonical_url": "https://bestbuy.com/",
+    "tokens": [
+      "bestbuy"
+    ]
+  },
+  {
+    "brand_id": "costco",
+    "display_name": "Costco",
+    "category": "ecommerce",
+    "official_domains": [
+      "costco.com"
+    ],
+    "canonical_url": "https://costco.com/",
+    "tokens": [
+      "costco"
+    ]
+  },
+  {
+    "brand_id": "alibaba",
+    "display_name": "Alibaba",
+    "category": "ecommerce",
+    "official_domains": [
+      "alibaba.com"
+    ],
+    "canonical_url": "https://alibaba.com/",
+    "tokens": [
+      "alibaba"
+    ]
+  },
+  {
+    "brand_id": "aliexpress",
+    "display_name": "AliExpress",
+    "category": "ecommerce",
+    "official_domains": [
+      "aliexpress.com"
+    ],
+    "canonical_url": "https://aliexpress.com/",
+    "tokens": [
+      "aliexpress"
+    ]
+  },
+  {
+    "brand_id": "etsy",
+    "display_name": "Etsy",
+    "category": "ecommerce",
+    "official_domains": [
+      "etsy.com"
+    ],
+    "canonical_url": "https://etsy.com/",
+    "tokens": [
+      "etsy"
+    ]
+  },
+  {
+    "brand_id": "shopify",
+    "display_name": "Shopify",
+    "category": "ecommerce",
+    "official_domains": [
+      "shopify.com"
+    ],
+    "canonical_url": "https://shopify.com/",
+    "tokens": [
+      "shopify"
+    ]
+  },
+  {
+    "brand_id": "temu",
+    "display_name": "Temu",
+    "category": "ecommerce",
+    "official_domains": [
+      "temu.com"
+    ],
+    "canonical_url": "https://temu.com/",
+    "tokens": [
+      "temu"
+    ]
+  },
+  {
+    "brand_id": "shein",
+    "display_name": "Shein",
+    "category": "ecommerce",
+    "official_domains": [
+      "shein.com"
+    ],
+    "canonical_url": "https://shein.com/",
+    "tokens": [
+      "shein"
+    ]
+  },
+  {
+    "brand_id": "zalando",
+    "display_name": "Zalando",
+    "category": "ecommerce",
+    "official_domains": [
+      "zalando.com"
+    ],
+    "canonical_url": "https://zalando.com/",
+    "tokens": [
+      "zalando"
+    ]
+  },
+  {
+    "brand_id": "rakuten",
+    "display_name": "Rakuten",
+    "category": "ecommerce",
+    "official_domains": [
+      "rakuten.com"
+    ],
+    "canonical_url": "https://rakuten.com/",
+    "tokens": [
+      "rakuten"
+    ]
+  },
+  {
+    "brand_id": "mercado-libre",
+    "display_name": "Mercado Libre",
+    "category": "ecommerce",
+    "official_domains": [
+      "mercadolibre.com"
+    ],
+    "canonical_url": "https://mercadolibre.com/",
+    "tokens": [
+      "mercadolibre"
+    ]
+  },
+  {
+    "brand_id": "shopee",
+    "display_name": "Shopee",
+    "category": "ecommerce",
+    "official_domains": [
+      "shopee.com"
+    ],
+    "canonical_url": "https://shopee.com/",
+    "tokens": [
+      "shopee"
+    ]
+  },
+  {
+    "brand_id": "lazada",
+    "display_name": "Lazada",
+    "category": "ecommerce",
+    "official_domains": [
+      "lazada.com"
+    ],
+    "canonical_url": "https://lazada.com/",
+    "tokens": [
+      "lazada"
+    ]
+  },
+  {
+    "brand_id": "nike",
+    "display_name": "Nike",
+    "category": "ecommerce",
+    "official_domains": [
+      "nike.com"
+    ],
+    "canonical_url": "https://nike.com/",
+    "tokens": [
+      "nike"
+    ]
+  },
+  {
+    "brand_id": "adidas",
+    "display_name": "Adidas",
+    "category": "ecommerce",
+    "official_domains": [
+      "adidas.com"
+    ],
+    "canonical_url": "https://adidas.com/",
+    "tokens": [
+      "adidas"
+    ]
+  },
+  {
+    "brand_id": "zara",
+    "display_name": "Zara",
+    "category": "ecommerce",
+    "official_domains": [
+      "zara.com"
+    ],
+    "canonical_url": "https://zara.com/",
+    "tokens": [
+      "zara"
+    ]
+  },
+  {
+    "brand_id": "h-and-m",
+    "display_name": "H and M",
+    "category": "ecommerce",
+    "official_domains": [
+      "hm.com"
+    ],
+    "canonical_url": "https://hm.com/",
+    "tokens": [
+      "handm",
+      "hm"
+    ]
+  },
+  {
+    "brand_id": "doordash",
+    "display_name": "DoorDash",
+    "category": "food",
+    "official_domains": [
+      "doordash.com"
+    ],
+    "canonical_url": "https://doordash.com/",
+    "tokens": [
+      "doordash"
+    ]
+  },
+  {
+    "brand_id": "instacart",
+    "display_name": "Instacart",
+    "category": "food",
+    "official_domains": [
+      "instacart.com"
+    ],
+    "canonical_url": "https://instacart.com/",
+    "tokens": [
+      "instacart"
+    ]
+  },
+  {
+    "brand_id": "grubhub",
+    "display_name": "Grubhub",
+    "category": "food",
+    "official_domains": [
+      "grubhub.com"
+    ],
+    "canonical_url": "https://grubhub.com/",
+    "tokens": [
+      "grubhub"
+    ]
+  },
+  {
+    "brand_id": "uber-eats",
+    "display_name": "Uber Eats",
+    "category": "food",
+    "official_domains": [
+      "ubereats.com"
+    ],
+    "canonical_url": "https://ubereats.com/",
+    "tokens": [
+      "ubereats"
+    ]
+  },
+  {
+    "brand_id": "mcdonald-s",
+    "display_name": "McDonald's",
+    "category": "food",
+    "official_domains": [
+      "mcdonalds.com"
+    ],
+    "canonical_url": "https://mcdonalds.com/",
+    "tokens": [
+      "mcdonalds"
+    ]
+  },
+  {
+    "brand_id": "starbucks",
+    "display_name": "Starbucks",
+    "category": "food",
+    "official_domains": [
+      "starbucks.com"
+    ],
+    "canonical_url": "https://starbucks.com/",
+    "tokens": [
+      "starbucks"
+    ]
+  },
+  {
+    "brand_id": "dominos",
+    "display_name": "Dominos",
+    "category": "food",
+    "official_domains": [
+      "dominos.com",
+      "dominos.co.in"
+    ],
+    "canonical_url": "https://dominos.com/",
+    "tokens": [
+      "dominos"
+    ]
+  },
+  {
+    "brand_id": "pizza-hut",
+    "display_name": "Pizza Hut",
+    "category": "food",
+    "official_domains": [
+      "pizzahut.com",
+      "pizzahut.co.in"
+    ],
+    "canonical_url": "https://pizzahut.com/",
+    "tokens": [
+      "pizzahut"
+    ]
+  },
+  {
+    "brand_id": "kfc",
+    "display_name": "KFC",
+    "category": "food",
+    "official_domains": [
+      "kfc.com",
+      "kfc.co.in"
+    ],
+    "canonical_url": "https://kfc.com/",
+    "tokens": [
+      "kfc"
+    ]
+  },
+  {
+    "brand_id": "burger-king",
+    "display_name": "Burger King",
+    "category": "food",
+    "official_domains": [
+      "burgerking.in"
+    ],
+    "canonical_url": "https://burgerking.in/",
+    "tokens": [
+      "burgerking"
+    ]
+  },
+  {
+    "brand_id": "subway",
+    "display_name": "Subway",
+    "category": "food",
+    "official_domains": [
+      "subway.com"
+    ],
+    "canonical_url": "https://subway.com/",
+    "tokens": [
+      "subway"
+    ]
+  },
+  {
+    "brand_id": "haldiram-s",
+    "display_name": "Haldiram's",
+    "category": "food",
+    "official_domains": [
+      "haldirams.com"
+    ],
+    "canonical_url": "https://haldirams.com/",
+    "tokens": [
+      "haldirams"
+    ]
+  },
+  {
+    "brand_id": "amul",
+    "display_name": "Amul",
+    "category": "food",
+    "official_domains": [
+      "amul.com"
+    ],
+    "canonical_url": "https://amul.com/",
+    "tokens": [
+      "amul"
+    ]
+  },
+  {
+    "brand_id": "google",
+    "display_name": "Google",
+    "category": "tech",
+    "official_domains": [
+      "google.com",
+      "google.co.in"
+    ],
+    "canonical_url": "https://google.com/",
+    "tokens": [
+      "google"
+    ]
+  },
+  {
+    "brand_id": "microsoft",
+    "display_name": "Microsoft",
+    "category": "tech",
+    "official_domains": [
+      "microsoft.com",
+      "live.com",
+      "office.com",
+      "microsoftonline.com"
+    ],
+    "canonical_url": "https://microsoft.com/",
+    "tokens": [
+      "microsoft"
+    ]
+  },
+  {
+    "brand_id": "apple",
+    "display_name": "Apple",
+    "category": "tech",
+    "official_domains": [
+      "apple.com",
+      "icloud.com"
+    ],
+    "canonical_url": "https://apple.com/",
+    "tokens": [
+      "apple"
+    ]
+  },
+  {
+    "brand_id": "meta",
+    "display_name": "Meta",
+    "category": "social",
+    "official_domains": [
+      "meta.com"
+    ],
+    "canonical_url": "https://meta.com/",
+    "tokens": [
+      "meta"
+    ]
+  },
+  {
+    "brand_id": "facebook",
+    "display_name": "Facebook",
+    "category": "social",
+    "official_domains": [
+      "facebook.com"
+    ],
+    "canonical_url": "https://facebook.com/",
+    "tokens": [
+      "facebook"
+    ]
+  },
+  {
+    "brand_id": "instagram",
+    "display_name": "Instagram",
+    "category": "social",
+    "official_domains": [
+      "instagram.com"
+    ],
+    "canonical_url": "https://instagram.com/",
+    "tokens": [
+      "instagram"
+    ]
+  },
+  {
+    "brand_id": "whatsapp",
+    "display_name": "WhatsApp",
+    "category": "social",
+    "official_domains": [
+      "whatsapp.com"
+    ],
+    "canonical_url": "https://whatsapp.com/",
+    "tokens": [
+      "whatsapp"
+    ]
+  },
+  {
+    "brand_id": "messenger",
+    "display_name": "Messenger",
+    "category": "social",
+    "official_domains": [
+      "messenger.com"
+    ],
+    "canonical_url": "https://messenger.com/",
+    "tokens": [
+      "messenger"
+    ]
+  },
+  {
+    "brand_id": "threads",
+    "display_name": "Threads",
+    "category": "social",
+    "official_domains": [
+      "threads.net"
+    ],
+    "canonical_url": "https://threads.net/",
+    "tokens": [
+      "threads"
+    ]
+  },
+  {
+    "brand_id": "x-twitter",
+    "display_name": "X Twitter",
+    "category": "social",
+    "official_domains": [
+      "x.com",
+      "twitter.com"
+    ],
+    "canonical_url": "https://x.com/",
+    "tokens": [
+      "x",
+      "xtwitter"
+    ]
+  },
+  {
+    "brand_id": "linkedin",
+    "display_name": "LinkedIn",
+    "category": "social",
+    "official_domains": [
+      "linkedin.com"
+    ],
+    "canonical_url": "https://linkedin.com/",
+    "tokens": [
+      "linkedin"
+    ]
+  },
+  {
+    "brand_id": "snapchat",
+    "display_name": "Snapchat",
+    "category": "social",
+    "official_domains": [
+      "snapchat.com"
+    ],
+    "canonical_url": "https://snapchat.com/",
+    "tokens": [
+      "snapchat"
+    ]
+  },
+  {
+    "brand_id": "pinterest",
+    "display_name": "Pinterest",
+    "category": "social",
+    "official_domains": [
+      "pinterest.com"
+    ],
+    "canonical_url": "https://pinterest.com/",
+    "tokens": [
+      "pinterest"
+    ]
+  },
+  {
+    "brand_id": "reddit",
+    "display_name": "Reddit",
+    "category": "social",
+    "official_domains": [
+      "reddit.com"
+    ],
+    "canonical_url": "https://reddit.com/",
+    "tokens": [
+      "reddit"
+    ]
+  },
+  {
+    "brand_id": "telegram",
+    "display_name": "Telegram",
+    "category": "social",
+    "official_domains": [
+      "telegram.org",
+      "t.me"
+    ],
+    "canonical_url": "https://telegram.org/",
+    "tokens": [
+      "telegram"
+    ]
+  },
+  {
+    "brand_id": "discord",
+    "display_name": "Discord",
+    "category": "social",
+    "official_domains": [
+      "discord.com"
+    ],
+    "canonical_url": "https://discord.com/",
+    "tokens": [
+      "discord"
+    ]
+  },
+  {
+    "brand_id": "signal",
+    "display_name": "Signal",
+    "category": "social",
+    "official_domains": [
+      "signal.org"
+    ],
+    "canonical_url": "https://signal.org/",
+    "tokens": [
+      "signal"
+    ]
+  },
+  {
+    "brand_id": "tiktok",
+    "display_name": "TikTok",
+    "category": "social",
+    "official_domains": [
+      "tiktok.com"
+    ],
+    "canonical_url": "https://tiktok.com/",
+    "tokens": [
+      "tiktok"
+    ]
+  },
+  {
+    "brand_id": "youtube",
+    "display_name": "YouTube",
+    "category": "media",
+    "official_domains": [
+      "youtube.com"
+    ],
+    "canonical_url": "https://youtube.com/",
+    "tokens": [
+      "youtube"
+    ]
+  },
+  {
+    "brand_id": "quora",
+    "display_name": "Quora",
+    "category": "social",
+    "official_domains": [
+      "quora.com"
+    ],
+    "canonical_url": "https://quora.com/",
+    "tokens": [
+      "quora"
+    ]
+  },
+  {
+    "brand_id": "medium",
+    "display_name": "Medium",
+    "category": "social",
+    "official_domains": [
+      "medium.com"
+    ],
+    "canonical_url": "https://medium.com/",
+    "tokens": [
+      "medium"
+    ]
+  },
+  {
+    "brand_id": "sharechat",
+    "display_name": "ShareChat",
+    "category": "social",
+    "official_domains": [
+      "sharechat.com"
+    ],
+    "canonical_url": "https://sharechat.com/",
+    "tokens": [
+      "sharechat"
+    ]
+  },
+  {
+    "brand_id": "tencent",
+    "display_name": "Tencent",
+    "category": "tech",
+    "official_domains": [
+      "tencent.com"
+    ],
+    "canonical_url": "https://tencent.com/",
+    "tokens": [
+      "tencent"
+    ]
+  },
+  {
+    "brand_id": "wechat",
+    "display_name": "WeChat",
+    "category": "social",
+    "official_domains": [
+      "wechat.com"
+    ],
+    "canonical_url": "https://wechat.com/",
+    "tokens": [
+      "wechat"
+    ]
+  },
+  {
+    "brand_id": "baidu",
+    "display_name": "Baidu",
+    "category": "tech",
+    "official_domains": [
+      "baidu.com"
+    ],
+    "canonical_url": "https://baidu.com/",
+    "tokens": [
+      "baidu"
+    ]
+  },
+  {
+    "brand_id": "yandex",
+    "display_name": "Yandex",
+    "category": "tech",
+    "official_domains": [
+      "yandex.com"
+    ],
+    "canonical_url": "https://yandex.com/",
+    "tokens": [
+      "yandex"
+    ]
+  },
+  {
+    "brand_id": "naver",
+    "display_name": "Naver",
+    "category": "tech",
+    "official_domains": [
+      "naver.com"
+    ],
+    "canonical_url": "https://naver.com/",
+    "tokens": [
+      "naver"
+    ]
+  },
+  {
+    "brand_id": "line",
+    "display_name": "LINE",
+    "category": "social",
+    "official_domains": [
+      "line.me"
+    ],
+    "canonical_url": "https://line.me/",
+    "tokens": [
+      "line"
+    ]
+  },
+  {
+    "brand_id": "netflix",
+    "display_name": "Netflix",
+    "category": "media",
+    "official_domains": [
+      "netflix.com"
+    ],
+    "canonical_url": "https://netflix.com/",
+    "tokens": [
+      "netflix"
+    ]
+  },
+  {
+    "brand_id": "disney-plus-hotstar",
+    "display_name": "Disney Plus Hotstar",
+    "category": "media",
+    "official_domains": [
+      "hotstar.com"
+    ],
+    "canonical_url": "https://hotstar.com/",
+    "tokens": [
+      "disneyplushotstar",
+      "hotstar"
+    ]
+  },
+  {
+    "brand_id": "jiocinema",
+    "display_name": "JioCinema",
+    "category": "media",
+    "official_domains": [
+      "jiocinema.com"
+    ],
+    "canonical_url": "https://jiocinema.com/",
+    "tokens": [
+      "jiocinema"
+    ]
+  },
+  {
+    "brand_id": "prime-video",
+    "display_name": "Prime Video",
+    "category": "media",
+    "official_domains": [
+      "primevideo.com"
+    ],
+    "canonical_url": "https://primevideo.com/",
+    "tokens": [
+      "primevideo"
+    ]
+  },
+  {
+    "brand_id": "sony-liv",
+    "display_name": "Sony LIV",
+    "category": "media",
+    "official_domains": [
+      "sonyliv.com"
+    ],
+    "canonical_url": "https://sonyliv.com/",
+    "tokens": [
+      "sonyliv"
+    ]
+  },
+  {
+    "brand_id": "zee5",
+    "display_name": "ZEE5",
+    "category": "media",
+    "official_domains": [
+      "zee5.com"
+    ],
+    "canonical_url": "https://zee5.com/",
+    "tokens": [
+      "zee5"
+    ]
+  },
+  {
+    "brand_id": "spotify",
+    "display_name": "Spotify",
+    "category": "media",
+    "official_domains": [
+      "spotify.com"
+    ],
+    "canonical_url": "https://spotify.com/",
+    "tokens": [
+      "spotify"
+    ]
+  },
+  {
+    "brand_id": "gaana",
+    "display_name": "Gaana",
+    "category": "media",
+    "official_domains": [
+      "gaana.com"
+    ],
+    "canonical_url": "https://gaana.com/",
+    "tokens": [
+      "gaana"
+    ]
+  },
+  {
+    "brand_id": "jiosaavn",
+    "display_name": "JioSaavn",
+    "category": "media",
+    "official_domains": [
+      "jiosaavn.com"
+    ],
+    "canonical_url": "https://jiosaavn.com/",
+    "tokens": [
+      "jiosaavn"
+    ]
+  },
+  {
+    "brand_id": "twitch",
+    "display_name": "Twitch",
+    "category": "media",
+    "official_domains": [
+      "twitch.tv"
+    ],
+    "canonical_url": "https://twitch.tv/",
+    "tokens": [
+      "twitch"
+    ]
+  },
+  {
+    "brand_id": "disney",
+    "display_name": "Disney",
+    "category": "media",
+    "official_domains": [
+      "disney.com"
+    ],
+    "canonical_url": "https://disney.com/",
+    "tokens": [
+      "disney"
+    ]
+  },
+  {
+    "brand_id": "max-hbo",
+    "display_name": "Max HBO",
+    "category": "media",
+    "official_domains": [
+      "max.com"
+    ],
+    "canonical_url": "https://max.com/",
+    "tokens": [
+      "max",
+      "maxhbo"
+    ]
+  },
+  {
+    "brand_id": "hulu",
+    "display_name": "Hulu",
+    "category": "media",
+    "official_domains": [
+      "hulu.com"
+    ],
+    "canonical_url": "https://hulu.com/",
+    "tokens": [
+      "hulu"
+    ]
+  },
+  {
+    "brand_id": "paramount-plus",
+    "display_name": "Paramount Plus",
+    "category": "media",
+    "official_domains": [
+      "paramountplus.com"
+    ],
+    "canonical_url": "https://paramountplus.com/",
+    "tokens": [
+      "paramountplus"
+    ]
+  },
+  {
+    "brand_id": "crunchyroll",
+    "display_name": "Crunchyroll",
+    "category": "media",
+    "official_domains": [
+      "crunchyroll.com"
+    ],
+    "canonical_url": "https://crunchyroll.com/",
+    "tokens": [
+      "crunchyroll"
+    ]
+  },
+  {
+    "brand_id": "bookmyshow",
+    "display_name": "BookMyShow",
+    "category": "media",
+    "official_domains": [
+      "bookmyshow.com"
+    ],
+    "canonical_url": "https://bookmyshow.com/",
+    "tokens": [
+      "bookmyshow"
+    ]
+  },
+  {
+    "brand_id": "pvr-inox",
+    "display_name": "PVR INOX",
+    "category": "media",
+    "official_domains": [
+      "pvrcinemas.com"
+    ],
+    "canonical_url": "https://pvrcinemas.com/",
+    "tokens": [
+      "pvrcinemas",
+      "pvrinox"
+    ]
+  },
+  {
+    "brand_id": "steam",
+    "display_name": "Steam",
+    "category": "gaming",
+    "official_domains": [
+      "steampowered.com",
+      "steamcommunity.com"
+    ],
+    "canonical_url": "https://steampowered.com/",
+    "tokens": [
+      "steam",
+      "steampowered"
+    ]
+  },
+  {
+    "brand_id": "epic-games",
+    "display_name": "Epic Games",
+    "category": "gaming",
+    "official_domains": [
+      "epicgames.com"
+    ],
+    "canonical_url": "https://epicgames.com/",
+    "tokens": [
+      "epicgames"
+    ]
+  },
+  {
+    "brand_id": "xbox",
+    "display_name": "Xbox",
+    "category": "gaming",
+    "official_domains": [
+      "xbox.com"
+    ],
+    "canonical_url": "https://xbox.com/",
+    "tokens": [
+      "xbox"
+    ]
+  },
+  {
+    "brand_id": "playstation",
+    "display_name": "PlayStation",
+    "category": "gaming",
+    "official_domains": [
+      "playstation.com"
+    ],
+    "canonical_url": "https://playstation.com/",
+    "tokens": [
+      "playstation"
+    ]
+  },
+  {
+    "brand_id": "nintendo",
+    "display_name": "Nintendo",
+    "category": "gaming",
+    "official_domains": [
+      "nintendo.com"
+    ],
+    "canonical_url": "https://nintendo.com/",
+    "tokens": [
+      "nintendo"
+    ]
+  },
+  {
+    "brand_id": "roblox",
+    "display_name": "Roblox",
+    "category": "gaming",
+    "official_domains": [
+      "roblox.com"
+    ],
+    "canonical_url": "https://roblox.com/",
+    "tokens": [
+      "roblox"
+    ]
+  },
+  {
+    "brand_id": "riot-games",
+    "display_name": "Riot Games",
+    "category": "gaming",
+    "official_domains": [
+      "riotgames.com"
+    ],
+    "canonical_url": "https://riotgames.com/",
+    "tokens": [
+      "riotgames"
+    ]
+  },
+  {
+    "brand_id": "dream11",
+    "display_name": "Dream11",
+    "category": "gaming",
+    "official_domains": [
+      "dream11.com"
+    ],
+    "canonical_url": "https://dream11.com/",
+    "tokens": [
+      "dream11"
+    ]
+  },
+  {
+    "brand_id": "mpl",
+    "display_name": "MPL",
+    "category": "gaming",
+    "official_domains": [
+      "mpl.live"
+    ],
+    "canonical_url": "https://mpl.live/",
+    "tokens": [
+      "mpl"
+    ]
+  },
+  {
+    "brand_id": "ubisoft",
+    "display_name": "Ubisoft",
+    "category": "gaming",
+    "official_domains": [
+      "ubisoft.com"
+    ],
+    "canonical_url": "https://ubisoft.com/",
+    "tokens": [
+      "ubisoft"
+    ]
+  },
+  {
+    "brand_id": "electronic-arts",
+    "display_name": "Electronic Arts",
+    "category": "gaming",
+    "official_domains": [
+      "ea.com"
+    ],
+    "canonical_url": "https://ea.com/",
+    "tokens": [
+      "ea",
+      "electronicarts"
+    ]
+  },
+  {
+    "brand_id": "blizzard",
+    "display_name": "Blizzard",
+    "category": "gaming",
+    "official_domains": [
+      "blizzard.com"
+    ],
+    "canonical_url": "https://blizzard.com/",
+    "tokens": [
+      "blizzard"
+    ]
+  },
+  {
+    "brand_id": "github",
+    "display_name": "GitHub",
+    "category": "tech",
+    "official_domains": [
+      "github.com"
+    ],
+    "canonical_url": "https://github.com/",
+    "tokens": [
+      "github"
+    ]
+  },
+  {
+    "brand_id": "gitlab",
+    "display_name": "GitLab",
+    "category": "tech",
+    "official_domains": [
+      "gitlab.com"
+    ],
+    "canonical_url": "https://gitlab.com/",
+    "tokens": [
+      "gitlab"
+    ]
+  },
+  {
+    "brand_id": "bitbucket",
+    "display_name": "Bitbucket",
+    "category": "tech",
+    "official_domains": [
+      "bitbucket.org"
+    ],
+    "canonical_url": "https://bitbucket.org/",
+    "tokens": [
+      "bitbucket"
+    ]
+  },
+  {
+    "brand_id": "atlassian",
+    "display_name": "Atlassian",
+    "category": "tech",
+    "official_domains": [
+      "atlassian.com",
+      "atlassian.net"
+    ],
+    "canonical_url": "https://atlassian.com/",
+    "tokens": [
+      "atlassian"
+    ]
+  },
+  {
+    "brand_id": "slack",
+    "display_name": "Slack",
+    "category": "tech",
+    "official_domains": [
+      "slack.com"
+    ],
+    "canonical_url": "https://slack.com/",
+    "tokens": [
+      "slack"
+    ]
+  },
+  {
+    "brand_id": "zoom",
+    "display_name": "Zoom",
+    "category": "tech",
+    "official_domains": [
+      "zoom.us"
+    ],
+    "canonical_url": "https://zoom.us/",
+    "tokens": [
+      "zoom"
+    ]
+  },
+  {
+    "brand_id": "dropbox",
+    "display_name": "Dropbox",
+    "category": "tech",
+    "official_domains": [
+      "dropbox.com"
+    ],
+    "canonical_url": "https://dropbox.com/",
+    "tokens": [
+      "dropbox"
+    ]
+  },
+  {
+    "brand_id": "box",
+    "display_name": "Box",
+    "category": "tech",
+    "official_domains": [
+      "box.com"
+    ],
+    "canonical_url": "https://box.com/",
+    "tokens": [
+      "box"
+    ]
+  },
+  {
+    "brand_id": "adobe",
+    "display_name": "Adobe",
+    "category": "tech",
+    "official_domains": [
+      "adobe.com"
+    ],
+    "canonical_url": "https://adobe.com/",
+    "tokens": [
+      "adobe"
+    ]
+  },
+  {
+    "brand_id": "canva",
+    "display_name": "Canva",
+    "category": "tech",
+    "official_domains": [
+      "canva.com"
+    ],
+    "canonical_url": "https://canva.com/",
+    "tokens": [
+      "canva"
+    ]
+  },
+  {
+    "brand_id": "figma",
+    "display_name": "Figma",
+    "category": "tech",
+    "official_domains": [
+      "figma.com"
+    ],
+    "canonical_url": "https://figma.com/",
+    "tokens": [
+      "figma"
+    ]
+  },
+  {
+    "brand_id": "notion",
+    "display_name": "Notion",
+    "category": "tech",
+    "official_domains": [
+      "notion.so"
+    ],
+    "canonical_url": "https://notion.so/",
+    "tokens": [
+      "notion"
+    ]
+  },
+  {
+    "brand_id": "salesforce",
+    "display_name": "Salesforce",
+    "category": "tech",
+    "official_domains": [
+      "salesforce.com"
+    ],
+    "canonical_url": "https://salesforce.com/",
+    "tokens": [
+      "salesforce"
+    ]
+  },
+  {
+    "brand_id": "oracle",
+    "display_name": "Oracle",
+    "category": "tech",
+    "official_domains": [
+      "oracle.com"
+    ],
+    "canonical_url": "https://oracle.com/",
+    "tokens": [
+      "oracle"
+    ]
+  },
+  {
+    "brand_id": "sap",
+    "display_name": "SAP",
+    "category": "tech",
+    "official_domains": [
+      "sap.com"
+    ],
+    "canonical_url": "https://sap.com/",
+    "tokens": [
+      "sap"
+    ]
+  },
+  {
+    "brand_id": "ibm",
+    "display_name": "IBM",
+    "category": "tech",
+    "official_domains": [
+      "ibm.com"
+    ],
+    "canonical_url": "https://ibm.com/",
+    "tokens": [
+      "ibm"
+    ]
+  },
+  {
+    "brand_id": "cisco",
+    "display_name": "Cisco",
+    "category": "tech",
+    "official_domains": [
+      "cisco.com"
+    ],
+    "canonical_url": "https://cisco.com/",
+    "tokens": [
+      "cisco"
+    ]
+  },
+  {
+    "brand_id": "intel",
+    "display_name": "Intel",
+    "category": "tech",
+    "official_domains": [
+      "intel.com"
+    ],
+    "canonical_url": "https://intel.com/",
+    "tokens": [
+      "intel"
+    ]
+  },
+  {
+    "brand_id": "amd",
+    "display_name": "AMD",
+    "category": "tech",
+    "official_domains": [
+      "amd.com"
+    ],
+    "canonical_url": "https://amd.com/",
+    "tokens": [
+      "amd"
+    ]
+  },
+  {
+    "brand_id": "nvidia",
+    "display_name": "NVIDIA",
+    "category": "tech",
+    "official_domains": [
+      "nvidia.com"
+    ],
+    "canonical_url": "https://nvidia.com/",
+    "tokens": [
+      "nvidia"
+    ]
+  },
+  {
+    "brand_id": "qualcomm",
+    "display_name": "Qualcomm",
+    "category": "tech",
+    "official_domains": [
+      "qualcomm.com"
+    ],
+    "canonical_url": "https://qualcomm.com/",
+    "tokens": [
+      "qualcomm"
+    ]
+  },
+  {
+    "brand_id": "microsoft-azure",
+    "display_name": "Microsoft Azure",
+    "category": "tech",
+    "official_domains": [
+      "azure.com"
+    ],
+    "canonical_url": "https://azure.com/",
+    "tokens": [
+      "azure",
+      "microsoftazure"
+    ]
+  },
+  {
+    "brand_id": "cloudflare",
+    "display_name": "Cloudflare",
+    "category": "tech",
+    "official_domains": [
+      "cloudflare.com"
+    ],
+    "canonical_url": "https://cloudflare.com/",
+    "tokens": [
+      "cloudflare"
+    ]
+  },
+  {
+    "brand_id": "heroku",
+    "display_name": "Heroku",
+    "category": "tech",
+    "official_domains": [
+      "heroku.com"
+    ],
+    "canonical_url": "https://heroku.com/",
+    "tokens": [
+      "heroku"
+    ]
+  },
+  {
+    "brand_id": "vercel",
+    "display_name": "Vercel",
+    "category": "tech",
+    "official_domains": [
+      "vercel.com"
+    ],
+    "canonical_url": "https://vercel.com/",
+    "tokens": [
+      "vercel"
+    ]
+  },
+  {
+    "brand_id": "netlify",
+    "display_name": "Netlify",
+    "category": "tech",
+    "official_domains": [
+      "netlify.com"
+    ],
+    "canonical_url": "https://netlify.com/",
+    "tokens": [
+      "netlify"
+    ]
+  },
+  {
+    "brand_id": "digitalocean",
+    "display_name": "DigitalOcean",
+    "category": "tech",
+    "official_domains": [
+      "digitalocean.com"
+    ],
+    "canonical_url": "https://digitalocean.com/",
+    "tokens": [
+      "digitalocean"
+    ]
+  },
+  {
+    "brand_id": "godaddy",
+    "display_name": "GoDaddy",
+    "category": "tech",
+    "official_domains": [
+      "godaddy.com"
+    ],
+    "canonical_url": "https://godaddy.com/",
+    "tokens": [
+      "godaddy"
+    ]
+  },
+  {
+    "brand_id": "namecheap",
+    "display_name": "Namecheap",
+    "category": "tech",
+    "official_domains": [
+      "namecheap.com"
+    ],
+    "canonical_url": "https://namecheap.com/",
+    "tokens": [
+      "namecheap"
+    ]
+  },
+  {
+    "brand_id": "hostinger",
+    "display_name": "Hostinger",
+    "category": "tech",
+    "official_domains": [
+      "hostinger.com"
+    ],
+    "canonical_url": "https://hostinger.com/",
+    "tokens": [
+      "hostinger"
+    ]
+  },
+  {
+    "brand_id": "wordpress",
+    "display_name": "WordPress",
+    "category": "tech",
+    "official_domains": [
+      "wordpress.com",
+      "wordpress.org"
+    ],
+    "canonical_url": "https://wordpress.com/",
+    "tokens": [
+      "wordpress"
+    ]
+  },
+  {
+    "brand_id": "wix",
+    "display_name": "Wix",
+    "category": "tech",
+    "official_domains": [
+      "wix.com"
+    ],
+    "canonical_url": "https://wix.com/",
+    "tokens": [
+      "wix"
+    ]
+  },
+  {
+    "brand_id": "squarespace",
+    "display_name": "Squarespace",
+    "category": "tech",
+    "official_domains": [
+      "squarespace.com"
+    ],
+    "canonical_url": "https://squarespace.com/",
+    "tokens": [
+      "squarespace"
+    ]
+  },
+  {
+    "brand_id": "openai",
+    "display_name": "OpenAI",
+    "category": "tech",
+    "official_domains": [
+      "openai.com",
+      "chatgpt.com"
+    ],
+    "canonical_url": "https://openai.com/",
+    "tokens": [
+      "openai"
+    ]
+  },
+  {
+    "brand_id": "anthropic",
+    "display_name": "Anthropic",
+    "category": "tech",
+    "official_domains": [
+      "anthropic.com",
+      "claude.ai"
+    ],
+    "canonical_url": "https://anthropic.com/",
+    "tokens": [
+      "anthropic"
+    ]
+  },
+  {
+    "brand_id": "hugging-face",
+    "display_name": "Hugging Face",
+    "category": "tech",
+    "official_domains": [
+      "huggingface.co"
+    ],
+    "canonical_url": "https://huggingface.co/",
+    "tokens": [
+      "huggingface"
+    ]
+  },
+  {
+    "brand_id": "stack-overflow",
+    "display_name": "Stack Overflow",
+    "category": "tech",
+    "official_domains": [
+      "stackoverflow.com"
+    ],
+    "canonical_url": "https://stackoverflow.com/",
+    "tokens": [
+      "stackoverflow"
+    ]
+  },
+  {
+    "brand_id": "npm",
+    "display_name": "npm",
+    "category": "tech",
+    "official_domains": [
+      "npmjs.com"
+    ],
+    "canonical_url": "https://npmjs.com/",
+    "tokens": [
+      "npm",
+      "npmjs"
+    ]
+  },
+  {
+    "brand_id": "pypi",
+    "display_name": "PyPI",
+    "category": "tech",
+    "official_domains": [
+      "pypi.org"
+    ],
+    "canonical_url": "https://pypi.org/",
+    "tokens": [
+      "pypi"
+    ]
+  },
+  {
+    "brand_id": "docker",
+    "display_name": "Docker",
+    "category": "tech",
+    "official_domains": [
+      "docker.com"
+    ],
+    "canonical_url": "https://docker.com/",
+    "tokens": [
+      "docker"
+    ]
+  },
+  {
+    "brand_id": "kaggle",
+    "display_name": "Kaggle",
+    "category": "tech",
+    "official_domains": [
+      "kaggle.com"
+    ],
+    "canonical_url": "https://kaggle.com/",
+    "tokens": [
+      "kaggle"
+    ]
+  },
+  {
+    "brand_id": "postman",
+    "display_name": "Postman",
+    "category": "tech",
+    "official_domains": [
+      "postman.com"
+    ],
+    "canonical_url": "https://postman.com/",
+    "tokens": [
+      "postman"
+    ]
+  },
+  {
+    "brand_id": "jetbrains",
+    "display_name": "JetBrains",
+    "category": "tech",
+    "official_domains": [
+      "jetbrains.com"
+    ],
+    "canonical_url": "https://jetbrains.com/",
+    "tokens": [
+      "jetbrains"
+    ]
+  },
+  {
+    "brand_id": "mozilla",
+    "display_name": "Mozilla",
+    "category": "tech",
+    "official_domains": [
+      "mozilla.org"
+    ],
+    "canonical_url": "https://mozilla.org/",
+    "tokens": [
+      "mozilla"
+    ]
+  },
+  {
+    "brand_id": "brave",
+    "display_name": "Brave",
+    "category": "tech",
+    "official_domains": [
+      "brave.com"
+    ],
+    "canonical_url": "https://brave.com/",
+    "tokens": [
+      "brave"
+    ]
+  },
+  {
+    "brand_id": "opera",
+    "display_name": "Opera",
+    "category": "tech",
+    "official_domains": [
+      "opera.com"
+    ],
+    "canonical_url": "https://opera.com/",
+    "tokens": [
+      "opera"
+    ]
+  },
+  {
+    "brand_id": "proton",
+    "display_name": "Proton",
+    "category": "tech",
+    "official_domains": [
+      "proton.me"
+    ],
+    "canonical_url": "https://proton.me/",
+    "tokens": [
+      "proton"
+    ]
+  },
+  {
+    "brand_id": "duckduckgo",
+    "display_name": "DuckDuckGo",
+    "category": "tech",
+    "official_domains": [
+      "duckduckgo.com"
+    ],
+    "canonical_url": "https://duckduckgo.com/",
+    "tokens": [
+      "duckduckgo"
+    ]
+  },
+  {
+    "brand_id": "bing",
+    "display_name": "Bing",
+    "category": "tech",
+    "official_domains": [
+      "bing.com"
+    ],
+    "canonical_url": "https://bing.com/",
+    "tokens": [
+      "bing"
+    ]
+  },
+  {
+    "brand_id": "yahoo",
+    "display_name": "Yahoo",
+    "category": "tech",
+    "official_domains": [
+      "yahoo.com"
+    ],
+    "canonical_url": "https://yahoo.com/",
+    "tokens": [
+      "yahoo"
+    ]
+  },
+  {
+    "brand_id": "outlook",
+    "display_name": "Outlook",
+    "category": "tech",
+    "official_domains": [
+      "outlook.com"
+    ],
+    "canonical_url": "https://outlook.com/",
+    "tokens": [
+      "outlook"
+    ]
+  },
+  {
+    "brand_id": "rediff",
+    "display_name": "Rediff",
+    "category": "tech",
+    "official_domains": [
+      "rediff.com"
+    ],
+    "canonical_url": "https://rediff.com/",
+    "tokens": [
+      "rediff"
+    ]
+  },
+  {
+    "brand_id": "zoho",
+    "display_name": "Zoho",
+    "category": "tech",
+    "official_domains": [
+      "zoho.com"
+    ],
+    "canonical_url": "https://zoho.com/",
+    "tokens": [
+      "zoho"
+    ]
+  },
+  {
+    "brand_id": "freshworks",
+    "display_name": "Freshworks",
+    "category": "tech",
+    "official_domains": [
+      "freshworks.com"
+    ],
+    "canonical_url": "https://freshworks.com/",
+    "tokens": [
+      "freshworks"
+    ]
+  },
+  {
+    "brand_id": "truecaller",
+    "display_name": "Truecaller",
+    "category": "tech",
+    "official_domains": [
+      "truecaller.com"
+    ],
+    "canonical_url": "https://truecaller.com/",
+    "tokens": [
+      "truecaller"
+    ]
+  },
+  {
+    "brand_id": "docusign",
+    "display_name": "DocuSign",
+    "category": "tech",
+    "official_domains": [
+      "docusign.com"
+    ],
+    "canonical_url": "https://docusign.com/",
+    "tokens": [
+      "docusign"
+    ]
+  },
+  {
+    "brand_id": "infosys",
+    "display_name": "Infosys",
+    "category": "tech",
+    "official_domains": [
+      "infosys.com"
+    ],
+    "canonical_url": "https://infosys.com/",
+    "tokens": [
+      "infosys"
+    ]
+  },
+  {
+    "brand_id": "tata-consultancy-services",
+    "display_name": "Tata Consultancy Services",
+    "category": "tech",
+    "official_domains": [
+      "tcs.com"
+    ],
+    "canonical_url": "https://tcs.com/",
+    "tokens": [
+      "tataconsultancyservices",
+      "tcs"
+    ]
+  },
+  {
+    "brand_id": "wipro",
+    "display_name": "Wipro",
+    "category": "tech",
+    "official_domains": [
+      "wipro.com"
+    ],
+    "canonical_url": "https://wipro.com/",
+    "tokens": [
+      "wipro"
+    ]
+  },
+  {
+    "brand_id": "hcltech",
+    "display_name": "HCLTech",
+    "category": "tech",
+    "official_domains": [
+      "hcltech.com"
+    ],
+    "canonical_url": "https://hcltech.com/",
+    "tokens": [
+      "hcltech"
+    ]
+  },
+  {
+    "brand_id": "tech-mahindra",
+    "display_name": "Tech Mahindra",
+    "category": "tech",
+    "official_domains": [
+      "techmahindra.com"
+    ],
+    "canonical_url": "https://techmahindra.com/",
+    "tokens": [
+      "techmahindra"
+    ]
+  },
+  {
+    "brand_id": "samsung",
+    "display_name": "Samsung",
+    "category": "tech",
+    "official_domains": [
+      "samsung.com"
+    ],
+    "canonical_url": "https://samsung.com/",
+    "tokens": [
+      "samsung"
+    ]
+  },
+  {
+    "brand_id": "sony",
+    "display_name": "Sony",
+    "category": "tech",
+    "official_domains": [
+      "sony.com"
+    ],
+    "canonical_url": "https://sony.com/",
+    "tokens": [
+      "sony"
+    ]
+  },
+  {
+    "brand_id": "lg",
+    "display_name": "LG",
+    "category": "tech",
+    "official_domains": [
+      "lg.com"
+    ],
+    "canonical_url": "https://lg.com/",
+    "tokens": [
+      "lg"
+    ]
+  },
+  {
+    "brand_id": "dell",
+    "display_name": "Dell",
+    "category": "tech",
+    "official_domains": [
+      "dell.com"
+    ],
+    "canonical_url": "https://dell.com/",
+    "tokens": [
+      "dell"
+    ]
+  },
+  {
+    "brand_id": "hp",
+    "display_name": "HP",
+    "category": "tech",
+    "official_domains": [
+      "hp.com"
+    ],
+    "canonical_url": "https://hp.com/",
+    "tokens": [
+      "hp"
+    ]
+  },
+  {
+    "brand_id": "lenovo",
+    "display_name": "Lenovo",
+    "category": "tech",
+    "official_domains": [
+      "lenovo.com"
+    ],
+    "canonical_url": "https://lenovo.com/",
+    "tokens": [
+      "lenovo"
+    ]
+  },
+  {
+    "brand_id": "asus",
+    "display_name": "Asus",
+    "category": "tech",
+    "official_domains": [
+      "asus.com"
+    ],
+    "canonical_url": "https://asus.com/",
+    "tokens": [
+      "asus"
+    ]
+  },
+  {
+    "brand_id": "xiaomi",
+    "display_name": "Xiaomi",
+    "category": "tech",
+    "official_domains": [
+      "xiaomi.com",
+      "mi.com"
+    ],
+    "canonical_url": "https://xiaomi.com/",
+    "tokens": [
+      "xiaomi"
+    ]
+  },
+  {
+    "brand_id": "oneplus",
+    "display_name": "OnePlus",
+    "category": "tech",
+    "official_domains": [
+      "oneplus.com"
+    ],
+    "canonical_url": "https://oneplus.com/",
+    "tokens": [
+      "oneplus"
+    ]
+  },
+  {
+    "brand_id": "realme",
+    "display_name": "Realme",
+    "category": "tech",
+    "official_domains": [
+      "realme.com"
+    ],
+    "canonical_url": "https://realme.com/",
+    "tokens": [
+      "realme"
+    ]
+  },
+  {
+    "brand_id": "vivo",
+    "display_name": "Vivo",
+    "category": "tech",
+    "official_domains": [
+      "vivo.com"
+    ],
+    "canonical_url": "https://vivo.com/",
+    "tokens": [
+      "vivo"
+    ]
+  },
+  {
+    "brand_id": "oppo",
+    "display_name": "Oppo",
+    "category": "tech",
+    "official_domains": [
+      "oppo.com"
+    ],
+    "canonical_url": "https://oppo.com/",
+    "tokens": [
+      "oppo"
+    ]
+  },
+  {
+    "brand_id": "nothing",
+    "display_name": "Nothing",
+    "category": "tech",
+    "official_domains": [
+      "nothing.tech"
+    ],
+    "canonical_url": "https://nothing.tech/",
+    "tokens": [
+      "nothing"
+    ]
+  },
+  {
+    "brand_id": "logitech",
+    "display_name": "Logitech",
+    "category": "tech",
+    "official_domains": [
+      "logitech.com"
+    ],
+    "canonical_url": "https://logitech.com/",
+    "tokens": [
+      "logitech"
+    ]
+  },
+  {
+    "brand_id": "lastpass",
+    "display_name": "LastPass",
+    "category": "security",
+    "official_domains": [
+      "lastpass.com"
+    ],
+    "canonical_url": "https://lastpass.com/",
+    "tokens": [
+      "lastpass"
+    ]
+  },
+  {
+    "brand_id": "1password",
+    "display_name": "1Password",
+    "category": "security",
+    "official_domains": [
+      "1password.com"
+    ],
+    "canonical_url": "https://1password.com/",
+    "tokens": [
+      "1password"
+    ]
+  },
+  {
+    "brand_id": "bitwarden",
+    "display_name": "Bitwarden",
+    "category": "security",
+    "official_domains": [
+      "bitwarden.com"
+    ],
+    "canonical_url": "https://bitwarden.com/",
+    "tokens": [
+      "bitwarden"
+    ]
+  },
+  {
+    "brand_id": "nordvpn",
+    "display_name": "NordVPN",
+    "category": "security",
+    "official_domains": [
+      "nordvpn.com"
+    ],
+    "canonical_url": "https://nordvpn.com/",
+    "tokens": [
+      "nordvpn"
+    ]
+  },
+  {
+    "brand_id": "expressvpn",
+    "display_name": "ExpressVPN",
+    "category": "security",
+    "official_domains": [
+      "expressvpn.com"
+    ],
+    "canonical_url": "https://expressvpn.com/",
+    "tokens": [
+      "expressvpn"
+    ]
+  },
+  {
+    "brand_id": "norton",
+    "display_name": "Norton",
+    "category": "security",
+    "official_domains": [
+      "norton.com"
+    ],
+    "canonical_url": "https://norton.com/",
+    "tokens": [
+      "norton"
+    ]
+  },
+  {
+    "brand_id": "mcafee",
+    "display_name": "McAfee",
+    "category": "security",
+    "official_domains": [
+      "mcafee.com"
+    ],
+    "canonical_url": "https://mcafee.com/",
+    "tokens": [
+      "mcafee"
+    ]
+  },
+  {
+    "brand_id": "kaspersky",
+    "display_name": "Kaspersky",
+    "category": "security",
+    "official_domains": [
+      "kaspersky.com"
+    ],
+    "canonical_url": "https://kaspersky.com/",
+    "tokens": [
+      "kaspersky"
+    ]
+  },
+  {
+    "brand_id": "avast",
+    "display_name": "Avast",
+    "category": "security",
+    "official_domains": [
+      "avast.com"
+    ],
+    "canonical_url": "https://avast.com/",
+    "tokens": [
+      "avast"
+    ]
+  },
+  {
+    "brand_id": "quick-heal",
+    "display_name": "Quick Heal",
+    "category": "security",
+    "official_domains": [
+      "quickheal.com"
+    ],
+    "canonical_url": "https://quickheal.com/",
+    "tokens": [
+      "quickheal"
+    ]
+  },
+  {
+    "brand_id": "crowdstrike",
+    "display_name": "CrowdStrike",
+    "category": "security",
+    "official_domains": [
+      "crowdstrike.com"
+    ],
+    "canonical_url": "https://crowdstrike.com/",
+    "tokens": [
+      "crowdstrike"
+    ]
+  },
+  {
+    "brand_id": "okta",
+    "display_name": "Okta",
+    "category": "security",
+    "official_domains": [
+      "okta.com"
+    ],
+    "canonical_url": "https://okta.com/",
+    "tokens": [
+      "okta"
+    ]
+  },
+  {
+    "brand_id": "naukri",
+    "display_name": "Naukri",
+    "category": "tech",
+    "official_domains": [
+      "naukri.com"
+    ],
+    "canonical_url": "https://naukri.com/",
+    "tokens": [
+      "naukri"
+    ]
+  },
+  {
+    "brand_id": "indeed",
+    "display_name": "Indeed",
+    "category": "tech",
+    "official_domains": [
+      "indeed.com"
+    ],
+    "canonical_url": "https://indeed.com/",
+    "tokens": [
+      "indeed"
+    ]
+  },
+  {
+    "brand_id": "glassdoor",
+    "display_name": "Glassdoor",
+    "category": "tech",
+    "official_domains": [
+      "glassdoor.com"
+    ],
+    "canonical_url": "https://glassdoor.com/",
+    "tokens": [
+      "glassdoor"
+    ]
+  },
+  {
+    "brand_id": "foundit",
+    "display_name": "Foundit",
+    "category": "tech",
+    "official_domains": [
+      "foundit.in"
+    ],
+    "canonical_url": "https://foundit.in/",
+    "tokens": [
+      "foundit"
+    ]
+  },
+  {
+    "brand_id": "internshala",
+    "display_name": "Internshala",
+    "category": "tech",
+    "official_domains": [
+      "internshala.com"
+    ],
+    "canonical_url": "https://internshala.com/",
+    "tokens": [
+      "internshala"
+    ]
+  },
+  {
+    "brand_id": "unstop",
+    "display_name": "Unstop",
+    "category": "tech",
+    "official_domains": [
+      "unstop.com"
+    ],
+    "canonical_url": "https://unstop.com/",
+    "tokens": [
+      "unstop"
+    ]
+  },
+  {
+    "brand_id": "shaadi-com",
+    "display_name": "Shaadi.com",
+    "category": "social",
+    "official_domains": [
+      "shaadi.com"
+    ],
+    "canonical_url": "https://shaadi.com/",
+    "tokens": [
+      "shaadi",
+      "shaadicom"
+    ]
+  },
+  {
+    "brand_id": "justdial",
+    "display_name": "Justdial",
+    "category": "tech",
+    "official_domains": [
+      "justdial.com"
+    ],
+    "canonical_url": "https://justdial.com/",
+    "tokens": [
+      "justdial"
+    ]
+  },
+  {
+    "brand_id": "craigslist",
+    "display_name": "Craigslist",
+    "category": "ecommerce",
+    "official_domains": [
+      "craigslist.org"
+    ],
+    "canonical_url": "https://craigslist.org/",
+    "tokens": [
+      "craigslist"
+    ]
+  },
+  {
+    "brand_id": "yelp",
+    "display_name": "Yelp",
+    "category": "tech",
+    "official_domains": [
+      "yelp.com"
+    ],
+    "canonical_url": "https://yelp.com/",
+    "tokens": [
+      "yelp"
+    ]
+  },
+  {
+    "brand_id": "trustpilot",
+    "display_name": "Trustpilot",
+    "category": "tech",
+    "official_domains": [
+      "trustpilot.com"
+    ],
+    "canonical_url": "https://trustpilot.com/",
+    "tokens": [
+      "trustpilot"
+    ]
+  },
+  {
+    "brand_id": "coursera",
+    "display_name": "Coursera",
+    "category": "education",
+    "official_domains": [
+      "coursera.org"
+    ],
+    "canonical_url": "https://coursera.org/",
+    "tokens": [
+      "coursera"
+    ]
+  },
+  {
+    "brand_id": "edx",
+    "display_name": "edX",
+    "category": "education",
+    "official_domains": [
+      "edx.org"
+    ],
+    "canonical_url": "https://edx.org/",
+    "tokens": [
+      "edx"
+    ]
+  },
+  {
+    "brand_id": "udemy",
+    "display_name": "Udemy",
+    "category": "education",
+    "official_domains": [
+      "udemy.com"
+    ],
+    "canonical_url": "https://udemy.com/",
+    "tokens": [
+      "udemy"
+    ]
+  },
+  {
+    "brand_id": "khan-academy",
+    "display_name": "Khan Academy",
+    "category": "education",
+    "official_domains": [
+      "khanacademy.org"
+    ],
+    "canonical_url": "https://khanacademy.org/",
+    "tokens": [
+      "khanacademy"
+    ]
+  },
+  {
+    "brand_id": "byju-s",
+    "display_name": "BYJU'S",
+    "category": "education",
+    "official_domains": [
+      "byjus.com"
+    ],
+    "canonical_url": "https://byjus.com/",
+    "tokens": [
+      "byjus"
+    ]
+  },
+  {
+    "brand_id": "unacademy",
+    "display_name": "Unacademy",
+    "category": "education",
+    "official_domains": [
+      "unacademy.com"
+    ],
+    "canonical_url": "https://unacademy.com/",
+    "tokens": [
+      "unacademy"
+    ]
+  },
+  {
+    "brand_id": "physicswallah",
+    "display_name": "PhysicsWallah",
+    "category": "education",
+    "official_domains": [
+      "pw.live"
+    ],
+    "canonical_url": "https://pw.live/",
+    "tokens": [
+      "physicswallah",
+      "pw"
+    ]
+  },
+  {
+    "brand_id": "vedantu",
+    "display_name": "Vedantu",
+    "category": "education",
+    "official_domains": [
+      "vedantu.com"
+    ],
+    "canonical_url": "https://vedantu.com/",
+    "tokens": [
+      "vedantu"
+    ]
+  },
+  {
+    "brand_id": "upgrad",
+    "display_name": "upGrad",
+    "category": "education",
+    "official_domains": [
+      "upgrad.com"
+    ],
+    "canonical_url": "https://upgrad.com/",
+    "tokens": [
+      "upgrad"
+    ]
+  },
+  {
+    "brand_id": "simplilearn",
+    "display_name": "Simplilearn",
+    "category": "education",
+    "official_domains": [
+      "simplilearn.com"
+    ],
+    "canonical_url": "https://simplilearn.com/",
+    "tokens": [
+      "simplilearn"
+    ]
+  },
+  {
+    "brand_id": "great-learning",
+    "display_name": "Great Learning",
+    "category": "education",
+    "official_domains": [
+      "mygreatlearning.com"
+    ],
+    "canonical_url": "https://mygreatlearning.com/",
+    "tokens": [
+      "greatlearning",
+      "mygreatlearning"
+    ]
+  },
+  {
+    "brand_id": "nptel",
+    "display_name": "NPTEL",
+    "category": "education",
+    "official_domains": [
+      "nptel.ac.in"
+    ],
+    "canonical_url": "https://nptel.ac.in/",
+    "tokens": [
+      "nptel"
+    ]
+  },
+  {
+    "brand_id": "swayam",
+    "display_name": "SWAYAM",
+    "category": "education",
+    "official_domains": [
+      "swayam.gov.in"
+    ],
+    "canonical_url": "https://swayam.gov.in/",
+    "tokens": [
+      "swayam"
+    ]
+  },
+  {
+    "brand_id": "iit-bombay",
+    "display_name": "IIT Bombay",
+    "category": "education",
+    "official_domains": [
+      "iitb.ac.in"
+    ],
+    "canonical_url": "https://iitb.ac.in/",
+    "tokens": [
+      "iitb",
+      "iitbombay"
+    ]
+  },
+  {
+    "brand_id": "iit-delhi",
+    "display_name": "IIT Delhi",
+    "category": "education",
+    "official_domains": [
+      "iitd.ac.in"
+    ],
+    "canonical_url": "https://iitd.ac.in/",
+    "tokens": [
+      "iitd",
+      "iitdelhi"
+    ]
+  },
+  {
+    "brand_id": "iit-madras",
+    "display_name": "IIT Madras",
+    "category": "education",
+    "official_domains": [
+      "iitm.ac.in"
+    ],
+    "canonical_url": "https://iitm.ac.in/",
+    "tokens": [
+      "iitm",
+      "iitmadras"
+    ]
+  },
+  {
+    "brand_id": "indian-institute-of-science",
+    "display_name": "Indian Institute of Science",
+    "category": "education",
+    "official_domains": [
+      "iisc.ac.in"
+    ],
+    "canonical_url": "https://iisc.ac.in/",
+    "tokens": [
+      "iisc",
+      "indianinstituteofscience"
+    ]
+  },
+  {
+    "brand_id": "university-of-mumbai",
+    "display_name": "University of Mumbai",
+    "category": "education",
+    "official_domains": [
+      "mu.ac.in"
+    ],
+    "canonical_url": "https://mu.ac.in/",
+    "tokens": [
+      "mu",
+      "universityofmumbai"
+    ]
+  },
+  {
+    "brand_id": "savitribai-phule-pune-university",
+    "display_name": "Savitribai Phule Pune University",
+    "category": "education",
+    "official_domains": [
+      "unipune.ac.in"
+    ],
+    "canonical_url": "https://unipune.ac.in/",
+    "tokens": [
+      "savitribaiphulepuneuniversity",
+      "unipune"
+    ]
+  },
+  {
+    "brand_id": "delhi-university",
+    "display_name": "Delhi University",
+    "category": "education",
+    "official_domains": [
+      "du.ac.in"
+    ],
+    "canonical_url": "https://du.ac.in/",
+    "tokens": [
+      "delhiuniversity",
+      "du"
+    ]
+  },
+  {
+    "brand_id": "jnu",
+    "display_name": "JNU",
+    "category": "education",
+    "official_domains": [
+      "jnu.ac.in"
+    ],
+    "canonical_url": "https://jnu.ac.in/",
+    "tokens": [
+      "jnu"
+    ]
+  },
+  {
+    "brand_id": "harvard-university",
+    "display_name": "Harvard University",
+    "category": "education",
+    "official_domains": [
+      "harvard.edu"
+    ],
+    "canonical_url": "https://harvard.edu/",
+    "tokens": [
+      "harvard",
+      "harvarduniversity"
+    ]
+  },
+  {
+    "brand_id": "mit",
+    "display_name": "MIT",
+    "category": "education",
+    "official_domains": [
+      "mit.edu"
+    ],
+    "canonical_url": "https://mit.edu/",
+    "tokens": [
+      "mit"
+    ]
+  },
+  {
+    "brand_id": "stanford-university",
+    "display_name": "Stanford University",
+    "category": "education",
+    "official_domains": [
+      "stanford.edu"
+    ],
+    "canonical_url": "https://stanford.edu/",
+    "tokens": [
+      "stanford",
+      "stanforduniversity"
+    ]
+  },
+  {
+    "brand_id": "university-of-oxford",
+    "display_name": "University of Oxford",
+    "category": "education",
+    "official_domains": [
+      "ox.ac.uk"
+    ],
+    "canonical_url": "https://ox.ac.uk/",
+    "tokens": [
+      "ox",
+      "universityofoxford"
+    ]
+  },
+  {
+    "brand_id": "university-of-cambridge",
+    "display_name": "University of Cambridge",
+    "category": "education",
+    "official_domains": [
+      "cam.ac.uk"
+    ],
+    "canonical_url": "https://cam.ac.uk/",
+    "tokens": [
+      "cam",
+      "universityofcambridge"
+    ]
+  },
+  {
+    "brand_id": "wikipedia",
+    "display_name": "Wikipedia",
+    "category": "education",
+    "official_domains": [
+      "wikipedia.org"
+    ],
+    "canonical_url": "https://wikipedia.org/",
+    "tokens": [
+      "wikipedia"
+    ]
+  },
+  {
+    "brand_id": "wikimedia",
+    "display_name": "Wikimedia",
+    "category": "education",
+    "official_domains": [
+      "wikimedia.org"
+    ],
+    "canonical_url": "https://wikimedia.org/",
+    "tokens": [
+      "wikimedia"
+    ]
+  },
+  {
+    "brand_id": "internet-archive",
+    "display_name": "Internet Archive",
+    "category": "education",
+    "official_domains": [
+      "archive.org"
+    ],
+    "canonical_url": "https://archive.org/",
+    "tokens": [
+      "archive",
+      "internetarchive"
+    ]
+  },
+  {
+    "brand_id": "duolingo",
+    "display_name": "Duolingo",
+    "category": "education",
+    "official_domains": [
+      "duolingo.com"
+    ],
+    "canonical_url": "https://duolingo.com/",
+    "tokens": [
+      "duolingo"
+    ]
+  },
+  {
+    "brand_id": "grammarly",
+    "display_name": "Grammarly",
+    "category": "education",
+    "official_domains": [
+      "grammarly.com"
+    ],
+    "canonical_url": "https://grammarly.com/",
+    "tokens": [
+      "grammarly"
+    ]
+  },
+  {
+    "brand_id": "leetcode",
+    "display_name": "LeetCode",
+    "category": "education",
+    "official_domains": [
+      "leetcode.com"
+    ],
+    "canonical_url": "https://leetcode.com/",
+    "tokens": [
+      "leetcode"
+    ]
+  },
+  {
+    "brand_id": "hackerrank",
+    "display_name": "HackerRank",
+    "category": "education",
+    "official_domains": [
+      "hackerrank.com"
+    ],
+    "canonical_url": "https://hackerrank.com/",
+    "tokens": [
+      "hackerrank"
+    ]
+  },
+  {
+    "brand_id": "geeksforgeeks",
+    "display_name": "GeeksforGeeks",
+    "category": "education",
+    "official_domains": [
+      "geeksforgeeks.org"
+    ],
+    "canonical_url": "https://geeksforgeeks.org/",
+    "tokens": [
+      "geeksforgeeks"
+    ]
+  },
+  {
+    "brand_id": "w3schools",
+    "display_name": "W3Schools",
+    "category": "education",
+    "official_domains": [
+      "w3schools.com"
+    ],
+    "canonical_url": "https://w3schools.com/",
+    "tokens": [
+      "w3schools"
+    ]
+  },
+  {
+    "brand_id": "codecademy",
+    "display_name": "Codecademy",
+    "category": "education",
+    "official_domains": [
+      "codecademy.com"
+    ],
+    "canonical_url": "https://codecademy.com/",
+    "tokens": [
+      "codecademy"
+    ]
+  },
+  {
+    "brand_id": "times-of-india",
+    "display_name": "Times of India",
+    "category": "news",
+    "official_domains": [
+      "indiatimes.com"
+    ],
+    "canonical_url": "https://indiatimes.com/",
+    "tokens": [
+      "indiatimes",
+      "timesofindia"
+    ]
+  },
+  {
+    "brand_id": "hindustan-times",
+    "display_name": "Hindustan Times",
+    "category": "news",
+    "official_domains": [
+      "hindustantimes.com"
+    ],
+    "canonical_url": "https://hindustantimes.com/",
+    "tokens": [
+      "hindustantimes"
+    ]
+  },
+  {
+    "brand_id": "the-hindu",
+    "display_name": "The Hindu",
+    "category": "news",
+    "official_domains": [
+      "thehindu.com"
+    ],
+    "canonical_url": "https://thehindu.com/",
+    "tokens": [
+      "thehindu"
+    ]
+  },
+  {
+    "brand_id": "ndtv",
+    "display_name": "NDTV",
+    "category": "news",
+    "official_domains": [
+      "ndtv.com"
+    ],
+    "canonical_url": "https://ndtv.com/",
+    "tokens": [
+      "ndtv"
+    ]
+  },
+  {
+    "brand_id": "india-today",
+    "display_name": "India Today",
+    "category": "news",
+    "official_domains": [
+      "indiatoday.in"
+    ],
+    "canonical_url": "https://indiatoday.in/",
+    "tokens": [
+      "indiatoday"
+    ]
+  },
+  {
+    "brand_id": "indian-express",
+    "display_name": "Indian Express",
+    "category": "news",
+    "official_domains": [
+      "indianexpress.com"
+    ],
+    "canonical_url": "https://indianexpress.com/",
+    "tokens": [
+      "indianexpress"
+    ]
+  },
+  {
+    "brand_id": "mint",
+    "display_name": "Mint",
+    "category": "news",
+    "official_domains": [
+      "livemint.com"
+    ],
+    "canonical_url": "https://livemint.com/",
+    "tokens": [
+      "livemint",
+      "mint"
+    ]
+  },
+  {
+    "brand_id": "moneycontrol",
+    "display_name": "Moneycontrol",
+    "category": "news",
+    "official_domains": [
+      "moneycontrol.com"
+    ],
+    "canonical_url": "https://moneycontrol.com/",
+    "tokens": [
+      "moneycontrol"
+    ]
+  },
+  {
+    "brand_id": "business-standard",
+    "display_name": "Business Standard",
+    "category": "news",
+    "official_domains": [
+      "business-standard.com"
+    ],
+    "canonical_url": "https://business-standard.com/",
+    "tokens": [
+      "businessstandard"
+    ]
+  },
+  {
+    "brand_id": "news18",
+    "display_name": "News18",
+    "category": "news",
+    "official_domains": [
+      "news18.com"
+    ],
+    "canonical_url": "https://news18.com/",
+    "tokens": [
+      "news18"
+    ]
+  },
+  {
+    "brand_id": "zee-news",
+    "display_name": "Zee News",
+    "category": "news",
+    "official_domains": [
+      "india.com"
+    ],
+    "canonical_url": "https://india.com/",
+    "tokens": [
+      "india",
+      "zeenews"
+    ]
+  },
+  {
+    "brand_id": "aaj-tak",
+    "display_name": "Aaj Tak",
+    "category": "news",
+    "official_domains": [
+      "aajtak.in"
+    ],
+    "canonical_url": "https://aajtak.in/",
+    "tokens": [
+      "aajtak"
+    ]
+  },
+  {
+    "brand_id": "abp-live",
+    "display_name": "ABP Live",
+    "category": "news",
+    "official_domains": [
+      "abplive.com"
+    ],
+    "canonical_url": "https://abplive.com/",
+    "tokens": [
+      "abplive"
+    ]
+  },
+  {
+    "brand_id": "lokmat",
+    "display_name": "Lokmat",
+    "category": "news",
+    "official_domains": [
+      "lokmat.com"
+    ],
+    "canonical_url": "https://lokmat.com/",
+    "tokens": [
+      "lokmat"
+    ]
+  },
+  {
+    "brand_id": "loksatta",
+    "display_name": "Loksatta",
+    "category": "news",
+    "official_domains": [
+      "loksatta.com"
+    ],
+    "canonical_url": "https://loksatta.com/",
+    "tokens": [
+      "loksatta"
+    ]
+  },
+  {
+    "brand_id": "bbc",
+    "display_name": "BBC",
+    "category": "news",
+    "official_domains": [
+      "bbc.com",
+      "bbc.co.uk"
+    ],
+    "canonical_url": "https://bbc.com/",
+    "tokens": [
+      "bbc"
+    ]
+  },
+  {
+    "brand_id": "cnn",
+    "display_name": "CNN",
+    "category": "news",
+    "official_domains": [
+      "cnn.com"
+    ],
+    "canonical_url": "https://cnn.com/",
+    "tokens": [
+      "cnn"
+    ]
+  },
+  {
+    "brand_id": "reuters",
+    "display_name": "Reuters",
+    "category": "news",
+    "official_domains": [
+      "reuters.com"
+    ],
+    "canonical_url": "https://reuters.com/",
+    "tokens": [
+      "reuters"
+    ]
+  },
+  {
+    "brand_id": "new-york-times",
+    "display_name": "New York Times",
+    "category": "news",
+    "official_domains": [
+      "nytimes.com"
+    ],
+    "canonical_url": "https://nytimes.com/",
+    "tokens": [
+      "newyorktimes",
+      "nytimes"
+    ]
+  },
+  {
+    "brand_id": "washington-post",
+    "display_name": "Washington Post",
+    "category": "news",
+    "official_domains": [
+      "washingtonpost.com"
+    ],
+    "canonical_url": "https://washingtonpost.com/",
+    "tokens": [
+      "washingtonpost"
+    ]
+  },
+  {
+    "brand_id": "the-guardian",
+    "display_name": "The Guardian",
+    "category": "news",
+    "official_domains": [
+      "theguardian.com"
+    ],
+    "canonical_url": "https://theguardian.com/",
+    "tokens": [
+      "theguardian"
+    ]
+  },
+  {
+    "brand_id": "bloomberg",
+    "display_name": "Bloomberg",
+    "category": "news",
+    "official_domains": [
+      "bloomberg.com"
+    ],
+    "canonical_url": "https://bloomberg.com/",
+    "tokens": [
+      "bloomberg"
+    ]
+  },
+  {
+    "brand_id": "forbes",
+    "display_name": "Forbes",
+    "category": "news",
+    "official_domains": [
+      "forbes.com"
+    ],
+    "canonical_url": "https://forbes.com/",
+    "tokens": [
+      "forbes"
+    ]
+  },
+  {
+    "brand_id": "wall-street-journal",
+    "display_name": "Wall Street Journal",
+    "category": "news",
+    "official_domains": [
+      "wsj.com"
+    ],
+    "canonical_url": "https://wsj.com/",
+    "tokens": [
+      "wallstreetjournal",
+      "wsj"
+    ]
+  },
+  {
+    "brand_id": "al-jazeera",
+    "display_name": "Al Jazeera",
+    "category": "news",
+    "official_domains": [
+      "aljazeera.com"
+    ],
+    "canonical_url": "https://aljazeera.com/",
+    "tokens": [
+      "aljazeera"
+    ]
+  },
+  {
+    "brand_id": "cnbc",
+    "display_name": "CNBC",
+    "category": "news",
+    "official_domains": [
+      "cnbc.com"
+    ],
+    "canonical_url": "https://cnbc.com/",
+    "tokens": [
+      "cnbc"
+    ]
+  },
+  {
+    "brand_id": "financial-times",
+    "display_name": "Financial Times",
+    "category": "news",
+    "official_domains": [
+      "ft.com"
+    ],
+    "canonical_url": "https://ft.com/",
+    "tokens": [
+      "financialtimes",
+      "ft"
+    ]
+  },
+  {
+    "brand_id": "the-economist",
+    "display_name": "The Economist",
+    "category": "news",
+    "official_domains": [
+      "economist.com"
+    ],
+    "canonical_url": "https://economist.com/",
+    "tokens": [
+      "economist",
+      "theeconomist"
+    ]
+  },
+  {
+    "brand_id": "techcrunch",
+    "display_name": "TechCrunch",
+    "category": "news",
+    "official_domains": [
+      "techcrunch.com"
+    ],
+    "canonical_url": "https://techcrunch.com/",
+    "tokens": [
+      "techcrunch"
+    ]
+  },
+  {
+    "brand_id": "the-verge",
+    "display_name": "The Verge",
+    "category": "news",
+    "official_domains": [
+      "theverge.com"
+    ],
+    "canonical_url": "https://theverge.com/",
+    "tokens": [
+      "theverge"
+    ]
+  },
+  {
+    "brand_id": "wired",
+    "display_name": "Wired",
+    "category": "news",
+    "official_domains": [
+      "wired.com"
+    ],
+    "canonical_url": "https://wired.com/",
+    "tokens": [
+      "wired"
+    ]
+  },
+  {
+    "brand_id": "tata-group",
+    "display_name": "Tata Group",
+    "category": "auto",
+    "official_domains": [
+      "tata.com"
+    ],
+    "canonical_url": "https://tata.com/",
+    "tokens": [
+      "tata",
+      "tatagroup"
+    ]
+  },
+  {
+    "brand_id": "reliance-industries",
+    "display_name": "Reliance Industries",
+    "category": "finance",
+    "official_domains": [
+      "ril.com"
+    ],
+    "canonical_url": "https://ril.com/",
+    "tokens": [
+      "relianceindustries",
+      "ril"
+    ]
+  },
+  {
+    "brand_id": "adani-group",
+    "display_name": "Adani Group",
+    "category": "finance",
+    "official_domains": [
+      "adani.com"
+    ],
+    "canonical_url": "https://adani.com/",
+    "tokens": [
+      "adani",
+      "adanigroup"
+    ]
+  },
+  {
+    "brand_id": "mahindra",
+    "display_name": "Mahindra",
+    "category": "auto",
+    "official_domains": [
+      "mahindra.com"
+    ],
+    "canonical_url": "https://mahindra.com/",
+    "tokens": [
+      "mahindra"
+    ]
+  },
+  {
+    "brand_id": "maruti-suzuki",
+    "display_name": "Maruti Suzuki",
+    "category": "auto",
+    "official_domains": [
+      "marutisuzuki.com"
+    ],
+    "canonical_url": "https://marutisuzuki.com/",
+    "tokens": [
+      "marutisuzuki"
+    ]
+  },
+  {
+    "brand_id": "hyundai",
+    "display_name": "Hyundai",
+    "category": "auto",
+    "official_domains": [
+      "hyundai.com"
+    ],
+    "canonical_url": "https://hyundai.com/",
+    "tokens": [
+      "hyundai"
+    ]
+  },
+  {
+    "brand_id": "tata-motors",
+    "display_name": "Tata Motors",
+    "category": "auto",
+    "official_domains": [
+      "tatamotors.com"
+    ],
+    "canonical_url": "https://tatamotors.com/",
+    "tokens": [
+      "tatamotors"
+    ]
+  },
+  {
+    "brand_id": "honda",
+    "display_name": "Honda",
+    "category": "auto",
+    "official_domains": [
+      "honda.com"
+    ],
+    "canonical_url": "https://honda.com/",
+    "tokens": [
+      "honda"
+    ]
+  },
+  {
+    "brand_id": "toyota",
+    "display_name": "Toyota",
+    "category": "auto",
+    "official_domains": [
+      "toyota.com",
+      "toyotabharat.com"
+    ],
+    "canonical_url": "https://toyota.com/",
+    "tokens": [
+      "toyota"
+    ]
+  },
+  {
+    "brand_id": "kia",
+    "display_name": "Kia",
+    "category": "auto",
+    "official_domains": [
+      "kia.com"
+    ],
+    "canonical_url": "https://kia.com/",
+    "tokens": [
+      "kia"
+    ]
+  },
+  {
+    "brand_id": "mg-motor-india",
+    "display_name": "MG Motor India",
+    "category": "auto",
+    "official_domains": [
+      "mgmotor.co.in"
+    ],
+    "canonical_url": "https://mgmotor.co.in/",
+    "tokens": [
+      "mgmotor",
+      "mgmotorindia"
+    ]
+  },
+  {
+    "brand_id": "hero-motocorp",
+    "display_name": "Hero MotoCorp",
+    "category": "auto",
+    "official_domains": [
+      "heromotocorp.com"
+    ],
+    "canonical_url": "https://heromotocorp.com/",
+    "tokens": [
+      "heromotocorp"
+    ]
+  },
+  {
+    "brand_id": "bajaj-auto",
+    "display_name": "Bajaj Auto",
+    "category": "auto",
+    "official_domains": [
+      "bajajauto.com"
+    ],
+    "canonical_url": "https://bajajauto.com/",
+    "tokens": [
+      "bajajauto"
+    ]
+  },
+  {
+    "brand_id": "tvs-motor",
+    "display_name": "TVS Motor",
+    "category": "auto",
+    "official_domains": [
+      "tvsmotor.com"
+    ],
+    "canonical_url": "https://tvsmotor.com/",
+    "tokens": [
+      "tvsmotor"
+    ]
+  },
+  {
+    "brand_id": "royal-enfield",
+    "display_name": "Royal Enfield",
+    "category": "auto",
+    "official_domains": [
+      "royalenfield.com"
+    ],
+    "canonical_url": "https://royalenfield.com/",
+    "tokens": [
+      "royalenfield"
+    ]
+  },
+  {
+    "brand_id": "ola-electric",
+    "display_name": "Ola Electric",
+    "category": "auto",
+    "official_domains": [
+      "olaelectric.com"
+    ],
+    "canonical_url": "https://olaelectric.com/",
+    "tokens": [
+      "olaelectric"
+    ]
+  },
+  {
+    "brand_id": "ather-energy",
+    "display_name": "Ather Energy",
+    "category": "auto",
+    "official_domains": [
+      "atherenergy.com"
+    ],
+    "canonical_url": "https://atherenergy.com/",
+    "tokens": [
+      "atherenergy"
+    ]
+  },
+  {
+    "brand_id": "tesla",
+    "display_name": "Tesla",
+    "category": "auto",
+    "official_domains": [
+      "tesla.com"
+    ],
+    "canonical_url": "https://tesla.com/",
+    "tokens": [
+      "tesla"
+    ]
+  },
+  {
+    "brand_id": "ford",
+    "display_name": "Ford",
+    "category": "auto",
+    "official_domains": [
+      "ford.com"
+    ],
+    "canonical_url": "https://ford.com/",
+    "tokens": [
+      "ford"
+    ]
+  },
+  {
+    "brand_id": "bmw",
+    "display_name": "BMW",
+    "category": "auto",
+    "official_domains": [
+      "bmw.com"
+    ],
+    "canonical_url": "https://bmw.com/",
+    "tokens": [
+      "bmw"
+    ]
+  },
+  {
+    "brand_id": "mercedes-benz",
+    "display_name": "Mercedes-Benz",
+    "category": "auto",
+    "official_domains": [
+      "mercedes-benz.com"
+    ],
+    "canonical_url": "https://mercedes-benz.com/",
+    "tokens": [
+      "mercedesbenz"
+    ]
+  },
+  {
+    "brand_id": "volkswagen",
+    "display_name": "Volkswagen",
+    "category": "auto",
+    "official_domains": [
+      "volkswagen.com"
+    ],
+    "canonical_url": "https://volkswagen.com/",
+    "tokens": [
+      "volkswagen"
+    ]
+  },
+  {
+    "brand_id": "audi",
+    "display_name": "Audi",
+    "category": "auto",
+    "official_domains": [
+      "audi.com"
+    ],
+    "canonical_url": "https://audi.com/",
+    "tokens": [
+      "audi"
+    ]
+  },
+  {
+    "brand_id": "examplebank",
+    "display_name": "Example Bank",
+    "category": "bank",
+    "official_domains": [
+      "examplebank.bank.in",
+      "examplebank.co.in"
+    ],
+    "canonical_url": "https://www.examplebank.bank.in/",
+    "tokens": [
+      "examplebank",
+      "examplebnk",
+      "eb-netbanking"
+    ]
+  }
+]
