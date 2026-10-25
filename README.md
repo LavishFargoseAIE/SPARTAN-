@@ -11,6 +11,8 @@ SiteGuard detects fake bank and government websites **before the page loads**, e
 - **Source of Truth:** Signed Brand Registry with Ed25519 digital signatures
 
 ---
+## PPT LINK:
+https://canva.link/jgfqm5ydvjrthrh
 
 ## Architecture Flow
 
