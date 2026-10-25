@@ -12,7 +12,7 @@ SiteGuard detects fake bank and government websites **before the page loads**, e
 
 ---
 ## PPT LINK:
-https://canva.link/jgfqm5ydvjrthrh
+https://drive.google.com/file/d/15D2szaVObtK_wQlTZJ02_ArQDB2mcg5D/view?usp=sharing
 
 ## Architecture Flow
 
