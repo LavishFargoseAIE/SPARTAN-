@@ -3577,7 +3577,7 @@ export function updateAllowlist(newDomains: string[]): void {
   }
 }
 
-export async function isOfficial(host: string): Promise<boolean> {
+export function isOfficialSync(host: string): boolean {
   const clean = host.toLowerCase().trim();
   if (dynamicAllowlist.has(clean)) return true;
 
@@ -3587,6 +3587,10 @@ export async function isOfficial(host: string): Promise<boolean> {
     if (dynamicAllowlist.has(parent)) return true;
   }
   return false;
+}
+
+export async function isOfficial(host: string): Promise<boolean> {
+  return isOfficialSync(host);
 }
 
 export function getAllOfficialDomains(): string[] {

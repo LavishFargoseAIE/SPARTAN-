@@ -85,6 +85,7 @@ async function buildPlatform(target, outDir, manifestFile) {
   if (fs.existsSync(iconsSrc)) {
     for (const f of fs.readdirSync(iconsSrc)) {
       fs.copyFileSync(path.resolve(iconsSrc, f), path.resolve(iconsDist, f));
+      fs.copyFileSync(path.resolve(iconsSrc, f), path.resolve(outDir, f));
     }
   }
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#1e293b"/><path d="M24 10 L34 16 L34 26 C34 32 24 38 24 38 C24 38 14 32 14 26 L14 16 Z" fill="#10b981"/><path d="M21 24 L24 27 L29 20" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>`;

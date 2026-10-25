@@ -74,6 +74,11 @@ const reasonNames: Record<string, Record<string, string>> = {
     hi: "यह नाम {brand} की नकल करता है",
     mr: "हे नाव {brand} ची नक्कल करते",
   },
+  typosquatting: {
+    en: "The address copies {brand} using a lookalike spelling",
+    hi: "यह पता मिलती-जुलती स्पेलिंग से {brand} की नकल करता है",
+    mr: "हा पत्ता मिळत्याजुळत्या स्पेलिंगने {brand} ची नक्कल करतो",
+  },
   combosquatting: {
     en: "Uses {brand} with deceptive security words",
     hi: "{brand} के नाम के साथ भ्रामक शब्द जोड़े गए हैं",

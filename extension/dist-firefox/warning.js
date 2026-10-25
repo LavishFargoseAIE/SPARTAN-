@@ -3566,7 +3566,7 @@
     "zwift.com"
   ];
   var dynamicAllowlist = new Set(EMBEDDED_OFFICIAL_DOMAINS);
-  async function isOfficial(host) {
+  function isOfficialSync(host) {
     const clean = host.toLowerCase().trim();
     if (dynamicAllowlist.has(clean))
       return true;
@@ -3577,6 +3577,9 @@
         return true;
     }
     return false;
+  }
+  async function isOfficial(host) {
+    return isOfficialSync(host);
   }
 
   // src/verify.ts
@@ -3687,6 +3690,11 @@
       en: "The name copies {brand}",
       hi: "\u092F\u0939 \u0928\u093E\u092E {brand} \u0915\u0940 \u0928\u0915\u0932 \u0915\u0930\u0924\u093E \u0939\u0948",
       mr: "\u0939\u0947 \u0928\u093E\u0935 {brand} \u091A\u0940 \u0928\u0915\u094D\u0915\u0932 \u0915\u0930\u0924\u0947"
+    },
+    typosquatting: {
+      en: "The address copies {brand} using a lookalike spelling",
+      hi: "\u092F\u0939 \u092A\u0924\u093E \u092E\u093F\u0932\u0924\u0940-\u091C\u0941\u0932\u0924\u0940 \u0938\u094D\u092A\u0947\u0932\u093F\u0902\u0917 \u0938\u0947 {brand} \u0915\u0940 \u0928\u0915\u0932 \u0915\u0930\u0924\u093E \u0939\u0948",
+      mr: "\u0939\u093E \u092A\u0924\u094D\u0924\u093E \u092E\u093F\u0933\u0924\u094D\u092F\u093E\u091C\u0941\u0933\u0924\u094D\u092F\u093E \u0938\u094D\u092A\u0947\u0932\u093F\u0902\u0917\u0928\u0947 {brand} \u091A\u0940 \u0928\u0915\u094D\u0915\u0932 \u0915\u0930\u0924\u094B"
     },
     combosquatting: {
       en: "Uses {brand} with deceptive security words",
